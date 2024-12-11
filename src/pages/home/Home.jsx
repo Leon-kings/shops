@@ -1,11 +1,56 @@
 import React from "react"
-
+import Head from "../../universal/head/Head"
+// import Header from "../../universal/header/Header"
 const Home = () => {
   return (
-    <div className="container w-full flex px-0 py-0 mx-0">
-      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fuga officia, voluptatum at nulla, quae corrupti recusandae ratione ab odio, quos eligendi dicta pariatur laborum non consequatur sunt sed. Praesentium, nihil!
-  
+  <>
+   <div className="container grid px-0 py-0 mx-0 my-0 ">
+    <div className="card">
+      <h2 className="text-2xl">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+        Reiciendis, expedita iusto veniam, aspernatur natus velit molestias cupiditate 
+        odio eveniet ipsam nesciunt debitis et itaque, neque sed error ab asperiores atque.</h2>
     </div>
+
+    {/* end of nav part */}
+    {/*  */}
+    {/*  */}
+
+    {/* head components start*/}
+    <div className="container">
+
+       <Head/>
+
+     <div className="card">
+      <h2 className="text-2xl">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+        Reiciendis, expedita iusto veniam, aspernatur natus velit molestias cupiditate 
+        odio eveniet ipsam nesciunt debitis et itaque, neque sed error ab asperiores atque.</h2>
+     </div>
+    </div>
+
+    {/* end of head */}
+    {/*  */}
+    {/*  */}
+    
+    <div className="card">
+      <div className="container">
+      {/* <Header/> */}
+      </div>
+    </div>
+
+
+
+
+   </div>
+
+
+
+
+    <div >
+     
+      
+    </div>
+   
+    </>
   )
 }
 

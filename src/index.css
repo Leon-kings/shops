@@ -49,4 +49,7 @@ button {
     background-color: #636ddf;
   }
 }
+.backImage{
+  background-image: url('https://www.ituonline.com/wp-content/uploads/2023/10/What-Does-It-Mean-for-Computers.jpg')
+}
 @import "tailwindcss";

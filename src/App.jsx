@@ -8,6 +8,7 @@ import Dashboard from './components/dashboard/admin/Dashboard';
 import Home from './pages/home/Home';
 import Login from './pages/form/login/Login';
 import Example from './components/nav/Navbar';
+import Footer from './components/footer/Footer';
 
 export default function App() {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
@@ -32,7 +33,7 @@ export default function App() {
           }
         />
       </Routes>
-
+<Footer/>
     </BrowserRouter>
 </div>
     </>
