@@ -11,17 +11,16 @@ const Home = () => {
             <div className="header">
                <Header />
             </div>
-            
         </div>
+
         {/* end of nav part */}
         {/*  */}
         {/*  */}
-Lorem ipsum dolor sit amet consectetur, adipisicing elit. Adipisci ea cum optio nisi sequi odio eligendi, nostrum numquam explicabo, animi distinctio accusamus accusantium beatae suscipit hic sit at aperiam officiis.
+
         {/* head components start*/}
         <div className="container">
 
-          <div className="container py-10 m-0">
-
+          <div className="container m-0">
             <Head />
           </div>
               <div className="card">
