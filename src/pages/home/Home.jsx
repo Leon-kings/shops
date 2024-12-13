@@ -1,57 +1,49 @@
-import React from "react"
-import Head from "../../universal/head/Head"
-// import Header from "../../universal/header/Header"
+import React from "react";
+import Head from "../../universal/head/Head";
+import Header from "../../universal/header/Header";
+
 const Home = () => {
   return (
-  <>
-   <div className="container grid px-0 py-0 mx-0 my-0 ">
-    <div className="card">
-      <h2 className="text-2xl">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-        Reiciendis, expedita iusto veniam, aspernatur natus velit molestias cupiditate 
-        odio eveniet ipsam nesciunt debitis et itaque, neque sed error ab asperiores atque.</h2>
-    </div>
+    <>
+      <div className="container w-full ">
+        {/* Header Video components*/}
+        <div className="container">
+            <div className="header">
+               <Header />
+            </div>
+            
+        </div>
+        {/* end of nav part */}
+        {/*  */}
+        {/*  */}
+Lorem ipsum dolor sit amet consectetur, adipisicing elit. Adipisci ea cum optio nisi sequi odio eligendi, nostrum numquam explicabo, animi distinctio accusamus accusantium beatae suscipit hic sit at aperiam officiis.
+        {/* head components start*/}
+        <div className="container">
 
-    {/* end of nav part */}
-    {/*  */}
-    {/*  */}
+          <div className="container py-10 m-0">
 
-    {/* head components start*/}
-    <div className="container">
+            <Head />
+          </div>
+              <div className="card">
+                <h2 className="text-2xl">Visit The LD shops and Bought Your Favourite 
+                  Computers and Its Accessories To Brightify and Emplify Development 
+                  of Digital Substain Technology , Also promotes Services Require 
+                  Digital Technological Devices Expecially PC </h2>
+              </div>
+        </div>
 
-       <Head/>
+        {/* end of head */}
+        {/*  */}
+        {/*  */}
 
-     <div className="card">
-      <h2 className="text-2xl">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-        Reiciendis, expedita iusto veniam, aspernatur natus velit molestias cupiditate 
-        odio eveniet ipsam nesciunt debitis et itaque, neque sed error ab asperiores atque.</h2>
-     </div>
-    </div>
-
-    {/* end of head */}
-    {/*  */}
-    {/*  */}
-    
-    <div className="card">
-      <div className="container">
-      {/* <Header/> */}
+        <div className="card">
+          <div className="container">{/* <Header/> */}</div>
+        </div>
       </div>
-    </div>
 
-
-
-
-   </div>
-
-
-
-
-    <div >
-     
-      
-    </div>
-   
+      <div></div>
     </>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;

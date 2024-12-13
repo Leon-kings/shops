@@ -1,9 +1,9 @@
-import React, { useRef, useState } from 'react'
+import React, { useState } from 'react'
 import { Dialog, DialogPanel } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 import { Link } from 'react-router-dom'
 // background image
-import Video from '../../assets/video/head.mp4'
+
 // logo image
 import logo from "../../assets/images/360_F_288921356_krHC3KV1lJ2jAGnaep6NXZX6Fkv4FF9q.jpg"
 const navigation = [
@@ -12,7 +12,7 @@ const navigation = [
   { name: 'MARKET', href: '/Market' },
   { name: 'SERVICES', href: '/Services' },
   { name: 'ABOUT', href: '/Contacts' },
-  { name: 'FAQ', href: '/Fquestion' },
+  // { name: 'FAQ', href: '/Fquestion' },
 ]
 
 export default function Example() {
@@ -22,7 +22,7 @@ export default function Example() {
   
   
   return (
-    <div className="bg-white">
+    <div className="bg-whit">
       <header className="absolute inset-x-0 top-0 z-50">
         <nav aria-label="Global" className="flex items-center justify-between p-6 lg:px-8">
           <div className="flex lg:flex-1">
@@ -31,7 +31,7 @@ export default function Example() {
               <img
                 alt="logo"
                 src={logo}
-                className="h-20 p-1 w-auto"
+                className="h-20 w-auto"
               />
            
           </div>
@@ -66,10 +66,13 @@ export default function Example() {
            </Link>
           </div>
         </nav>
+        {/*  */}
+        {/*  */}
+        {/*  */}
         <Dialog open={mobileMenuOpen} onClose={setMobileMenuOpen} className="lg:hidden">
           <div className="fixed inset-0 z-50" />
-          <DialogPanel className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
-            <div className="flex items-center justify-between">
+          <DialogPanel className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-blue-400 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
+            <div className="flex items-center w-full justify-between">
            
                 <img
                   alt="logo"
@@ -80,7 +83,7 @@ export default function Example() {
               <button
                 type="button"
                 onClick={() => setMobileMenuOpen(false)}
-                className="-m-2.5 mx-1.5 rounded-md p-2.5 text-gray-700"
+                className=" rounded-md  text-gray-700"
               >
                 <span className="sr-only">Close menu</span>
                 <XMarkIcon aria-hidden="true" className="size-6" />
@@ -116,47 +119,7 @@ export default function Example() {
 {/* main content */}
 {/*  */}
 {/*  */}
-      <div className="relative isolate px-6 pt-14 lg:px-8">
-        <div
-          aria-hidden="true"
-          className="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-1xl sm:-top-80"
-        >
-          <div>
-              <video className="w-full" controls autoPlay loop>
-      <source src={Video} type="video/mp4"/>
-      Your browser does not support the video tag.
-    </video>
-  </div>
- 
-        </div>
-        <div className="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
-          <div className="hidden sm:mb-8 sm:flex sm:justify-center">
-            <div className="relative rounded-full px-3 py-1 text-sm/6 text-gray-600 ring-1 ring-gray-900/10 hover:ring-gray-900/20">
-            GET YOUR DESIRED COMPUTER ON RESONABLE PRICE{' '} <span></span>
-            <Link className="font-semibold text-indigo-600">
-                <span aria-hidden="true" className="absolute inset-0" />
-                Buy Yours <span aria-hidden="true">&rarr;</span>
-             </Link>
-            </div>
-          </div>
-          <div className="text-center">
-            <p className="mt-8 text-lg font-medium text-pretty text-gray-500 sm:text-xl/8">
-            Leon is happy to Serve you Your Favourate Computers ,
-            Choose The Best PC and Also If You want to Buy Your repairment Kits.
-            </p>
-            <div className="mt-10 flex items-center justify-center gap-x-6">
-              <Link className="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
-            
-                Get started
-                </Link>
-                <Link className="text-sm/6 font-semibold text-gray-900">
-             
-                Learn more <span aria-hidden="true">→</span>
-             </Link>
-            </div>
-          </div>
-        </div>
-      </div>
+
     </div>
   )
 }
