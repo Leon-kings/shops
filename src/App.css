@@ -12,8 +12,11 @@
   transition: filter 300ms;
 }
 
-
+.title{
+  padding-top: 55px;
+  padding-bottom: 40px;
+}
 .card {
-  padding: 2em;
+  padding: 1em;
 }
 
