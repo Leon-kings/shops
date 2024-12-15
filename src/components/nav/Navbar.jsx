@@ -12,7 +12,7 @@ const navigation = [
   { name: 'MARKET', href: '/Market' },
   { name: 'SERVICES', href: '/Services' },
   { name: 'ABOUT', href: '/Contacts' },
-  // { name: 'FAQ', href: '/Fquestion' },
+  { name: 'FAQ', href: '/Fquestion' },
 ]
 
 export default function Example() {

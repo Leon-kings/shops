@@ -24,64 +24,64 @@ export default function Head() {
               <div className="mt-10">
                 {/* Decorative image grid */}
                 <div
-                  aria-hidden="true"
+                  
                   className="pointer-events-none lg:absolute lg:inset-y-0 lg:mx-auto lg:w-full lg:max-w-7xl"
                 >
                   <div className="absolute transform sm:top-0 sm:left-1/2 sm:translate-x-8 lg:top-1/2 lg:left-1/2 lg:-translate-y-1/2 lg:translate-x-8">
                     <div className="flex items-center space-x-6 lg:space-x-8">
-                      <div className="grid shrink-0 grid-cols-1 gap-y-6 lg:gap-y-8">
-                        <div className="h-64 w-44 overflow-hidden rounded-lg sm:opacity-0 lg:opacity-100">
+                      <div className="grid shrink-0 grid-cols-1 ">
+                        <div className="h-44 w-40 overflow-hidden rounded-lg sm:opacity-0 lg:opacity-100">
                           <img
                             alt=""
                             src="https://i.pcmag.com/imagery/reviews/00xTIwo4AQMjnWl4H4ctDCq-1..v1643394203.jpg"
-                            className="size-full object-cover"
+                            className="size-fit object-cover"
                           />
                         </div>
-                        <div className="h-64 w-44 overflow-hidden rounded-lg">
+                        <div className="h-44 w-40 overflow-hidden rounded-lg">
                           <img
                             alt=""
                             src="https://www.techtarget.com/rms/onlineimages/acer_chromebook-f_mobile.jpg"
-                            className="size-full object-cover"
+                            className="size-fit object-cover"
                           />
                         </div>
                         
                       </div>
-                      <div className="grid shrink-0 grid-cols-1 gap-y-6 lg:gap-y-8">
-                        <div className="h-64 w-44 overflow-hidden rounded-lg">
+                      <div className="grid shrink-0 grid-cols-1 ">
+                        <div className="h-44 w-40 overflow-hidden rounded-lg">
                           <img
                             alt=""
                             src="https://m.media-amazon.com/images/I/71X6WUQoHfL.jpg"
-                            className="size-full object-cover"
+                            className="size-fit object-cover"
                           />
                         </div>
-                        <div className="h-64 w-44 overflow-hidden rounded-lg">
+                        <div className="h-44 w-40 overflow-hidden rounded-lg">
                           <img
                             alt=""
                             src="https://www.techtarget.com/rms/onlineimages/hp_elitebook_mobile.jpg"
-                            className="size-full object-cover"
+                            className="size-fit object-cover"
                           />
                         </div>
-                        <div className="h-64 w-44 overflow-hidden rounded-lg">
+                        <div className="h-44 w-40 overflow-hidden rounded-lg">
                           <img
                             alt=""
                             src="https://cdn.gadgetbytenepal.com/wp-content/uploads/2024/04/Lenovo-IdeaPad-1-2022-Intel-Celeron-N4020.jpg"
-                            className="size-full object-cover"
+                            className="size-fit object-cover"
                           />
                         </div>
                       </div>
-                      <div className="grid shrink-0 grid-cols-1 gap-y-6 lg:gap-y-8">
-                        <div className="h-64 w-44 overflow-hidden rounded-lg">
+                      <div className="grid shrink-0 grid-cols-1 ">
+                        <div className="h-44 w-40 overflow-hidden rounded-lg">
                           <img
                             alt=""
                             src="https://computercures.com.au/wp-content/uploads/2019/01/aio.jpg"
-                            className="size-full object-cover"
+                            className="size-fit object-cover"
                           />
                         </div>
-                        <div className="h-64 w-44 overflow-hidden rounded-lg">
+                        <div className="h-44 w-40 overflow-hidden rounded-lg">
                           <img
                             alt=""
-                            src="https://tailwindui.com/plus/img/ecommerce-images/home-page-03-hero-image-tile-07.jpg"
-                            className="size-full object-cover"
+                            src="https://resource.logitech.com/content/dam/gaming/en/products/g433/g433-gallery-black-1.png"
+                            className="size-fit object-cover"
                           />
                         </div>
                       </div>
