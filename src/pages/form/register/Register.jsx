@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import FormInput from '../action/FormInput'
 import { Link, useNavigate} from "react-router-dom";
 import axios from "axios";
-React
+React;
 const Register = () => {
   const [values, setValues] = useState({
 
@@ -38,7 +38,7 @@ const Register = () => {
       type: "text",
       placeholder: "+250787944577",
       errorMessage: "Phone should start with country code +250",
-      label: "email",
+      label: "Telephone",
       required: true
     },
 
@@ -49,7 +49,7 @@ const Register = () => {
       placeholder: "password",
       errorMessage: "password should be 8-12 characters include at least 1 letter and 1 symbol",
       label: "password",
-      // pattern:"/^[a-zA-Z0-9!@#\$%\^\&*_=+-]{8,12}$/g",
+      pattern:"/^[a-zA-Z0-9!@#\$%\^\&*_=+-]{8,12}$/g",
       required: true
     },
   ];
