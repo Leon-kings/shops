@@ -1,6 +1,5 @@
-
 import React from 'react'
-
+React;
 export default function Head() {
     return (
       <div className="relative overflow-hidden bg-white">

@@ -1,95 +1,111 @@
-import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
-
-const Login = () => {
-  const [formData, setFormData] = useState({
-    email: "",
-    password: "",
-    confirmPassword: "",
+import  React, { useState } from "react";
+import FormInput from '../action/FormInput'
+import { Link, useNavigate } from "react-router-dom";
+import axios from "axios";
+React;
+const Login =()=>{
+  
+  const [values,setValues] = useState({
+ 
+    email:"",
+    password:"",
+  
   });
-  const [error, setError] = useState("");
 
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData({ ...formData, [name]: value });
-  };
-  const Navigate = useNavigate();
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    if (formData.password !== formData.confirmPassword) {
-      setError("Passwords do not match!");
-      return;
+  const inputs=[
+  
+ 
+    {
+      id:1,
+      name:"email",
+      type:"email",
+      placeholder:"email",
+      errorMessage:"email should be valid and should incloude @ symbols",
+      label:"email",
+      required:true
+    },
+ 
+    {
+      id:2,
+      name:"password",
+      type:"password",
+      placeholder:"password",
+      errorMessage:"passworx should be 8-12 characters include at least 1 letter and 1 symbol",
+      label:"password",
+    
+      required:true
+    },
+  ];
+const Navigate=useNavigate();
+// fetching data from database
+         // handleSubmit
+
+const handleSubmit = async (e) => {
+  e.preventDefault();
+  console.log(values);
+
+  if (values.email === 'admin@gmail.com' && values.password === 'admin') {
+    if (window.confirm("Do you really want to continue to dashboard?")) {
+      Navigate("/5Eqi3pEyTJliNa7ANd9GcQN");
+    }else{
+
+      Navigate("/");
     }
-    setError("");
-    alert("Registration Successful!");
-    Navigate("/Dashboard");
-    console.log("Form Data: ", formData);
-    // Add your integration logic here
-  };
+    return;
+  }
 
-  return (
-    <>
-      <div className="title"></div>
-      <div className="min-h-screen flex items-center justify-center ">
-        <form
-          onSubmit={handleSubmit}
-          className="bg-white p-6 rounded-lg shadow-lg w-full"
-        >
-          <h2 className="text-2xl font-bold text-center mb-4">LOGIN</h2>
+  try {
+    await axios.post('https://backendproject-8m9r.onrender.com/users/auth', values);
+    if (window.confirm("Do you really want to move?")) {
+   
+      Navigate("/833 103.803C182.209 103");
+    }else{
+  
+      Navigate("/");
+    }
+  } catch (err) {
+    console.log(err);
 
-          {error && (
-            <div className=" bg-red-100 text-red-700 p-2 mb-4 rounded">
-              {error}
-            </div>
-          )}
-
-          <div className="mb-4">
-            <label className="block text-gray-700">Email</label>
-            <input
-              type="email"
-              name="email"
-              value={formData.email}
-              onChange={handleChange}
-              required
-              className="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring focus:ring-blue-300"
-            />
-          </div>
-
-          <div className="mb-4">
-            <label className="block text-gray-700">Password</label>
-            <input
-              type="password"
-              name="password"
-              value={formData.password}
-              onChange={handleChange}
-              required
-              className="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring focus:ring-blue-300"
-            />
-          </div>
-
-          <div className="mb-4">
-            <label className="block text-gray-700">Confirm Password</label>
-            <input
-              type="password"
-              name="confirmPassword"
-              value={formData.confirmPassword}
-              onChange={handleChange}
-              required
-              className="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring focus:ring-blue-300"
-            />
-          </div>
-
-          <button
-            type="submit"
-            className="w-full bg-blue-500 text-white py-2 rounded-md hover:bg-blue-600 transition"
-          >
-            LOGIN
-          </button>
-        </form>
-       
-      </div>
-    </>
-  );
+    if (err.response && err.response.status === 401) {
+      alert('Invalid credentials. Please try again.');
+    } else {
+     alert('An error occurred. Please try again later.');
+    }
+  }
 };
 
-export default Login;
+
+
+ 
+  const onChange =(e) =>{
+    setValues({...values,[e.target.name]:e.target.value});
+  }
+  return(
+    <><div className="title"></div>
+  <div className="container flex items-center justify-center min-h-screen bg-gray-100">
+     <div className="w-full max-w-md p-8 bg-white rounded shadow-md">
+      <form onSubmit={handleSubmit} className="mt-4">
+        <h2 className="title">Log in</h2>
+        <div className="container">
+        {inputs.map((input)=>(
+          <FormInput key={input.id} className="p-3 w-full"
+          {...input}value={values[input.name]}
+          onChange={onChange} />
+        ))}
+        <div className="head">
+        <button className="button w-full">Submit</button>
+        <p className="p-4">If you don`t have an account  
+          <Link to="/Register"><b>
+            <button className="p-3 bg-blue-500"> Register</button>
+            </b>
+            </Link>
+            </p>
+        </div>
+        </div>
+      </form>
+     </div>
+ </div>
+    </>
+  )
+}
+export default Login ;

@@ -1,9 +1,7 @@
-import { EnvelopeIcon } from "@heroicons/react/16/solid";
-import { ArrowLeftOnRectangleIcon } from "@heroicons/react/24/outline";
-import { BuildingStorefrontIcon } from "@heroicons/react/24/outline";
-import { GlobeAltIcon, PhoneIcon } from "@heroicons/react/24/solid";
+
 import React from "react";
-import { Link } from "react-router-dom";
+
+import NewC from "../../universal/about/NewC";
 React;
 export default function About() {
   const data = [
@@ -44,120 +42,32 @@ export default function About() {
         "https://images.unsplash.com/photo-1624224971170-2f84fed5eb5e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=100&h=100&crop=faces&q=80",
     },
   ];
-  const tiers = [
-    {
-      name: "PERSONAL COMPUTERS",
-      id: "1",
-      href: "/Market",
-      featured: false,
-    },
-    {
-      name: "COMPUTER ACCESSORIES",
-      id: "2",
-      href: "/Market",
-      featured: true,
-    },
-  ];
 
-  function classNames(...classes) {
-    return classes.filter(Boolean).join(" ");
-  }
+
 
   return (
     <>
       <div className="title"></div>
       <div className="bg-white">
         {/*  */}
-        <div className="grid gap-10 lg:grid-cols-2 xl:grid-cols-2">
-          <div className="text-2xl">
-            <h2 className="text-blue-500 p-10">ABOUT US</h2>
-            <p className="text p-2.5">
-              We mostly Happy to bring you new Technological Market online , You
-              can Order Anythoing You want And Our Special Delivery Team Deliver
-              It Safely.{" "}
-            </p>
-            <div className="title"></div>
-            <div className="grid gap-10 px-4 lg:grid-cols-2 sm:grid-cols-1 xl:grid-cols-2">
-              <div className="contacts">
-                <h2 className="text-green-400 ">+250-7879-445-77</h2>
-                <h2 className="text">KG073 Ave</h2>
-                <h2 className="text-blue-400 ">kingsleon250@gmail.com</h2>
-                <h2 className="text ">https://ld.vercel.app</h2>
-              </div>
-              <div className="icon">
-                <PhoneIcon className="w-8 p-2" />
-                <ArrowLeftOnRectangleIcon className="w-8 p-2" />
-                <EnvelopeIcon className="w-8 p-2" />
-                <GlobeAltIcon className="w-8 p-2" />
-              </div>
+        <NewC/>
+        <section className="py-24 relative">
+        <div className="w-full max-w-7xl px-4 md:px-5 lg:px-5 mx-auto">
+            <div className="w-full justify-start items-center gap-8 grid lg:grid-cols-2 grid-cols-1">
+                <div className="w-full flex-col justify-start lg:items-start items-center gap-10 inline-flex">
+                    <div className="w-full flex-col justify-start lg:items-start items-center gap-4 flex">
+                        <h2 className="text-gray-900 text-4xl font-bold font-manrope leading-normal lg:text-start text-center">Building Stronger Communities through Collaboration and Empowerment</h2>
+                        <p className="text-gray-500 text-base font-normal leading-relaxed lg:text-start text-center">Through collaborationperse perspectives and strengths are leveraged to create inclusive environments where everyone has the opportunity to thrive. This approach not only fosters personal growth and achievement but also strengthens the fabric of society.</p>
+                    </div>
+                    <button className="sm:w-fit w-full px-3.5 py-2 bg-indigo-600 hover:bg-indigo-800 transition-all duration-700 ease-in-out rounded-lg shadow-[0px_1px_2px_0px_rgba(16,_24,_40,_0.05)] justify-center items-center flex">
+                        <span className="px-1.5 text-white text-sm font-medium leading-6">Get Started</span>
+                    </button>
+                </div>
+                <img className="lg:mx-0 mx-auto h-full rounded-3xl object-cover" src="https://pagedone.io/asset/uploads/1717751272.png" alt="about Us image" />
             </div>
-          </div>
-          <div className="text-2xl">
-            <BuildingStorefrontIcon />
-          </div>
         </div>
+    </section>
         {/*  */}
-        <div className="relative isolate bg-white px-6  ">
-          <div className="container flex flex-col items-center justify-center w-full p-6 mx-auto mt-4 text-center xl:px-0">
-            <div className="text-sm font-bold tracking-wider text-indigo-600 uppercase">
-              products
-            </div>
-            <h2 className="max-w-2xl mt-3 text-3xl font-bold leading-snug tracking-tight text-gray-300 lg:leading-tight lg:text-4xl dark:text-white">
-              Choose Now
-            </h2>
-          </div>
-          <div className="mx-auto grid max-w-lg grid-cols-1 items-center sm:gap-y-0 lg:max-w-4xl lg:grid-cols-2">
-            {tiers.map((tier, tierIdx) => (
-              <div
-                key={tier.id}
-                className={classNames(
-                  tier.featured
-                    ? "relative bg-gray-900 shadow-2xl"
-                    : "bg-green-100 sm:mx-8 lg:mx-0",
-                  tier.featured
-                    ? ""
-                    : tierIdx === 0
-                    ? "rounded-t-3xl sm:rounded-b-none lg:rounded-bl-3xl lg:rounded-tr-none"
-                    : "sm:rounded-t-none lg:rounded-bl-none lg:rounded-tr-3xl",
-                  "rounded-3xl ring-1 ring-gray-900/10 sm:p-12"
-                )}
-              >
-                <h3
-                  id={tier.id}
-                  className={classNames(
-                    tier.featured ? "text-indigo-400" : "text-indigo-600",
-                    "text-base/7 font-semibold"
-                  )}
-                >
-                  {tier.name}
-                </h3>
-
-                <p
-                  className={classNames(
-                    tier.featured ? "text-gray-300" : "text-gray-600",
-                    "mt-6 text-base/7"
-                  )}
-                >
-                  PRODUCTS
-                </p>
-                <h2 className="text-xl text-blue-400">BUY YOURS NOW</h2>
-                <Link to={tier.href}>
-                  <button
-                    aria-describedby={tier.id}
-                    className={classNames(
-                      tier.featured
-                        ? "bg-indigo-500 shadow-sm hover:bg-indigo-400 focus-visible:outline-indigo-500"
-                        : "text-indigo-600 ring-1 ring-inset ring-indigo-200 hover:ring-indigo-300 focus-visible:outline-indigo-600",
-                      "mt-8 block rounded-md px-3.5  text-center text-sm font-semibold focus-visible:outline-offset-2 sm:mt-10"
-                    )}
-                  >
-                    Get started today
-                  </button>
-                </Link>
-              </div>
-            ))}
-          </div>
-        </div>
         {/*  */}
         <div className="container flex flex-col items-center justify-center w-full p-6 mx-auto mt-4 text-center xl:px-0">
           <div className="text-sm font-bold tracking-wider text-indigo-600 uppercase">
