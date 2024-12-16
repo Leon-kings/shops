@@ -1,50 +1,6 @@
 import React from 'react'
 React
 import { FingerPrintIcon, ShoppingCartIcon, ServerIcon, CodeBracketIcon} from '@heroicons/react/24/outline'
-
-const products = [
-  {
-    id: 1,
-    imageSrc: 'https://resource.logitech.com/content/dam/gaming/en/products/g433/g433-gallery-black-1.png',
-    imageAlt: "G433 7.1 Wired Surround Gaming Headset",
-  },
-  {
-    id: 1,
-    imageSrc: 'https://resource.logitech.com/content/dam/gaming/en/products/g433/g433-gallery-black-1.png',
-    imageAlt: "G433 7.1 Wired Surround Gaming Headset",
-  },
-  {
-    id: 1,
-    imageSrc: 'https://resource.logitech.com/content/dam/gaming/en/products/g433/g433-gallery-black-1.png',
-    imageAlt: "G433 7.1 Wired Surround Gaming Headset",
-  },
-  {
-    id: 1,
-    imageSrc: 'https://resource.logitech.com/content/dam/gaming/en/products/g433/g433-gallery-black-1.png',
-    imageAlt: "G433 7.1 Wired Surround Gaming Headset",
-  },
-  {
-    id: 1,
-    imageSrc: 'https://resource.logitech.com/content/dam/gaming/en/products/g433/g433-gallery-black-1.png',
-    imageAlt: "G433 7.1 Wired Surround Gaming Headset",
-  },
-  {
-    id: 1,
-    imageSrc: 'https://resource.logitech.com/content/dam/gaming/en/products/g433/g433-gallery-black-1.png',
-    imageAlt: "G433 7.1 Wired Surround Gaming Headset",
-  },
-  {
-    id: 1,
-    imageSrc: 'https://resource.logitech.com/content/dam/gaming/en/products/g433/g433-gallery-black-1.png',
-    imageAlt: "G433 7.1 Wired Surround Gaming Headset",
-  },
-  {
-    id: 1,
-    imageSrc: 'https://resource.logitech.com/content/dam/gaming/en/products/g433/g433-gallery-black-1.png',
-    imageAlt: "G433 7.1 Wired Surround Gaming Headset",
-  },
-]
-
 const features = [
   {
     name: 'Bought Products',
@@ -104,21 +60,7 @@ export default function Services() {
         </div>
       </div>
       {/*  */}
-      <div className="mx-auto max-w-2xl lg:text-center">
-        <div className="title"></div>
-          <h2 className="text-base/7 font-semibold text-indigo-600">BRANDS WE OFFER</h2>
-        </div>
-      <div className="mt-6 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8">
-            {products.map((product) => (
-              <div key={product.id} className="group relative">
-                <img
-                  alt={product.imageAlt}
-                  src={product.imageSrc}
-                  className="aspect-square w-full rounded-md bg-gray-200 object-cover group-hover:opacity-75 lg:aspect-auto lg:h-50"
-                />
-              </div>
-            ))}
-          </div>
+
     </div>
     <div className="title"></div>
     </>

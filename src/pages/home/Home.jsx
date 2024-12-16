@@ -8,6 +8,8 @@ import About from "../about/About";
 import Login from "../form/login/Login";
 import Register from "../form/register/Register";
 import Services from "../services/Services";
+import Testimony from "../testimony/Testimony";
+import IT from "../information/IT";
 React
 const Home = () => {
   return (
@@ -84,6 +86,18 @@ const Home = () => {
         </div> 
          </div>
          {/*  */}
+         <hr className="p-3 text-2xl text-blue-600"/>
+         <div className="head">
+        
+        {/* space btn nav and body ends*/}
+      {/* Header Video components*/}
+    <div className="main">
+     <div className="main ">
+      <Testimony/>
+       </div>
+        </div> 
+         </div>
+         {/*  */}
          <hr className="text-blue-600"/>
          <div className="head">
         
@@ -92,6 +106,18 @@ const Home = () => {
     <div className="main">
      <div className="main ">
       <About/>
+       </div>
+        </div> 
+         </div>
+         <hr className="text-blue-600"/>
+         {/*  */}
+         <div className="head">
+        
+        {/* space btn nav and body ends*/}
+      {/* Header Video components*/}
+    <div className="main">
+     <div className="main ">
+      <IT/>
        </div>
         </div> 
          </div>
@@ -110,6 +136,8 @@ const Home = () => {
         </div> 
          </div>
          {/*  */}
+         <hr className="p-3 text-2xl text-blue-600"/>
+
          {/*  */}
          <hr className="p-3 text-2xl text-blue-600"/>
          <div className="head">

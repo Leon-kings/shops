@@ -37,7 +37,7 @@ const NewC = () => {
                 <div className="w-full lg:justify-start justify-center items-center sm:gap-10 gap-5 inline-flex">
                   <div className="flex-col justify-start items-start inline-flex">
                     <h3 className="text-gray-900 text-4xl font-bold font-manrope leading-normal">
-                      33+
+                      3+
                     </h3>
                     <h6 className="text-gray-500 text-base font-normal leading-relaxed">
                       Years of Experience
@@ -45,15 +45,15 @@ const NewC = () => {
                   </div>
                   <div className="flex-col justify-start items-start inline-flex">
                     <h4 className="text-gray-900 text-4xl font-bold font-manrope leading-normal">
-                      125+
-                    </h4>
+                      6+
+                    </h4> 
                     <h6 className="text-gray-500 text-base font-normal leading-relaxed">
                       Successful Projects
                     </h6>
                   </div>
                   <div className="flex-col justify-start items-start inline-flex">
                     <h4 className="text-gray-900 text-4xl font-bold font-manrope leading-normal">
-                      52+
+                      2+
                     </h4>
                     <h6 className="text-gray-500 text-base font-normal leading-relaxed">
                       Happy Clients
