@@ -88,23 +88,18 @@ export default function IT() {
                     <div className="flex bg-gray-800/40 ring-1 ring-white/5">
                       <div className="-mb-px flex text-sm/6 font-medium text-gray-400">
                         <div className="border-b border-r border-b-white/20 border-r-white/10 bg-white/5 px-4 py-2 text-white">
-                          NotificationSetting.html
+                          NotificationSetting.jsx
                         </div>
                         <div className="border-r border-gray-600/10 px-4 py-2">App.jsx</div>
                       </div>
                     </div>
                     <div className="pb-14 pt-6 text-2xl text-white">
 
-                 <p> &lt;!DOCTYPE html&gt;</p>
-                    <p>&lt;html&gt;</p>
-                    <p>&lt;head&gt;</p>  
-                    <p>&lt;title&gt;Page Title&lt;/title&gt;</p>
-                    <p>&lt;/head&gt;</p>
-                    <p>&lt;body&gt;</p>
-                    <p>&lt;h1&gt;My First Heading&lt;/h1&gt;</p>
-                    <p>&lt;p&gt;My first paragraph.&lt;/p&gt;</p>
-                    <p>&lt;/body&gt;</p>
-                    <p>&lt;/html&gt;</p>
+                    <img
+                      className="size-full object-cover object-top"
+                      src="https://cms.exercise.com/wp-content/uploads/2023/07/react-native-fitness-app-code-1024x855.png"
+                      alt=""
+                    />
                     </div>
                   </div>
                 </div>
