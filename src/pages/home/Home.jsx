@@ -16,7 +16,7 @@ const Home = () => {
     <>
       
             {/* Body space */}
-      <div className="container px-0 py-0 mx-0">
+      <div className="container px-0 w-full py-0 mx-0">
         {/* general container */}
          {/* Head Body starts*/}
           <div className="head">
