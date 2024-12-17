@@ -42,7 +42,6 @@ export default function About() {
     e.preventDefault();
     console.log(values);
 
-
     try {
       await axios.post(
         "https://backendproject-8m9r.onrender.com/users/auth",
@@ -66,7 +65,7 @@ export default function About() {
   const onChange = (e) => {
     setValues({ ...values, [e.target.name]: e.target.value });
   };
-  // 
+  //
   const data = [
     {
       content: (
@@ -131,9 +130,7 @@ export default function About() {
                 </div>
                 <button className="sm:w-fit w-full px-3.5 py-2 bg-indigo-600 hover:bg-indigo-800 transition-all duration-700 ease-in-out rounded-lg shadow-[0px_1px_2px_0px_rgba(16,_24,_40,_0.05)] justify-center items-center flex">
                   <button className="px-1.5 text-white text-sm font-medium leading-6">
-                    <Link to={'/Market'}>
-                    Get Started
-                    </Link>
+                    <Link to={"/Market"}>Get Started</Link>
                   </button>
                 </button>
               </div>
@@ -192,7 +189,7 @@ export default function About() {
                     Empowerment
                   </h2>
                   <p className="text-gray-500 text-base font-normal leading-relaxed lg:text-start text-center">
-                    Through collaborationperse perspectives and strengths are
+                    Through collaboration perse perspectives and strengths are
                     leveraged to create inclusive environments where everyone
                     has the opportunity to thrive. This approach not only
                     fosters personal growth and achievement but also strengthens
@@ -201,42 +198,46 @@ export default function About() {
                 </div>
                 <button className="sm:w-fit w-full px-3.5 py-2 bg-indigo-600 hover:bg-indigo-800 transition-all duration-700 ease-in-out rounded-lg shadow-[0px_1px_2px_0px_rgba(16,_24,_40,_0.05)] justify-center items-center flex">
                   <button className="px-1.5 text-white text-sm font-medium leading-6">
-                    <Link to={'/Market'}>
-                    Get Started
-                    </Link>
+                    <Link to={"/Market"}>Get Started</Link>
                   </button>
                 </button>
               </div>
-{/*  */}
-<div className="container flex items-center justify-center min-h-screen bg-gray-100">
-        <div className="w-full max-w-md p-8 bg-white rounded shadow-md">
-          <form onSubmit={handleSubmit} className="mt-4">
-            <h2 className="title">Message</h2>
-            <div className="container lg:">
-              {inputs.map((input) => (
-                <FormInput
-                  key={input.id}
-                  className="p-3"
-                  {...input}
-                  value={values[input.name]}
-                  onChange={onChange}
-                />
-              ))}
-              <div className="head">
-                <button className="w-30 bg-blue-200">Submit</button>
-                <p className="p-4">
-                  If you don`t have an account
-                  <Link to="/Register">
-                    <b>
-                      <button className="p-3 bg-blue-500"> Register</button>
-                    </b>
-                  </Link>
-                </p>
+              {/*  */}
+              <div className="container flex items-center justify-center min-h-screen bg-gray-100">
+                <div className="w-full max-w-md p-8 bg-white rounded shadow-md">
+                  <form onSubmit={handleSubmit} className="mt-4">
+                    <h2 className="title">Message</h2>
+                    <div className="container lg:">
+                      {inputs.map((input) => (
+                        <FormInput
+                          key={input.id}
+                          className="p-3"
+                          {...input}
+                          value={values[input.name]}
+                          onChange={onChange}
+                        />
+                      ))}
+                      <div className="head">
+                        <button className="w-30 bg-blue-200">Submit</button>
+                        <p className="p-4">
+                          If you don`t have an account
+                          <Link to="/Register">
+                            <b>
+                              <button className="p-3 bg-blue-500">
+                                {" "}
+                                Register
+                              </button>
+                            </b>
+                          </Link>
+                        </p>
+                      </div>
+                    </div>
+                  </form>
+                </div>
               </div>
-            </div>
-          </form>
-        </div>
-      </div>
+              {/*  */}
+
+              {/*  */}
             </div>
           </div>
         </section>

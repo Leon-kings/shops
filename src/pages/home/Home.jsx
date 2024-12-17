@@ -137,9 +137,6 @@ const Home = () => {
          </div>
          {/*  */}
          <hr className="p-3 text-2xl text-blue-600"/>
-
-         {/*  */}
-         <hr className="p-3 text-2xl text-blue-600"/>
          <div className="head">
            {/* space btn nav and body */}
            <div className="title"></div>
