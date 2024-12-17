@@ -15,19 +15,17 @@ const Testimony = () => {
           <figure className="mt-10">
             <blockquote className="text-center text-xl/8 font-semibold text-gray-900 sm:text-2xl/9">
               <p>
-                “Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo
-                expedita voluptas culpa sapiente alias molestiae. Numquam
-                corrupti in laborum sed rerum et corporis.”
+                “We thank LD Solutions for the wonderful job in helping us develop our program. Everyone was professional, excellent and hard working”
               </p>
             </blockquote>
             <figcaption className="mt-10">
               <img
                 alt=""
-                src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBXP2aVSrSo0SREvW2j66JA2LfVK6pYkIf5g&s"
                 className="mx-auto size-16"
               />
               <div className="mt-4 flex items-center justify-center space-x-3 text-base">
-                <div className="font-semibold text-gray-900">Judith Black</div>
+                <div className="font-semibold text-gray-900">Leon</div>
                 <svg
                   width={3}
                   height={3}
@@ -37,7 +35,7 @@ const Testimony = () => {
                 >
                   <circle r={1} cx={1} cy={1} />
                 </svg>
-                <div className="text-gray-600">CEO of Workcation</div>
+                <div className="text-gray-600">CEO of LD</div>
               </div>
             </figcaption>
           </figure>

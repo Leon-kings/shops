@@ -70,8 +70,7 @@ import axios from "axios";
           <div className="max-w-xl lg:max-w-lg">
             <h2 className="text-4xl font-semibold tracking-tight text-white">Subscribe to our newsletter</h2>
             <p className="mt-4 text-lg text-gray-300">
-              Nostrud amet eu ullamco nisi aute in ad minim nostrud adipisicing velit quis. Duis tempor incididunt
-              dolore.
+            To better illustrate this, let’s imagine a situation. Suppose you’re a customer who had just found an online store with cool tees. You take a look and decide to purchase one for yourself..
             </p>
             <div className="mt-6 flex max-w-md gap-x-4">
             <form onSubmit={handleSubmit} className="mt-4 bg-white p-4">
@@ -99,7 +98,7 @@ import axios from "axios";
               </div>
               <dt className="mt-4 text-base font-semibold text-white">Weekly articles</dt>
               <dd className="mt-2 text-base/7 text-gray-400">
-                Non laboris consequat cupidatat laborum magna. Eiusmod non irure cupidatat duis commodo amet.
+              This whole ordeal, however imagined, could have been easily avoided had the website been designed well enough — with a proper informative.
               </dd>
             </div>
             <div className="flex flex-col items-start">
@@ -108,7 +107,7 @@ import axios from "axios";
               </div>
               <dt className="mt-4 text-base font-semibold text-white">No spam</dt>
               <dd className="mt-2 text-base/7 text-gray-400">
-                Officia excepteur ullamco ut sint duis proident non adipisicing. Voluptate incididunt anim.
+              We’re going to talk a lot about useful elements today, and for a very good reason — there are just so many practical things you can put in.
               </dd>
             </div>
           </dl>
