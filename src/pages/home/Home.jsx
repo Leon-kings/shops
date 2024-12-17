@@ -10,148 +10,136 @@ import Register from "../form/register/Register";
 import Services from "../services/Services";
 import Testimony from "../testimony/Testimony";
 import IT from "../information/IT";
-React
+React;
 const Home = () => {
   return (
     <>
-      
-            {/* Body space */}
+      {/* Body space */}
       <div className="container px-0 w-full py-0 mx-0">
         {/* general container */}
-         {/* Head Body starts*/}
-          <div className="head">
-           {/* space btn nav and body */}
-           <div className="title"></div>
+        {/* Head Body starts*/}
+        <div className="head">
+          {/* space btn nav and body */}
+          <div className="title"></div>
           {/* space btn nav and body ends*/}
-        {/* Header Video components*/}
-      <div className="header">
-       <div className="header">
-        <Header />
-         </div>
-          </div> 
-           </div>
-            <hr className="p-3 text-2xl text-blue-600"/>
+          {/* Header Video components*/}
+          <div className="header">
+            <div className="header">
+              <Header />
+            </div>
+          </div>
+        </div>
+        <hr className="p-3 text-2xl text-blue-600" />
         {/* end of nav part */}
         {/*  */}
         {/*  */}
-     
 
         {/* head components start*/}
         <div className="head">
-        
           {/* space btn nav and body ends*/}
-        {/* Header Video components*/}
-      <div className="main">
-       <div className="main">
-        <Head />
-         </div>
-          </div> 
-           </div>
+          {/* Header Video components*/}
+          <div className="main">
+            <div className="main">
+              <Head />
+            </div>
+          </div>
+        </div>
         {/*  */}
-        <hr className="p-3 text-2xl text-blue-600"/>
+        <hr className="p-3 text-2xl text-blue-600" />
         <div className="head">
-           {/* space btn nav and body */}
-       
+          {/* space btn nav and body */}
+
           {/* space btn nav and body ends*/}
-        {/* Header Video components*/}
-      <div className="header">
-       <div className="header">
-       <Product/>
-         </div>
-          </div> 
-           </div>
-           <hr className="p-3 text-2xl text-blue-600"/>
+          {/* Header Video components*/}
+          <div className="header">
+            <div className="header">
+              <Product />
+            </div>
+          </div>
+        </div>
+        <hr className="p-3 text-2xl text-blue-600" />
         {/* end of head */}
         {/*  */}
         {/*  */}
         <div className="head">
-        
-        {/* space btn nav and body ends*/}
-      {/* Header Video components*/}
-    <div className="main">
-     <div className="main ">
-      <Package/>
-       </div>
-        </div> 
-         </div>
-         <hr className="p-3 text-2xl text-blue-600"/>
-         <div className="head">
-        
-        {/* space btn nav and body ends*/}
-      {/* Header Video components*/}
-    <div className="main">
-     <div className="main ">
-      <Fquestion/>
-       </div>
-        </div> 
-         </div>
-         {/*  */}
-         <hr className="p-3 text-2xl text-blue-600"/>
-         <div className="head">
-        
-        {/* space btn nav and body ends*/}
-      {/* Header Video components*/}
-    <div className="main">
-     <div className="main ">
-      <Testimony/>
-       </div>
-        </div> 
-         </div>
-         {/*  */}
-         <hr className="text-blue-600"/>
-         <div className="head">
-        
-        {/* space btn nav and body ends*/}
-      {/* Header Video components*/}
-    <div className="main">
-     <div className="main ">
-      <About/>
-       </div>
-        </div> 
-         </div>
-         <hr className="text-blue-600"/>
-         {/*  */}
-         <div className="head">
-        
-        {/* space btn nav and body ends*/}
-      {/* Header Video components*/}
-    <div className="main">
-     <div className="main ">
-      <IT/>
-       </div>
-        </div> 
-         </div>
-         <hr className="text-blue-600"/>
-         <div className="head">
-        
-        {/* space btn nav and body ends*/}
-      {/* Header Video components*/}
-    <div className="main grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-2 xl:gap-x-8">
-     <div className=" grid-cols-1 main ">
-      <Login/>
-       </div>
-       <div className=" main ">
-      <Register/>
-       </div>
-        </div> 
-         </div>
-         {/*  */}
-         <hr className="p-3 text-2xl text-blue-600"/>
-         <div className="head">
-           {/* space btn nav and body */}
-           <div className="title"></div>
           {/* space btn nav and body ends*/}
-        {/* Header Video components*/}
-      <div className="header">
-       <div className="header">
-        <Services />
-         </div>
-          </div> 
-           </div>
-            <hr className="p-3 text-2xl text-blue-600"/>
-
-
-
+          {/* Header Video components*/}
+          <div className="main">
+            <div className="main ">
+              <Package />
+            </div>
+          </div>
+        </div>
+        <hr className="p-3 text-2xl text-blue-600" />
+        <div className="head">
+          {/* space btn nav and body ends*/}
+          {/* Header Video components*/}
+          <div className="main">
+            <div className="main ">
+              <Fquestion />
+            </div>
+          </div>
+        </div>
+        {/*  */}
+        <hr className="p-3 text-2xl text-blue-600" />
+        <div className="head">
+          {/* space btn nav and body ends*/}
+          {/* Header Video components*/}
+          <div className="main">
+            <div className="main ">
+              <Testimony />
+            </div>
+          </div>
+        </div>
+        {/*  */}
+        <hr className="text-blue-600" />
+        <div className="head">
+          {/* space btn nav and body ends*/}
+          {/* Header Video components*/}
+          <div className="main">
+            <div className="main ">
+              <About />
+            </div>
+          </div>
+        </div>
+        <hr className="text-blue-600" />
+        {/*  */}
+        <div className="head">
+          {/* space btn nav and body ends*/}
+          {/* Header Video components*/}
+          <div className="main">
+            <div className="main ">
+              <IT />
+            </div>
+          </div>
+        </div>
+        <hr className="text-blue-600" />
+        <div className="head">
+          {/* space btn nav and body ends*/}
+          {/* Header Video components*/}
+          <div className="main grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-2 xl:gap-x-8">
+            <div className=" grid-cols-1 main ">
+              <Login />
+            </div>
+            <div className=" main ">
+              <Register />
+            </div>
+          </div>
+        </div>
+        {/*  */}
+        <hr className="p-3 text-2xl text-blue-600" />
+        <div className="head">
+          {/* space btn nav and body */}
+          <div className="title"></div>
+          {/* space btn nav and body ends*/}
+          {/* Header Video components*/}
+          <div className="header">
+            <div className="header">
+              <Services />
+            </div>
+          </div>
+        </div>
+        <hr className="p-3 text-2xl text-blue-600" />
       </div>
     </>
   );
