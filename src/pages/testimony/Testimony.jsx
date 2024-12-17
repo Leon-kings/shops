@@ -1,48 +1,119 @@
-import React from 'react'
+import React from "react";
+// import { Link } from "react-router-dom";
 React;
-const Testimony = () => {
-  return (
-    <div>
-        <section className="relative isolate overflow-hidden bg-white px-6 py-24 sm:py-32 lg:px-8">
-        <div className="absolute inset-0 -z-10 bg-[radial-gradient(45rem_50rem_at_top,theme(colors.indigo.100),white)] opacity-20" />
-        <div className="absolute inset-y-0 right-1/2 -z-10 mr-16 w-[200%] origin-bottom-left skew-x-[-30deg] bg-white shadow-xl shadow-indigo-600/10 ring-1 ring-indigo-50 sm:mr-28 lg:mr-0 xl:mr-16 xl:origin-center" />
-        <div className="mx-auto max-w-2xl lg:max-w-4xl">
-          <img
-            alt=""
-            src="https://tailwindui.com/plus/img/logos/workcation-logo-indigo-600.svg"
-            className="mx-auto h-12"
-          />
-          <figure className="mt-10">
-            <blockquote className="text-center text-xl/8 font-semibold text-gray-900 sm:text-2xl/9">
-              <p>
-                “We thank LD Solutions for the wonderful job in helping us develop our program. Everyone was professional, excellent and hard working”
-              </p>
-            </blockquote>
-            <figcaption className="mt-10">
-              <img
-                alt=""
-                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBXP2aVSrSo0SREvW2j66JA2LfVK6pYkIf5g&s"
-                className="mx-auto size-16"
-              />
-              <div className="mt-4 flex items-center justify-center space-x-3 text-base">
-                <div className="font-semibold text-gray-900">Leon</div>
-                <svg
-                  width={3}
-                  height={3}
-                  viewBox="0 0 2 2"
-                  aria-hidden="true"
-                  className="fill-gray-900"
-                >
-                  <circle r={1} cx={1} cy={1} />
-                </svg>
-                <div className="text-gray-600">CEO of LD</div>
-              </div>
-            </figcaption>
-          </figure>
-        </div>
-      </section>
-    </div>
-  )
-}
+import { Autoplay, A11y } from 'swiper/modules';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+import 'swiper/css/autoplay';
+import 'swiper/css/controller';
 
-export default Testimony
+export default function Testimony() {
+  const data = [
+    {
+      content: (
+        <>
+          Share a testimonial
+          that hits some of your benefits from one of your popular
+          customer.
+        </>
+      ),
+      author: "Leon",
+      title: "CEO Of LD",
+      avatar:
+        "https://images.unsplash.com/photo-1511485977113-f34c92461ad9?crop=faces&cs=tinysrgb&fit=crop&fm=jpg&ixid=MnwxfDB8MXxhbGx8fHx8fHx8fHwxNjIwMTQ5ODEx&ixlib=rb-1.2.1&q=80&w=100&h=100",
+    },
+    {
+      content: (
+        <>
+          Make sure you only pick the right sentence to
+          keep it short and simple.
+        </>
+      ),
+      author: "Dylan Ambrose",
+      title: "Lead marketer at Netflix ",
+      avatar:
+        "https://images.unsplash.com/photo-1463453091185-61582044d556?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&crop=faces&fit=crop&w=100&h=100&q=80",
+    },
+    {
+      content: (
+        <>
+          This is an awesome landing page template Ive
+          seen. I would use this for anything.
+        </>
+      ),
+      author: "Gabrielle Winn",
+      title: "Co-founder of Acme Inc",
+      avatar:
+        "https://images.unsplash.com/photo-1624224971170-2f84fed5eb5e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=100&h=100&crop=faces&q=80",
+    },
+    {
+      content: (
+        <>
+          This is an awesome landing page template Ive
+          seen. I would use this for anything.
+        </>
+      ),
+      author: " WinnGabrielle",
+      title: " Co-founder ",
+      avatar:
+        "https://images.unsplash.com/photo-1624224971170-2f84fed5eb5e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=100&h=100&crop=faces&q=80",
+    },
+  ];
+  return (
+    <div className="bg-white">
+      <div className="mx-auto w-full px-4 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8">
+        <h2 className="text-2xl font-bold tracking-tight text-gray-900">
+          Testimony
+        </h2>
+        <div className="mt-6 grid grid-cols-1 gap-x-6 gap-y-10 xl:gap-x-8">
+        <section className='slider'>
+          <Swiper
+            modules={[Autoplay, A11y]}
+            spaceBetween={30} // Adjust the spacing as needed
+            slidesPerView={1} // Show only one slide by default
+            autoplay
+          >
+            <div className="container p-6 mx-auto mb-10 xl:px-0">
+              <div className="grid gap-10 ">
+                {data.map((item, index) => (
+                  <SwiperSlide key={index}>
+                    <div
+                      className={
+                        index === 0 ? "lg:col-span-2 xl:col-auto" : ""
+                      }
+                      key={index}>
+                      <div className="flex flex-col justify-between w-full h-full px-6 py-6 bg-gray-100 dark:bg-gray-800 md:px-14 rounded-2xl md:py-14 dark:bg-trueGray-800">
+                        <p className="text-2xl leading-normal">
+                          {item.content}
+                        </p>
+                        <div className="flex items-center mt-8 space-x-3">
+                          <div className="flex-shrink-0 overflow-hidden w-28 h-24">
+                            <img
+                              alt="Testimony"
+                              src={item.avatar}
+                              loading="lazy"
+                             
+                            />
+                          </div>
+                          <div>
+                            <div className="text-lg font-medium">
+                              {item.author}
+                            </div>
+                            <div className="text-gray-600 dark:text-gray-400">
+                              {item.title}
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </SwiperSlide>
+                ))}
+              </div>
+            </div>
+          </Swiper>
+        </section>
+        </div>
+      </div>
+    </div>
+  );
+}
