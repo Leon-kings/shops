@@ -7,8 +7,7 @@ import axios from "axios";
 
   export default function Footer() {
     const [values, setValues] = useState({
-      email: "",
-      password: "",
+      email: ""
     });
   
     const inputs = [
