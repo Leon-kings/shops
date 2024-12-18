@@ -12,6 +12,7 @@ import Testimony from "../testimony/Testimony";
 import IT from "../information/IT";
 import WhyUs from "../../universal/whyus/WhyUs";
 import Portfolio from "../../universal/potifolio/Portfolio";
+import Card from "../category/Products";
 React;
 const Home = () => {
   return (
@@ -162,6 +163,17 @@ const Home = () => {
           </div>
         </div>
         <hr className="p-3 text-2xl text-blue-600" />
+        <div className="head">
+          {/* space btn nav and body */}
+          <div className="title"></div>
+          {/* space btn nav and body ends*/}
+          {/* Header Video components*/}
+          <div className="header">
+            <div className="header">
+              <Card />
+            </div>
+          </div>
+        </div>
       </div>
     </>
   );

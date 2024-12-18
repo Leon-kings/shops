@@ -77,6 +77,7 @@ const Login = () => {
       <div className="title"></div>
       <div className="container flex items-center justify-center min-h-screen bg-gray-100">
         <div className="w-full max-w-md p-8 bg-white rounded shadow-md">
+
           <form onSubmit={handleSubmit} className="mt-4">
             <h2 className="title">Log in</h2>
             <div className="container">
