@@ -64,15 +64,15 @@ import axios from "axios";
     return (
      <>
       <div className="relative isolate overflow-hidden bg-gray-900 py-16 sm:py-24 lg:py-32">
-      <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-2">
-          <div className="max-w-xl lg:max-w-lg">
+      <div className="mx-auto w-full px-6 lg:px-8">
+        <div className="mx-auto grid w-full grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-2">
+          <div className="max-w-xl xl:w-full lg:max-w-lg">
             <h2 className="text-4xl font-semibold tracking-tight text-white">Subscribe to our newsletter</h2>
             <p className="mt-4 text-lg text-gray-300">
             To better illustrate this, let’s imagine a situation. Suppose you’re a customer who had just found an online store with cool tees. You take a look and decide to purchase one for yourself..
             </p>
             <div className="mt-6 flex max-w-md gap-x-4">
-            <form onSubmit={handleSubmit} className="mt-4 bg-white p-4">
+            <form onSubmit={handleSubmit} className="mt-4 rounded-2xl bg-white p-4">
             <div className="container">
               {inputs.map((input) => (
                 <FormInput
