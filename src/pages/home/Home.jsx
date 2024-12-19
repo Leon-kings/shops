@@ -11,7 +11,7 @@ import Services from "../services/Services";
 import Testimony from "../testimony/Testimony";
 import IT from "../information/IT";
 import WhyUs from "../../universal/whyus/WhyUs";
-import Portfolio from "../../universal/potifolio/Portfolio";
+
 import Card from "../category/Products";
 React;
 const Home = () => {
@@ -115,16 +115,7 @@ const Home = () => {
             </div>
           </div>
         </div>
-        <hr className="text-blue-600" />
-        <div className="head">
-          {/* space btn nav and body ends*/}
-          {/* Header Video components*/}
-          <div className="main">
-            <div className="main ">
-              <Portfolio />
-            </div>
-          </div>
-        </div>
+
         <hr className="text-blue-600" />
         {/*  */}
         <div className="head">

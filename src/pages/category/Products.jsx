@@ -7,23 +7,21 @@ const Card = () => {
         <div className="container">
           <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
             <SingleCard
-              image="https://i.ibb.co/r2zns1m/image-01.jpg"
-              CardTitle="50+ Best creative website themes & templates"
-              titleHref="/#"
-              btnHref="/#"
-              CardDescription="Lorem ipsum dolor sit amet pretium consectetur adipiscing elit. Lorem consectetur adipiscing elit."
+              image="https://www.cnet.com/a/img/resize/749c306c97f14076499981fc018dace33d0e367d/hub/2018/02/13/517fda12-de2a-4c3f-bee5-05daaf870537/01laptops-with-longest-battery-life-2018-feb.jpg?auto=webp&width=1200"
+              CardTitle="Best PC Store"
+              CardDescription="We are glad to serve you Better Products with Best Quality From Orginal Industry."
               Button="View Details"
             />
             <SingleCard
-              image="https://i.ibb.co/0nbbWM9/image-02-1.jpg"
-              CardTitle="Creative Card Component designs graphic elements"
-              CardDescription="Lorem ipsum dolor sit amet pretium consectetur adipiscing elit. Lorem consectetur adipiscing elit."
+              image="https://media.istockphoto.com/id/1306977961/vector/js-coding-website-background.jpg?s=612x612&w=0&k=20&c=FK-XxRWdnbIqlAkhq5lpAke8s1XMQsApMUdyrAe7Lks="
+              CardTitle="Best Guidance / Debugging"
+              CardDescription="We are also hapy to help and debug ReactJs,NextJs and NodeJs Application."
               Button="View Details"
             />
             <SingleCard
-              image="https://i.ibb.co/dL9fH7N/image-03-1.jpg"
-              CardTitle="The ultimate UX and UI guide to card design"
-              CardDescription="Lorem ipsum dolor sit amet pretium consectetur adipiscing elit. Lorem consectetur adipiscing elit."
+              image="https://products.shureweb.eu/shure_product_db/product_main_images/files/c25/16a/40-/original/ce632827adec4e1842caa762f10e643d.webp"
+              CardTitle="HeadPhones"
+              CardDescription="We are also Glad to Give Headphone for better fucusing with straight Musics"
               Button="View Details"
             />
           </div>
