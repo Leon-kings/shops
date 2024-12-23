@@ -143,7 +143,7 @@ const Features = () => {
         </section>
         {/*  */}
         <div className="bg-gray-50 py-24 sm:py-32">
-        <div className="mx-auto max-w-2xl px-6 lg:max-w-7xl lg:px-8">
+        <div className="mx-auto w-full px-6 lg:w-full xl:w-full lg:px-8">
           <h2 className="text-center text-base/7 font-semibold text-indigo-600">Debug faster</h2>
           <p className="mx-auto mt-2 max-w-lg text-balance text-center text-4xl font-semibold tracking-tight text-gray-950 sm:text-5xl">
             Everything you need to deploy your app
@@ -157,7 +157,7 @@ const Features = () => {
                     Mobile friendly
                   </p>
                   <p className="mt-2 max-w-lg text-sm/6 text-gray-600 max-lg:text-center">
-                    Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo.
+                    Every Website or Software have to be user friendly and more responsive to make user friendly.
                   </p>
                 </div>
                 <div className="relative min-h-[30rem] w-full grow [container-type:inline-size] max-lg:mx-auto max-lg:max-w-sm">
@@ -178,7 +178,7 @@ const Features = () => {
                 <div className="px-8 pt-8 sm:px-10 sm:pt-10">
                   <p className="mt-2 text-lg font-medium tracking-tight text-gray-950 max-lg:text-center">Performance</p>
                   <p className="mt-2 max-w-lg text-sm/6 text-gray-600 max-lg:text-center">
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit maiores impedit.
+                    You need to build code which perform perfectly in the line you want and specified.
                   </p>
                 </div>
                 <div className="flex flex-1 items-center justify-center px-8 max-lg:pb-12 max-lg:pt-10 sm:px-10 lg:pb-2">
@@ -197,7 +197,7 @@ const Features = () => {
                 <div className="px-8 pt-8 sm:px-10 sm:pt-10">
                   <p className="mt-2 text-lg font-medium tracking-tight text-gray-950 max-lg:text-center">Security</p>
                   <p className="mt-2 max-w-lg text-sm/6 text-gray-600 max-lg:text-center">
-                    Morbi viverra dui mi arcu sed. Tellus semper adipiscing suspendisse semper morbi.
+                    Data from the form user input have to be stored in database which is more Secure and other cridentials.
                   </p>
                 </div>
                 <div className="flex flex-1 items-center [container-type:inline-size] max-lg:py-6 lg:pb-2">
@@ -218,7 +218,7 @@ const Features = () => {
                     Powerful APIs
                   </p>
                   <p className="mt-2 max-w-lg text-sm/6 text-gray-600 max-lg:text-center">
-                    Sit quis amet rutrum tellus ullamcorper ultricies libero dolor eget sem sodales gravida.
+                    To build more functionality it could be easy and less effort when you fetch API that contain that data.
                   </p>
                 </div>
                 <div className="relative min-h-[30rem] w-full grow">
@@ -226,7 +226,7 @@ const Features = () => {
                     <div className="flex bg-gray-800/40 ring-1 ring-white/5">
                       <div className="-mb-px flex text-sm/6 font-medium text-gray-400">
                         <div className="border-b border-r border-b-white/20 border-r-white/10 bg-white/5 px-4 py-2 text-white">
-                          NotificationSetting.jsx
+                          Navigation.jsx
                         </div>
                         <div className="border-r border-gray-600/10 px-4 py-2">App.jsx</div>
                       </div>

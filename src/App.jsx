@@ -37,15 +37,16 @@ export default function App() {
             <Route path="/Market" element={<Market />} />
             <Route path="/Register" element={<Register />} />
             <Route path="/Features" element={<Features />} />
+            <Route path="/Dashboard" element={<Dashboard />} />
             {/* Private Route */}
-            <Route
+            {/* <Route
               path="/Dashboard"
               element={
                 <PrivateRoute isAuthenticated={isAuthenticated}>
                   <Dashboard />
                 </PrivateRoute>
               }
-            />
+            /> */}
             <Route
               path="/Udashboard"
               element={

@@ -3,7 +3,7 @@ React;
 const Card = () => {
   return (
     <>
-      <section className="bg-gray-2 pb-10 pt-20 dark:bg-dark bg-amber-50 lg:pb-20 lg:pt-[120px]">
+      <section className="bg-gray-2 pb-10 pt-20 dark:bg-dark lg:pb-20 lg:pt-[120px]">
         <div className="container">
           <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
             <SingleCard
@@ -44,7 +44,7 @@ const SingleCard = ({
   return (
     <>
       {/*  */}
-      <div className="mb-10 overflow-hidden rounded-lg bg-white shadow-1 duration-300 hover:shadow-3 dark:bg-dark-2 dark:shadow-card dark:hover:shadow-3">
+      <div className="mb-10 overflow-hidden rounded-lg bg-amber-50 shadow-1 duration-300 hover:shadow-3 dark:bg-dark-2 dark:shadow-card dark:hover:shadow-3">
         <img src={image} alt="" className="w-full" />
         <div className="p-8 text-center sm:p-9 md:p-7 xl:p-9">
           <h3>

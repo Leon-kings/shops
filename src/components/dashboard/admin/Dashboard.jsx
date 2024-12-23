@@ -1,9 +1,15 @@
 import React from 'react'
-
+import IT from '../../../pages/information/IT';
+import Sidebar from './components/sidebar/Side';
+React;
 const Dashboard = () => {
   return (
     <div>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore sed dolore voluptatum mollitia dolores reprehenderit fugiat, voluptates provident consequuntur assumenda cum ducimus explicabo quod illum inventore unde? Nisi, aliquid voluptates?
+     <div className="title"></div>
+     <div className="nec">
+      <Sidebar/>
+     </div>
+     <IT/>
     </div>
   )
 }
