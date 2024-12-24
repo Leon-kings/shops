@@ -3,10 +3,10 @@ import ProductList from "./components/ProductList";
 import Cart from "./components/Cart";
 import { CartProvider } from "./CartContext";
 import OrderModal from "./components/OrderModal";
-import { useState } from "react"
+import React, { useState } from "react"
 // import { useCart } from "./CartContext";
-
-function App() {
+React;
+function AppComputer() {
 
   const [isModalOpen, setIsModalOpen] = useState(false);
   // const { resetCart } = useCart()
@@ -46,4 +46,4 @@ function App() {
   );
 }
 
-export default App;
+export default AppComputer;

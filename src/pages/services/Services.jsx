@@ -17,7 +17,7 @@ const features = [
   {
     name: "Code Support",
     description:
-      "We also provide guidance and Debugging for Reactj , Nodejs , Nextjs codes to debug the buggers.",
+      "We also provide guidance and Debugging for ReactJs , NodeJs , NextJs codes to debug the buggers.",
     icon: CodeBracketIcon,
   },
   {
@@ -38,12 +38,14 @@ export default function Services() {
   return (
     <>
       <div className="title"></div>
-      <div className="bg-white sm:py-32">
+      <br />
+      <div className="bg-white sm:py-32 w-full xl:w-full">
+      <h2 className="text-2xl font-bold tracking-tight text-blue-600">
+        SERVICES
+        </h2>
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto w-full lg:text-center">
-            <h2 className="text-base/7 font-semibold text-indigo-600">
-              SERVICES
-            </h2>
+          
             <p className="mt-6 text-lg/8 text-gray-600">
               LD is Mostly Happy To Serve You Better Electronics Appliances With
               Best Quality From Dubai ,<br /> and Also Allow And Provide Support

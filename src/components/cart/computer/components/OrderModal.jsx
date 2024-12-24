@@ -1,7 +1,8 @@
 // Modal.jsx
 import { useCart } from "../CartContext";
-import OrderConfirmed from "../../../assets/images/assets/icon-order-confirmed.svg";
-
+import OrderConfirmed from "../../../../assets/images/360_F_288921356_krHC3KV1lJ2jAGnaep6NXZX6Fkv4FF9q.jpg";
+import React from "react";
+React;
 const OrderModal = ({ isOpen, onClose, onStartNewOrder }) => {
   const { cartItems } = useCart();
 

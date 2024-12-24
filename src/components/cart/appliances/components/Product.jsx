@@ -1,8 +1,8 @@
-import { useState } from "react";
-import Cart from "../../../assets/images/icon-add-to-cart.svg";
+import React, { useState } from "react";
+import Cart from "../../../../assets/images/360_F_288921356_krHC3KV1lJ2jAGnaep6NXZX6Fkv4FF9q.jpg";
 import { useCart } from "../CartContext";
 import { useEffect } from "react";
-
+React;
 const Product = ({ product }) => {
   const [count, setCount] = useState(0);
   const { cartItems, updateCart } = useCart();
@@ -47,9 +47,9 @@ const Product = ({ product }) => {
                 : "flex bg-white -mt-5 border-black border-2 px-5 py-2 rounded-[1.5rem] transition-all duration-300 group-hover:hidden"
             }
           >
-            <span>
-              <img src={Cart} alt="Add to cart" />
-            </span>
+            <label>
+              <img src={Cart} alt="Add to cart" className="w-4" />
+            </label>
             Add to cart
           </button>
           <div
@@ -65,7 +65,7 @@ const Product = ({ product }) => {
             >
               -
             </button>
-            <span className="text-white font-bold">{count}</span>
+            <p className="text-black font-bold">{count}</p>
             <button
               className="bg-red-500 text-white px-3 py-1 rounded"
               onClick={increment}
@@ -77,9 +77,9 @@ const Product = ({ product }) => {
       </div>
       <div className="pl-4">
         <p className="text-sm font-primary text-blue-400">{product.tag}</p>
-        <h1 className="text-lg text-black font-primary font-medium">
+        <h3 className="text-lg text-black font-primary font-medium">
           {product.name}
-        </h1>
+        </h3>
         <p className="text-red font-primary">{product.price}</p>
       </div>
     </div>

@@ -3,6 +3,7 @@ import NewC from "../../universal/about/NewC";
 import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
 import FormInput from "../form/action/FormInput";
+
 React;
 export default function About() {
   // form data
@@ -71,7 +72,11 @@ export default function About() {
   return (
     <>
       <div className="title"></div>
+      <br />
       <div className="bg-white">
+      <h2 className="text-2xl py-3 font-bold tracking-tight text-blue-600">
+          ABOUT
+        </h2>
         {/*  */}
         <NewC />
         <section className="py-24 relative">
@@ -133,21 +138,21 @@ export default function About() {
               </div>
               {/*  */}
               <div className="container flex items-center justify-center min-h-screen bg-gray-100">
-                <div className="w-full max-w-md p-8 bg-white rounded shadow-md">
+                <div className="w-full max-w-md p-3 lg:p-8 xl:p-8 bg-white rounded shadow-md">
                   <form onSubmit={handleSubmit} className="mt-4">
                     <h2 className="title">Message</h2>
-                    <div className="container lg:">
+                    <div className="p-0">
                       {inputs.map((input) => (
                         <FormInput
                           key={input.id}
-                          className="p-3"
+                          className="p-3 w-full"
                           {...input}
                           value={values[input.name]}
                           onChange={onChange}
                         />
                       ))}
                       <div className="head">
-                        <button className="w-30 bg-blue-200">Submit</button>
+                        <button className="w-30 bg-blue-200">Send </button>
                         <p className="p-4">
                           If you don`t have an account
                           <Link to="/Register">

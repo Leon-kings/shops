@@ -1,11 +1,10 @@
 // CartContext.js
-import { createContext, useState, useContext } from "react";
-
+import React, { createContext, useState, useContext } from "react";
+React;
 const CartContext = createContext();
 
 export const CartProvider = ({ children }) => {
   const [cartItems, setCartItems] = useState([]);
-    // const [resetFlag, setResetFlag] = useState(false);
 
   const updateCart = (product, quantity) => {
     setCartItems((prevItems) => {
@@ -26,12 +25,6 @@ export const CartProvider = ({ children }) => {
       return prevItems;
     });
   };
-
-//  const resetCart = () => {
-//    setCartItems([]);
-//    setResetFlag((prev) => !prev); // Toggle the reset flag
-//  };
-
 
   return (
     <CartContext.Provider value={{ cartItems, updateCart}}>

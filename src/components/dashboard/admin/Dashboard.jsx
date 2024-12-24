@@ -7,6 +7,7 @@ const Dashboard = () => {
     <div>
      <div className="title"></div>
      <div className="nec">
+      
       <Sidebar/>
      </div>
      <IT/>

@@ -16,6 +16,7 @@ import Services from "./pages/services/Services";
 import Market from "./pages/market/Market";
 import Features from "./pages/new/Features";
 import Register from "./pages/form/register/Register";
+import CheckOut from "./components/payment/CheckOut";
 
 export default function App() {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
@@ -38,6 +39,8 @@ export default function App() {
             <Route path="/Register" element={<Register />} />
             <Route path="/Features" element={<Features />} />
             <Route path="/Dashboard" element={<Dashboard />} />
+            {/* payment */}
+            <Route path="/CheckOut" element={<CheckOut />} />
             {/* Private Route */}
             {/* <Route
               path="/Dashboard"

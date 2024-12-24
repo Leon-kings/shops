@@ -11,7 +11,7 @@ import Services from "../services/Services";
 import Testimony from "../testimony/Testimony";
 import IT from "../information/IT";
 import WhyUs from "../../universal/whyus/WhyUs";
-import { BarsArrowUpIcon } from "@heroicons/react/24/outline";
+import { ArrowUpIcon } from "@heroicons/react/24/outline";
 
 
 React;
@@ -39,7 +39,7 @@ const Home = () => {
         {/*  */}
 
         {/* head components start*/}
-        <div className="head lg:w-full xl:w-full">
+        <div className="head w-full lg:w-full xl:w-full">
           {/* space btn nav and body ends*/}
           {/* Header Video components*/}
           <div className="main">
@@ -50,7 +50,7 @@ const Home = () => {
         </div>
         {/*  */}
         <hr className="p-3 text-2xl text-blue-600" />
-        <div className="head lg:w-full xl:w-full">
+        <div className="head w-full lg:w-full xl:w-full">
           {/* space btn nav and body */}
 
           {/* space btn nav and body ends*/}
@@ -154,11 +154,14 @@ const Home = () => {
             </div>
           </div>
         </div>
-    <div className="icon right-0 hover:text-red-400">
+    <div className="icon bg-white w-7 hover:text-red-400">
       <a href="#top">
-      <BarsArrowUpIcon className="w-6"/>
+        <b>
+      <ArrowUpIcon className="w-6"/>
+        </b>
       </a>
     </div>
+    <div className="title"></div>
       </div>
     </>
   );

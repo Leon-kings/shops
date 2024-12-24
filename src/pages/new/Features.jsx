@@ -1,11 +1,16 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Shop from "../../universal/marketPart/Shop";
 React;
 const Features = () => {
   return (
     <>
       <div className="title"></div>
+      <br />
       <div className="bg-white w-full">
+      <h2 className="text-2xl py-3 font-bold tracking-tight text-blue-600">
+          FEATURES
+        </h2>
         <section className="py-24 relative xl:mr-0 lg:mr-5 mr-0">
           <div className="w-full max-w-7xl px-4 md:px-5 lg:px-5 mx-auto">
             <div className="w-full justify-start items-center xl:gap-12 gap-10 grid lg:grid-cols-2 grid-cols-1">
@@ -106,7 +111,8 @@ const Features = () => {
           </div>
         </section>
         {/*  */}
-        <section className="py-24 relative">
+        {/*  */}
+        <section className="py-24 relative w-full xl:w-full">
           <div className="w-full max-w-7xl px-4 md:px-5 lg:px-5 mx-auto">
             <div className="w-full justify-start items-center gap-8 grid lg:grid-cols-2 grid-cols-1">
               <div className="w-full flex-col justify-start lg:items-start items-center gap-10 inline-flex">
@@ -136,13 +142,14 @@ const Features = () => {
               <img
                 className="lg:mx-0 mx-auto h-full rounded-3xl object-cover"
                 src="https://pagedone.io/asset/uploads/1717751272.png"
-                alt="about Us image"
+                alt="LD"
               />
             </div>
           </div>
         </section>
         {/*  */}
-        <div className="bg-gray-50 py-24 sm:py-32">
+        {/*  */}
+        <div className="bg-gray-50 w-full xl:w-full py-24 sm:py-32">
         <div className="mx-auto w-full px-6 lg:w-full xl:w-full lg:px-8">
           <h2 className="text-center text-base/7 font-semibold text-indigo-600">Debug faster</h2>
           <p className="mx-auto mt-2 max-w-lg text-balance text-center text-4xl font-semibold tracking-tight text-gray-950 sm:text-5xl">
@@ -247,7 +254,11 @@ const Features = () => {
           </div>
         </div>
       </div>
-        {/*  */}
+      {/*  */}
+      <div className="w-full xl:w-full sm:w-full">
+        <Shop/>
+      </div>
+      {/*  */}
       </div>
       <div className="title"></div>
     </>

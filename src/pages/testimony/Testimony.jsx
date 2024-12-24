@@ -61,9 +61,9 @@ export default function Testimony() {
   ];
   return (
     <div className="bg-white">
-      <div className="mx-auto w-full px-4 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8">
-        <h2 className="text-2xl font-bold tracking-tight text-gray-900">
-          Testimony
+      <div className="mx-auto w-full px-4 xl:w-full sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8">
+        <h2 className="text-2xl font-bold tracking-tight text-blue-600">
+          TESTIMONY
         </h2>
         <div className="mt-6 grid grid-cols-1 gap-x-6 gap-y-10 xl:gap-x-8">
         <section className='slider'>
@@ -89,7 +89,7 @@ export default function Testimony() {
                         <div className="flex items-center mt-8 space-x-3">
                           <div className="flex-shrink-0 overflow-hidden w-28 h-24">
                             <img
-                              alt="Testimony"
+                              alt="LD"
                               src={item.avatar}
                               loading="lazy"
                              

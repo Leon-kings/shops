@@ -1,9 +1,10 @@
 // Cart.js
-import EmptyCart from "../../../../assets/images/illustration-empty-cart.svg";
+import EmptyCart from "../../../../assets/images/360_F_288921356_krHC3KV1lJ2jAGnaep6NXZX6Fkv4FF9q.jpg";
 import { useCart } from "../CartContext";
-import RemoveIcon from "../../../../assets/images/icon-remove-item.svg";
-import Carbon from "../../../../assets/images/icon-carbon-neutral.svg";
-
+import RemoveIcon from "../../../../assets/images/360_F_288921356_krHC3KV1lJ2jAGnaep6NXZX6Fkv4FF9q.jpg";
+import Carbon from "../../../../assets/images/360_F_288921356_krHC3KV1lJ2jAGnaep6NXZX6Fkv4FF9q.jpg";
+import React from "react";
+React;
 
 function Cart({ onConfirmOrder }) {
   const { cartItems, updateCart } = useCart();
@@ -20,10 +21,10 @@ function Cart({ onConfirmOrder }) {
 
   return (
     <div className="  bg-gray-100 dark:bg-gray-800 md:px-14 rounded-2xl md:py-14 dark:bg-trueGray-800">
-      <h1 className="text-2xl text-red font-bold">Your Added  To Cart Items : ({totalItems})</h1>
+      <h3 className="text-2xl text-red font-bold">Your Added  To Cart Items : ({totalItems})</h3>
       {totalItems === 0 ? (
         <div className="flex flex-col items-center">
-          <img src={EmptyCart} alt="Empty Cart"  />
+          <img src={EmptyCart} alt="Empty Cart" className="w-8" />
           <p className="text-sm text-rose-500">
            Add Your Products
           </p>
@@ -65,7 +66,7 @@ function Cart({ onConfirmOrder }) {
             </p>
           </div>
           <div className="flex items-center justify-center py-2 px-4 bg-rose-100 mt-4 rounded-lg gap-1">
-            <img src={Carbon} alt="" />
+            <img src={Carbon} alt="" className="w-8"/>
             <p className="text-[0.7rem] font-medium text-rose-400">
               This is a{" "}
               <label htmlFor="label" className="font-bold text-rose-500">Leon-shop</label>{" "}
