@@ -1,5 +1,6 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react'
+
 React;
 const Userview = () => {
     const [users, setUsers] = useState([]);
@@ -82,8 +83,9 @@ const Userview = () => {
                 <div className="flex-grow bg-gray-100 min-h-screen ">
 
 
-<h1>Users</h1>
+<h4>Users</h4>
 {users.length > 0 ? (
+  <div className="w-full overflow-x-auto">
   <table className="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
     <thead>
       <tr className="bg-gray-100">
@@ -179,8 +181,10 @@ const Userview = () => {
       ))}
     </tbody>
   </table>
+</div>
+
 ) : (
-  <p className='text-red-500'>No users found.</p>
+  <p className='text-red-500'> No users found.</p>
 )}
 
 </div>

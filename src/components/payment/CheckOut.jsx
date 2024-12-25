@@ -2,15 +2,12 @@ import React from 'react'
 React;
 export default function CheckOut() {
   return (
-    <>
-    <div className='container flex-col'>
-        <div className="title"></div>
+    <div>
+      <div className="title">
         <br />
-        <div className="content">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iure ipsam libero in, cupiditate quaerat quis quas delectus quidem quae neque cum quam, facilis doloremque veniam exercitationem facere veritatis placeat voluptatibus.
-        </div>
+      </div>
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatum inventore numquam possimus molestiae maiores, dolores odio. Rerum iusto repellendus at, cumque quod ipsum autem itaque nihil numquam fugit quia harum.
       
     </div>
-    </>
   )
 }

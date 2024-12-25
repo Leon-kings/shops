@@ -17,6 +17,7 @@ import Market from "./pages/market/Market";
 import Features from "./pages/new/Features";
 import Register from "./pages/form/register/Register";
 import CheckOut from "./components/payment/CheckOut";
+import Profile from "./components/dashboard/admin/components/profile/Profile";
 
 export default function App() {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
@@ -55,6 +56,14 @@ export default function App() {
               element={
                 <PrivateRoute isAuthenticated={isAuthenticated}>
                   <Dashboard />
+                </PrivateRoute>
+              }
+            />
+                        <Route
+              path="/Profile/Dashboard"
+              element={
+                <PrivateRoute isAuthenticated={isAuthenticated}>
+                  <Profile />
                 </PrivateRoute>
               }
             />

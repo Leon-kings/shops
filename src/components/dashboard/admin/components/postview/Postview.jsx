@@ -84,20 +84,18 @@ export default function Postview() {
     <div>
       {/* Main Content */}
       <div className="flex-grow bg-gray-100 min-h-screen ">
-        <h1>Posts</h1>
-        <div className="overflow-x-auto">
-          <table className="min-w-full bg-white border border-gray-200">
+        <h4>Posts</h4>
+        <div className="w-full overflow-x-auto">
+          <table className="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
             <thead>
               <tr className="bg-gray-100">
-                <th className="text-left py-2 px-4 border">ID</th>
-                <th className="text-left py-2 px-4 border">Name</th>
-                <th className="text-left py-2 px-4 border">Email</th>
-                <th className="text-left py-2 px-4 border">Price</th>
-
-                <th className="text-left py-2 px-4 border">Capacity</th>
-                <th className="text-left py-2 px-4 border">Type</th>
-                <th className="text-left py-2 px-4 border">URL</th>
-                <th className="text-center py-2 px-4 border">Actions</th>
+                <th className="text-left py-2">ID</th>
+                <th className="text-left py-2">Name</th>
+                <th className="text-left py-2  ">Email</th>
+                <th className="text-left py-2  ">Price</th>
+                <th className="text-left py-2 ">Type</th>
+                <th className="text-left py-2  ">URL</th>
+                <th className="text-center py-2">Actions</th>
               </tr>
             </thead>
             <tbody>
@@ -176,14 +174,12 @@ export default function Postview() {
                     </>
                   ) : (
                     <>
-                      <td className="py-2 px-4 border">{post._id}</td>
-                      <td className="py-2 px-4 border">{post.name}</td>
-                      <td className="py-2 px-4 border">{post.email}</td>
+                      <td className="py-2 px-2 border">{post._id}</td>
+                      <td className="py-2 px-2 border">{post.name}</td>
+                      <td className="py-2 px-2 border">{post.email}</td>
                       <td className="py-2 px-4 border">{post.price}$</td>
-
-                      <td className="py-2 px-4 border">{post.capacity}</td>
-                      <td className="py-2 px-4 border">{post.type}</td>
-                      <td className="py-2 px-4 border">
+                      <td className="py-2 px-2 border">{post.type}</td>
+                      <td className="py-2 px-2 border">
                         <a
                           href={post.url}
                           target="_blank"
@@ -193,7 +189,7 @@ export default function Postview() {
                           View
                         </a>
                       </td>
-                      <td className="py-2 px-4 border text-center">
+                      <td className="py-2 px-2 border text-center">
                         <button
                           className="bg-blue-500 text-white px-2 py-1 rounded mr-2"
                           onClick={() => handleEdit(post)}
