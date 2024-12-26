@@ -54,7 +54,7 @@ const Login = () => {
         values
       );
       if (window.confirm("Do you really want to move?")) {
-        Navigate("/833 103.803C182.209 103");
+        Navigate("/Dashboard");
       } else {
         Navigate("/");
       }
