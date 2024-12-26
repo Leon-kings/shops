@@ -5,16 +5,19 @@ import { BiLogOut } from "react-icons/bi";
 import { CgProfile } from "react-icons/cg";
 import { IoSettings } from "react-icons/io5";
 import { BsHouse } from "react-icons/bs";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 function Sidebar() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
-
+  const navigate = useNavigate();
   const toggleSidebar = () => {
     setIsSidebarOpen(!isSidebarOpen);
   };
-  const Logout = () => {
-    alert("Thanks");
+  const handleLogout = () => {
+    // Clear user authentication data
+    localStorage.removeItem("token"); // Or sessionStorage.removeItem("token");
+    localStorage.removeItem("user"); // Optional: Remove any stored user info
+    navigate("/login"); // Redirect to the login page
   };
   return (
     <div className="flex h-screen scroll-auto">
@@ -60,7 +63,7 @@ function Sidebar() {
           </li>
           <br />
           <li className="my-2">
-            <Link to={Logout}>
+            <Link to={handleLogout}>
               <button>
                 <BiLogOut />
               </button>
@@ -68,7 +71,7 @@ function Sidebar() {
           </li>
           <br />
           <li className="my-2">
-            <Link to={Logout}>
+            <Link to={handleLogout}>
               <button>
                 <BiLogOut />
               </button>
