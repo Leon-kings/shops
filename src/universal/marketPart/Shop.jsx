@@ -6,19 +6,19 @@ const Shop = () => {
 
   const slides = [
     {
-      image: "https://images.unsplash.com/photo-1483985988355-763728e1935b",
+      image: "https://www.shutterstock.com/image-photo/professional-female-backend-software-developer-600nw-2216535609.jpg",
       headline: "Make Yourself Codefull",
       subheadline: "Exclusive Discounts on New Arrivals",
       tagline: "Make Your Job Simply Easier"
     },
     {
-      image: "https://images.unsplash.com/photo-1441984904996-e0b6ba687e04",
+      image: "https://s3.envato.com/files/447548803/Trader%20programmer%20(25%20of%2028).jpg",
       headline: "Collaboration perse perspectives",
       subheadline: "Up to 40% Off on Selected Items",
       tagline: "Elevate your style with our exclusive pieces"
     },
     {
-      image: "https://images.unsplash.com/photo-1445205170230-053b83016050",
+      image: "https://cdn.thewirecutter.com/wp-content/media/2024/12/portablemonitors-2048px-7.jpg.jpg",
       headline: "Luxury Essentials",
       subheadline: "Free Shipping on Orders Over $100",
       tagline: "Timeless pieces for the modern wardrobe"
