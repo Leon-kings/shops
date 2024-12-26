@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Head from "../../universal/head/Head";
 import Header from "../../universal/header/Header";
 import Package from "../../universal/packages/Package";
@@ -11,11 +11,34 @@ import Services from "../services/Services";
 import Testimony from "../testimony/Testimony";
 import IT from "../information/IT";
 import WhyUs from "../../universal/whyus/WhyUs";
-import { ArrowUpIcon } from "@heroicons/react/24/outline";
-
+import { BiLogIn } from "react-icons/bi";
+import { BsInfo, BsQuestion } from "react-icons/bs";
+import { TbSettingsExclamation } from "react-icons/tb";
 
 React;
 const Home = () => {
+  const [isVisible, setIsVisible] = useState(false);
+
+  // Show or hide the button based on scroll position
+  useEffect(() => {
+    const toggleVisibility = () => {
+      if (window.scrollY > 300) {
+        setIsVisible(true);
+      } else {
+        setIsVisible(false);
+      }
+    };
+    window.addEventListener("scroll", toggleVisibility);
+    return () => window.removeEventListener("scroll", toggleVisibility);
+  }, []);
+
+  // Scroll to the top smoothly
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
   return (
     <>
       {/* Body space */}
@@ -75,7 +98,7 @@ const Home = () => {
           </div>
         </div>
         <hr className="p-3 text-2xl text-blue-600" />
-        <div className="head lg:w-full xl:w-full">
+        <div className="head lg:w-full xl:w-full" id="fQ">
           {/* space btn nav and body ends*/}
           {/* Header Video components*/}
           <div className="main">
@@ -97,7 +120,7 @@ const Home = () => {
         </div>
         {/*  */}
         <hr className="text-blue-600" />
-        <div className="head lg:w-full xl:w-full">
+        <div className="head lg:w-full xl:w-full" id="about">
           {/* space btn nav and body ends*/}
           {/* Header Video components*/}
           <div className="main">
@@ -129,7 +152,7 @@ const Home = () => {
           </div>
         </div>
         <hr className="text-blue-600" />
-        <div className="head lg:w-full xl:w-full">
+        <div className="head lg:w-full xl:w-full" id="logs">
           {/* space btn nav and body ends*/}
           {/* Header Video components*/}
           <div className="main grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-2 xl:gap-x-8">
@@ -143,7 +166,7 @@ const Home = () => {
         </div>
         {/*  */}
         <hr className="p-3 text-2xl text-blue-600" />
-        <div className="head lg:w-full xl:w-full">
+        <div className="head lg:w-full xl:w-full" id="service">
           {/* space btn nav and body */}
        
           {/* space btn nav and body ends*/}
@@ -154,13 +177,24 @@ const Home = () => {
             </div>
           </div>
         </div>
-    <div className="icon bg-white w-7 hover:text-red-400">
-      <a href="#top">
-        <b>
-      <ArrowUpIcon className="w-6"/>
-        </b>
-      </a>
-    </div>
+        {/* button back to top */}
+      <div>
+      {isVisible && (
+        <button
+          onClick={scrollToTop}
+          className="fixed bottom-6 right-4 bg-blue-600 text-white p-3 rounded-full shadow-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-300"
+        >
+          ↑
+        </button>
+      )}
+      </div>
+      <div className="grid bg-white py-4 grid-cols-[repeat(auto-fit,minmax(150px,1fr))] gap-4">
+  <div className="bg-blue-200 text-white p-4 text-center"><a href="#logs" title="Login"><button><BiLogIn/> </button> </a> </div>
+  <div className="bg-green-200 text-white p-4 text-center"><a href="#service" title="Services"><button><TbSettingsExclamation/> </button> </a></div>
+  <div className="bg-red-200 text-white p-4 text-center"><a href="#fQ" title="Question"><button><BsQuestion/> </button> </a></div>
+  <div className="bg-yellow-200 text-white p-4 text-center"><a href="#about" title="About"><button><BsInfo/> </button> </a></div>
+</div>
+
     <div className="title"></div>
       </div>
     </>
