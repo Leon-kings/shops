@@ -2,7 +2,7 @@ import React from "react";
 React;
 import { useState, useEffect } from "react";
 import axios from "axios";
-
+import "../userview/components/css.css";
 export default function Postview() {
   const [posts, setPosts] = useState([]);
   const [editingPost, setEditingPost] = useState(null);
@@ -38,8 +38,10 @@ export default function Postview() {
         `https://backendproject-8m9r.onrender.com/posts/${postId}`
       );
       setPosts(posts.filter((post) => post._id !== postId));
+      alert('Deleted Successfully');
     } catch (error) {
       console.error("Error deleting post:", error);
+      alert('Deleted Failed',error);
     }
   };
 
@@ -69,8 +71,10 @@ export default function Postview() {
         )
       );
       setEditingPost(null);
+      alert('Updated Successfully');
     } catch (error) {
       console.error("Error updating post:", error);
+      alert('Updated Failed', error);
     }
   };
 
@@ -83,27 +87,42 @@ export default function Postview() {
   return (
     <div>
       {/* Main Content */}
-      <div className="flex-grow bg-gray-100 min-h-screen ">
+      <div className=" bg-gray-100  ">
+        <div className="title"></div>
         <h4>Posts</h4>
-        <div className="w-full overflow-x-auto">
-          <table className="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
-            <thead>
+        <div className="overflow-x-auto">
+          <table className="min-w-full bg-white border border-gray-200">
+            <thead className="rounded-lg text-base text-blue-400 font-semibold w-full">
               <tr className="bg-gray-100">
-                <th className="text-left py-2">ID</th>
-                <th className="text-left py-2">Name</th>
-                <th className="text-left py-2  ">Email</th>
-                <th className="text-left py-2  ">Price</th>
-                <th className="text-left py-2 ">Type</th>
-                <th className="text-left py-2  ">URL</th>
-                <th className="text-center py-2">Actions</th>
+                <th className="px-6 py-3 text-left text-sm font-medium text-gray-700 uppercase tracking-wider">
+                  ID
+                </th>
+                <th className="px-6 py-3 text-left text-sm font-medium text-gray-700 uppercase tracking-wider">
+                  Name
+                </th>
+                <th className="px-6 py-3 text-left text-sm font-medium text-gray-700 uppercase tracking-wider ">
+                  Email
+                </th>
+                <th className="px-6 py-3 text-left text-sm font-medium text-gray-700 uppercase tracking-wider ">
+                  Price
+                </th>
+                <th className="px-6 py-3 text-left text-sm font-medium text-gray-700 uppercase tracking-wider">
+                  Type
+                </th>
+                <th className="px-6 py-3 text-left text-sm font-medium text-gray-700 uppercase tracking-wider ">
+                  URL
+                </th>
+                <th className="px-6 py-3 text-left text-sm font-medium text-gray-700 uppercase tracking-wider">
+                  Actions
+                </th>
               </tr>
             </thead>
-            <tbody>
+            <tbody className="divide-y divide-gray-200">
               {posts?.posts?.map((post) => (
                 <tr key={post._id} className="border-t">
                   {editingPost === post._id ? (
                     <>
-                      <td className="py-2 px-4 border">
+                      <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
                         <input
                           type="text"
                           name="name"
@@ -112,7 +131,7 @@ export default function Postview() {
                           className="w-full border p-1"
                         />
                       </td>
-                      <td className="py-2 px-4 border">
+                      <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
                         <input
                           type="email"
                           name="email"
@@ -121,7 +140,7 @@ export default function Postview() {
                           className="w-full border p-1"
                         />
                       </td>
-                      <td className="py-2 px-4 border">
+                      <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
                         <input
                           type="number"
                           name="price"
@@ -130,7 +149,7 @@ export default function Postview() {
                           className="w-full border p-1"
                         />
                       </td>
-                      <td className="py-2 px-4 border">
+                      <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
                         <input
                           type="text"
                           name="capacity"
@@ -139,7 +158,7 @@ export default function Postview() {
                           className="w-full border p-1"
                         />
                       </td>
-                      <td className="py-2 px-4 border">
+                      <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
                         <input
                           type="text"
                           name="type"
@@ -148,7 +167,7 @@ export default function Postview() {
                           className="w-full border p-1"
                         />
                       </td>
-                      <td className="py-2 px-4 border">
+                      <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
                         <input
                           type="url"
                           name="url"
@@ -157,7 +176,7 @@ export default function Postview() {
                           className="w-full border p-1"
                         />
                       </td>
-                      <td className="py-2 px-4 border text-center">
+                      <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900 text-center">
                         <button
                           className="bg-green-500 text-white px-2 py-1 rounded mr-2"
                           onClick={() => handleUpdate(post._id)}
@@ -174,12 +193,22 @@ export default function Postview() {
                     </>
                   ) : (
                     <>
-                      <td className="py-2 px-2 border">{post._id}</td>
-                      <td className="py-2 px-2 border">{post.name}</td>
-                      <td className="py-2 px-2 border">{post.email}</td>
-                      <td className="py-2 px-4 border">{post.price}$</td>
-                      <td className="py-2 px-2 border">{post.type}</td>
-                      <td className="py-2 px-2 border">
+                      <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
+                        {post._id}
+                      </td>
+                      <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
+                        {post.name}
+                      </td>
+                      <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
+                        {post.email}
+                      </td>
+                      <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
+                        {post.price}$
+                      </td>
+                      <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
+                        {post.type}
+                      </td>
+                      <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
                         <a
                           href={post.url}
                           target="_blank"
@@ -189,7 +218,7 @@ export default function Postview() {
                           View
                         </a>
                       </td>
-                      <td className="py-2 px-2 border text-center">
+                      <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900 text-center">
                         <button
                           className="bg-blue-500 text-white px-2 py-1 rounded mr-2"
                           onClick={() => handleEdit(post)}

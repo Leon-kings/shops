@@ -1,11 +1,12 @@
 import React, { useState } from "react";
 React;
 import Userview from "../userview/Userview";
-import { BiLogOut } from "react-icons/bi";
+import { BiLogOut, BiUser } from "react-icons/bi";
 import { CgProfile } from "react-icons/cg";
 import { IoSettings } from "react-icons/io5";
 import { BsHouse } from "react-icons/bs";
 import { Link, useNavigate } from "react-router-dom";
+
 
 function Sidebar() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
@@ -63,9 +64,9 @@ function Sidebar() {
           </li>
           <br />
           <li className="my-2">
-            <Link to={handleLogout}>
+            <Link to={'/5010/Userview'}>
               <button>
-                <BiLogOut />
+                <BiUser />
               </button>
             </Link>
           </li>

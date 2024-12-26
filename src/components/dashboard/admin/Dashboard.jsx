@@ -28,20 +28,26 @@ const Dashboard = () => {
   // handleSubmit
   const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log(values);
-
+    console.log("Submitting with values:", values);
+  
     try {
       const response = await axios.get(
         `https://backendproject-8m9r.onrender.com/users/${values}`
       );
-      setSearch(response.data.data);
-      alert("Fetched Successfully");
-    
+      console.log("Response data:", response.data);
+  
+      if (response.data.data) {
+        setSearch(response.data.data);
+        alert("Fetched Successfully");
+      } else {
+        alert("No data found");
+      }
     } catch (error) {
-      console.log(error);
-      alert('error in fetching:',error);
+      console.error("Error fetching posts:", error);
+      alert('Error in fetching: ' + (error.response?.data?.message || error.message));
     }
   };
+  
       // Delete user
       const handleDelete = async (e) => {
         e.preventDefault();
@@ -98,12 +104,14 @@ const Dashboard = () => {
           <h3 className="text-center text-red-400 font-bold">USERS PAGE</h3>
           <Sidebar />
         </div>
+        <div className="title"></div>
         <hr className="p-4 text-2xl text-blue-600" />
-        <div className="post">
-          <h3 className="text-center text-red-400 font-bold">PRODUCT PAGE</h3>
-          <Postview />
-        </div>
-        <IT />
+        <div className="title"></div>
+        
+<IT />
+       
+        <h3 className="text-center text-red-400 font-bold">PRODUCT PAGE</h3>
+        <Postview />
       </div>
     </>
   );

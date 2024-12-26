@@ -18,6 +18,7 @@ import Features from "./pages/new/Features";
 import Register from "./pages/form/register/Register";
 import CheckOut from "./components/payment/CheckOut";
 import Profile from "./components/dashboard/admin/components/profile/Profile";
+import Userview from "./components/dashboard/admin/components/userview/Userview";
 
 export default function App() {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
@@ -40,6 +41,7 @@ export default function App() {
             <Route path="/Register" element={<Register />} />
             <Route path="/Features" element={<Features />} />
             <Route path="/Dashboard" element={<Dashboard />} />
+            <Route path="/5010/Userview" element={<Userview/> } />
             {/* payment */}
             <Route path="/CheckOut" element={<CheckOut />} />
             {/* Private Route */}

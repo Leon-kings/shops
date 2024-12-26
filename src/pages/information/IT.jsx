@@ -145,7 +145,10 @@ export default function IT() {
   }
   export const TeamCard = ({ imageSrc, name, profession }) => {
     return (
-      <>
+      <>  
+      <div className="title">
+        <br />
+      </div>
         <div className="w-full px-4 md:w-1/2 xl:w-1/4">
           <div className="mx-auto mb-10 w-full max-w-full">
             <div className="relative overflow-hidden rounded-lg">
