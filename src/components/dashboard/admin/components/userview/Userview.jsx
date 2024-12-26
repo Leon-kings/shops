@@ -85,9 +85,9 @@ const Userview = () => {
 
 <h4>Users</h4>
 {users.length > 0 ? (
-  <div className="w-full overflow-x-auto">
-  <table className="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
-    <thead>
+ <div className="w-full overflow-x-scroll md:overflow-auto  max-w-7xl 2xl:max-w-none mt-2">
+    <table className="table-auto overflow-scroll md:overflow-auto w-full text-left font-inter border ">
+    <thead className='rounded-lg text-base text-white font-semibold w-full'>
       <tr className="bg-gray-100">
         <th className="text-left py-2 px-4 border">ID</th>
         <th className="text-left py-2 px-4 border">Name</th>
