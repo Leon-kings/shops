@@ -1,7 +1,10 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import "./components/css.css";
+import { BsHouse } from "react-icons/bs";
+import { Link } from "react-router-dom";
 React;
+
 const Userview = () => {
   const [users, setUsers] = useState([]);
   const [editingUser, setEditingUser] = useState(null);
@@ -217,6 +220,9 @@ const Userview = () => {
           <p className="text-red-500"> No users found.</p>
         )}
       </div>
+      <Link to={'/dashboard'}>
+      <button><BsHouse/></button>
+      </Link>
       <div className="title"></div>
     </div>
   );

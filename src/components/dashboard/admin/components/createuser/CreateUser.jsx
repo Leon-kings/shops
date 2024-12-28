@@ -2,19 +2,27 @@ import axios from "axios";
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import FormInput from "../../../../../pages/form/action/FormInput";
-React;
 
-export default function CreateTestimony() {
+React;
+export default function CreateUser() {
   const [values, setValues] = useState({
     email: "",
-    testimony: "",
-    name: "",
+    password: "",
+    fullname: "",
+    phone: "",
   });
-  const Navigate = useNavigate();
-
   const inputs = [
     {
       id: 1,
+      name: "fullname",
+      type: "text",
+      placeholder: "Names",
+      errorMessage: "Names needed ",
+      label: "Your Names",
+      required: true,
+    },
+    {
+      id: 2,
       name: "email",
       type: "email",
       placeholder: "email",
@@ -23,65 +31,61 @@ export default function CreateTestimony() {
       required: true,
     },
     {
-      id: 2,
-      name: "name",
-      type: "name",
-      placeholder: "name",
-      errorMessage: "name should be same as those you use to register",
-      label: "Name",
+      id: 3,
+      name: "phone",
+      type: "text",
+      placeholder: "+250787944577",
+      errorMessage: "Phone should start with country code +250",
+      label: "Telephone",
       required: true,
     },
 
     {
-      id: 3,
-      name: "testimony",
-      type: "testimony",
-      placeholder: "testimony",
-      errorMessage: "testimony should be text",
-      label: "testimony",
+      id: 4,
+      name: "password",
+      type: "password",
+      placeholder: "password",
+      errorMessage:
+        "password should be 8-12 characters include at least 1 letter and 1 symbol",
+      label: "password",
+      pattern:"/^[a-zA-Z0-9!@#\$%\^\&*_=+-]{8,12}$/g",
       required: true,
     },
   ];
 
-  // fetching data from database
-  // handleSubmit
   const handleSubmit = async (e) => {
     e.preventDefault();
     console.log(values);
     try {
       await axios.post(
-        "https://backendproject-8m9r.onrender.com/testimony",
+        "https://backendproject-8m9r.onrender.com/users",
         values
       );
-      if (window.confirm("Back to dashboard?")) {
+      if (window.confirm("Shall We Move")) {
         Navigate("/Dashboard");
       } else {
         Navigate("/Settings");
       }
-    } catch (error) {
-      console.log(error);
-      alert(error);
+    } catch (err) {
+      console.log(err);
     }
   };
-
+  const Navigate = useNavigate();
   const onChange = (e) => {
     setValues({ ...values, [e.target.name]: e.target.value });
   };
   return (
     <>
       <div>
-        {/* Main Content */}
         <div className="title">
           <br />
         </div>
-        <div className="container flex items-center justify-center min-h-screen bg-gray-100 text-black">
+        <div className="container w-full xl:w-full lg:w-full md:w-full sm:w-full flex justify-center min-h-screen bg-gray-100 text-black">
           <div className="w-full max-w-md p-8 bg-white rounded shadow-md">
             <div className="Register">
               <form onSubmit={handleSubmit}>
                 <div className="head">
-                  <h2 className="text-black text-2xl py-4">
-                    TESTIMONY
-                  </h2>
+                  <h2 className="text-green-400 text-2xl py-4"> Register</h2>
                 </div>
                 <div className="contain">
                   {inputs.map((input) => (
@@ -102,6 +106,7 @@ export default function CreateTestimony() {
           </div>
         </div>
       </div>
+      <div className="title"></div>
     </>
   );
 }

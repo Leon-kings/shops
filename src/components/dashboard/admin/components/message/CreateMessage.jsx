@@ -1,17 +1,13 @@
-import axios from "axios";
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
 import FormInput from "../../../../../pages/form/action/FormInput";
+import { useNavigate } from "react-router-dom";
+import axios from "axios";
 React;
-
-export default function CreateTestimony() {
+export default function CreateMessage() {
   const [values, setValues] = useState({
     email: "",
-    testimony: "",
-    name: "",
+    message: "",
   });
-  const Navigate = useNavigate();
-
   const inputs = [
     {
       id: 1,
@@ -19,70 +15,52 @@ export default function CreateTestimony() {
       type: "email",
       placeholder: "email",
       errorMessage: "email should be valid and should incloude @ symbols",
-      label: "email",
+      label: "Email",
       required: true,
     },
     {
       id: 2,
-      name: "name",
-      type: "name",
-      placeholder: "name",
-      errorMessage: "name should be same as those you use to register",
-      label: "Name",
-      required: true,
-    },
-
-    {
-      id: 3,
-      name: "testimony",
-      type: "testimony",
-      placeholder: "testimony",
-      errorMessage: "testimony should be text",
-      label: "testimony",
+      name: "message",
+      type: "text",
+      placeholder: "Meassages",
+      errorMessage: "Message needed to send to admin",
+      label: "Your Message",
       required: true,
     },
   ];
 
-  // fetching data from database
-  // handleSubmit
   const handleSubmit = async (e) => {
     e.preventDefault();
     console.log(values);
     try {
       await axios.post(
-        "https://backendproject-8m9r.onrender.com/testimony",
+        "https://backendproject-8m9r.onrender.com/message",
         values
       );
-      if (window.confirm("Back to dashboard?")) {
+      if (window.confirm("Do you really want to continue to login?")) {
         Navigate("/Dashboard");
       } else {
         Navigate("/Settings");
       }
-    } catch (error) {
-      console.log(error);
-      alert(error);
+    } catch (err) {
+      console.log(err);
     }
   };
-
+  const Navigate = useNavigate();
   const onChange = (e) => {
     setValues({ ...values, [e.target.name]: e.target.value });
   };
   return (
     <>
-      <div>
-        {/* Main Content */}
-        <div className="title">
-          <br />
-        </div>
-        <div className="container flex items-center justify-center min-h-screen bg-gray-100 text-black">
+    <div className="title">
+      <br />
+     </div>
+      <div className="container w-full xl:w-full lg:w-full md:w-full sm:w-full text-black">
+        <div className=" flex items-center justify-center min-h-screen bg-gray-100">
           <div className="w-full max-w-md p-8 bg-white rounded shadow-md">
             <div className="Register">
               <form onSubmit={handleSubmit}>
-                <div className="head">
-                  <h2 className="text-black text-2xl py-4">
-                    TESTIMONY
-                  </h2>
-                </div>
+                <h2 className="text-green-300 py-4">CREATE MESSAGES</h2>
                 <div className="contain">
                   {inputs.map((input) => (
                     <FormInput
@@ -94,7 +72,7 @@ export default function CreateTestimony() {
                     />
                   ))}
                   <div className="head">
-                    <button className="btn w-44 text-white">Submit</button>
+                    <button className="btn w-44 text-white">Send</button>
                   </div>
                 </div>
               </form>

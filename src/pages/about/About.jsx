@@ -49,9 +49,9 @@ export default function About() {
         values
       );
       if (window.confirm("Do you really want to move?")) {
-        Navigate("/833 103.803C182.209 103");
-      } else {
         Navigate("/");
+      } else {
+        Navigate("/Register");
       }
     } catch (err) {
       console.log(err);
@@ -73,13 +73,15 @@ export default function About() {
     <>
       <div className="title"></div>
       <br />
-      <div className="bg-white">
+      <div className="container bg-white w-full xl:w-full md:w-full sm:w-full">
       <h2 className="text-2xl py-3 font-bold tracking-tight text-blue-600">
           ABOUT
         </h2>
         {/*  */}
         <NewC />
-        <section className="py-24 relative">
+        <section className="py-24 relative w-full xl:w-full md:w-full sm:w-full">
+          <h2 className="text-blue-400 font-bold py-4">BUILD YOUR NETWORK</h2>
+          <br />
           <div className="w-full max-w-7xl px-4 md:px-5 lg:px-5 mx-auto">
             <div className="w-full justify-start items-center gap-8 grid lg:grid-cols-2 grid-cols-1">
               <div className="w-full flex-col justify-start lg:items-start items-center gap-10 inline-flex">
@@ -114,20 +116,18 @@ export default function About() {
         {/*  */}
 
         {/* form pages */}
-        <section className="py-24 relative">
+        <section className="py-24 relative w-full xl:w-full md:w-full sm:w-full">
+          <h2 className="text-blue-400 font-bold py-6">MESSAGE US TO ASSIST YOU</h2>
           <div className="w-full max-w-7xl px-4 md:px-5 lg:px-5 mx-auto">
             <div className="w-full justify-start items-center gap-8 grid lg:grid-cols-2 grid-cols-1">
               <div className="w-full flex-col justify-start lg:items-start items-center gap-10 inline-flex">
                 <div className="w-full flex-col justify-start lg:items-start items-center gap-4 flex">
                   <h2 className="text-gray-900 text-4xl font-bold font-manrope leading-normal lg:text-start text-center">
-                    Building Smartness
+                    Building Smartness Web
                   </h2>
                   <p className="text-gray-500 text-base font-normal leading-relaxed lg:text-start text-center">
                     Through collaboration perse perspectives and strengths are
-                    leveraged to create inclusive environments where everyone
-                    has the opportunity to thrive. This approach not only
-                    fosters personal growth and achievement but also strengthens
-                    the fabric of society.
+                    leveraged to create inclusive web with more leverage to help environments to hangle challenges.
                   </p>
                 </div>
                 <button className="sm:w-fit w-full px-3.5 py-2 bg-indigo-600 hover:bg-indigo-800 transition-all duration-700 ease-in-out rounded-lg shadow-[0px_1px_2px_0px_rgba(16,_24,_40,_0.05)] justify-center items-center flex">
@@ -137,10 +137,10 @@ export default function About() {
                 </button>
               </div>
               {/*  */}
-              <div className="container flex items-center justify-center min-h-screen bg-gray-100">
+              <div className="container flex items-center justify-center min-h-screen bg-gray-100 text-black">
                 <div className="w-full max-w-md p-3 lg:p-8 xl:p-8 bg-white rounded shadow-md">
                   <form onSubmit={handleSubmit} className="mt-4">
-                    <h2 className="title">Message</h2>
+                    <h2 className="title text-green-300 font-bold">MESSAGE</h2>
                     <div className="p-0">
                       {inputs.map((input) => (
                         <FormInput
@@ -158,7 +158,7 @@ export default function About() {
                           <Link to="/Register">
                             <b>
                               <button className="p-3 bg-blue-500">
-                                {" "}
+                          
                                 Register
                               </button>
                             </b>
@@ -169,8 +169,6 @@ export default function About() {
                   </form>
                 </div>
               </div>
-              {/*  */}
-
               {/*  */}
             </div>
           </div>

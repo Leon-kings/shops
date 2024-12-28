@@ -4,11 +4,11 @@ import Video from "../../assets/video/head.mp4";
 React
 const Header = () => {
   return (
-    <div className=" flex-auto relative ">
+    <div className=" flex-auto relative w-full xl:w-full md:w-full sm:w-full">
       {/* Video Background */}
       <div className="absolute transform-gpu overflow-hidden blur-1xl ">
         <div className="title"></div>
-        <video className="w-full object-cover" autoPlay loop muted>
+        <video className="w-full xl:w-full md:w-full sm:w-full object-cover" autoPlay loop muted>
           <source src={Video} type="video/mp4" />
           Your browser does not support the video tag.
         </video>
@@ -36,7 +36,7 @@ const Header = () => {
                 </Link>
               </button>
             </div>
-            <p className="text-gray-300 py-10 text-lg font-medium">LD Computer Store Rwanda Limited is a Full-Service Technology Services Provider also called the Top IT Consulting Company in Kigali, Rwanda.</p>
+            <h2 className="text-gray-300 py-10 font-medium">LD Computer Store Rwanda Limited is a Full-Service Technology Services Provider also called the Top IT Consulting Company in Kigali, Rwanda.</h2>
           </div>
         </div>
       </div>

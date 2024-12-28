@@ -3,7 +3,8 @@ React;
 const WhyUs = () => {
   return (
     <>
-      <section className="overflow-hidden pt-20 pb-12 lg:pt-[120px] lg:pb-[90px] bg-white dark:bg-dark">
+      <section className="overflow-hidden w-full xl:w-full md:w-full sm:w-full pt-20 pb-12 lg:pt-[120px] lg:pb-[90px] bg-white dark:bg-dark">
+        <h2 className="text-blue-400 font-bold py-4">WHY US ?</h2>
         <div className="container mx-auto">
           <div className="flex flex-wrap items-center justify-between -mx-4">
             <div className="w-full px-4 lg:w-6/12">
@@ -608,9 +609,7 @@ const WhyUs = () => {
 
             <div className="w-full p-4 lg:w-1/2 xl:w-1/2">
               <div className="mt-10 lg:mt-0 p-4">
-                <p className="block text-blue-400 mb-4 text-lg font-semibold text-primary">
-                  Why Choose Us
-                </p>
+
                 <h2 className="mb-5 text-3xl font-bold text-dark dark:text-white sm:text-[40px]/[48px]">
                   Make your customers happy by giving services.
                 </h2>

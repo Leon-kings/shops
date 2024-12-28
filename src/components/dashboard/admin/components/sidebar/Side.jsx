@@ -6,8 +6,6 @@ import { CgProfile } from "react-icons/cg";
 import { IoSettings } from "react-icons/io5";
 import { BsHouse } from "react-icons/bs";
 import { Link, useNavigate } from "react-router-dom";
-
-
 function Sidebar() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const navigate = useNavigate();
@@ -31,7 +29,7 @@ function Sidebar() {
         `}
       >
         {/* Sidebar content here */}
-        <div className="title"></div>
+        
         <ul className="scroll-auto">
           <li className="w-40">
             <img
@@ -64,7 +62,7 @@ function Sidebar() {
           </li>
           <br />
           <li className="my-2">
-            <Link to={'/5010/Userview'}>
+            <Link to={"/5010/Userview"}>
               <button>
                 <BiUser />
               </button>

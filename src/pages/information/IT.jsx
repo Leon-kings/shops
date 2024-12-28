@@ -5,8 +5,8 @@ export default function IT() {
     <>
     <div className="title"></div>
       <div className="bg-gray-50 py-24 sm:py-32">
-        <div className="mx-auto w-full px-6 lg:w-full xl:w-full lg:px-8">
-          <h2 className="text-center text-base/7 font-semibold text-indigo-600">Debug faster</h2>
+        <div className="mx-auto w-full px-6 lg:w-full xl:w-full xl:px-8 lg:px-8">
+        <h2 className="text-blue-400 font-bold py-4">DEBUG FASTER</h2>
           <p className="mx-auto mt-2 max-w-lg text-balance text-center text-4xl font-semibold tracking-tight text-gray-950 sm:text-5xl">
             Everything you need to deploy your app
           </p>
@@ -109,14 +109,12 @@ export default function IT() {
           </div>
         </div>
         {/*  */}
-        <section className="pb-10 pt-20 dark:bg-dark lg:pb-20 lg:pt-[120px]">
+        <section className="pb-10 pt-20 dark:bg-dark lg:pb-20 lg:pt-[120px] lg:w-full xl:w-full">
+        <h2 className="text-blue-400 font-bold py-4">OUR TECHNICAL TEAM</h2>
       <div className="container mx-auto">
         <div className="-mx-4 flex flex-wrap">
           <div className="w-full px-4">
             <div className="mx-auto mb-[60px] max-w-[510px] text-center">
-              <h2 className="mb-3 text-3xl font-bold leading-[1.2] text-dark dark:text-white sm:text-4xl md:text-[40px]">
-                Our Awesome Team
-              </h2>
               <p className="text-base text-body-color dark:text-dark-6">
               We are Happy to Present to you Supporting Team.
               </p>

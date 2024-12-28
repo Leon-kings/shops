@@ -2,7 +2,9 @@ import React from 'react'
 React;
 export default function Head() {
     return (
-      <div className="relative overflow-hidden bg-white">
+      <>
+      <div className="relative overflow-hidden bg-white w-full xl:w-full md:w-full sm:w-full">
+        <h2 className="text-blue-400 font-bold py-4">BUY YOUR DEVICES</h2>
         <div className="pt-16 pb-80 sm:pt-24 sm:pb-40 lg:pt-40 lg:pb-48">
           <div className="relative mx-auto max-w-7xl px-4 sm:static sm:px-6 lg:px-8">
             <div className="sm:max-w-lg">
@@ -31,14 +33,12 @@ export default function Head() {
                       <div className="grid shrink-0 grid-cols-1 ">
                         <div className="h-44 w-40 overflow-hidden rounded-lg sm:opacity-0 lg:opacity-100">
                           <img
-                            alt=""
                             src="https://i.pcmag.com/imagery/reviews/00xTIwo4AQMjnWl4H4ctDCq-1..v1643394203.jpg"
                             className="size-fit object-cover"
                           />
                         </div>
                         <div className="h-44 w-40 overflow-hidden rounded-lg">
                           <img
-                            alt=""
                             src="https://www.techtarget.com/rms/onlineimages/acer_chromebook-f_mobile.jpg"
                             className="size-fit object-cover"
                           />
@@ -48,21 +48,18 @@ export default function Head() {
                       <div className="grid shrink-0 grid-cols-1 ">
                         <div className="h-44 w-40 overflow-hidden rounded-lg">
                           <img
-                            alt=""
                             src="https://m.media-amazon.com/images/I/71X6WUQoHfL.jpg"
                             className="size-fit object-cover"
                           />
                         </div>
                         <div className="h-44 w-40 overflow-hidden rounded-lg">
                           <img
-                            alt=""
                             src="https://www.techtarget.com/rms/onlineimages/hp_elitebook_mobile.jpg"
                             className="size-fit object-cover"
                           />
                         </div>
                         <div className="h-44 w-40 overflow-hidden rounded-lg">
                           <img
-                            alt=""
                             src="https://cdn.gadgetbytenepal.com/wp-content/uploads/2024/04/Lenovo-IdeaPad-1-2022-Intel-Celeron-N4020.jpg"
                             className="size-fit object-cover"
                           />
@@ -71,14 +68,12 @@ export default function Head() {
                       <div className="grid shrink-0 grid-cols-1 ">
                         <div className="h-44 w-40 overflow-hidden rounded-lg">
                           <img
-                            alt=""
                             src="https://computercures.com.au/wp-content/uploads/2019/01/aio.jpg"
                             className="size-fit object-cover"
                           />
                         </div>
                         <div className="h-44 w-40 overflow-hidden rounded-lg">
                           <img
-                            alt=""
                             src="https://resource.logitech.com/content/dam/gaming/en/products/g433/g433-gallery-black-1.png"
                             className="size-fit object-cover"
                           />
@@ -92,6 +87,7 @@ export default function Head() {
           </div>
         </div>
       </div>
+      </>
     )
   }
   

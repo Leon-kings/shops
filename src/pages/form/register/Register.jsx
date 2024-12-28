@@ -75,9 +75,10 @@ const Register = () => {
   };
   return (
     <>
-      <div className="title"></div>
-      <br />
-      <div className="container flex items-center justify-center min-h-screen bg-gray-100">
+      <div className="title">
+       <br /> 
+      </div>
+      <div className="container w-full xl:w-full lg:w-full md:w-full sm:w-full flex justify-center min-h-screen bg-gray-100">
         <div className="w-full max-w-md p-8 bg-white rounded shadow-md">
           <div className="Register">
             <form onSubmit={handleSubmit}>
@@ -97,7 +98,7 @@ const Register = () => {
                 <div className="head">
                   <button className="btn w-44 text-white">Submit</button>
 
-                  <p className="p-4">
+                  <p className="p-4 text-black">
                     If you do have an account got
                     <Link to="/login">
                       <b>
@@ -112,6 +113,7 @@ const Register = () => {
             </form>
           </div>
         </div>
+        <div className="title"></div>
       </div>
     </>
   );

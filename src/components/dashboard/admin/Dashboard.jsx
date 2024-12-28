@@ -29,13 +29,13 @@ const Dashboard = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     console.log("Submitting with values:", values);
-  
+
     try {
       const response = await axios.get(
         `https://backendproject-8m9r.onrender.com/users/${values}`
       );
       console.log("Response data:", response.data);
-  
+
       if (response.data.data) {
         setSearch(response.data.data);
         alert("Fetched Successfully");
@@ -44,27 +44,29 @@ const Dashboard = () => {
       }
     } catch (error) {
       console.error("Error fetching posts:", error);
-      alert('Error in fetching: ' + (error.response?.data?.message || error.message));
+      alert(
+        "Error in fetching: " + (error.response?.data?.message || error.message)
+      );
     }
   };
-  
-      // Delete user
-      const handleDelete = async (e) => {
-        e.preventDefault();
-        try {
-          if (window.confirm("Do you really want to Delete?")) {
-    
-            await axios.delete(`https://backendproject-8m9r.onrender.com/users/${values}`);
-            setSearch(search.filter((user) => user._id !== values));
-          }
-          else {
-            alert('Error in delete')
-          }
-        } catch (error) {
-          console.error("Error deleting user:", error);
-          alert("Error deleting user:", error);
-        }
-      };
+
+  // Delete user
+  const handleDelete = async (e) => {
+    e.preventDefault();
+    try {
+      if (window.confirm("Do you really want to Delete?")) {
+        await axios.delete(
+          `https://backendproject-8m9r.onrender.com/users/${values}`
+        );
+        setSearch(search.filter((user) => user._id !== values));
+      } else {
+        alert("Error in delete");
+      }
+    } catch (error) {
+      console.error("Error deleting user:", error);
+      alert("Error deleting user:", error);
+    }
+  };
   const onChange = (e) => {
     setValues({ ...values, [e.target.name]: e.target.value });
   };
@@ -97,7 +99,11 @@ const Dashboard = () => {
                 <td className="p-2 text-black">{data.name}</td>
                 <td className="p-2 text-red-400">{data.email}</td>
                 <td className="p-2 text-black">{data.number}</td>
-                <td><button onClick={handleDelete}><TrashIcon className="w-6"/></button></td>
+                <td>
+                  <button onClick={handleDelete}>
+                    <TrashIcon className="w-6" />
+                  </button>
+                </td>
               </tr>;
             })}
           </div>
@@ -107,9 +113,9 @@ const Dashboard = () => {
         <div className="title"></div>
         <hr className="p-4 text-2xl text-blue-600" />
         <div className="title"></div>
-        
-<IT />
-       
+
+        <IT />
+
         <h3 className="text-center text-red-400 font-bold">PRODUCT PAGE</h3>
         <Postview />
       </div>

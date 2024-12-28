@@ -11,6 +11,7 @@ const Card = () => {
               CardTitle="Best PC Store"
               CardDescription="We are glad to serve you Better Products with Best Quality From Orginal Industry."
               Button="View Details"
+              btnHref="/Market"
             />
             <SingleCard
               image="https://media.istockphoto.com/id/1306977961/vector/js-coding-website-background.jpg?s=612x612&w=0&k=20&c=FK-XxRWdnbIqlAkhq5lpAke8s1XMQsApMUdyrAe7Lks="
@@ -23,6 +24,7 @@ const Card = () => {
               CardTitle="HeadPhones"
               CardDescription="We are also Glad to Give Headphone for better fucusing with straight Musics"
               Button="View Details"
+              btnHref="/Market"
             />
           </div>
         </div>
@@ -33,14 +35,7 @@ const Card = () => {
 
 export default Card;
 
-const SingleCard = ({
-  image,
-  Button,
-  CardDescription,
-  CardTitle,
-  titleHref,
-  btnHref,
-}) => {
+const SingleCard = ({ image, Button, CardDescription, CardTitle, btnHref }) => {
   return (
     <>
       {/*  */}
@@ -48,12 +43,9 @@ const SingleCard = ({
         <img src={image} alt="" className="w-full" />
         <div className="p-8 text-center sm:p-9 md:p-7 xl:p-9">
           <h3>
-            <a
-              href={titleHref ? titleHref : "/#"}
-              className="mb-4 block text-xl font-semibold text-dark hover:text-primary dark:text-white sm:text-[22px] md:text-xl lg:text-[22px] xl:text-xl 2xl:text-[22px]"
-            >
+            <p className="mb-4 block text-xl font-semibold text-dark hover:text-primary dark:text-white sm:text-[22px] md:text-xl lg:text-[22px] xl:text-xl 2xl:text-[22px]">
               {CardTitle}
-            </a>
+            </p>
           </h3>
           <p className="mb-7 text-base leading-relaxed text-body-color dark:text-dark-6">
             {CardDescription}
@@ -61,7 +53,7 @@ const SingleCard = ({
 
           {Button && (
             <button
-              href={btnHref ? btnHref : "#"}
+              href={btnHref ? btnHref : "/Market"}
               className="inline-block rounded-full border border-gray-3 px-7 py-2 text-base font-medium text-body-color transition hover:border-primary hover:bg-primary hover:text-white dark:border-dark-3 dark:text-dark-6"
             >
               {Button}

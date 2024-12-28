@@ -28,7 +28,7 @@ const Login = () => {
       errorMessage:
         "password should be 8-12 characters include at least 1 letter and 1 symbol",
       label: "password",
-      required: true
+      required: true,
     },
   ];
   const Navigate = useNavigate();
@@ -78,7 +78,6 @@ const Login = () => {
       <div className="container flex items-center justify-center min-h-screen bg-gray-100">
         <div className="w-full max-w-md p-8 bg-white rounded shadow-md">
           <form onSubmit={handleSubmit} className="mt-4">
-            
             <h2 className="title text-green-400 text-2xl py-4">Log in</h2>
             <div className="container">
               {inputs.map((input) => (
@@ -92,11 +91,14 @@ const Login = () => {
               ))}
               <div className="head">
                 <button className="button w-42 text-white">Submit</button>
-                <p className="p-4">
+                <p className="p-4 text-black">
                   If you don`t have an account
                   <Link to="/Register">
                     <b>
-                      <button className="p-3 bg-blue-500 hover:text-green-300 "> Register</button>
+                      <button className="p-3 bg-blue-500 hover:text-green-300 ">
+                        {" "}
+                        Register
+                      </button>
                     </b>
                   </Link>
                 </p>

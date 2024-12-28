@@ -3,6 +3,8 @@ React;
 import { useState, useEffect } from "react";
 import axios from "axios";
 import "../userview/components/css.css";
+import { Link } from "react-router-dom";
+import { BsHouse } from "react-icons/bs";
 export default function Postview() {
   const [posts, setPosts] = useState([]);
   const [editingPost, setEditingPost] = useState(null);
@@ -86,9 +88,11 @@ export default function Postview() {
   console.log(posts);
   return (
     <div>
+      <div className="title">
+        <br />
+      </div>
       {/* Main Content */}
       <div className=" bg-gray-100  ">
-        <div className="title"></div>
         <h4>Posts</h4>
         <div className="overflow-x-auto">
           <table className="min-w-full bg-white border border-gray-200">
@@ -240,6 +244,10 @@ export default function Postview() {
           </table>
         </div>
       </div>
+      <Link to={'/dashboard'}>
+      <button><BsHouse/></button>
+      </Link>
+      <div className="title"></div>
     </div>
   );
 }

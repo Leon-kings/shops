@@ -61,12 +61,7 @@ export default function Fquestion(handler) {
        <br />
       <div className="py-5 bg-white w-full xl:w-full">
         <div className="container flex flex-col items-center justify-center w-full p-8 mx-auto mt-4 text-center xl:px-0">
-          <div className="text-sm font-bold tracking-wider text-indigo-600 uppercase">
-            FAQ
-          </div>
-          <h2 className="max-w-2xl mt-3 text-3xl font-bold leading-snug tracking-tight text-gray-800 lg:leading-tight lg:text-4xl dark:text-white">
-            Frequently Asked Questions
-          </h2>
+        <h2 className="text-blue-400 font-bold py-4">FAQ</h2>
           <p className="max-w-2xl py-4 text-lg leading-normal text-gray-500 lg:text-xl xl:text-xl dark:text-gray-300">
             Answer your customers possible questions here, it will increase the
             conversion rate as well as support or chat requests.
@@ -114,7 +109,8 @@ export default function Fquestion(handler) {
         </div>
       </div>
       {/*  */}
-      <section className="bg-white py-20 dark:bg-dark lg:py-[120px]">
+      <section className="bg-white py-20 dark:bg-dark lg:py-[120px] w-full xl:w-full">
+      <h2 className="text-blue-400 font-bold py-4">EXPLORE MORE</h2>
         <div ref={domNode} className="container">
           <div className="-mx-4 flex flex-wrap justify-center">
             <div className="w-full px-4 lg:w-10/12">
