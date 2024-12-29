@@ -4,11 +4,11 @@ import Video from "../../assets/video/head.mp4";
 React
 const Header = () => {
   return (
-    <div className=" flex-auto relative w-full xl:w-full md:w-full sm:w-full">
+    <div className="flex-auto relative w-full xl:w-full md:w-full sm:w-full">
       {/* Video Background */}
       <div className="absolute transform-gpu overflow-hidden blur-1xl ">
         <div className="title"></div>
-        <video className="w-full xl:w-full md:w-full sm:w-full object-cover" autoPlay loop muted>
+        <video className="w-full object-cover" autoPlay loop muted>
           <source src={Video} type="video/mp4" />
           Your browser does not support the video tag.
         </video>

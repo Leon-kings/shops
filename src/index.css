@@ -2,35 +2,30 @@
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
-
+  width: 100%;
   color-scheme: light dark;
-  
   background-color: #242424;
-
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-
 body {
   margin: 0;
   display: flex;
   place-items: center;
-  min-width: 320px;
+  width: 100%;
   min-height: 100vh;
   background-color: antiquewhite;
-  background-image: url('.');
+  background-image: url(".");
 }
 
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
 }
-.icon{
-  float: right;
-}
+
 button {
   border-radius: 8px;
   border: 1px solid transparent;
@@ -45,17 +40,12 @@ button {
 
 @media (prefers-color-scheme: light) {
   :root {
-   
     background-color: #ffffff;
   }
 
   button {
     background-color: #636ddf;
   }
-  btn {
-    background-color: #25e846;
-  }
 }
-
 
 @import "tailwindcss";

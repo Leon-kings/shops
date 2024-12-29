@@ -57,7 +57,7 @@ const Register = () => {
     console.log(values);
     try {
       await axios.post(
-        "https://backendproject-8m9r.onrender.com/users",
+        "https://shopsnodejs.onrender.com/users",
         values
       );
       if (window.confirm("Do you really want to continue to login?")) {
