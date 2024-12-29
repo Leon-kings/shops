@@ -4,7 +4,7 @@ React;
 const NewC = () => {
   return (
     <div>
-      <section className="py-24 relative w-full xl:w-full md:w-full sm:w-full">
+      <section className="py-24 relative">
         <h2 className="text-blue-400 font-bold py-4">EMPOWERING OTHERS</h2>
         <div className="w-full max-w-7xl px-4 md:px-5 lg:px-5 mx-auto">
           <div className="w-full justify-start items-center gap-12 grid lg:grid-cols-2 grid-cols-1">

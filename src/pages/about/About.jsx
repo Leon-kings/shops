@@ -73,13 +73,13 @@ export default function About() {
     <>
       <div className="title"></div>
       <br />
-      <div className="container bg-white w-full xl:w-full md:w-full sm:w-full">
+      <div className="container bg-white">
       <h2 className="text-2xl py-3 font-bold tracking-tight text-blue-600">
           ABOUT
         </h2>
         {/*  */}
         <NewC />
-        <section className="py-24 relative w-full xl:w-full md:w-full sm:w-full">
+        <section className="py-24 relative  ">
           <h2 className="text-blue-400 font-bold py-4">BUILD YOUR NETWORK</h2>
           <br />
           <div className="w-full max-w-7xl px-4 md:px-5 lg:px-5 mx-auto">

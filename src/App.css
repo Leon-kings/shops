@@ -1,5 +1,5 @@
 #root {
-  max-width: 1280px;
+  /* max-width: 1280px; */
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
@@ -18,7 +18,5 @@
   padding-top: 55px;
   padding-bottom: 40px;
 }
-.card {
-  padding: 1em;
-}
+
 

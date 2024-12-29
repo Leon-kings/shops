@@ -44,10 +44,11 @@ const Home = () => {
   return (
     <>
       {/* Body space */}
-      <div className="container px-0 lg:w-full xl:w-full w-full py-0 mx-0">
+      <div className="container px-0 xl:w-full w-full py-0 mx-0">
         {/* general container */}
         {/* Head Body starts*/}
         <div className="head w-full">
+          
           {/* space btn nav and body */}
           <div className="title"></div>
           {/* space btn nav and body ends*/}
