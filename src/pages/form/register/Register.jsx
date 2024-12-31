@@ -51,6 +51,7 @@ const Register = () => {
       required: true,
     },
   ];
+  const Navigate = useNavigate();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -69,7 +70,7 @@ const Register = () => {
       console.log(err);
     }
   };
-  const Navigate = useNavigate();
+ 
   const onChange = (e) => {
     setValues({ ...values, [e.target.name]: e.target.value });
   };
