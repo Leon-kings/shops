@@ -96,7 +96,7 @@ const Login = () => {
                   <Link to="/Register">
                     <b>
                       <button className="p-3 bg-blue-500 hover:text-green-300 ">
-                        {" "}
+                       
                         Register
                       </button>
                     </b>

@@ -59,6 +59,30 @@ export default function Fquestion(handler) {
       answer:
         "Yes, we do offer javaScript [React + Nodejs and Nextjs] , PHP and JAVA.",
     },
+    {
+      id: 6,
+      question: "What is Debugging?",
+      answer:
+        "Debugging is the process of identifying and resolving errors, or bugs, in a software system.",
+    },
+    {
+      id: 7,
+      question: "What are CASE Tools?",
+      answer:
+        "CASE stands for Computer-Aided Software Engineering. CASE tools are a set of automated software application programs, which are used to support, accelerate and smoothen the SDLC activities",
+    },
+    {
+      id: 8,
+      question: "What is Software Re-engineering?",
+      answer:
+        "Software re-engineering is the process of scanning, modifying, and reconfiguring a system in a new way.",
+    },
+    {
+      id: 9,
+      question: "What is Reverse Engineering?",
+      answer:
+        "Software Reverse Engineering is a process of recovering the design, requirement specifications, and functions of a product from an analysis of its code.",
+    },
   ];
 
   return (
