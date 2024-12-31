@@ -50,7 +50,7 @@ const Login = () => {
 
     try {
       await axios.post(
-        "https://backendproject-8m9r.onrender.com/users/auth",
+        "https://shopsnodejs.onrender.com/users/auth",
         values
       );
       if (window.confirm("Do you really want to move?")) {
