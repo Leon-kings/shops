@@ -5,74 +5,74 @@ import { Link } from "react-router-dom";
 React;
 import "../userview/components/css.css";
 export default function Testimonyview() {
-  const [message, setMessage] = useState([]);
-  const [editingMessage, setEditingMessage] = useState(null);
+  const [testimony, setTestimony] = useState([]);
+  const [editingTestimony, setEditingTestimony] = useState(null);
   const [formData, setFormData] = useState({
     email: "",
-    message: "",
+    testimony: "",
+    name:""
   });
 
-  // Fetch message from API
+  // Fetch testimony from API
   useEffect(() => {
-    const fetchMessage = async () => {
+    const fetchtestimony = async () => {
       try {
         const response = await axios.get(
-          "https://backendproject-8m9r.onrender.com/message"
+          "https://backendproject-8m9r.onrender.com/testimony"
         );
-        setMessage(response.data.data);
+        setTestimony(response.data.data);
       } catch (error) {
-        console.error("Error fetching message:", error);
+        console.error("Error fetching testimony:", error);
       }
     };
 
-    fetchMessage();
+    fetchtestimony();
   }, []);
 
-  // Delete msg
-  const handleDelete = async (msgId) => {
+  // Delete testimony
+  const handleDelete = async (testimonyId) => {
     try {
       if (window.confirm("Do you really want to Delete?")) {
         await axios.delete(
-          `https://backendproject-8m9r.onrender.com/message/${msgId}`
+          `https://backendproject-8m9r.onrender.com/testimony/${testimonyId}`
         );
-        setMessage(message.filter((msg) => msg._id !== msgId));
+        setTestimony(testimony.filter((testimony) => testimony._id !== testimonyId));
       } else {
         alert("Error in delete");
       }
     } catch (error) {
-      console.error("Error deleting msg:", error);
-      alert("Error deleting msg:", error);
+      console.error("Error deleting testimony:", error);
+      alert("Error deleting testimony:", error);
     }
   };
 
   // Handle edit
-  const handleEdit = (msg) => {
-    setEditingMessage(msg._id);
+  const handleEdit = (testimony) => {
+    setEditingTestimony(testimony._id);
     setFormData({
-      email: msg.email,
-      message: msg.message,
+      email: testimony.email,
+      name:testimony.name,
+      testimony: testimony.testimony,
     });
   };
 
-  // Update msg
-  const handleUpdate = async (msgId) => {
+  // Update testimony
+  const handleUpdate = async (testimonyId) => {
     try {
-      if (window.confirm("Do you really want to Update?")) {
+      
         await axios.put(
-          `https://backendproject-8m9r.onrender.com/message/${msgId}`,
+          `https://backendproject-8m9r.onrender.com/testimony/${testimonyId}`,
           formData
         );
-        setMessage(
-          message.map((msg) =>
-            msg._id === msgId ? { ...msg, ...formData } : msg
+        setTestimony(
+          testimony.map((testimony) =>
+            testimony._id === testimonyId ? { ...testimony, ...formData } : testimony
           )
         );
-        setEditingMessage(null);
-      } else {
-        alert("Error in Updating ");
-      }
+        setEditingTestimony(null);
+  
     } catch (error) {
-      console.error("Error updating msg:", error);
+      console.error("Error updating testimony:", error);
     }
   };
 
@@ -81,7 +81,7 @@ export default function Testimonyview() {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
   };
-  console.log(message[0]);
+  console.log(testimony[0]);
   return (
     <>
       <div className="title">
@@ -90,7 +90,7 @@ export default function Testimonyview() {
       <div className="container bg-white rounded-md">
       <div className="relative overflow-hidden bg-gray-100 min-h-screen ">
           <h4>Testimony</h4>
-          {message.length > 0 ? (
+          {testimony.length > 0 ? (
             <div className="overflow-x-auto">
               <table className="min-w-full bg-white border border-gray-200">
                 <thead className="rounded-lg text-base text-blue-400 font-semibold w-full">
@@ -98,12 +98,15 @@ export default function Testimonyview() {
                     <th className="px-6 py-3 text-left text-sm font-medium text-gray-700 uppercase tracking-wider">
                       ID
                     </th>
+                    <th className="px-6 py-3 text-left text-sm font-medium text-gray-700 uppercase tracking-wider">
+                      Name
+                    </th>
 
                     <th className="px-6 py-3 text-left text-sm font-medium text-gray-700 uppercase tracking-wider">
                       Email
                     </th>
                     <th className="px-6 py-3 text-left text-sm font-medium text-gray-700 uppercase tracking-wider">
-                      message
+                      testimony
                     </th>
 
                     <th className="px-6 py-3 text-left text-sm font-medium text-gray-700 uppercase tracking-wider">
@@ -112,12 +115,21 @@ export default function Testimonyview() {
                   </tr>
                 </thead>
                 <tbody className="divide-y divide-gray-200">
-                  {message.map((msg) => (
-                    <tr key={msg._id} className="border-t">
-                      {editingMessage === msg._id ? (
+                  {testimony.map((testimony) => (
+                    <tr key={testimony._id} className="border-t">
+                      {editingTestimony === testimony._id ? (
                         <>
-                          <td>{msg._id}</td>
+                          <td>{testimony._id}</td>
 
+                          <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
+                            <input
+                              type="name"
+                              name="text"
+                              value={formData.name}
+                              onChange={handleInputChange}
+                              className="w-full border p-1"
+                            />
+                          </td>
                           <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
                             <input
                               type="email"
@@ -129,9 +141,9 @@ export default function Testimonyview() {
                           </td>
                           <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
                             <input
-                              type="message"
-                              name="message"
-                              value={formData.message}
+                              type="testimony"
+                              name="testimony"
+                              value={formData.testimony}
                               onChange={handleInputChange}
                               className="w-full border p-1"
                             />
@@ -140,13 +152,13 @@ export default function Testimonyview() {
                           <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900 text-center">
                             <button
                               className="bg-green-500 text-white px-2 py-1 rounded mr-2"
-                              onClick={() => handleUpdate(msg._id)}
+                              onClick={() => handleUpdate(testimony._id)}
                             >
                               Save
                             </button>
                             <button
                               className="bg-gray-500 text-white px-2 py-1 rounded"
-                              onClick={() => setEditingMessage(null)}
+                              onClick={() => setEditingTestimony(null)}
                             >
                               Cancel
                             </button>
@@ -155,26 +167,29 @@ export default function Testimonyview() {
                       ) : (
                         <>
                           <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
-                            {msg._id}
+                            {testimony._id}
+                          </td>
+                          <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
+                            {testimony.name}
                           </td>
 
                           <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
-                            {msg.email}
+                            {testimony.email}
                           </td>
 
                           <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
-                            {msg.message}
+                            {testimony.testimony}
                           </td>
                           <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900 text-center">
                             <button
                               className="bg-blue-500 text-white px-2 py-1 rounded mr-2"
-                              onClick={() => handleEdit(msg)}
+                              onClick={() => handleEdit(testimony)}
                             >
                               Edit
                             </button>
                             <button
                               className="bg-red-500 text-white px-2 py-1 rounded"
-                              onClick={() => handleDelete(msg._id)}
+                              onClick={() => handleDelete(testimony._id)}
                             >
                               Delete
                             </button>
