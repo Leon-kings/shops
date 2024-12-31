@@ -20,11 +20,12 @@ const Userview = () => {
     const fetchUsers = async () => {
       try {
         const response = await axios.get(
-          "https://shopsnodejs.onrender.com/users"
+          "https://backendproject-8m9r.onrender.com/users"
         );
         setUsers(response.data.data);
+        console.log(response.data)
       } catch (error) {
-        console.error("Error fetching users:", error);
+        console.log("Error fetching users:", error);
       }
     };
 
@@ -86,7 +87,7 @@ const Userview = () => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
   };
-  console.log(users[0]);
+  // console.log(users[0]);
 
   return (
     <div>
@@ -95,8 +96,8 @@ const Userview = () => {
         <br />
       </div>
       <div className="relative overflow-hidden bg-gray-100 min-h-screen ">
-        <h4>Users</h4>
-        {users.length > 0 ? (
+        
+        {users && users.length > 0 ? (
           <div className="overflow-x-auto">
             <table className="min-w-full bg-white border border-gray-200">
               <thead className="rounded-lg text-base text-blue-400 font-semibold w-full">
