@@ -34,24 +34,30 @@ export default function Fquestion(handler) {
     {
       id: 1,
       question: "Is this component completely free to use?",
-      answer: "No, it should be purchased first.",
+      answer: "The software development life cycle (SDLC) typically includes planning, requirements analysis, design, coding, testing, deployment, and maintenance.",
     },
     {
       id: 2,
-      question: "Can I use it in a commercial project?",
-      answer: "Yes, once purchased, you can use it in any projects.",
+      question: "What methodologies are used?",
+      answer: "Some common methodologies include Waterfall, Agile, Scrum, Lean, and Prototype. The best methodology depends on the company and team",
     },
     {
       id: 3,
-      question: "What is your refund policy?",
+      question: "What are the main activities in software development?",
       answer:
-        "If you are unhappy with your purchase for any reason, email us within 90 days and we wll refund you in full, no questions asked.",
+        "The main activities are specification, design and implementation, validation, and evolution",
     },
     {
       id: 4,
       question: "Do you offer technical support?",
       answer:
-        "No, we don't offer technical support for components. Please purchase a support plan to get 6 months of support.",
+        "Yes, we do offer technical support for components.",
+    },
+    {
+      id: 5,
+      question: "Which Language do you offer?",
+      answer:
+        "Yes, we do offer javaScript [React + Nodejs and Nextjs] , PHP and JAVA.",
     },
   ];
 
