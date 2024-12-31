@@ -15,7 +15,7 @@ export default function Messageview() {
     const fetchMessage = async () => {
       try {
         const response = await axios.get(
-          "https://backendproject-8m9r.onrender.com/message"
+          "https://shopsnodejs.onrender.com/messages"
         );
         setMessage(response.data.data);
       } catch (error) {

@@ -50,7 +50,7 @@ export default function CreateTestimony() {
     console.log(values);
     try {
       await axios.post(
-        "https://backendproject-8m9r.onrender.com/testimony",
+        "https://shopsnodejs.onrender.com/testimony",
         values
       );
       if (window.confirm("Back to dashboard?")) {

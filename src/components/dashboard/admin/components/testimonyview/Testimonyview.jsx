@@ -18,7 +18,7 @@ export default function Testimonyview() {
     const fetchtestimony = async () => {
       try {
         const response = await axios.get(
-          "https://backendproject-8m9r.onrender.com/testimony"
+          "https://shopsnodejs.onrender.com/testimony"
         );
         setTestimony(response.data.data);
       } catch (error) {
@@ -34,7 +34,7 @@ export default function Testimonyview() {
     try {
       if (window.confirm("Do you really want to Delete?")) {
         await axios.delete(
-          `https://backendproject-8m9r.onrender.com/testimony/${testimonyId}`
+          `https://shopsnodejs.onrender.com/testimony/${testimonyId}`
         );
         setTestimony(testimony.filter((testimony) => testimony._id !== testimonyId));
       } else {
@@ -61,7 +61,7 @@ export default function Testimonyview() {
     try {
       
         await axios.put(
-          `https://backendproject-8m9r.onrender.com/testimony/${testimonyId}`,
+          `https://shopsnodejs.onrender.com/testimony/${testimonyId}`,
           formData
         );
         setTestimony(

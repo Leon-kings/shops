@@ -20,7 +20,7 @@ const Userview = () => {
     const fetchUsers = async () => {
       try {
         const response = await axios.get(
-          "https://backendproject-8m9r.onrender.com/users"
+          "https://shopsnodejs.onrender.com/users"
         );
         setUsers(response.data.data);
       } catch (error) {
@@ -36,7 +36,7 @@ const Userview = () => {
     try {
       if (window.confirm("Do you really want to Delete?")) {
         await axios.delete(
-          `https://backendproject-8m9r.onrender.com/users/${userId}`
+          `https://shopsnodejs.onrender.com/users/${userId}`
         );
         setUsers(users.filter((user) => user._id !== userId));
       } else {
@@ -64,7 +64,7 @@ const Userview = () => {
     try {
       if (window.confirm("Do you really want to Update?")) {
         await axios.put(
-          `https://backendproject-8m9r.onrender.com/users/${userId}`,
+          `https://shopsnodejs.onrender.com/users/${userId}`,
           formData
         );
         setUsers(
