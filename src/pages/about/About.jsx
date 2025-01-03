@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import NewC from "../../universal/about/NewC";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, } from "react-router-dom";
 import axios from "axios";
 import FormInput from "../form/action/FormInput";
 
@@ -35,9 +35,6 @@ export default function About() {
       required: true,
     },
   ];
-  const Navigate = useNavigate();
-  // fetching data from database
-  // handleSubmit
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -45,21 +42,15 @@ export default function About() {
 
     try {
       await axios.post(
-        "https://backendproject-8m9r.onrender.com/users/auth",
+        "https://shopsnodejs.onrender.com/messages",
         values
       );
-      if (window.confirm("Do you really want to move?")) {
-        Navigate("/");
-      } else {
-        Navigate("/Register");
-      }
+      alert('Message received');
     } catch (err) {
       console.log(err);
 
       if (err.response && err.response.status === 401) {
         alert("Invalid credentials. Please try again.");
-      } else {
-        alert("An error occurred. Please try again later.");
       }
     }
   };
