@@ -44,13 +44,13 @@ const Home = () => {
   return (
     <>
       {/* Body space */}
-      <div className="container px-0 xl:w-full w-full py-0 mx-0">
+      <div className="container md:w-full px-0 xl:w-full w-full py-0 mx-0">
         {/* general container */}
         {/* Head Body starts*/}
         <div className="head w-full">
           
           {/* space btn nav and body */}
-          <div className="title"></div>
+          {/* <div className="title"></div> */}
           {/* space btn nav and body ends*/}
           {/* Header Video components*/}
           <div className="header">
@@ -153,20 +153,7 @@ const Home = () => {
             </div>
           </div>
         </div>
-        <hr className="text-blue-600" />
-        <div className="head lg:w-full xl:w-full bg-white" id="logs">
-        <h2 className="text-blue-400 font-bold py-4">CREATE AND ACCESS YOUR ACCOUNT</h2>
-          {/* space btn nav and body ends*/}
-          {/* Header Video components*/}
-          <div className="main grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-2 xl:gap-x-8">
-            <div className="main ">
-              <Login />
-            </div>
-            <div className=" main ">
-              <Register />
-            </div>
-          </div>
-        </div>
+ 
         {/*  */}
         <hr className="p-3 text-2xl text-blue-600" />
         <div className="head lg:w-full xl:w-full" id="service">

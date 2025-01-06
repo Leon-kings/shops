@@ -88,7 +88,6 @@ export default function Fquestion(handler) {
   return (
     <>
       <div className="title"></div>
-       <br />
       <div className="py-5 bg-white w-full xl:w-full">
         <div className="container flex flex-col items-center justify-center w-full p-8 mx-auto mt-4 text-center xl:px-0">
         <h2 className="text-blue-400 font-bold py-4">FAQ</h2>
@@ -139,7 +138,7 @@ export default function Fquestion(handler) {
         </div>
       </div>
       {/*  */}
-      <section className="bg-white py-20 dark:bg-dark lg:py-[120px] w-full xl:w-full">
+      <section className="bg-white py-20 dark:bg-dark lg:py-[20px] w-full xl:w-full">
       <h2 className="text-blue-400 font-bold py-4">EXPLORE MORE</h2>
         <div ref={domNode} className="container">
           <div className="-mx-4 flex flex-wrap justify-center">

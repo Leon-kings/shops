@@ -48,7 +48,6 @@ export default function About() {
       alert('Message received');
     } catch (err) {
       console.log(err);
-
       if (err.response && err.response.status === 401) {
         alert("Invalid credentials. Please try again.");
       }
