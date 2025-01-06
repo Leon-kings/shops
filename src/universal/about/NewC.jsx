@@ -4,7 +4,7 @@ React;
 const NewC = () => {
   return (
     <div>
-      <section className="relative bg-white p-3">
+      <section className="relative bg-white p-4">
         <h2 className="text-2xl py-3 font-bold tracking-tight text-blue-600">
           ABOUT
         </h2>

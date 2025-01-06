@@ -13,6 +13,8 @@ import { BiLogIn } from "react-icons/bi";
 import { BsInfo, BsQuestion } from "react-icons/bs";
 import { TbSettingsExclamation } from "react-icons/tb";
 import { Link } from "react-router-dom";
+import NewTool from "../../universal/products/3d";
+import Show from "../../universal/sliderproducts/Sslider";
 
 React;
 const Home = () => {
@@ -165,7 +167,30 @@ const Home = () => {
             </div>
           </div>
         </div>
+        <br />
+        <div className="head lg:w-full xl:w-full" id="service">
+          {/* space btn nav and body */}
+          {/* space btn nav and body ends*/}
+          {/* Header Video components*/}
+          <div className="header">
+            <div className="header">
+              <NewTool />
+            </div>
+          </div>
+        </div>
+        <br />
+        <div className="head lg:w-full xl:w-full" id="service">
+          {/* space btn nav and body */}
+          {/* space btn nav and body ends*/}
+          {/* Header Video components*/}
+          <div className="header">
+            <div className="header">
+              <Show />
+            </div>
+          </div>
+        </div>
         {/* button back to top */}
+
         <div className="head lg:w-full xl:w-full" id="service">
       <div>
         <br />
