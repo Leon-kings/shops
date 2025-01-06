@@ -20,7 +20,7 @@ const Userview = () => {
     const fetchUsers = async () => {
       try {
         const response = await axios.get(
-          "https://backendproject-8m9r.onrender.com/users"
+          "https://shopsnodejs.onrender.com/users"
         );
         setUsers(response.data.data);
         console.log(response.data)
@@ -93,7 +93,6 @@ const Userview = () => {
     <div>
       {/* Main Content */}
       <div className="title">
-        <br />
       </div>
       <div className="relative overflow-hidden bg-gray-100 min-h-screen ">
         

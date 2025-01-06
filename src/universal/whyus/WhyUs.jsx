@@ -12,14 +12,14 @@ const WhyUs = () => {
                 <div className="w-full px-3 sm:px-4 xl:w-1/2">
                   <div className="py-3 p-4 sm:py-4">
                     <img
-                      src="https://i.ibb.co/gFb3ns6/image-1.jpg"
+                      src="https://lh6.googleusercontent.com/proxy/_VQGB_lJZeEsEljHp8tJc5Qzjr3Vvx0lB1-ChS6F5AukTf_ExpeoSN7sXjPKFIwcI7aX-Zvs0_PbVCdbSyfZsa05i4jdqgHro2m-_stUUMDSFfFLdvc5BgQOTKUpShs"
                       alt=""
                       className="w-full rounded-2xl"
                     />
                   </div>
                   <div className="py-3 p-4 sm:py-4">
                     <img
-                      src="https://i.ibb.co/rfHFq15/image-2.jpg"
+                      src="https://okcredit-blog-images-prod.storage.googleapis.com/2020/12/shutterstock_1445581070.jpg"
                       alt=""
                       className="w-full rounded-2xl"
                     />
@@ -28,7 +28,7 @@ const WhyUs = () => {
                 <div className="w-full px-3 sm:px-4 xl:w-1/2">
                   <div className="relative p-4 z-10 my-4">
                     <img
-                      src="https://i.ibb.co/9y7nYCD/image-3.jpg"
+                      src="https://img.freepik.com/free-photo/young-attractive-girl-electronics-store-stands-desk-tests-phone_78826-3427.jpg"
                       alt=""
                       className="w-full rounded-2xl"
                     />

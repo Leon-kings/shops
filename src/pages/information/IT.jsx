@@ -128,12 +128,12 @@ export default function IT() {
           <TeamCard
             name="Leon XF"
             profession="Web Developer"
-            imageSrc="https://i.ibb.co/T1J9LD4/image-03-2.jpg"
+            imageSrc="https://t4.ftcdn.net/jpg/08/49/51/37/360_F_849513792_b27tX0iih99en3aVrkmSCyhGq8PPd7kd.jpg"
           />
           <TeamCard
             name="A Leon"
             profession="Software Developer"
-            imageSrc="https://i.ibb.co/8P6cvVy/image-01-1.jpg"
+            imageSrc="https://t3.ftcdn.net/jpg/08/49/48/10/360_F_849481092_1cFJoaObBuSSCS57ez4jICh6bM0Y7QLF.jpg"
           />
 
         </div>

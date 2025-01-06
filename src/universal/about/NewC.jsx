@@ -18,13 +18,13 @@ const NewC = () => {
               <div className="pt-24 lg:justify-center sm:justify-end justify-start items-start gap-2.5 flex">
                 <img
                   className=" rounded-xl object-cover"
-                  src="https://pagedone.io/asset/uploads/1717741205.png"
+                  src="https://img.freepik.com/free-photo/young-attractive-girls-electronics-store-use-laptop-exhibition-concept-buying-gadgets_78826-3142.jpg"
                   alt="LD"
                 />
               </div>
               <img
                 className="sm:ml-0 ml-auto rounded-xl object-cover"
-                src="https://pagedone.io/asset/uploads/1717741215.png"
+                src="https://media.istockphoto.com/id/1191418270/photo/3d-render-of-computer-shop.jpg?s=612x612&w=0&k=20&c=-uUx4m4IB7Lysqsm_JH4DGT0rKx4eVR2-4DTYZIKKis="
                 alt="LD"
               />
             </div>
