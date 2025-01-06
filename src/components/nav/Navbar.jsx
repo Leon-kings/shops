@@ -14,10 +14,10 @@ const navigation = [
   { name: "FAQ", href: "/Fquestion" },
 ];
 
-export default function Example() {
+export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   return (
-    <div className="bg-whit">
+    <div className="bg-white sm:mr-0 md:mr-0 mr-0 w-full sm:w-full md:w-full lg:w-full xl:w-full">
       <header className="absolute inset-x-0 top-0 z-50">
         <nav
           aria-label="Global"
@@ -95,7 +95,7 @@ export default function Example() {
                     className="text-sm/6 font-semibold text-gray-900 hover:bg-gray-50"
                     to={"/login"}
                   >
-                    LOG IN <b aria-hidden="true">&rarr;</b>
+                    LOG IN <b aria-hidden="true" className="text-yellow-300">&rarr;</b>
                   </Link>
                 </div>
               </div>
@@ -103,11 +103,6 @@ export default function Example() {
           </DialogPanel>
         </Dialog>
       </header>
-      {/*  */}
-      {/*  */}
-      {/* main content */}
-      {/*  */}
-      {/*  */}
     </div>
   );
 }

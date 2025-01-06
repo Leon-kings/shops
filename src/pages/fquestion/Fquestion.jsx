@@ -88,9 +88,9 @@ export default function Fquestion(handler) {
   return (
     <>
       <div className="title"></div>
-      <div className="py-5 bg-white w-full xl:w-full">
+      <div className="py-5 bg-white md:w-full sm:w-full lg:w-full w-full xl:w-full">
         <div className="container flex flex-col items-center justify-center w-full p-8 mx-auto mt-4 text-center xl:px-0">
-        <h2 className="text-blue-400 font-bold py-4">FAQ</h2>
+        <h2 className="text-blue-400 font-bold size-10 py-4">FAQ</h2>
           <p className="max-w-2xl py-4 text-lg leading-normal text-gray-500 lg:text-xl xl:text-xl dark:text-gray-300">
             Answer your customers possible questions here, it will increase the
             conversion rate as well as support or chat requests.
@@ -138,7 +138,8 @@ export default function Fquestion(handler) {
         </div>
       </div>
       {/*  */}
-      <section className="bg-white py-20 dark:bg-dark lg:py-[20px] w-full xl:w-full">
+      <br />
+      <section className="bg-white py-20 dark:bg-dark lg:py-[20px] md:w-full sm:w-full lg:w-full w-full xl:w-full">
       <h2 className="text-blue-400 font-bold py-4">EXPLORE MORE</h2>
         <div ref={domNode} className="container">
           <div className="-mx-4 flex flex-wrap justify-center">
@@ -555,7 +556,7 @@ export default function Fquestion(handler) {
           </div>
         )}
       </section>
-      <div className="title"></div>
+      
     </>
   );
 }

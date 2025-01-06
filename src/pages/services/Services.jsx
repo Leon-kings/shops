@@ -38,23 +38,12 @@ export default function Services() {
   return (
     <>
       <div className="title"></div>  
-      <div className="bg-white sm:py-32 w-full xl:w-full">
-      <h2 className="text-2xl font-bold tracking-tight text-blue-600">
-        SERVICES
-        </h2>
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <div className="mx-auto w-full lg:text-center">
-          
-            <p className="mt-6 text-lg/8 text-gray-600">
-              LD is Mostly Happy To Serve You Better Electronics Appliances With
-              Best Quality From Dubai ,<br /> and Also Allow And Provide Support
-              In IT
-            </p>
-          </div>
-          <div className="new bg-white">
+      <div className="main xl:mr-0 lg:mr-0 mr-0">
             <Card />
           </div>
-          <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-4xl">
+          <br />
+          <section className="bg-white xl:w-full lg:w-full md:w-full xl:mr-0 lg:mr-0 sm:mr-0 md:mr-0 mr-0 p-8">
+          <div className="mx-auto py-12 w-full xl:w-full ">
           <h2 className="text-blue-400 font-bold py-4">EMPOWERING OTHERS</h2>
           <br/>
             <dl className="grid max-w-xl grid-cols-1 gap-x-8 gap-y-10 lg:max-w-none lg:grid-cols-2 lg:gap-y-16">
@@ -76,10 +65,8 @@ export default function Services() {
               ))}
             </dl>
           </div>
-        </div>
+          </section>
         {/*  */}
-      </div>
-      <div className="title"></div>
     </>
   );
 }

@@ -62,14 +62,11 @@ export default function About() {
   return (
     <>
       <div className="title"></div>
-      <br />
-      <div className="container bg-white">
-      <h2 className="text-2xl py-3 font-bold tracking-tight text-blue-600">
-          ABOUT
-        </h2>
+      <div className="container">
         {/*  */}
         <NewC />
-        <section className="py-24 relative  ">
+        <br />
+        <section className="py-24 relative bg-white ">
           <h2 className="text-blue-400 font-bold py-4">BUILD YOUR NETWORK</h2>
           <br />
           <div className="w-full max-w-7xl px-4 md:px-5 lg:px-5 mx-auto">
@@ -104,9 +101,9 @@ export default function About() {
         </section>
         {/*  */}
         {/*  */}
-
+<br />
         {/* form pages */}
-        <section className="py-24 relative w-full xl:w-full md:w-full sm:w-full">
+        <section className="py-24 relative w-full xl:w-full bg-white md:w-full sm:w-full">
           <h2 className="text-blue-400 font-bold py-6">MESSAGE US TO ASSIST YOU</h2>
           <div className="w-full max-w-7xl px-4 md:px-5 lg:px-5 mx-auto">
             <div className="w-full justify-start items-center gap-8 grid lg:grid-cols-2 grid-cols-1">

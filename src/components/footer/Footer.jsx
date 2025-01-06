@@ -28,25 +28,16 @@ import axios from "axios";
     const handleSubmit = async (e) => {
       e.preventDefault();
       console.log(values);
-  
-      if (values.email === "admin@gmail.com" && values.password === "admin") {
-        if (window.confirm("Do you really want to continue to dashboard?")) {
-          Navigate("/Dashboard");
-        } else {
-          Navigate("/");
-        }
-        return;
-      }
-  
+
       try {
         await axios.post(
-          "https://backendproject-8m9r.onrender.com/users/auth",
+          "https://shopsnodejs.onrender.com/subscription",
           values
         );
-        if (window.confirm("Do you really want to move?")) {
-          Navigate("/833 103.803C182.209 103");
-        } else {
+        if (window.confirm("Thank you ! Your Subscription received")) {
           Navigate("/");
+        } else {
+          Navigate("/Register");
         }
       } catch (err) {
         console.log(err);

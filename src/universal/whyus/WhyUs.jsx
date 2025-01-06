@@ -3,7 +3,7 @@ React;
 const WhyUs = () => {
   return (
     <>
-      <section className="overflow-hidden w-full xl:w-full md:w-full sm:w-full pt-20 pb-12 lg:pt-[120px] lg:pb-[90px] bg-white dark:bg-dark">
+      <section className="overflow-hidden w-full xl:w-full md:w-full sm:w-full bg-white dark:bg-dark">
         <h2 className="text-blue-400 font-bold py-4">WHY US ?</h2>
         <div className="container mx-auto">
           <div className="flex flex-wrap items-center justify-between -mx-4">

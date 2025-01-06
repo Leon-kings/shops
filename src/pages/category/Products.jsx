@@ -3,7 +3,17 @@ React;
 const Card = () => {
   return (
     <>
-      <section className="bg-gray-2 pb-10 pt-20 dark:bg-dark lg:pb-20 lg:pt-[120px]">
+      <section className="bg-white w-full lg:w-full xl:w-full dark:bg-dark">
+        <h2 className="text-2xl py-6 font-bold tracking-tight text-blue-600">
+          SERVICES
+        </h2>
+        <div className="mx-auto w-full lg:text-center">
+          <p className="mt-6 text-lg/8 text-gray-600">
+            LD is Mostly Happy To Serve You Better Electronics Appliances With
+            Best Quality From Dubai ,<br /> and Also Allow And Provide Support
+            In IT
+          </p>
+        </div>
         <div className="container">
           <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
             <SingleCard

@@ -5,8 +5,6 @@ import Package from "../../universal/packages/Package";
 import Product from "../products/Product";
 import Fquestion from "../fquestion/Fquestion";
 import About from "../about/About";
-import Login from "../form/login/Login";
-import Register from "../form/register/Register";
 import Services from "../services/Services";
 import Testimony from "../testimony/Testimony";
 import IT from "../information/IT";
@@ -14,6 +12,7 @@ import WhyUs from "../../universal/whyus/WhyUs";
 import { BiLogIn } from "react-icons/bi";
 import { BsInfo, BsQuestion } from "react-icons/bs";
 import { TbSettingsExclamation } from "react-icons/tb";
+import { Link } from "react-router-dom";
 
 React;
 const Home = () => {
@@ -167,7 +166,9 @@ const Home = () => {
           </div>
         </div>
         {/* button back to top */}
+        <div className="head lg:w-full xl:w-full" id="service">
       <div>
+        <br />
       {isVisible && (
         <button
           onClick={scrollToTop}
@@ -177,15 +178,15 @@ const Home = () => {
         </button>
       )}
       </div>
+
     {/* back to tops */}
       <div className="grid bg-white py-4 grid-cols-[repeat(auto-fit,minmax(150px,1fr))] gap-4">
-      <div className="bg-blue-200 text-white p-4 text-center"><a href="#logs" title="Login"><button><BiLogIn/> </button> </a> </div>
+      <div className="bg-blue-200 text-white p-4 text-center"> <Link to={'/Register'}><button><BiLogIn/> </button> </Link></div>
       <div className="bg-green-200 text-white p-4 text-center"><a href="#service" title="Services"><button><TbSettingsExclamation/> </button> </a></div>
       <div className="bg-red-200 text-white p-4 text-center"><a href="#fQ" title="Question"><button><BsQuestion/> </button> </a></div>
       <div className="bg-yellow-200 text-white p-4 text-center"><a href="#about" title="About"><button><BsInfo/> </button> </a></div>
     </div>
-
-    <div className="title"></div>
+    </div>
       </div>
     </>
   );

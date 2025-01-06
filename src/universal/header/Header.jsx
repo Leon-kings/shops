@@ -4,7 +4,7 @@ import Video from "../../assets/video/head.mp4";
 React
 const Header = () => {
   return (
-    <div className="flex-auto relative w-full xl:w-full">
+    <div className="flex-auto relative w-full xl:w-full lg:w-full">
       
       {/* Video Background */}
       <div className="absolute transform-gpu overflow-hidden blur-1xl ">
@@ -32,8 +32,8 @@ const Header = () => {
                 Get started
               </Link>
               <button>
-                <Link to={'/Contacts'} className="text-sm/6 font-semibold text-gray-900">
-                  Learn more <b aria-hidden="true">→</b>
+                <Link to={'/Who/we/are'} className="text-sm/6 font-semibold text-black">
+                  Learn more <b aria-hidden="true" className="text-white font-extrabold">→</b>
                 </Link>
               </button>
             </div>

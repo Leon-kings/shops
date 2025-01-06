@@ -4,7 +4,13 @@ React;
 const NewC = () => {
   return (
     <div>
-      <section className="py-24 relative">
+      <section className="relative bg-white p-3">
+        <h2 className="text-2xl py-3 font-bold tracking-tight text-blue-600">
+          ABOUT
+        </h2>
+        <h3 className="p-3 font-bold">
+          Look who we are and We Empower Other Young Generation.
+        </h3>
         <h2 className="text-blue-400 font-bold py-4">EMPOWERING OTHERS</h2>
         <div className="w-full max-w-7xl px-4 md:px-5 lg:px-5 mx-auto">
           <div className="w-full justify-start items-center gap-12 grid lg:grid-cols-2 grid-cols-1">
@@ -47,7 +53,7 @@ const NewC = () => {
                   <div className="flex-col justify-start items-start inline-flex">
                     <h4 className="text-gray-900 text-4xl font-bold font-manrope leading-normal">
                       6+
-                    </h4> 
+                    </h4>
                     <h6 className="text-gray-500 text-base font-normal leading-relaxed">
                       Successful Projects
                     </h6>
@@ -64,9 +70,7 @@ const NewC = () => {
               </div>
               <button className="sm:w-fit w-full px-3.5 py-2 bg-indigo-600 hover:bg-indigo-800 transition-all duration-700 ease-in-out rounded-lg shadow-[0px_1px_2px_0px_rgba(16,_24,_40,_0.05)] justify-center items-center flex">
                 <button className="px-1.5 text-white text-sm font-medium leading-6">
-                  <Link to={'/Dashboard'}>
-                  Read More
-                  </Link>
+                  <Link to={"/Dashboard"}>Read More</Link>
                 </button>
               </button>
             </div>

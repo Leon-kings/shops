@@ -3,7 +3,7 @@ React;
 export default function IT() {
     return (
     <>
-    <div className="title"></div>
+    <br />
       <div className="bg-gray-50 py-24 sm:py-32">
         <div className="mx-auto w-full px-6 lg:w-full xl:w-full xl:px-8 lg:px-8">
         <h2 className="text-blue-400 font-bold py-4">DEBUG FASTER</h2>
@@ -109,7 +109,9 @@ export default function IT() {
           </div>
         </div>
         {/*  */}
-        <section className="pb-10 pt-20 dark:bg-dark lg:pb-20 lg:pt-[120px] lg:w-full xl:w-full">
+      </div>
+      <br />
+      <section className="pb-10 pt-20 bg-white dark:bg-dark w-full lg:pb-20 lg:pt-[120px] lg:w-full xl:w-full">
         <h2 className="text-blue-400 font-bold py-4">OUR TECHNICAL TEAM</h2>
       <div className="container mx-auto">
         <div className="-mx-4 flex flex-wrap">
@@ -137,16 +139,12 @@ export default function IT() {
         </div>
       </div>
     </section>
-      </div>
       </>
     )
   }
   export const TeamCard = ({ imageSrc, name, profession }) => {
     return (
       <>  
-      <div className="title">
-        <br />
-      </div>
         <div className="w-full px-4 md:w-1/2 xl:w-1/4">
           <div className="mx-auto mb-10 w-full max-w-full">
             <div className="relative overflow-hidden rounded-lg">

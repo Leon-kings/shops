@@ -6,13 +6,12 @@ const Features = () => {
   return (
     <>
       <div className="title"></div>
-      <br />
-      <div className="bg-white w-full">
-      <h2 className="text-2xl py-3 font-bold tracking-tight text-blue-600">
-          FEATURES
-        </h2>
-        <section className="py-24 relative xl:mr-0 lg:mr-5 mr-0 w-full xl:w-full lg:w-full">
-        <h2 className="text-blue-400 font-bold py-4">EMPOWERING OTHERS</h2>
+      <div className=" w-full">
+        <section className="py-24 bg-white relative xl:mr-0 lg:mr-0 mr-0 w-full xl:w-full lg:w-full">
+          <h2 className="text-2xl py-3 font-bold tracking-tight text-blue-600">
+            FEATURES
+          </h2>
+          <h2 className="text-blue-400 font-bold py-4">EMPOWERING OTHERS</h2>
           <div className="w-full max-w-7xl px-4 md:px-5 lg:px-5 mx-auto">
             <div className="w-full justify-start items-center xl:gap-12 gap-10 grid lg:grid-cols-2 grid-cols-1">
               <div className="w-full flex-col justify-center lg:items-start items-center gap-10 inline-flex">
@@ -71,28 +70,26 @@ const Features = () => {
                 </div>
                 <button className="sm:w-fit w-full group px-3.5 py-2 bg-indigo-50 hover:bg-indigo-100 rounded-lg shadow-[0px_1px_2px_0px_rgba(16,_24,_40,_0.05)] transition-all duration-700 ease-in-out justify-center items-center flex">
                   <button className="px-1.5  text-sm font-medium leading-6 group-hover:-translate-x-0.5 transition-all duration-700 ease-in-out">
-                    <Link to={'/'}>
-                    Read More
-                    </Link>
+                    <Link to={"/"}>Read More</Link>
                   </button>
                   <b className="text-green-400">
-                  <svg
-                    className="group-hover:translate-x-0.5 text-green-400 transition-all duration-700 ease-in-out"
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="18"
-                    height="18"
-                    viewBox="0 0 18 18"
-                    fill="none"
-                  >
-                    <path
-                      d="M6.75265 4.49658L11.2528 8.99677L6.75 13.4996"
-                      stroke="#4F46E5"
-                      className="text-green-400"
-                      strokeWidth="1.6"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    />
-                  </svg>
+                    <svg
+                      className="group-hover:translate-x-0.5 text-green-400 transition-all duration-700 ease-in-out"
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="18"
+                      height="18"
+                      viewBox="0 0 18 18"
+                      fill="none"
+                    >
+                      <path
+                        d="M6.75265 4.49658L11.2528 8.99677L6.75 13.4996"
+                        stroke="#4F46E5"
+                        className="text-green-400"
+                        strokeWidth="1.6"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      />
+                    </svg>
                   </b>
                 </button>
               </div>
@@ -110,8 +107,9 @@ const Features = () => {
         </section>
         {/*  */}
         {/*  */}
-        <section className="py-24 relative w-full xl:w-full">
-        <h2 className="text-blue-400 font-bold py-4">BUILD YOUR NETWORK</h2>
+        <br />
+        <section className="py-24 relative w-full bg-white xl:w-full">
+          <h2 className="text-blue-400 font-bold py-4">BUILD YOUR NETWORK</h2>
           <div className="w-full max-w-7xl px-4 md:px-5 lg:px-5 mx-auto">
             <div className="w-full justify-start items-center gap-8 grid lg:grid-cols-2 grid-cols-1">
               <div className="w-full flex-col justify-start lg:items-start items-center gap-10 inline-flex">
@@ -130,10 +128,8 @@ const Features = () => {
                 </div>
                 <button className="sm:w-fit w-full px-3.5 py-2 bg-indigo-600 hover:bg-indigo-800 transition-all duration-700 ease-in-out rounded-lg shadow-[0px_1px_2px_0px_rgba(16,_24,_40,_0.05)] justify-center items-center flex">
                   <p className="px-1.5 text-white text-sm font-medium leading-6">
-                    <Link to={'/'}>
-                    <button className="text-white">
-                    Get Started
-                    </button>
+                    <Link to={"/"}>
+                      <button className="text-white">Get Started</button>
                     </Link>
                   </p>
                 </button>
@@ -146,15 +142,18 @@ const Features = () => {
             </div>
           </div>
         </section>
-  
-      {/*  */}
-      <div className="w-full xl:w-full sm:w-full">
-      <h2 className="text-blue-400 font-bold py-4">WHAT WE HAVE IN THE STORE</h2>
-        <Shop/>
+        <br />
+        {/*  */}
+        <div className="w-full xl:w-full sm:w-full bg-white">
+          <h2 className="text-blue-400 font-bold py-4">
+            WHAT WE HAVE IN THE STORE
+          </h2>
+          <p className="p-4">We happy to serve you better Accessories</p>
+          <Shop />
+        </div>
+        {/*  */}
       </div>
-      {/*  */}
-      </div>
-      <div className="title"></div>
+      <br />
     </>
   );
 };

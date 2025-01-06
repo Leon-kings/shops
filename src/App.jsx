@@ -27,6 +27,7 @@ import CreateUser from "./components/dashboard/admin/components/createuser/Creat
 import CreateMessage from "./components/dashboard/admin/components/message/CreateMessage";
 import CreatePost from "./components/dashboard/admin/components/post/CreatePost";
 import CreateTestimony from "./components/dashboard/admin/components/testmony/Testimony";
+import Address from "./universal/address/Address";
 
 export default function App() {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
@@ -43,6 +44,7 @@ export default function App() {
             />
             <Route path="/" element={<Home />} />
             <Route path="/Fquestion" element={<Fquestion />} />
+            <Route path="/Who/we/are" element={<Address />} />
             <Route path="/Contacts" element={<About />} />
             <Route path="/Services" element={<Services />} />
             <Route path="/Market" element={<Market />} />
