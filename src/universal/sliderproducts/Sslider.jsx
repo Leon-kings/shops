@@ -23,21 +23,13 @@ const Show = () => {
             <SwiperSlide>
               <SingleShow
                 image="https://img.freepik.com/free-photo/young-attractive-girl-electronics-store-stands-desk-tests-phone_78826-3427.jpg"
-                reviewImg="https://media.licdn.com/dms/image/v2/C4E0BAQGyvrUNxhq-pg/company-logo_200_200/company-logo_200_200/0/1630649105415/leon_software_logo?e=2147483647&v=beta&t=ZQQwTpbxbIlDw-6q-OG4A5SIT0GUNFKxg9Z5puArZ5c"
-                reviewAlt="lineicon"
-                details="Velit est sit voluptas eum sapiente omnis! Porro, impedit minus quam reprehenderit tempore sint quaerat id! Mollitia perspiciatis est asperiores commodi labore!"
-                name="Larry Diamond"
-                position="Chief Executive Officer."
+                details="Shop Newegg today for all of your gaming, PC & technology needs. Don't miss today's best electronics deals with fast shipping & great customer service!"
               />
             </SwiperSlide>
             <SwiperSlide>
               <SingleShow
                 image="https://img.freepik.com/free-photo/people-working-together-new-project_23-2148778013.jpg"
-                reviewImg="https://media.licdn.com/dms/image/v2/C4E0BAQGyvrUNxhq-pg/company-logo_200_200/company-logo_200_200/0/1630649105415/leon_software_logo?e=2147483647&v=beta&t=ZQQwTpbxbIlDw-6q-OG4A5SIT0GUNFKxg9Z5puArZ5c"
-                reviewAlt="lineicon"
-                details="Velit est sit voluptas eum sapiente omnis! Porro, impedit minus quam reprehenderit tempore sint quaerat id! Mollitia perspiciatis est asperiores commodi labore!"
-                name="Larry Diamond"
-                position="Chief Executive Officer."
+                details="Rwanda's Shop for mobiles, Electronics, perfumes, Laptops. Buy genuine products at the best prices. Apple, Samsung, HP, Canon, Sony, JBL, Epson."
               />
             </SwiperSlide>
             <div className="absolute left-0 right-0 z-10 flex items-center justify-center gap-5 sm:bottom-0">
@@ -85,14 +77,7 @@ const Show = () => {
 
 export default Show;
 
-const SingleShow = ({
-  image,
-  reviewImg,
-  reviewAlt,
-  details,
-  name,
-  position,
-}) => {
+const SingleShow = ({ image, details, name, position }) => {
   return (
     <div className="relative flex justify-center">
       <div className="relative w-full pb-16 md:w-11/12 lg:w-10/12 xl:w-8/12">
