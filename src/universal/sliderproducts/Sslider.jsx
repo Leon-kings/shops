@@ -18,6 +18,7 @@ const Show = () => {
   return (
     <>
       <section className="pb-20 pt-20 dark:bg-dark lg:pb-[120px] bg-white lg:pt-[120px]">
+      <h2 className="text-blue-400 font-bold p-4">WHAT WE HAVE</h2>
         <div className="container mx-auto">
           <Swiper slidesPerView={1} ref={sliderRef}>
             <SwiperSlide>
@@ -105,10 +106,6 @@ const SingleShow = ({ image, details, name, position }) => {
           </div>
           <div className="w-full">
             <div>
-              {/* <div className="mb-7">
-                <img src={reviewImg} alt={reviewAlt} />
-              </div> */}
-
               <p className="mb-11 text-base font-normal italic leading-[1.81] text-body-color dark:text-dark-6 sm:text-[22px]">
                 {details}
               </p>

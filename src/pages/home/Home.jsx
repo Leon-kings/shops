@@ -15,6 +15,7 @@ import { TbSettingsExclamation } from "react-icons/tb";
 import { Link } from "react-router-dom";
 import NewTool from "../../universal/products/3d";
 import Show from "../../universal/sliderproducts/Sslider";
+import BlogP from "../products/BloggerProduct";
 
 React;
 const Home = () => {
@@ -186,6 +187,17 @@ const Home = () => {
           <div className="header">
             <div className="header">
               <Show />
+            </div>
+          </div>
+        </div>
+        <br />
+        <div className="head lg:w-full xl:w-full" id="service">
+          {/* space btn nav and body */}
+          {/* space btn nav and body ends*/}
+          {/* Header Video components*/}
+          <div className="header">
+            <div className="header">
+              <BlogP />
             </div>
           </div>
         </div>

@@ -1,20 +1,21 @@
 import React from "react"
 
 const features = [
-    { name: 'Origin', description: 'Designed by Good Goods, Inc.' },
+    { name: 'Origin', description: 'Designed by LD.Inc.' },
     { name: 'Material', description: 'Solid walnut base with rare earth magnets and powder coated steel card cover' },
-    { name: 'Dimensions', description: '6.25" x 3.55" x 1.15"' },
-    { name: 'Finish', description: 'Hand sanded and finished with natural oil' },
-    { name: 'Includes', description: 'Wood card tray and 3 refill packs' },
+    { name: 'Dimensions', description: '16.25" x 10.55" x 3.15"' },
+    { name: 'Assistance', description: 'We provide assistance for Reactjs and Nodejs' },
+    { name: 'Languages', description: 'React and Node js and Next js.' },
     { name: 'Considerations', description: 'Made from natural materials. Grain and color vary with each item.' },
   ]
   React;
   export default function NewTool() {
     return (
       <div className="bg-white">
+         <h2 className="text-blue-400 font-bold py-4">Technical Specifications</h2>
+         <p className="text-center ">We Offer more respectfull products for various domain Gaming , Coding and Graphical Designing and Other Job. </p>
         <div className="mx-auto grid w-full grid-cols-1 items-center gap-x-8 gap-y-16 px-4 py-24 sm:px-6 sm:py-32 lg:w-full lg:grid-cols-2 lg:px-8">
           <div>
-            <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Technical Specifications</h2>
             <p className="mt-4 text-gray-500">
               The walnut wood card tray is precision milled to perfectly fit a stack of Focus cards. The powder coated
               steel divider separates active cards from new ones, or can be used to archive important task lists.
