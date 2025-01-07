@@ -95,7 +95,7 @@ const Userview = () => {
       <div className="title">
       </div>
       <div className="relative overflow-hidden bg-gray-100 min-h-screen ">
-        
+      
         {users && users.length > 0 ? (
           <div className="overflow-x-auto">
             <table className="min-w-full bg-white border border-gray-200">
@@ -223,7 +223,7 @@ const Userview = () => {
       <Link to={'/dashboard'}>
       <button><BsHouse/></button>
       </Link>
-      <div className="title"></div>
+      <br />
     </div>
   );
 };

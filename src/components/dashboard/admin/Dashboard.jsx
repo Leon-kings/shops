@@ -26,18 +26,42 @@ const Dashboard = () => {
   ];
   // fetching data from database
   // handleSubmit
+  // const handleSubmit = async (e) => {
+  //   e.preventDefault();
+  //   console.log("Submitting with values:", values);
+
+  //   try {
+  //     const response = await axios.get(
+  //       `https://shopsnodejs.onrender.com/users/${values}`
+  //     );
+  //     console.log("Response data:", response.data);
+
+  //     if (response.data.data) {
+  //       setSearch(response.data.data);
+  //       console.log(response.data)
+  //       alert("Fetched Successfully");
+  //     } else {
+  //       alert("No data found");
+  //     }
+  //   } catch (error) {
+  //     console.error("Error fetching posts:", error);
+  //     alert(
+  //       "Error in fetching: " + (error.response?.data?.message || error.message)
+  //     );
+  //   }
+  // };
   const handleSubmit = async (e) => {
-    e.preventDefault();
+    e.preventDefault(); // Prevent form reload
     console.log("Submitting with values:", values);
 
     try {
       const response = await axios.get(
-        `https://backendproject-8m9r.onrender.com/users/${values}`
+        `https://shopsnodejs.onrender.com/users/${values}`
       );
       console.log("Response data:", response.data);
 
       if (response.data.data) {
-        setSearch(response.data.data);
+        setSearch(response.data.data); // Set fetched data
         alert("Fetched Successfully");
       } else {
         alert("No data found");
@@ -56,7 +80,7 @@ const Dashboard = () => {
     try {
       if (window.confirm("Do you really want to Delete?")) {
         await axios.delete(
-          `https://backendproject-8m9r.onrender.com/users/${values}`
+          `https://shopsnodejs.onrender.com/users/${values}`
         );
         setSearch(search.filter((user) => user._id !== values));
       } else {
@@ -96,9 +120,9 @@ const Dashboard = () => {
           <div className="results">
             {search.map((data, index) => {
               <tr key={index} className="shadow-md border">
-                <td className="p-2 text-black">{data.name}</td>
+                <td className="p-2 text-black">{data.fullname}</td>
                 <td className="p-2 text-red-400">{data.email}</td>
-                <td className="p-2 text-black">{data.number}</td>
+                <td className="p-2 text-black">{data.phone}</td>
                 <td>
                   <button onClick={handleDelete}>
                     <TrashIcon className="w-6" />

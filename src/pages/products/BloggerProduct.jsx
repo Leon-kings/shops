@@ -12,8 +12,8 @@ const BlogP = () => {
                   CATEGORY UPCOMMING PRODUCTS
                 </h2>
                 <p className="text-base text-body-color dark:text-dark-6">
-                  There are many variations of passages of Lorem Ipsum available
-                  but the majority have suffered alteration in some form.
+                Business identity verified
+Traditional Sourcing Brought Online. Find Quality Products & Contact Verified Suppliers!
                 </p>
               </div>
             </div>
