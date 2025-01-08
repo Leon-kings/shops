@@ -80,7 +80,7 @@ function Sidebar() {
       </div>
 
       {/* Main content */}
-      <div className="flex-1 bg-white p-4 w-full lg:w-full sm:w-full">
+      <div className="flex-1 bg-white p-4 w-full xl:w-full lg:w-full sm:w-full">
         {/* Main content here */}
         <Userview />
         {/* ... */}

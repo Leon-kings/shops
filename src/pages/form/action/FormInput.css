@@ -1,7 +1,7 @@
 .formInput {
   display: flex;
   flex-direction: column;
-  width: 240px;
+  /* width: 240px; */
   padding: auto;
   max-width: 400px;
 }

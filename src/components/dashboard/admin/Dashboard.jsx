@@ -6,6 +6,8 @@ import axios from "axios";
 import FormInput from "../../../pages/form/action/FormInput";
 import { BiSearch } from "react-icons/bi";
 import { TrashIcon } from "@heroicons/react/16/solid";
+// import Map from "./components/livemap/Map";
+// import LineChart from "./components/linechart/LineChart";
 
 React;
 const Dashboard = () => {
@@ -133,12 +135,8 @@ const Dashboard = () => {
           <h3 className="text-center text-red-400 font-bold">USERS PAGE</h3>
           <Sidebar />
         </div>
-        <div className="title"></div>
-        <hr className="p-4 text-2xl text-blue-600" />
-        <div className="title"></div>
-
+        <br />
         <IT />
-
         <h3 className="text-center text-red-400 font-bold">PRODUCT PAGE</h3>
         <Postview />
       </div>

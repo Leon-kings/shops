@@ -62,7 +62,7 @@ import axios from "axios";
             <p className="mt-4 text-lg text-gray-300">
             To better illustrate this, let’s imagine a situation. Suppose you’re a customer who had just found an online store with cool tees. You take a look and decide to purchase one for yourself..
             </p>
-            <div className="mt-6 flex max-w-md gap-x-4">
+            <div className="mt-6 flex w-full gap-x-4">
             <form onSubmit={handleSubmit} className="mt-4 rounded-2xl bg-white p-4">
             <div className="container">
               {inputs.map((input) => (
@@ -75,7 +75,7 @@ import axios from "axios";
                 />
               ))}
               <div className="head">
-                <button className="w-fit">Subscribe</button>
+                <button className="w-full">Subscribe</button>
               </div>
             </div>
           </form>
