@@ -34,10 +34,10 @@ export default function CreateMessage() {
     console.log(values);
     try {
       await axios.post(
-        "https://backendproject-8m9r.onrender.com/message",
+        "https://shopsnodejs.onrender.com/messages",
         values
       );
-      if (window.confirm("Do you really want to continue to login?")) {
+      if (window.confirm("message received, Continue ?")) {
         Navigate("/Dashboard");
       } else {
         Navigate("/Settings");
@@ -53,7 +53,6 @@ export default function CreateMessage() {
   return (
     <>
     <div className="title">
-      <br />
      </div>
       <div className="container w-full xl:w-full lg:w-full md:w-full sm:w-full text-black">
         <div className=" flex items-center justify-center min-h-screen bg-gray-100">

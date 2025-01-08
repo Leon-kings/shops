@@ -29,7 +29,7 @@ export default function About() {
       type: "message",
       placeholder: "message",
       errorMessage:
-        "passworx should be 8-12 characters include at least 1 letter and 1 symbol",
+        "message needed",
       label: "Message",
 
       required: true,
