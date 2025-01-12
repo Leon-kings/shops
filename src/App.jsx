@@ -28,6 +28,7 @@ import CreateMessage from "./components/dashboard/admin/components/message/Creat
 import CreatePost from "./components/dashboard/admin/components/post/CreatePost";
 import CreateTestimony from "./components/dashboard/admin/components/testmony/Testimony";
 import Address from "./universal/address/Address";
+import Udashboard from "./components/dashboard/user/Udashboard";
 
 export default function App() {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
@@ -52,6 +53,7 @@ export default function App() {
             <Route path="/Features" element={<Features />} />
             {/* dashboard link */}
             <Route path="/Dashboard" element={<Dashboard />} />
+            <Route path="/Udashboard" element={<Udashboard />} />
             <Route path="/5010/Userview" element={<Userview/> } />
             <Route path="/5010/Postview" element={<Postview/> } />
             <Route path="/5010/Testimony" element={<Testimonyview/> } />
