@@ -1,17 +1,23 @@
 import React from 'react'
-import UCreateMessage from './components/message/CreateMessage';
-import UCreatePost from './components/post/CreatePost';
-import UCreateTestimony from './components/testmony/Testimony';
-import USidebar from './components/sidebar/Side';
+import MyChart from './components/charts/Chart';
+import MyBarChart from './components/charts/Barchart';
+import Sidebar from './components/sidebar/Side';
+
 React;
 export default function Udashboard() {
   return (
-    <div>
-        <UCreateMessage/>
-        <UCreatePost/>
-        <UCreateTestimony/>
-        <USidebar/>
-      
+<> <div className="title"></div>
+    <div className='w-full container xl:w-full lg:w-full md:w-full sm:w-full'> 
+   <Sidebar/>
+      <div className="grid grid-cols-2 gap-2 ">
+        <div className="head">
+           <MyBarChart/>
+        </div>
+     <div className="head">
+      <MyChart/>
+     </div>
+      </div>
     </div>
+    </>
   )
 }

@@ -1,13 +1,14 @@
 import React, { useState } from "react";
 React;
-
 import { BiLogOut, BiUser } from "react-icons/bi";
 import { CgProfile } from "react-icons/cg";
 import { IoSettings } from "react-icons/io5";
 import { BsHouse } from "react-icons/bs";
 import { Link, useNavigate } from "react-router-dom";
-import UPostview from "../postview/Postview";
-function USidebar() {
+import Postview from "../../../admin/components/postview/Postview";
+import MyBarChart from "../charts/Barchart";
+import MyChart from "../charts/Chart";
+function Sidebar() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const navigate = useNavigate();
   const toggleSidebar = () => {
@@ -30,12 +31,12 @@ function USidebar() {
         `}
       >
         {/* Sidebar content here */}
-        
+
         <ul className="scroll-auto">
           <li className="w-40">
             <img
-              src="https://plus.unsplash.com/premium_photo-1686729237226-0f2edb1e8970?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8d2FsbHBhcGVyfGVufDB8fDB8fHww"
-              alt="new"
+              src="https://t4.ftcdn.net/jpg/02/88/92/13/360_F_288921356_krHC3KV1lJ2jAGnaep6NXZX6Fkv4FF9q.jpg"
+              alt=""
             />
           </li>
           <li className="my-2">
@@ -83,7 +84,14 @@ function USidebar() {
       {/* Main content */}
       <div className="flex-1 bg-white p-4 w-full xl:w-full lg:w-full sm:w-full">
         {/* Main content here */}
-      <UPostview/>
+        <div className="grid grid-cols-2 gap-2 ">
+          <div className="head">
+            <MyBarChart />
+          </div>
+          <div className="head">
+            <MyChart />
+          </div>
+        </div>
         {/* ... */}
       </div>
 
@@ -98,4 +106,4 @@ function USidebar() {
   );
 }
 
-export default USidebar;
+export default Sidebar;
