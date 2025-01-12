@@ -18,15 +18,12 @@ const Header = () => {
                     previous activity and shares how you should manage you
                     money.
                   </p>
-                  <a
-                    href="#"
-                    title=""
+                  <b
                     className="inline-flex items-center px-6 py-5 text-base font-semibold text-black transition-all duration-200 bg-green-300 mt-9 hover:bg-green-400 focus:bg-green-400"
                     role="button"
                   >
-                    {" "}
-                    Get started for free{" "}
-                  </a>
+                    Get started for free
+                  </b>
                 </div>
 
                 <div className="mt-8 border-t-2 border-black lg:mt-auto sm:mt-14">
