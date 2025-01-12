@@ -40,7 +40,7 @@ const renderCustomizedLabel = ({
 const MyPieChart = () => {
   return (
     <div className="p-4 bg-amber-100 rounded-lg">
-      <h2 className="text-xl font-bold mb-4 text-center">LD Pie Chart</h2>
+      <h2 className="text-xl font-bold text-center">LD Pie Chart</h2>
       <div className="w-full h-64 sm:h-60 md:h-70">
         <PieChart width={500} height={400}>
           <Pie
