@@ -8,6 +8,7 @@ import { Link, useNavigate } from "react-router-dom";
 import Postview from "../../../admin/components/postview/Postview";
 import MyBarChart from "../charts/Barchart";
 import MyChart from "../charts/Chart";
+import MyPieChart from "../charts/PieChart";
 function Sidebar() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const navigate = useNavigate();
@@ -40,7 +41,7 @@ function Sidebar() {
             />
           </li>
           <li className="my-2">
-            <Link to={"/"}>
+            <Link to={"/Udashboard"}>
               <button>
                 <BsHouse />
               </button>
@@ -82,14 +83,17 @@ function Sidebar() {
       </div>
 
       {/* Main content */}
-      <div className="flex-1 bg-white p-4 w-full xl:w-full lg:w-full sm:w-full">
+      <div className=" bg-white p-4 grid w-full xl:w-full lg:w-full sm:w-full">
         {/* Main content here */}
-        <div className="grid grid-cols-2 gap-2 ">
+        <div className="grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-1 lg:grid-cols-3 xl:gap-x-8">
           <div className="head">
             <MyBarChart />
           </div>
           <div className="head">
             <MyChart />
+          </div>
+          <div className="head">
+            <MyPieChart />
           </div>
         </div>
         {/* ... */}

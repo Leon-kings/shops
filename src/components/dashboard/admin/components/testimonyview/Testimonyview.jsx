@@ -88,7 +88,7 @@ export default function Testimonyview() {
         <br />
       </div>
       <div className="container bg-white rounded-md">
-      <div className="relative overflow-hidden bg-gray-100 min-h-screen ">
+      <div className="relative overflow-hidden bg-gray-100 ">
           <h4>Testimony</h4>
           {testimony.length > 0 ? (
             <div className="overflow-x-auto">
