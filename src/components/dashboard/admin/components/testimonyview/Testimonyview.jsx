@@ -5,83 +5,74 @@ import { Link } from "react-router-dom";
 React;
 import "../userview/components/css.css";
 export default function Testimonyview() {
-  const [testimony, setTestimony] = useState([]);
-  const [editingTestimony, setEditingTestimony] = useState(null);
-  const [formData, setFormData] = useState({
-    email: "",
-    testimony: "",
-    name:""
-  });
+  const [testimonies, setTestimonies] = useState([]);
+  const [formData, setFormData] = useState({ email: "", name: "", testimony: "" });
+  const [editingTestimonyId, setEditingTestimonyId] = useState(null);
 
-  // Fetch testimony from API
+  // Fetch testimonies from API
   useEffect(() => {
-    const fetchtestimony = async () => {
+    const fetchTestimonies = async () => {
       try {
-        const response = await axios.get(
-          "https://shopsnodejs.onrender.com/testimony"
-        );
-        setTestimony(response.data.data);
+        const response = await axios.get("https://shopsnodejs.onrender.com/testimony");
+        setTestimonies(response.data.data);
+        console.log(response.data)
       } catch (error) {
-        console.error("Error fetching testimony:", error);
+        console.error("Error fetching testimonies:", error);
       }
     };
-
-    fetchtestimony();
+    fetchTestimonies();
   }, []);
 
-  // Delete testimony
-  const handleDelete = async (testimonyId) => {
-    try {
-      if (window.confirm("Do you really want to Delete?")) {
-        await axios.delete(
-          `https://shopsnodejs.onrender.com/testimony/${testimonyId}`
-        );
-        setTestimony(testimony.filter((testimony) => testimony._id !== testimonyId));
-      } else {
-        alert("Error in delete");
-      }
-    } catch (error) {
-      console.error("Error deleting testimony:", error);
-      alert("Error deleting testimony:", error);
-    }
+  // Handle input changes
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
   };
 
   // Handle edit
   const handleEdit = (testimony) => {
-    setEditingTestimony(testimony._id);
+    setEditingTestimonyId(testimony._id);
     setFormData({
       email: testimony.email,
-      name:testimony.name,
+      name: testimony.name,
       testimony: testimony.testimony,
     });
   };
 
-  // Update testimony
-  const handleUpdate = async (testimonyId) => {
+  // Handle update
+  const handleUpdate = async () => {
     try {
-      
-        await axios.put(
-          `https://shopsnodejs.onrender.com/testimony/${testimonyId}`,
+      if (window.confirm("Do you really want to update this testimony?")) {
+        const response = await axios.put(
+          `https://shopsnodejs.onrender.com/testimony/${editingTestimonyId}`,
           formData
         );
-        setTestimony(
-          testimony.map((testimony) =>
-            testimony._id === testimonyId ? { ...testimony, ...formData } : testimony
+        setTestimonies(
+          testimonies.map((test) =>
+            test._id === editingTestimonyId ? { ...test, ...response.data } : test
           )
         );
-        setEditingTestimony(null);
-  
+        setEditingTestimonyId(null);
+        setFormData({ email: "", name: "", testimony: "" });
+      }
     } catch (error) {
       console.error("Error updating testimony:", error);
     }
   };
 
-  // Handle form input change
-  const handleInputChange = (e) => {
-    const { name, value } = e.target;
-    setFormData({ ...formData, [name]: value });
+  // Handle delete
+  const handleDelete = async (testimonyId) => {
+    try {
+      if (window.confirm("Are you sure you want to delete this testimony?")) {
+        await axios.delete(`https://shopsnodejs.onrender.com/testimony/${testimonyId}`);
+        setTestimonies(testimonies.filter((test) => test._id !== testimonyId));
+      }
+    } catch (error) {
+      console.error("Error deleting testimony:", error);
+    }
   };
-  console.log(testimony[0]);
+
+  console.log(testimonies[0]);
   return (
     <>
       <div className="title">
@@ -90,7 +81,7 @@ export default function Testimonyview() {
       <div className="container bg-white rounded-md">
       <div className="relative overflow-hidden bg-gray-100 ">
           <h4>Testimony</h4>
-          {testimony.length > 0 ? (
+          {testimonies.length > 0 ? (
             <div className="overflow-x-auto">
               <table className="min-w-full bg-white border border-gray-200">
                 <thead className="rounded-lg text-base text-blue-400 font-semibold w-full">
@@ -115,9 +106,9 @@ export default function Testimonyview() {
                   </tr>
                 </thead>
                 <tbody className="divide-y divide-gray-200">
-                  {testimony.map((testimony) => (
+                  {testimonies.map((testimony) => (
                     <tr key={testimony._id} className="border-t">
-                      {editingTestimony === testimony._id ? (
+                      {editingTestimonyId === testimony._id ? (
                         <>
                           <td>{testimony._id}</td>
 
@@ -158,7 +149,7 @@ export default function Testimonyview() {
                             </button>
                             <button
                               className="bg-gray-500 text-white px-2 py-1 rounded"
-                              onClick={() => setEditingTestimony(null)}
+                              onClick={() => setEditingTestimonyId(null)}
                             >
                               Cancel
                             </button>
