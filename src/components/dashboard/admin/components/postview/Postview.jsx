@@ -5,6 +5,7 @@ import axios from "axios";
 import "../userview/components/css.css";
 import { Link } from "react-router-dom";
 import { BsHouse } from "react-icons/bs";
+import { HomeIcon } from "@heroicons/react/16/solid";
 export default function Postview() {
   const [posts, setPosts] = useState([]);
   const [editingPost, setEditingPost] = useState(null);
@@ -93,6 +94,13 @@ export default function Postview() {
       </div>
       {/* Main Content */}
       <div className=" bg-gray-100  ">
+      <div className="fixed right-4">
+            <Link to={"/Dashboard"}>
+              <button>
+                <HomeIcon className="size-4" />
+              </button>
+            </Link>
+          </div>
         <h4>Posts</h4>
         <div className="overflow-x-auto">
           <table className="min-w-full bg-white border border-gray-200">

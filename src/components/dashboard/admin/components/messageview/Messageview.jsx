@@ -2,6 +2,8 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 React;
 import "../userview/components/css.css";
+import { HomeIcon } from "@heroicons/react/16/solid";
+import { Link } from "react-router-dom";
 export default function Messageview() {
   const [message, setMessage] = useState([]);
   const [editingMessage, setEditingMessage] = useState(null);
@@ -86,6 +88,13 @@ export default function Messageview() {
         <br />
       </div>
       <div className="bg-white rounded-md">
+      <div className="fixed right-4">
+            <Link to={"/Udashboard"}>
+              <button>
+                <HomeIcon className="size-4" />
+              </button>
+            </Link>
+          </div>
         <div className="relative overflow-hidden bg-gray-100 min-h-screen ">
           <h4>Messages</h4>
           {message.length > 0 ? (

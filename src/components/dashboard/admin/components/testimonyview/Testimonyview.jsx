@@ -4,6 +4,7 @@ import { BsHouse } from "react-icons/bs";
 import { Link } from "react-router-dom";
 React;
 import "../userview/components/css.css";
+import { HomeIcon } from "@heroicons/react/16/solid";
 export default function Testimonyview() {
   const [testimonies, setTestimonies] = useState([]);
   const [formData, setFormData] = useState({ email: "", name: "", testimony: "" });
@@ -81,6 +82,13 @@ export default function Testimonyview() {
       </div>
       <div className="container bg-white rounded-md">
       <div className="relative overflow-hidden bg-gray-100 ">
+      <div className="fixed right-4">
+            <Link to={"/Dashboard"}>
+              <button>
+                <HomeIcon className="size-4" />
+              </button>
+            </Link>
+          </div>
           <h4>Testimony</h4>
           {testimonies.length > 0 ? (
             <div className="overflow-x-auto">

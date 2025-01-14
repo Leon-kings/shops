@@ -1,18 +1,14 @@
-import { EyeIcon, HomeIcon } from "@heroicons/react/16/solid";
+import { EyeIcon } from "@heroicons/react/16/solid";
 import React from "react";
 import { BiCartAdd, BiUserPlus } from "react-icons/bi";
 import { LuMessageCirclePlus } from "react-icons/lu";
 import { TbSettingsAutomation } from "react-icons/tb";
 import { Link } from "react-router-dom";
-import CreateMessage from "../../../admin/components/message/CreateMessage";
-import CreateTestimony from "../../../admin/components/testmony/Testimony";
-import CreatePost from "../../../admin/components/post/CreatePost";
-import Postview from "../../../admin/components/postview/Postview";
 // pages
-// import CreateTestimony from "../testmony/Testimony";
-// import CreatePost from "../post/CreatePost";
-// import CreateMessage from "../message/CreateMessage";
-// import CreateUser from "../createuser/CreateUser";
+import Postview from "../../../admin/components/postview/Postview";
+import CreateMessageUser from "../messages/CreateMessageUser";
+import CreateTestimonyUser from "../testimony/CreateTestimonyUser";
+import CreatePostUser from "../post/CreatePostUser";
 
 React;
 export default function USettings() {
@@ -23,28 +19,28 @@ export default function USettings() {
       <div className="bg-white">
         <div className="grid bg-white py-4 grid-cols-[repeat(auto-fit,minmax(150px,1fr))] gap-4">
           <div className="bg-blue-200 text-white p-4 text-center">
-            <Link to={'/5040/Create/User/245678'}>
+            <Link to={'/5044/Create/User/245678'}>
               <button disabled>
                 <BiUserPlus />
               </button>
             </Link>
           </div>
           <div className="bg-green-200 text-white p-4 text-center">
-            <Link to={'/5040/Create/Message/245678'}>
+            <Link to={'/5044/Create/Message/245678'}>
               <button>
                 <LuMessageCirclePlus />
               </button>
             </Link>
           </div>
           <div className="bg-red-200 text-white p-4 text-center">
-            <Link to={'/5040/Create/Testimony/245678'}>
+            <Link to={'/5044/Create/Testimony/245678'}>
               <button>
                 <TbSettingsAutomation />
               </button>
             </Link>
           </div>
           <div className="bg-yellow-200 text-white p-4 text-center">
-            <Link to={'/5040/Create/Post/245678'}>
+            <Link to={'/5044/Create/Post/245678'}>
               <button>
                 <BiCartAdd />
               </button>
@@ -52,11 +48,7 @@ export default function USettings() {
           </div>
         </div>
         <h4 className="py-4 font-bold underline">View All</h4>
-        <Link to={'/Udashboard'}>
-        <button>
-            <HomeIcon className="size-4"/>
-        </button>
-        </Link>
+  
         {/*  */}
         {/*  */}
         <div className="grid bg-white py-4 grid-cols-[repeat(auto-fit,minmax(150px,1fr))] gap-4">
@@ -101,10 +93,10 @@ export default function USettings() {
         <div className="grid bg-white grid-cols-[repeat(auto-fit,minmax(350px,1fr))] gap-4">
    
           <div className="text-white p-4 text-center">
-           <CreateMessage/>
+           <CreateMessageUser/>
         </div>
           <div className="text-white p-4 text-center">
-           <CreateTestimony/>
+           <CreateTestimonyUser/>
            </div>
         </div>
         {/*  */}
@@ -114,7 +106,7 @@ export default function USettings() {
         <label htmlFor="head">We can make our Comments and Testimony and also create user and post or post products</label>
         <div className="grid bg-white py-4 grid-cols-[repeat(auto-fit,minmax(350px,1fr))] gap-4">
           <div className="text-white p-4 text-center">
-          <CreatePost/>
+          <CreatePostUser/>
         </div>
           <div className="text-white p-4 text-center">
          <Postview/>

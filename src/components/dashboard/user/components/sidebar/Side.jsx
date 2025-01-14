@@ -63,7 +63,7 @@ function Sidebar() {
             </li>
             <br />
             <li className="my-2">
-              <Link to={"/Settings"}>
+              <Link to={"/302010/Settings"}>
                 <button>
                   <IoSettings />
                 </button>
@@ -71,7 +71,7 @@ function Sidebar() {
             </li>
             <br />
             <li className="my-2">
-              <Link to={"/Profile/Dashboard"}>
+              <Link to={"/302005/Profile"}>
                 <button>
                   <CgProfile />
                 </button>
@@ -80,7 +80,7 @@ function Sidebar() {
             <br />
             <li className="my-2">
               <Link to={"/5010/Userview"}>
-                <button>
+                <button disabled>
                   <BiUser />
                 </button>
               </Link>

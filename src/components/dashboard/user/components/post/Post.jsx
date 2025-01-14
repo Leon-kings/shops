@@ -10,7 +10,7 @@ export default function UPost() {
   const [formData, setFormData] = useState({
     email: "",
     description: "",
-    file:"",
+    image:"",
     name: "",
     price: "",
   });
@@ -55,7 +55,7 @@ export default function UPost() {
     setFormData({
       email: "",
       description: "",
-      file:"",
+      image:"",
       name: "",
       price: "",
     });
