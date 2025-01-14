@@ -116,8 +116,8 @@ function Sidebar() {
                       <img
                         key={index}
                         src={logo}
-                        alt="Marketer logo"
-                        className="inline-block h-8 w-8 rounded-full ring-2 ring-white"
+                        alt=""
+                        className="inline-block h-8 w-8 rounded-full ring-2 ring-amber-100"
                       />
                     ))}
                   </div>
@@ -126,7 +126,7 @@ function Sidebar() {
                       <img
                         key={index}
                         src={logo}
-                        alt="Marketer logo"
+                        alt=""
                         className="inline-block h-8 w-8 rounded-full ring-2 ring-white"
                       />
                     ))}

@@ -28,7 +28,12 @@ import CreateMessage from "./components/dashboard/admin/components/message/Creat
 import CreatePost from "./components/dashboard/admin/components/post/CreatePost";
 import CreateTestimony from "./components/dashboard/admin/components/testmony/Testimony";
 import Address from "./universal/address/Address";
+// user dashboard
 import Udashboard from "./components/dashboard/user/Udashboard";
+import USettings from "./components/dashboard/user/components/settings/Settings";
+import Umessages from "./components/dashboard/user/components/messages/Umessages";
+import UTestimony from "./components/dashboard/user/components/testimony/Testimony";
+import UPost from "./components/dashboard/user/components/post/Post";
 
 export default function App() {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
@@ -63,6 +68,11 @@ export default function App() {
             <Route path="/5040/Create/Message/245678" element={<CreateMessage/> } />
             <Route path="/5040/Create/Post/245678" element={<CreatePost/> } />
             <Route path="/5040/Create/User/245678" element={<CreateUser/> } />
+            {/* user dshboard */}
+            <Route path="/302010/Settings" element={<USettings/> } />
+            <Route path="/302015/Message" element={<Umessages/> } />
+            <Route path="/302020/Testimony" element={<UTestimony/> } />
+            <Route path="/302025/Post" element={<UPost/> } />
             {/* payment */}
             <Route path="/CheckOut" element={<CheckOut />} />
             {/* Private Route */}

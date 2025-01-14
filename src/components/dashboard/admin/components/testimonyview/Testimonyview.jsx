@@ -30,17 +30,17 @@ export default function Testimonyview() {
   };
 
   // Handle edit
-  const handleEdit = (testimony) => {
-    setEditingTestimonyId(testimony._id);
+  const handleEdit = (testimonies) => {
+    setEditingTestimonyId(testimonies._id);
     setFormData({
-      email: testimony.email,
-      name: testimony.name,
-      testimony: testimony.testimony,
+      email: testimonies.email,
+      name: testimonies.name,
+      testimony: testimonies.testimony,
     });
   };
 
   // Handle update
-  const handleUpdate = async () => {
+  const handleUpdate = async (editingTestimonyId) => {
     try {
       if (window.confirm("Do you really want to update this testimony?")) {
         const response = await axios.put(
@@ -57,6 +57,7 @@ export default function Testimonyview() {
       }
     } catch (error) {
       console.error("Error updating testimony:", error);
+      alert('Error updating Testimony',error);
     }
   };
 
