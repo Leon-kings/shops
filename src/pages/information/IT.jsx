@@ -1,5 +1,7 @@
 import React from "react"
 React;
+import image from '../../assets/images/356202168_1515581109215839_7191836832866658358_n.jpg'
+import image1 from '../../assets/images/301389587_1302677223839563_7777363161221694487_n.jpg'
 export default function IT() {
     return (
     <>
@@ -128,12 +130,12 @@ export default function IT() {
           <TeamCard
             name="Leon XF"
             profession="Web Developer"
-            imageSrc="https://t4.ftcdn.net/jpg/08/49/51/37/360_F_849513792_b27tX0iih99en3aVrkmSCyhGq8PPd7kd.jpg"
+            imageSrc={image}
           />
           <TeamCard
             name="A Leon"
             profession="Software Developer"
-            imageSrc="https://t3.ftcdn.net/jpg/08/49/48/10/360_F_849481092_1cFJoaObBuSSCS57ez4jICh6bM0Y7QLF.jpg"
+            imageSrc={image1}
           />
 
         </div>
@@ -148,7 +150,7 @@ export default function IT() {
         <div className="w-full px-4 md:w-1/2 xl:w-1/4">
           <div className="mx-auto mb-10 w-full max-w-full">
             <div className="relative overflow-hidden rounded-lg">
-              <img src={imageSrc} alt="team member" className="w-full" />
+              <img src={imageSrc} alt="" className="w-full h-[350px]" />
               <div className="absolute bottom-5 left-0 w-full text-center">
                 <div className="relative mx-5 overflow-hidden rounded-lg bg-white px-3 py-5 dark:bg-dark-2">
                   <h3 className="text-base font-semibold text-dark dark:text-white">

@@ -28,8 +28,7 @@ export default function About() {
       name: "message",
       type: "message",
       placeholder: "message",
-      errorMessage:
-        "message needed",
+      errorMessage: "message needed",
       label: "Message",
 
       required: true,
@@ -45,6 +44,7 @@ export default function About() {
       alert("Message received");
     } catch (err) {
       console.log(err);
+      alert('Oops sorry , There are some errors!')
       if (err.response && err.response.status === 401) {
         alert("Invalid credentials. Please try again.");
       }

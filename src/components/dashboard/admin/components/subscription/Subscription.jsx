@@ -1,78 +1,76 @@
+import { HomeIcon } from "@heroicons/react/16/solid";
 import axios from "axios";
 import React, { useEffect, useState } from "react";
-React;
-import "../userview/components/css.css";
-import { HomeIcon } from "@heroicons/react/16/solid";
 import { Link } from "react-router-dom";
-export default function Messageview() {
-  const [message, setMessage] = useState([]);
-  const [editingMessage, setEditingMessage] = useState(null);
+React;
+export default function Subscription() {
+  const [subsc, setSubscription] = useState([]);
+  const [editingSubscription, setEditingSubscription] = useState(null);
   const [formData, setFormData] = useState({
     email: "",
-    message: "",
   });
 
-  // Fetch message from API
+  // Fetch Subscription from API
   useEffect(() => {
-    const fetchMessage = async () => {
+    const fetchSubscription = async () => {
       try {
         const response = await axios.get(
-          "https://shopsnodejs.onrender.com/messages"
+          "https://shopsnodejs.onrender.com/subscription"
         );
-        setMessage(response.data.data);
+        setSubscription(response.data.data);
+        console.log(response.data);
       } catch (error) {
-        console.error("Error fetching message:", error);
+        console.log("Error fetching Subscription:", error);
       }
     };
 
-    fetchMessage();
+    fetchSubscription();
   }, []);
 
-  // Delete msg
-  const handleDelete = async (msgId) => {
+  // Delete Subscription
+  const handleDelete = async (userId) => {
     try {
       if (window.confirm("Do you really want to Delete?")) {
         await axios.delete(
-          `https://backendproject-8m9r.onrender.com/message/${msgId}`
+          `https://shopsnodejs.onrender.com/subscription/${userId}`
         );
-        setMessage(message.filter((msg) => msg._id !== msgId));
+        setSubscription(subsc.filter((user) => user._id !== userId));
       } else {
         alert("Error in delete");
       }
     } catch (error) {
-      console.error("Error deleting msg:", error);
-      alert("Error deleting msg:", error);
+      console.error("Error deleting Subscription:", error);
+      alert("Error deleting Subscription:", error);
     }
   };
 
   // Handle edit
-  const handleEdit = (msg) => {
-    setEditingMessage(msg._id);
+  const handleEdit = (user) => {
+    setEditingSubscription(user._id);
     setFormData({
-      email: msg.email,
-      message: msg.message,
+      email: user.email,
     });
   };
 
-  // Update msg
-  const handleUpdate = async (msgId) => {
+  // Update subscription
+  const handleUpdate = async (userId) => {
     try {
       if (window.confirm("Do you really want to Update?")) {
         await axios.put(
-          `https://backendproject-8m9r.onrender.com/message/${msgId}`,
+          `https://shopsnodejs.onrender.com/subscription/${userId}`,
           formData
         );
-        setMessage(
-          message.map((msg) =>
-            msg._id === msgId ? { ...msg, ...formData } : msg
+        setSubscription(
+          subsc.map((user) =>
+            user._id === userId ? { ...user, ...formData } : user
           )
         );
-        setEditingMessage(null);
+        setEditingSubscription(null);
       } else {
         alert("Error in Updating ");
       }
     } catch (error) {
-      console.error("Error updating msg:", error);
+      console.error("Error updating Subscription:", error);
     }
   };
 
@@ -81,49 +79,42 @@ export default function Messageview() {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
   };
-  console.log(message[0]);
+  console.log(subsc[0]);
+
   return (
     <>
-      <div className="title">
-        <br />
-      </div>
-      <div className="reative rounded-md">
+      <div>
+        <div className="title"></div>
         <div className="relative overflow-hidden bg-gray-100 ">
-        <div className="fixed right-4">
+          <div className=" fixed top right-4">
             <Link to={"/Dashboard"}>
               <button>
                 <HomeIcon className="size-4" />
               </button>
             </Link>
           </div>
-          <h4>Messages</h4>
-          {message.length > 0 ? (
+          {subsc && subsc.length > 0 ? (
             <div className="overflow-x-auto">
-              <table className="min-w-full bg-white border border-gray-200">
+              <table className="w-full bg-white border border-gray-200">
                 <thead className="rounded-lg text-base text-blue-400 font-semibold w-full">
                   <tr className="bg-gray-100">
                     <th className="px-6 py-3 text-left text-sm font-medium text-gray-700 uppercase tracking-wider">
                       ID
                     </th>
-
                     <th className="px-6 py-3 text-left text-sm font-medium text-gray-700 uppercase tracking-wider">
                       Email
                     </th>
-                    <th className="px-6 py-3 text-left text-sm font-medium text-gray-700 uppercase tracking-wider">
-                      message
-                    </th>
-
                     <th className="px-6 py-3 text-left text-sm font-medium text-gray-700 uppercase tracking-wider">
                       Actions
                     </th>
                   </tr>
                 </thead>
                 <tbody className="divide-y divide-gray-200">
-                  {message.map((msg) => (
-                    <tr key={msg._id} className="border-t">
-                      {editingMessage === msg._id ? (
+                  {subsc.map((user) => (
+                    <tr key={user._id} className="border-t">
+                      {editingSubscription === user._id ? (
                         <>
-                          <td>{msg._id}</td>
+                          <td>{user._id}</td>
 
                           <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
                             <input
@@ -134,26 +125,16 @@ export default function Messageview() {
                               className="w-full border p-1"
                             />
                           </td>
-                          <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
-                            <input
-                              type="message"
-                              name="message"
-                              value={formData.message}
-                              onChange={handleInputChange}
-                              className="w-full border p-1"
-                            />
-                          </td>
-
                           <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900 text-center">
                             <button
                               className="bg-green-500 text-white px-2 py-1 rounded mr-2"
-                              onClick={() => handleUpdate(msg._id)}
+                              onClick={() => handleUpdate(user._id)}
                             >
                               Save
                             </button>
                             <button
                               className="bg-gray-500 text-white px-2 py-1 rounded"
-                              onClick={() => setEditingMessage(null)}
+                              onClick={() => setEditingSubscription(null)}
                             >
                               Cancel
                             </button>
@@ -162,26 +143,23 @@ export default function Messageview() {
                       ) : (
                         <>
                           <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
-                            {msg._id}
+                            {user._id}
                           </td>
 
                           <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
-                            {msg.email}
+                            {user.email}
                           </td>
 
-                          <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
-                            {msg.message}
-                          </td>
                           <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900 text-center">
                             <button
                               className="bg-blue-500 text-white px-2 py-1 rounded mr-2"
-                              onClick={() => handleEdit(msg)}
+                              onClick={() => handleEdit(user)}
                             >
                               Edit
                             </button>
                             <button
                               className="bg-red-500 text-white px-2 py-1 rounded"
-                              onClick={() => handleDelete(msg._id)}
+                              onClick={() => handleDelete(user._id)}
                             >
                               Delete
                             </button>
@@ -194,7 +172,10 @@ export default function Messageview() {
               </table>
             </div>
           ) : (
-            <p className="text-red-500"> No Message found.</p>
+            <p className="text-red-500 font-bold p-6">
+              {" "}
+              No subscription found.
+            </p>
           )}
         </div>
       </div>

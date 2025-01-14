@@ -33,14 +33,11 @@ export default function CreateMessageUser() {
     e.preventDefault();
     console.log(values);
     try {
-      await axios.post(
-        "https://shopsnodejs.onrender.com/messages",
-        values
-      );
+      await axios.post("https://shopsnodejs.onrender.com/messages", values);
       if (window.confirm("message received, Continue ?")) {
-        Navigate("/Dashboard");
+        Navigate("/302010/Settings");
       } else {
-        Navigate("/Settings");
+        Navigate("/Udashboard");
       }
     } catch (err) {
       console.log(err);
@@ -52,14 +49,13 @@ export default function CreateMessageUser() {
   };
   return (
     <>
-    <div className="title">
-     </div>
+      <div className="title"></div>
       <div className="container w-full xl:w-full lg:w-full md:w-full sm:w-full text-black">
         <div className=" flex items-center justify-center min-h-screen bg-gray-100">
           <div className="w-full max-w-md p-8 bg-white rounded shadow-md">
             <div className="Register">
               <form onSubmit={handleSubmit}>
-                <h2 className="text-green-300 py-4">CREATE MESSAGES</h2>
+                <h2 className="text-green-300 py-4 font-bold">CREATE MESSAGES</h2>
                 <div className="contain">
                   {inputs.map((input) => (
                     <FormInput

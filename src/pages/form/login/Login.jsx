@@ -54,7 +54,7 @@ const Login = () => {
         values
       );
       if (window.confirm("Do you really want to move?")) {
-        Navigate("/Dashboard");
+        Navigate("/Udashboard");
       } else {
         Navigate("/");
       }

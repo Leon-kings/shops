@@ -66,7 +66,7 @@ export default function UPost() {
     try {
       if (window.confirm("Do you really want to Update?")) {
         await axios.put(
-          `https://shopsnodejs.onrender.com/users/${userId}`,
+          `https://shopsnodejs.onrender.com/posts/${userId}`,
           formData
         );
         setPosts(
@@ -205,8 +205,7 @@ export default function UPost() {
                         {posts.email}
                       </td>
                       <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
-                        <img src={posts.file} alt=""  className=' object-cover w-full'/>
-                        
+                        <img src={posts.file} alt=""  className=' object-cover w-full'/> 
                       </td>
                       <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
                         {posts.description}
@@ -240,6 +239,7 @@ export default function UPost() {
       )}
     </div>
     </div>
+    <br />
     </>
   )
 }

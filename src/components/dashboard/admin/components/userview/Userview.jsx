@@ -1,7 +1,6 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import "./components/css.css";
-import { BsHouse } from "react-icons/bs";
 import { Link } from "react-router-dom";
 import { HomeIcon } from "@heroicons/react/16/solid";
 React;
@@ -24,7 +23,7 @@ const Userview = () => {
           "https://shopsnodejs.onrender.com/users"
         );
         setUsers(response.data.data);
-        console.log(response.data)
+        console.log(response.data);
       } catch (error) {
         console.log("Error fetching users:", error);
       }
@@ -37,9 +36,7 @@ const Userview = () => {
   const handleDelete = async (userId) => {
     try {
       if (window.confirm("Do you really want to Delete?")) {
-        await axios.delete(
-          `https://shopsnodejs.onrender.com/users/${userId}`
-        );
+        await axios.delete(`https://shopsnodejs.onrender.com/users/${userId}`);
         setUsers(users.filter((user) => user._id !== userId));
       } else {
         alert("Error in delete");
@@ -91,145 +88,145 @@ const Userview = () => {
   // console.log(users[0]);
 
   return (
-    <div>
-      {/* Main Content */}
-      <div className="title">
-      </div>
-      <div className="relative overflow-hidden bg-gray-100 min-h-screen ">
-      <div className=" fixed top right-4">
-      <Link to={'/Udashboard'}>
-        <button><HomeIcon className='size-4'/></button>
-      </Link>
-      </div>
-        {users && users.length > 0 ? (
-          <div className="overflow-x-auto">
-            <table className="min-w-full bg-white border border-gray-200">
-              <thead className="rounded-lg text-base text-blue-400 font-semibold w-full">
-                <tr className="bg-gray-100">
-                  <th className="px-6 py-3 text-left text-sm font-medium text-gray-700 uppercase tracking-wider">
-                    ID
-                  </th>
-                  <th className="px-6 py-3 text-left text-sm font-medium text-gray-700 uppercase tracking-wider">
-                    Name
-                  </th>
-                  <th className="px-6 py-3 text-left text-sm font-medium text-gray-700 uppercase tracking-wider">
-                    Email
-                  </th>
-                  <th className="px-6 py-3 text-left text-sm font-medium text-gray-700 uppercase tracking-wider">
-                    Password
-                  </th>
-                  <th className="px-6 py-3 text-left text-sm font-medium text-gray-700 uppercase tracking-wider">
-                    Tel
-                  </th>
-                  <th className="px-6 py-3 text-left text-sm font-medium text-gray-700 uppercase tracking-wider">
-                    Actions
-                  </th>
-                </tr>
-              </thead>
-              <tbody className="divide-y divide-gray-200">
-                {users.map((user) => (
-                  <tr key={user._id} className="border-t">
-                    {editingUser === user._id ? (
-                      <>
-                        <td>{user._id}</td>
-                        <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
-                          <input
-                            type="text"
-                            name="fullname"
-                            value={formData.fullname}
-                            onChange={handleInputChange}
-                            className="w-full border p-1"
-                          />
-                        </td>
-                        <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
-                          <input
-                            type="email"
-                            name="email"
-                            value={formData.email}
-                            onChange={handleInputChange}
-                            className="w-full border p-1"
-                          />
-                        </td>
-                        <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
-                          <input
-                            type="password"
-                            name="password"
-                            value={formData.password}
-                            onChange={handleInputChange}
-                            className="w-full border p-1"
-                          />
-                        </td>
-                        <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
-                          <input
-                            type="tel"
-                            name="phone"
-                            value={formData.phone}
-                            onChange={handleInputChange}
-                            className="w-full border p-1"
-                          />
-                        </td>
-                        <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900 text-center">
-                          <button
-                            className="bg-green-500 text-white px-2 py-1 rounded mr-2"
-                            onClick={() => handleUpdate(user._id)}
-                          >
-                            Save
-                          </button>
-                          <button
-                            className="bg-gray-500 text-white px-2 py-1 rounded"
-                            onClick={() => setEditingUser(null)}
-                          >
-                            Cancel
-                          </button>
-                        </td>
-                      </>
-                    ) : (
-                      <>
-                        <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
-                          {user._id}
-                        </td>
-                        <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
-                          {user.fullname}
-                        </td>
-                        <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
-                          {user.email}
-                        </td>
-                        <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
-                          ******
-                        </td>
-                        <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
-                          {user.phone}
-                        </td>
-                        <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900 text-center">
-                          <button
-                            className="bg-blue-500 text-white px-2 py-1 rounded mr-2"
-                            onClick={() => handleEdit(user)}
-                          >
-                            Edit
-                          </button>
-                          <button
-                            className="bg-red-500 text-white px-2 py-1 rounded"
-                            onClick={() => handleDelete(user._id)}
-                          >
-                            Delete
-                          </button>
-                        </td>
-                      </>
-                    )}
-                  </tr>
-                ))}
-              </tbody>
-            </table>
+    <>
+      <div>
+        {/* Main Content */}
+        <div className="title"></div>
+        <div className=" overflow-hidden bg-gray-100">
+          <div className=" fixed top right-4">
+            <Link to={"/Dashboard"}>
+              <button>
+                <HomeIcon className="size-4" />
+              </button>
+            </Link>
           </div>
-        ) : (
-          <p className="text-red-500"> No users found.</p>
-        )}
+          {users && users.length > 0 ? (
+            <div className="overflow-x-auto">
+              <table className="min-w-full bg-white border border-gray-200">
+                <thead className="rounded-lg text-base text-blue-400 font-semibold w-full">
+                  <tr className="bg-gray-100">
+                    <th className="px-6 py-3 text-left text-sm font-medium text-gray-700 uppercase tracking-wider">
+                      ID
+                    </th>
+                    <th className="px-6 py-3 text-left text-sm font-medium text-gray-700 uppercase tracking-wider">
+                      Name
+                    </th>
+                    <th className="px-6 py-3 text-left text-sm font-medium text-gray-700 uppercase tracking-wider">
+                      Email
+                    </th>
+                    <th className="px-6 py-3 text-left text-sm font-medium text-gray-700 uppercase tracking-wider">
+                      Password
+                    </th>
+                    <th className="px-6 py-3 text-left text-sm font-medium text-gray-700 uppercase tracking-wider">
+                      Tel
+                    </th>
+                    <th className="px-6 py-3 text-left text-sm font-medium text-gray-700 uppercase tracking-wider">
+                      Actions
+                    </th>
+                  </tr>
+                </thead>
+                <tbody className="divide-y divide-gray-200">
+                  {users.map((user) => (
+                    <tr key={user._id} className="border-t">
+                      {editingUser === user._id ? (
+                        <>
+                          <td>{user._id}</td>
+                          <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
+                            <input
+                              type="text"
+                              name="fullname"
+                              value={formData.fullname}
+                              onChange={handleInputChange}
+                              className="w-full border p-1"
+                            />
+                          </td>
+                          <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
+                            <input
+                              type="email"
+                              name="email"
+                              value={formData.email}
+                              onChange={handleInputChange}
+                              className="w-full border p-1"
+                            />
+                          </td>
+                          <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
+                            <input
+                              type="password"
+                              name="password"
+                              value={formData.password}
+                              onChange={handleInputChange}
+                              className="w-full border p-1"
+                            />
+                          </td>
+                          <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
+                            <input
+                              type="tel"
+                              name="phone"
+                              value={formData.phone}
+                              onChange={handleInputChange}
+                              className="w-full border p-1"
+                            />
+                          </td>
+                          <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900 text-center">
+                            <button
+                              className="bg-green-500 text-white px-2 py-1 rounded mr-2"
+                              onClick={() => handleUpdate(user._id)}
+                            >
+                              Save
+                            </button>
+                            <button
+                              className="bg-gray-500 text-white px-2 py-1 rounded"
+                              onClick={() => setEditingUser(null)}
+                            >
+                              Cancel
+                            </button>
+                          </td>
+                        </>
+                      ) : (
+                        <>
+                          <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
+                            {user._id}
+                          </td>
+                          <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
+                            {user.fullname}
+                          </td>
+                          <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
+                            {user.email}
+                          </td>
+                          <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
+                            ******
+                          </td>
+                          <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
+                            {user.phone}
+                          </td>
+                          <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900 text-center">
+                            <button
+                              className="bg-blue-500 text-white px-2 py-1 rounded mr-2"
+                              onClick={() => handleEdit(user)}
+                            >
+                              Edit
+                            </button>
+                            <button
+                              className="bg-red-500 text-white px-2 py-1 rounded"
+                              onClick={() => handleDelete(user._id)}
+                            >
+                              Delete
+                            </button>
+                          </td>
+                        </>
+                      )}
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          ) : (
+            <p className="text-red-500 font-bold p-6"> No users found.</p>
+          )}
+        </div>
       </div>
-      <Link to={'/dashboard'}>
-      <button><BsHouse/></button>
-      </Link>
       <br />
-    </div>
+    </>
   );
 };
 

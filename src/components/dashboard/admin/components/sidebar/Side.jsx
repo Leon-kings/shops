@@ -1,11 +1,13 @@
 import React, { useState } from "react";
 React;
-import Userview from "../userview/Userview";
 import { BiLogOut, BiUser } from "react-icons/bi";
 import { CgProfile } from "react-icons/cg";
 import { IoSettings } from "react-icons/io5";
 import { BsHouse } from "react-icons/bs";
 import { Link, useNavigate } from "react-router-dom";
+import MyBarChart from "../../../user/components/charts/Barchart";
+import MyChart from "../../../user/components/charts/Chart";
+import Subscription from "../subscription/Subscription";
 function Sidebar() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const navigate = useNavigate();
@@ -19,22 +21,22 @@ function Sidebar() {
     navigate("/login"); // Redirect to the login page
   };
   return (
-    <div className="flex h-screen scroll-auto">
+    <div className="flex scroll-auto">
       <div className="title"></div>
       {/* Sidebar */}
       <div
         className={`
-          fixed scroll-auto top-0 left-0 z-50 w-64 bg-gray-800 text-white p-4 overflow-y-auto transition-all duration-300 ease-in-out
+          fixed scroll-auto top-0 left-0 z-50 min-h-screen w-64 bg-gray-800 text-white p-4 overflow-y-auto transition-all duration-300 ease-in-out
           ${isSidebarOpen ? "translate-x-0" : "-translate-x-full"}
         `}
       >
         {/* Sidebar content here */}
-        
+
         <ul className="scroll-auto">
           <li className="w-40">
             <img
               src="https://plus.unsplash.com/premium_photo-1686729237226-0f2edb1e8970?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8d2FsbHBhcGVyfGVufDB8fDB8fHww"
-              alt="new"
+              alt=""
             />
           </li>
           <li className="my-2">
@@ -82,7 +84,18 @@ function Sidebar() {
       {/* Main content */}
       <div className="flex-1 bg-white p-4 w-full xl:w-full lg:w-full sm:w-full">
         {/* Main content here */}
-        <Userview />
+        <div className="grid gap-4 grid-cols-1 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 xl:grid-cols-3">
+          <div className="main">
+            <MyBarChart />
+          </div>
+          <div className="main">
+            <MyChart />
+          </div>
+          <div className="main">
+            <Subscription />
+          </div>
+        </div>
+      
         {/* ... */}
       </div>
 

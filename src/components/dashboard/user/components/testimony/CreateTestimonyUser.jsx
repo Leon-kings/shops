@@ -49,14 +49,11 @@ export default function CreateTestimonyUser() {
     e.preventDefault();
     console.log(values);
     try {
-      await axios.post(
-        "https://shopsnodejs.onrender.com/testimony",
-        values
-      );
-      if (window.confirm("Back to dashboard?")) {
-        Navigate("/Dashboard");
+      await axios.post("https://shopsnodejs.onrender.com/testimony", values);
+      if (window.confirm("Testimony Received Successfully")) {
+        Navigate("/302010/Settings");
       } else {
-        Navigate("/Settings");
+        Navigate("/Udashboard");
       }
     } catch (error) {
       console.log(error);
@@ -71,17 +68,13 @@ export default function CreateTestimonyUser() {
     <>
       <div>
         {/* Main Content */}
-        <div className="title">
-          <br />
-        </div>
+        <div className="title"></div>
         <div className="container flex items-center justify-center min-h-screen bg-gray-100 text-black">
           <div className="w-full max-w-md p-8 bg-white rounded shadow-md">
             <div className="Register">
               <form onSubmit={handleSubmit}>
                 <div className="head">
-                  <h2 className="text-black text-2xl py-4">
-                    TESTIMONY
-                  </h2>
+                  <h2 className="text-green-300  py-4 font-bold">CREATE TESTIMONY</h2>
                 </div>
                 <div className="contain">
                   {inputs.map((input) => (

@@ -82,14 +82,6 @@ export default function App() {
             {/* payment */}
             <Route path="/CheckOut" element={<CheckOut />} />
             {/* Private Route */}
-            {/* <Route
-              path="/Dashboard"
-              element={
-                <PrivateRoute isAuthenticated={isAuthenticated}>
-                  <Dashboard />
-                </PrivateRoute>
-              }
-            /> */}
             <Route
               path="/Udashboard"
               element={

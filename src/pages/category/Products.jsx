@@ -1,77 +1,80 @@
-import React from "react";
+import React from 'react'
 React;
-const Card = () => {
+export default function Card() {
   return (
-    <>
-      <section className="bg-white w-full lg:w-full xl:w-full dark:bg-dark">
-        <h2 className="text-2xl py-6 font-bold tracking-tight text-blue-600">
-          SERVICES
-        </h2>
-        <div className="mx-auto w-full lg:text-center">
-          <p className="mt-6 text-lg/8 text-gray-600">
-            LD is Mostly Happy To Serve You Better Electronics Appliances With
-            Best Quality From Dubai ,<br /> and Also Allow And Provide Support
-            In IT
-          </p>
+    <div>
+          <div className="relative py-12 bg-gray-900 sm:py-16 lg:py-20 xl:pt-32 xl:pb-44">
+        <div className="absolute inset-0 hidden lg:block">
+            <img className="object-cover object-right-bottom w-full h-full" src="https://60a99bedadae98078522-a9b6cded92292ef3bace063619038eb1.ssl.cf2.rackcdn.com/images_stores_WestburyLongIsland_WestburyROTATORlaptops560.jpg" alt="" />
         </div>
-        <div className="container">
-          <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-            <SingleCard
-              image="https://www.cnet.com/a/img/resize/749c306c97f14076499981fc018dace33d0e367d/hub/2018/02/13/517fda12-de2a-4c3f-bee5-05daaf870537/01laptops-with-longest-battery-life-2018-feb.jpg?auto=webp&width=1200"
-              CardTitle="Best PC Store"
-              CardDescription="We are glad to serve you Better Products with Best Quality From Orginal Industry."
-              Button="View Details"
-              btnHref="/Market"
-            />
-            <SingleCard
-              image="https://media.istockphoto.com/id/1306977961/vector/js-coding-website-background.jpg?s=612x612&w=0&k=20&c=FK-XxRWdnbIqlAkhq5lpAke8s1XMQsApMUdyrAe7Lks="
-              CardTitle="Best Guidance / Debugging"
-              CardDescription="We are also hapy to help and debug ReactJs,NextJs and NodeJs Application."
-              Button="View Details"
-            />
-            <SingleCard
-              image="https://products.shureweb.eu/shure_product_db/product_main_images/files/c25/16a/40-/original/ce632827adec4e1842caa762f10e643d.webp"
-              CardTitle="HeadPhones"
-              CardDescription="We are also Glad to Give Headphone for better fucusing with straight Musics"
-              Button="View Details"
-              btnHref="/Market"
-            />
-          </div>
+
+        <div className="relative px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
+            <div className="max-w-xl mx-auto text-center lg:max-w-md xl:max-w-lg lg:text-left lg:mx-0">
+                <h1 className="text-3xl font-bold text-white sm:text-4xl xl:text-5xl xl:leading-tight">Build SaaS Landing Page without Writing a Single Code</h1>
+                <p className="mt-8 text-base font-normal leading-7 text-gray-400 lg:max-w-md xl:pr-0 lg:pr-16">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In nunc nisl eu consectetur. Mi massa elementum odio eu viverra amet.</p>
+
+                <div className="flex items-center justify-center mt-8 space-x-5 xl:mt-16 lg:justify-start">
+                    <a
+                        href="#"
+                        title=""
+                        className="
+                            inline-flex
+                            items-center
+                            justify-center
+                            px-3
+                            py-3
+                            text-base
+                            font-bold
+                            leading-7
+                            text-gray-900
+                            transition-all
+                            duration-200
+                            bg-white
+                            border border-transparent
+                            rounded-md
+                            sm:px-6
+                            focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-900 focus:ring-white
+                            hover:bg-gray-200
+                        "
+                        role="button"
+                    >
+                        Get UI Kit Now
+                    </a>
+
+                    <a
+                        href="#"
+                        title=""
+                        className="
+                            inline-flex
+                            items-center
+                            justify-center
+                            px-2
+                            py-3
+                            text-base
+                            font-bold
+                            leading-7
+                            text-white
+                            transition-all
+                            duration-200
+                            bg-transparent
+                            border border-transparent
+                            rounded-md
+                            sm:px-4
+                            focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-900 focus:ring-gray-700
+                            hover:bg-gray-700
+                        "
+                        role="button"
+                    >
+                        Check live preview
+                    </a>
+                </div>
+            </div>
         </div>
-      </section>
-    </>
-  );
-};
 
-export default Card;
-
-const SingleCard = ({ image, Button, CardDescription, CardTitle, btnHref }) => {
-  return (
-    <>
-      {/*  */}
-      <div className="mb-10 overflow-hidden rounded-lg bg-amber-50 shadow-1 duration-300 hover:shadow-3 dark:bg-dark-2 dark:shadow-card dark:hover:shadow-3">
-        <img src={image} alt="" className="w-full" />
-        <div className="p-8 text-center sm:p-9 md:p-7 xl:p-9">
-          <h3>
-            <p className="mb-4 block text-xl font-semibold text-dark hover:text-primary dark:text-white sm:text-[22px] md:text-xl lg:text-[22px] xl:text-xl 2xl:text-[22px]">
-              {CardTitle}
-            </p>
-          </h3>
-          <p className="mb-7 text-base leading-relaxed text-body-color dark:text-dark-6">
-            {CardDescription}
-          </p>
-
-          {Button && (
-            <button
-              href={btnHref ? btnHref : "/Market"}
-              className="inline-block rounded-full border border-gray-3 px-7 py-2 text-base font-medium text-body-color transition hover:border-primary hover:bg-primary hover:text-white dark:border-dark-3 dark:text-dark-6"
-            >
-              {Button}
-            </button>
-          )}
+        <div className="mt-8 lg:hidden">
+            <img className="object-cover w-full h-full" src="https://cdn.rareblocks.xyz/collection/clarity-ecommerce/images/hero/1/bg.png" alt="" />
         </div>
-      </div>
-      {/*  */}
-    </>
-  );
-};
+    </div>
+    </div>
+  )
+}

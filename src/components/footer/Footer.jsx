@@ -54,7 +54,7 @@ import axios from "axios";
     };
     return (
      <>
-      <div className="relative isolate overflow-hidden bg-gray-900 py-16 sm:py-24 lg:py-32">
+      <div className="relative isolate overflow-hidden bg-gray-800 py-16 sm:py-24 lg:py-32">
       <div className="mx-auto w-full px-6 lg:px-8">
         <div className="mx-auto grid w-full grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-2">
           <div className="max-w-xl xl:w-full lg:max-w-lg">

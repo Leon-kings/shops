@@ -16,6 +16,7 @@ import { Link } from "react-router-dom";
 import NewTool from "../../universal/products/3d";
 import Show from "../../universal/sliderproducts/Sslider";
 import BlogP from "../products/BloggerProduct";
+import Card from "../category/Products";
 
 React;
 const Home = () => {
@@ -61,7 +62,7 @@ const Home = () => {
             </div>
           </div>
         </div>
-        <hr className="p-3 text-2xl text-blue-600" />
+        {/* <hr className="p-3 text-2xl text-blue-600" /> */}
         {/* end of nav part */}
         {/*  */}
         {/*  */}
@@ -77,7 +78,19 @@ const Home = () => {
           </div>
         </div>
         {/*  */}
-        <hr className="p-3 text-2xl text-blue-600" />
+
+        <div className="head w-full lg:w-full xl:w-full">
+          {/* space btn nav and body ends*/}
+          {/* Header Video components*/}
+          <div className="main">
+            <div className="main">
+              <Card />
+            </div>
+          </div>
+        </div>
+        {/*  */}
+
+        {/* <hr className="p-3 text-2xl text-blue-600" /> */}
         <div className="head w-full lg:w-full xl:w-full">
           {/* space btn nav and body */}
 
@@ -89,7 +102,7 @@ const Home = () => {
             </div>
           </div>
         </div>
-        <hr className="p-3 text-2xl text-blue-600" />
+        {/* <hr className="p-3 text-2xl text-blue-600" /> */}
         {/* end of head */}
         {/*  */}
         {/*  */}
@@ -102,7 +115,7 @@ const Home = () => {
             </div>
           </div>
         </div>
-        <hr className="p-3 text-2xl text-blue-600" />
+        {/* <hr className="p-3 text-2xl text-blue-600" /> */}
         <div className="head lg:w-full xl:w-full" id="fQ">
           {/* space btn nav and body ends*/}
           {/* Header Video components*/}
@@ -113,7 +126,7 @@ const Home = () => {
           </div>
         </div>
         {/*  */}
-        <hr className="p-3 text-2xl text-blue-600" />
+        {/* <hr className="p-3 text-2xl text-blue-600" /> */}
         <div className="head lg:w-full xl:w-full">
           {/* space btn nav and body ends*/}
           {/* Header Video components*/}
@@ -134,7 +147,7 @@ const Home = () => {
             </div>
           </div>
         </div>
-        <hr className="p-3 text-2xl text-blue-600" />
+        {/* <hr className="p-3 text-2xl text-blue-600" /> */}
         <div className="head lg:w-full xl:w-full">
           {/* space btn nav and body ends*/}
           {/* Header Video components*/}
@@ -157,7 +170,7 @@ const Home = () => {
         </div>
  
         {/*  */}
-        <hr className="p-3 text-2xl text-blue-600" />
+        {/* <hr className="p-3 text-2xl text-blue-600" /> */}
         <div className="head lg:w-full xl:w-full" id="service">
           {/* space btn nav and body */}
           {/* space btn nav and body ends*/}

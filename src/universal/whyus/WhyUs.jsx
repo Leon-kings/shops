@@ -24,6 +24,13 @@ const WhyUs = () => {
                       className="w-full rounded-2xl"
                     />
                   </div>
+                  <div className="py-3 p-4 sm:py-4">
+                    <img
+                      src="https://okcredit-blog-images-prod.storage.googleapis.com/2020/12/shutterstock_1445581070.jpg"
+                      alt=""
+                      className="w-full rounded-2xl"
+                    />
+                  </div>
                 </div>
                 <div className="w-full px-3 sm:px-4 xl:w-1/2">
                   <div className="relative p-4 z-10 my-4">
@@ -32,6 +39,7 @@ const WhyUs = () => {
                       alt=""
                       className="w-full rounded-2xl"
                     />
+                    
                     <span className="absolute -right-7 -bottom-7 z-[-1]">
                       <svg
                         width={134}
@@ -603,6 +611,7 @@ const WhyUs = () => {
                       </svg>
                     </span>
                   </div>
+                  
                 </div>
               </div>
             </div>

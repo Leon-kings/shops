@@ -4,7 +4,6 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import "../userview/components/css.css";
 import { Link } from "react-router-dom";
-import { BsHouse } from "react-icons/bs";
 import { HomeIcon } from "@heroicons/react/16/solid";
 export default function Postview() {
   const [posts, setPosts] = useState([]);
@@ -252,9 +251,6 @@ export default function Postview() {
           </table>
         </div>
       </div>
-      <Link to={'/dashboard'}>
-      <button><BsHouse/></button>
-      </Link>
       <div className="title"></div>
     </div>
   );

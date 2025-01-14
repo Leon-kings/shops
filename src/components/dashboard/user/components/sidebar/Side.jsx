@@ -36,12 +36,12 @@ function Sidebar() {
   };
   return (
     <>
-      <div className="flex h-screen scroll-auto">
+      <div className="flex scroll-auto">
         <div className="title"></div>
         {/* Sidebar */}
         <div
           className={`
-          fixed scroll-auto top-0 left-0 z-50 w-64 bg-gray-800 text-white p-4 overflow-y-auto transition-all duration-300 ease-in-out
+          fixed scroll-auto top-0 left-0 z-50 min-h-screen w-64 bg-gray-800 text-white p-4 overflow-y-auto transition-all duration-300 ease-in-out
           ${isSidebarOpen ? "translate-x-0" : "-translate-x-full"}
         `}
         >
@@ -147,7 +147,7 @@ function Sidebar() {
           {isSidebarOpen ? "Close" : "Menu"}
         </button>
       </div>
-      <div className="title"></div>
+
     </>
   );
 }
