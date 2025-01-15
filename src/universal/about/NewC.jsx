@@ -5,9 +5,7 @@ const NewC = () => {
   return (
     <div>
       <section className="relative bg-white p-4">
-        <h2 className="text-2xl py-3 font-bold tracking-tight text-blue-600">
-          ABOUT
-        </h2>
+       
         <h3 className="p-3 font-bold">
           Look who we are and We Empower Other Young Generation.
         </h3>

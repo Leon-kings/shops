@@ -3,7 +3,7 @@ import NewC from "../../universal/about/NewC";
 import { Link } from "react-router-dom";
 import axios from "axios";
 import FormInput from "../form/action/FormInput";
-
+import image from "../../assets/images/356202168_1515581109215839_7191836832866658358_n.jpg";
 React;
 export default function About() {
   // form data
@@ -44,7 +44,7 @@ export default function About() {
       alert("Message received");
     } catch (err) {
       console.log(err);
-      alert('Oops sorry , There are some errors!')
+      alert("Oops sorry , There are some errors!");
       if (err.response && err.response.status === 401) {
         alert("Invalid credentials. Please try again.");
       }
@@ -59,6 +59,83 @@ export default function About() {
     <>
       <div className="title"></div>
       <div className="container">
+        <section className="pt-12 bg-gradient-to-b from-gray-50 via-white to-gray-50">
+          <h2 className="text-2xl py-3 font-bold tracking-tight text-blue-600">
+            ABOUT
+          </h2>
+          <p className="p-4">An editor that helps you write clean codes </p>
+          <div className="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
+            <div className="grid max-w-md grid-cols-1 mx-auto lg:grid-cols-12 gap-x-6 gap-y-8 lg:max-w-none">
+              <div className="self-center lg:col-span-4">
+                <h2 className="text-xl font-bold text-gray-900 sm:text-4xl xl:text-3xl">
+                  Hey 👋 I am A Leon, Owner of LD design.
+                </h2>
+                <p className="mt-5 text-base font-normal leading-7 text-gray-500">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Vehicula massa in enim luctus.
+                </p>
+                <div className="relative inline-flex mt-9 group">
+                  <button>BUY NOW</button>
+                </div>
+              </div>
+
+              <div className="self-end lg:order-last lg:pb-20 lg:col-span-3">
+                <p className="text-xs font-bold tracking-widest text-gray-500 uppercase">
+                  ⚡️ Latest Picks
+                </p>
+
+                <div className="mt-6 space-y-6 lg:space-y-8">
+                  <div className="relative overflow-hidden">
+                    <div className="flex items-start lg:items-center">
+                      <img
+                        className="object-cover w-12 h-12 rounded-lg shrink-0"
+                        src="https://www.hp.com/gb-en/shop/Html/Merch/Images/c09014144_390x286.jpg"
+                        alt=""
+                      />
+                      <p className="ml-5 text-base font-bold leading-6 text-gray-900">
+                        Windows 11 Home in S modeAMD Ryzen™ 3 7320U8 GB RAM256
+                        GB SSD14 FHD
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="relative overflow-hidden">
+                    <div className="flex items-start lg:items-center">
+                      <img
+                        className="object-cover w-12 h-12 rounded-lg shrink-0"
+                        src="https://9to5mac.com/wp-content/uploads/sites/6/2021/10/MacBook-Pro-2021.jpg?quality=82&strip=all&w=1024"
+                        alt=""
+                      />
+                      <p className="ml-5 text-base font-bold leading-6 text-gray-900">
+                        8GB unified memory 256GB SSD storage 13-inch Retina
+                        display with True Tone Touch Bar and Touch ID
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="relative overflow-hidden">
+                    <div className="flex items-start lg:items-center">
+                      <img
+                        className="object-cover w-12 h-12 rounded-lg shrink-0"
+                        src="https://i.ebayimg.com/images/g/6iIAAOSw13ZlvUkz/s-l1200.jpg"
+                        alt=""
+                      />
+                      <p className="ml-5 text-base font-bold leading-6 text-gray-900">
+                        Beats Studio Pro Wireless Bluetooth Noise Cancelling
+                        Headphones - Excellent
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div className="self-end lg:col-span-5">
+                <img className="w-full mx-auto" src={image} alt="" />
+              </div>
+            </div>
+          </div>
+        </section>
+        <br />
         {/*  */}
         <NewC />
         <br />
