@@ -88,7 +88,7 @@ export default function UPost() {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
   };
-  console.log(post[0]);
+  // console.log(post[0]);
   return (
     <>
     <div className="title"></div>
