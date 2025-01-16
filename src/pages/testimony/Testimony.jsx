@@ -1,12 +1,10 @@
 import React from "react";
-// import { Link } from "react-router-dom";
-React;
 import { Autoplay, A11y } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/autoplay';
 import 'swiper/css/controller';
-
+React;
 export default function Testimony() {
   const data = [
     {
@@ -65,6 +63,7 @@ export default function Testimony() {
         <h2 className="text-2xl font-bold tracking-tight text-blue-600">
           TESTIMONY
         </h2>
+        <p className='font-medium p-4'>Don&apos; t miss to help Others by Give a Testimony !</p>
         <div className="mt-6 grid grid-cols-1 gap-x-6 gap-y-10 xl:gap-x-8">
         <section className='slider'>
           <Swiper

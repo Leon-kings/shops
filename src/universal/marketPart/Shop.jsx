@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { BiCart } from "react-icons/bi";
 import { FiArrowRight } from "react-icons/fi";
 React;
 const Shop = () => {
@@ -61,7 +62,7 @@ const Shop = () => {
                   {slide.tagline}
                 </p>
                 <button className="bg-white text-black px-8 py-3 rounded-full font-semibold hover:bg-gray-100 transition-colors duration-300 flex items-center mx-auto space-x-2 group">
-                  <button>Shop Now</button>
+                  <button><BiCart className="text-white size-6"/> </button>
                   <FiArrowRight className="group-hover:translate-x-1 transition-transform duration-300 text-green-500" />
                 </button>
               </div>

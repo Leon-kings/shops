@@ -5,6 +5,7 @@ export default function Head() {
       <>
       <div className="relative overflow-hidden bg-white w-full xl:w-full md:w-full sm:w-full">
         <h2 className="text-blue-400 font-bold py-4">BUY YOUR DEVICES</h2>
+        <p className='font-medium'>Don&apos; t miss today&apos; s best electronics deals with fast shipping & great customer service!</p>
         <div className="pt-16 pb-80 sm:pt-24 sm:pb-40 lg:pt-40 lg:pb-48">
           <div className="relative mx-auto max-w-7xl px-4 sm:static sm:px-6 lg:px-8">
             <div className="sm:max-w-lg">

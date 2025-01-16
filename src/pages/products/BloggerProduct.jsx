@@ -12,8 +12,8 @@ const BlogP = () => {
                   CATEGORY UPCOMMING PRODUCTS
                 </h2>
                 <p className="text-base text-body-color dark:text-dark-6">
-                Business identity verified
-Traditional Sourcing Brought Online. Find Quality Products & Contact Verified Suppliers!
+                  Business identity verified Traditional Sourcing Brought
+                  Online. Find Quality Products & Contact Verified Suppliers!
                 </p>
               </div>
             </div>
@@ -21,19 +21,16 @@ Traditional Sourcing Brought Online. Find Quality Products & Contact Verified Su
 
           <div className="-mx-4 flex flex-wrap">
             <BlogCard
-            
               CardTitle="SMART WATCHES"
               CardDescription="Shop through a wide selection of Smart Watches at Amazon.com. Free shipping and free returns on eligible items."
               image="https://images.samsung.com/is/image/samsung/assets/us/2407/watches/Watches-PCD_CO15_Sleep-Coaching_MO.jpg?$624_624_JPG$"
             />
             <BlogCard
-            
               CardTitle="SMART BLACERETES"
               CardDescription="Wearable Activity & Fitness Tracker for Multi-Sport Mode, All-Day Automatic Continuous Monitoring of Health Data, Improve Sleep, Stress & Wellness"
               image="https://play-lh.googleusercontent.com/r7jpJUzShrtPb6tJZy4ptr1CMQt_Vbaldn-7cWvLzga6zMhorcn8UybjeO4azY7Xv6g"
             />
             <BlogCard
-            
               CardTitle="SMART PHONE"
               CardDescription="Smartphones have built-in cameras, GPS navigation, and support for various communication methods, including voice calls, text messaging, and internet-based."
               image="https://hips.hearstapps.com/hmg-prod/images/best-flip-phones-660d8b9ae2100.jpg?crop=0.752xw:1.00xh;0.125xw,0&resize=1120:*"
@@ -56,18 +53,8 @@ const BlogCard = ({ image, date, CardTitle, CardDescription }) => {
             <img src={image} alt="" className="w-full" />
           </div>
           <div>
-            {date && (
-              <span className="mb-5 inline-block rounded bg-blue-400 px-4 py-1 text-center text-xs font-semibold leading-loose text-white">
-                {date}
-              </span>
-            )}
-            <h3>
-              <a
-                href="/#"
-                className="mb-4 inline-block text-xl font-semibold text-dark hover:text-blue-bg-blue-400 dark:text-white sm:text-2xl lg:text-xl xl:text-2xl"
-              >
-                {CardTitle}
-              </a>
+            <h3 className="mb-4 inline-block text-xl font-semibold text-dark hover:text-blue-bg-blue-400 dark:text-white sm:text-2xl lg:text-xl xl:text-2xl">
+              {CardTitle}
             </h3>
             <p className="text-base text-body-color dark:text-dark-6">
               {CardDescription}

@@ -4,6 +4,28 @@ React;
 import { useEffect, useRef, useState } from "react";
 
 export default function Fquestion(handler) {
+   const [isVisible, setIsVisible] = useState(false);
+  
+    // Show or hide the button based on scroll position
+    useEffect(() => {
+      const toggleVisibility = () => {
+        if (window.scrollY > 300) {
+          setIsVisible(true);
+        } else {
+          setIsVisible(false);
+        }
+      };
+      window.addEventListener("scroll", toggleVisibility);
+      return () => window.removeEventListener("scroll", toggleVisibility);
+    }, []);
+  
+    // Scroll to the top smoothly
+    const scrollToTop = () => {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
+    };
   // Handler hook for when Outside click dropdown close
   let useClickOutside = () => {
     let domNode = useRef();
@@ -91,7 +113,7 @@ export default function Fquestion(handler) {
       <div className="py-5 bg-white md:w-full sm:w-full lg:w-full w-full xl:w-full">
         <div className="container flex flex-col items-center justify-center w-full p-8 mx-auto mt-4 text-center xl:px-0">
         <h2 className="text-blue-400 font-bold size-10 py-4">FAQ</h2>
-          <p className="max-w-2xl py-4 text-lg leading-normal text-gray-500 lg:text-xl xl:text-xl dark:text-gray-300">
+          <p className="max-w-2xl py-4 text-lg leading-normal text-black lg:text-xl xl:text-xl dark:text-gray-300">
             Answer your customers possible questions here, it will increase the
             conversion rate as well as support or chat requests.
           </p>
@@ -141,6 +163,7 @@ export default function Fquestion(handler) {
       <br />
       <section className="bg-white py-20 dark:bg-dark lg:py-[20px] md:w-full sm:w-full lg:w-full w-full xl:w-full">
       <h2 className="text-blue-400 font-bold py-4">EXPLORE MORE</h2>
+      <p className='font-medium p-4'>Don&apos; t miss today&apos; s best electronics deals !</p>
         <div ref={domNode} className="container">
           <div className="-mx-4 flex flex-wrap justify-center">
             <div className="w-full px-4 lg:w-10/12">
@@ -556,6 +579,17 @@ export default function Fquestion(handler) {
           </div>
         )}
       </section>
+      <div>
+        
+        {isVisible && (
+          <button
+            onClick={scrollToTop}
+            className="fixed bottom-6 right-4 bg-blue-600 text-white p-3 rounded-full shadow-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-300"
+          >
+            ↑
+          </button>
+        )}
+        </div>
       <br />
     </>
   );

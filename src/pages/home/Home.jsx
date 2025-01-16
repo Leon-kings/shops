@@ -96,8 +96,8 @@ const Home = () => {
 
           {/* space btn nav and body ends*/}
           {/* Header Video components*/}
-          <div className="header">
-            <div className="header">
+          <div className="her">
+            <div className="he">
               <Product />
             </div>
           </div>

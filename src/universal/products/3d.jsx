@@ -31,22 +31,22 @@ const features = [
           </div>
           <div className="grid grid-cols-2 grid-rows-2 gap-4 sm:gap-6 lg:gap-8">
             <img
-              alt="Walnut card tray with white powder coated steel divider and 3 punchout holes."
+              alt=""
               src="https://t4.ftcdn.net/jpg/06/87/55/51/360_F_687555127_cjbaJXPyIpkhsLF0U74kH5mJT1B54wOs.jpg"
               className="rounded-lg bg-gray-100"
             />
             <img
-              alt="Top down view of walnut card tray with embedded magnets and card groove."
+              alt=""
               src="https://computerstoreskitchener.weebly.com/uploads/1/1/2/4/112427265/computer-stores-kitchener_orig.jpg"
               className="rounded-lg bg-gray-100"
             />
             <img
-              alt="Side of walnut card tray with card groove and recessed card area."
+              alt=""
               src="https://franchisemanila.com/wp-content/uploads/2015/09/mineski.jpg"
               className="rounded-lg bg-gray-100"
             />
             <img
-              alt="Walnut card tray filled with cards and card angled in dedicated groove."
+              alt=""
               src="https://media.istockphoto.com/id/538780817/photo/woman-buying-desktop-in-store.jpg?s=612x612&w=0&k=20&c=jsKq9MKEPvduNEeCOF_b-X6gKd0v62Bp1HA2T0KIlag="
               className="rounded-lg bg-gray-100"
             />

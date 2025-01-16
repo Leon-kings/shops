@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import NewC from "../../universal/about/NewC";
 import { Link } from "react-router-dom";
 import axios from "axios";
@@ -6,6 +6,28 @@ import FormInput from "../form/action/FormInput";
 import image from "../../assets/images/356202168_1515581109215839_7191836832866658358_n.jpg";
 React;
 export default function About() {
+   const [isVisible, setIsVisible] = useState(false);
+  
+    // Show or hide the button based on scroll position
+    useEffect(() => {
+      const toggleVisibility = () => {
+        if (window.scrollY > 300) {
+          setIsVisible(true);
+        } else {
+          setIsVisible(false);
+        }
+      };
+      window.addEventListener("scroll", toggleVisibility);
+      return () => window.removeEventListener("scroll", toggleVisibility);
+    }, []);
+  
+    // Scroll to the top smoothly
+    const scrollToTop = () => {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
+    };
   // form data
   const [values, setValues] = useState({
     email: "",
@@ -63,7 +85,7 @@ export default function About() {
           <h2 className="text-2xl py-3 font-bold tracking-tight text-blue-600">
             ABOUT
           </h2>
-          <p className="p-4">An editor that helps you write clean codes </p>
+          <p className="p-4 font-medium "> We are <b className="text-blue-500">LD</b> . Together, weve not only constructed buildings but also built enduring connections that define our success story</p>
           <div className="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
             <div className="grid max-w-md grid-cols-1 mx-auto lg:grid-cols-12 gap-x-6 gap-y-8 lg:max-w-none">
               <div className="self-center lg:col-span-4">
@@ -235,6 +257,17 @@ export default function About() {
             </div>
           </div>
         </section>
+        <div>
+        
+      {isVisible && (
+        <button
+          onClick={scrollToTop}
+          className="fixed bottom-6 right-4 bg-blue-600 text-white p-3 rounded-full shadow-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-300"
+        >
+          ↑
+        </button>
+      )}
+      </div>
       </div>
       <br />
     </>

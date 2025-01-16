@@ -80,9 +80,11 @@ const products = [
 
 export default function Product() {
   return (
+    <>
     <div className="bg-white w-full xl:w-full md:w-full sm:w-full">
       <h2 className="text-blue-400 font-bold py-4">PRODUCT CATEGORY</h2>
-      <div className="mx-auto w-full px-4 sm:px-6 sm:py-24 lg:px-8">
+      <p className="text font-medium">Kigali&apos; s top tech store, shop from us and enjoy the best services</p>
+      <div className="mx-auto w-full p-4 px-4 sm:px-6 lg:px-8">
         <div className="mt-6 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8">
           {products.map((product) => (
             <div key={product.id} className="group relative">
@@ -96,9 +98,9 @@ export default function Product() {
                   <h3 className="text-sm text-black">
                     <Link to={product.href}>{product.name}</Link>
                   </h3>
-                  <p className="mt-1 text-sm text-blue-400">{product.color}</p>
+                  <p className="mt-1 text-md font-medium text-blue-500">{product.color}</p>
                 </div>
-                <p className="text-sm font-medium text-green-400">
+                <p className="text-sm font-bold text-green-400">
                   {product.price}
                 </p>
               </div>
@@ -107,5 +109,7 @@ export default function Product() {
         </div>
       </div>
     </div>
+    <br />
+    </>
   );
 }
