@@ -33,7 +33,7 @@ export default function Messageview() {
     try {
       if (window.confirm("Do you really want to Delete?")) {
         await axios.delete(
-          `https://backendproject-8m9r.onrender.com/message/${msgId}`
+          `https://shopsnodejs.onrender.com/messages/${msgId}`
         );
         setMessage(message.filter((msg) => msg._id !== msgId));
       } else {
@@ -59,7 +59,7 @@ export default function Messageview() {
     try {
       if (window.confirm("Do you really want to Update?")) {
         await axios.put(
-          `https://backendproject-8m9r.onrender.com/message/${msgId}`,
+          `https://shopsnodejs.onrender.com/messages/${msgId}`,
           formData
         );
         setMessage(
