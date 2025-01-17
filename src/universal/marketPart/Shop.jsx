@@ -35,7 +35,7 @@ const Shop = () => {
   }, []);
 
   return (
-    <div className="relative h-screen w-full overflow-hidden">
+    <div className="relative h-[450px] rounded-2xl w-full overflow-hidden">
       {slides.map((slide, index) => (
         <div
           key={index}

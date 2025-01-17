@@ -6,7 +6,8 @@ import {
   ServerIcon,
   CodeBracketIcon,
 } from "@heroicons/react/24/outline";
-
+import logo from "../../assets/images/young-man-showing-his-friend-information-from-his-notes.jpg";
+import { Link } from "react-router-dom";
 const features = [
   {
     name: "Bought Products",
@@ -34,40 +35,40 @@ const features = [
 ];
 
 export default function Services() {
-   const [isVisible, setIsVisible] = useState(false);
-  
-    // Show or hide the button based on scroll position
-    useEffect(() => {
-      const toggleVisibility = () => {
-        if (window.scrollY > 300) {
-          setIsVisible(true);
-        } else {
-          setIsVisible(false);
-        }
-      };
-      window.addEventListener("scroll", toggleVisibility);
-      return () => window.removeEventListener("scroll", toggleVisibility);
-    }, []);
-  
-    // Scroll to the top smoothly
-    const scrollToTop = () => {
-      window.scrollTo({
-        top: 0,
-        behavior: "smooth",
-      });
+  const [isVisible, setIsVisible] = useState(false);
+
+  // Show or hide the button based on scroll position
+  useEffect(() => {
+    const toggleVisibility = () => {
+      if (window.scrollY > 300) {
+        setIsVisible(true);
+      } else {
+        setIsVisible(false);
+      }
     };
+    window.addEventListener("scroll", toggleVisibility);
+    return () => window.removeEventListener("scroll", toggleVisibility);
+  }, []);
+
+  // Scroll to the top smoothly
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
   return (
     <>
       <div className="title"></div>
       <section className="py-12 bg-white sm:py-16 lg:py-10 w-full sm:w-full md:w-full lg:w-full xl:w-full">
-        <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+        <div className="px-4 mx-auto w-full sm:px-6 lg:px-8">
           <div className="text-center">
             <h2 className="text-xl font-bold leading-tight text-blue-400 sm:text-xl xl:text-xl font-pj">
               OUR SERVICES
             </h2>
             <p className="mt-4 text-base font-bold leading-7 text-gray-600 sm:mt-8 font-pj">
-              We&apos; re Happy To Help Society To Advance Means Of Life With Better
-              Computers for Gaming , Coding and etc .{" "}
+              We&apos; re Happy To Help Society To Advance Means Of Life With
+              Better Computers for Gaming , Coding and etc .{" "}
             </p>
           </div>
 
@@ -356,71 +357,67 @@ export default function Services() {
           </div>
         </div>
       </section>
+      {/* new section */}
       <br />
-      <section className="relative bg-gray-900">
+      {/* start */}
+      <section className="relative bg-gray-900 w-full sm:w-full md:w-full lg:w-full xl:w-full">
         <div className="absolute inset-0">
           <div className="absolute inset-y-0 left-0 w-1/2 bg-white"></div>
         </div>
 
-        <div className="relative mx-auto max-w-7xl lg:grid lg:grid-cols-2">
+        <div className="relative mx-auto w-full lg:grid sm:grid-cols-1 lg:grid-cols-2">
           <div className="flex items-end px-4 pb-16 bg-white pt-28 sm:px-6 lg:px-8 lg:pb-24 xl:pr-12">
             <div className="max-w-lg mx-auto lg:mx-0">
               <p className="text-5xl sm:text-6xl lg:text-7xl">
-                ⚡️
+                <img src={logo} alt="" className="w-full" />
               </p>
               <h1 className="mt-10 text-3xl font-bold text-gray-900 sm:text-4xl lg:text-5xl">
-                We write articles on SaaS startup growth.
+                Electronics Store: Tech, PC Parts
               </h1>
               <p className="mt-6 text-base font-normal leading-7 text-gray-500">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vehicula massa in enim luctus. Rutrum arcu.
+                Shop LD Center for electronics, PCs, laptops, Apple products,
+                and much more. Enjoy in-store pickup, top deals, and expert
+                same-day tech support.
               </p>
               <div className="relative inline-flex mt-10 group">
-                <div
-                  className="absolute transitiona-all duration-1000 opacity-70 inset-0 bg-gradient-to-r from-[#44BCFF] via-[#FF44EC] to-[#FF675E] rounded-xl blur-lg filter group-hover:opacity-100 group-hover:duration-200">
-                </div>
-
-                <a href="#" title=""
-                  className="inline-flex relative items-center justify-center w-full sm:w-auto px-8 py-3 sm:text-sm text-base sm:py-3.5 font-semibold text-white transition-all duration-200 bg-gray-900 border border-transparent rounded-lg hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900"
-                  role="button">
-                  Read Exclusive Blog
-                </a>
+                <div className="absolute transitiona-all duration-1000 opacity-70 inset-0 bg-gradient-to-r from-[#44BCFF] via-[#FF44EC] to-[#FF675E] rounded-xl blur-lg filter group-hover:opacity-100 group-hover:duration-200"></div>
+                <Link to={"/Market"}>
+                  <button className="inline-flex relative items-center justify-center w-full sm:w-auto px-8 py-3 sm:text-sm text-base sm:py-3.5 font-semibold text-white transition-all duration-200 bg-gray-900 border border-transparent rounded-lg hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900">
+                    Read Exclusive Post
+                  </button>
+                </Link>
               </div>
             </div>
           </div>
 
           <div className="relative flex items-end px-4 py-16 bg-gray-900 sm:px-6 lg:pb-24 lg:px-8 xl:pl-12">
             <div className="absolute inset-0">
-              <img className="object-cover w-full h-full"
+              <img
+                className="object-cover w-full h-full"
                 src="https://landingfoliocom.imgix.net/store/collection/clarity-blog/images/hero/6/grid-pattern.svg"
-                alt=""/>
+                alt=""
+              />
             </div>
 
             <div className="relative w-full max-w-lg mx-auto lg:max-w-none">
-              <p className="text-lg font-bold text-white">
-                Featured Articles
-              </p>
+              <p className="text-lg font-bold text-white">Featured Post</p>
 
               <div className="mt-6 space-y-5">
-                <div
-                  className="overflow-hidden transition-all duration-200 transform bg-white border border-gray-200 rounded-2xl hover:shadow-lg hover:-translate-y-1">
+                <div className="overflow-hidden transition-all duration-200 transform bg-white border border-gray-200 rounded-2xl hover:shadow-lg hover:-translate-y-1">
                   <div className="px-4 py-5 sm:p-5">
                     <div className="flex items-start lg:items-center">
-                      <a href="#" title="" className="shrink-0">
-                        <img className="lg:h-24 w-14 h-14 lg:w-24 rounded-xl object-cvoer"
-                          src="https://landingfoliocom.imgix.net/store/collection/clarity-blog/images/hero/6/thumbnail-1.png"
-                          alt=""/>
-                      </a>
-
+                      <img
+                        className="lg:h-24 w-14 h-14 lg:w-24 rounded-xl object-cover"
+                        src={logo}
+                        alt=""
+                      />
                       <div className="flex-1 ml-4 lg:ml-6">
                         <p className="text-xs font-medium text-gray-900 lg:text-sm">
-                          <a href="#" title="" className="">
-                            Growth
-                          </a>
+                          PC
                         </p>
                         <p className="mt-2 text-sm font-bold text-gray-900 lg:text-lg group-hover:text-gray-600">
-                          <a href="#" title="" className="">
-                            How a visual artist redefines success in graphic design
-                          </a>
+                          How a visual artist redefines success in graphic
+                          design
                         </p>
                         <p className="mt-2 text-xs font-medium text-gray-500 lg:text-sm">
                           April 09, 2022
@@ -430,26 +427,28 @@ export default function Services() {
                   </div>
                 </div>
 
-                <div
-                  className="overflow-hidden transition-all duration-200 transform bg-white border border-gray-200 rounded-2xl hover:shadow-lg hover:-translate-y-1">
+                <div className="overflow-hidden transition-all duration-200 transform bg-white border border-gray-200 rounded-2xl hover:shadow-lg hover:-translate-y-1">
                   <div className="px-4 py-5 sm:p-5">
                     <div className="flex items-start lg:items-center">
-                      <a href="#" title="" className="shrink-0">
-                        <img className="lg:h-24 w-14 h-14 lg:w-24 rounded-xl object-cvoer"
+                  
+                        <img
+                          className="lg:h-24 w-14 h-14 lg:w-24 rounded-xl object-cvoer"
                           src="https://landingfoliocom.imgix.net/store/collection/clarity-blog/images/hero/6/thumbnail-2.png"
-                          alt=""/>
-                      </a>
+                          alt=""
+                        />
+               
 
                       <div className="flex-1 ml-4 lg:ml-6">
                         <p className="text-xs font-medium text-gray-900 lg:text-sm">
-                          <a href="#" title="" className="">
+                         
                             Growth
-                          </a>
+                    
                         </p>
                         <p className="mt-2 text-sm font-bold text-gray-900 lg:text-lg group-hover:text-gray-600">
-                          <a href="#" title="" className="">
-                            How a visual artist redefines success in graphic design
-                          </a>
+                     
+                            How a visual artist redefines success in graphic
+                            design
+
                         </p>
                         <p className="mt-2 text-xs font-medium text-gray-500 lg:text-sm">
                           April 09, 2022
@@ -458,27 +457,58 @@ export default function Services() {
                     </div>
                   </div>
                 </div>
-
-                <div
-                  className="overflow-hidden transition-all duration-200 transform bg-white border border-gray-200 rounded-2xl hover:shadow-lg hover:-translate-y-1">
+                <div className="overflow-hidden transition-all duration-200 transform bg-white border border-gray-200 rounded-2xl hover:shadow-lg hover:-translate-y-1">
                   <div className="px-4 py-5 sm:p-5">
                     <div className="flex items-start lg:items-center">
-                      <a href="#" title="" className="shrink-0">
-                        <img className="lg:h-24 w-14 h-14 lg:w-24 rounded-xl object-cvoer"
-                          src="https://landingfoliocom.imgix.net/store/collection/clarity-blog/images/hero/6/thumbnail-3.png"
-                          alt=""/>
-                      </a>
+            
+                        <img
+                          className="lg:h-24 w-14 h-14 lg:w-24 rounded-xl object-cvoer"
+                          src="https://landingfoliocom.imgix.net/store/collection/clarity-blog/images/hero/6/thumbnail-2.png"
+                          alt=""
+                        />
+                  
 
                       <div className="flex-1 ml-4 lg:ml-6">
                         <p className="text-xs font-medium text-gray-900 lg:text-sm">
-                          <a href="#" title="" className="">
+                      
                             Growth
-                          </a>
+                      
                         </p>
                         <p className="mt-2 text-sm font-bold text-gray-900 lg:text-lg group-hover:text-gray-600">
-                          <a href="#" title="" className="">
-                            How a visual artist redefines success in graphic design
-                          </a>
+                        
+                            How a visual artist redefines success in graphic
+                            design
+                         
+                        </p>
+                        <p className="mt-2 text-xs font-medium text-gray-500 lg:text-sm">
+                          April 09, 2022
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div className="overflow-hidden transition-all duration-200 transform bg-white border border-gray-200 rounded-2xl hover:shadow-lg hover:-translate-y-1">
+                  <div className="px-4 py-5 sm:p-5">
+                    <div className="flex items-start lg:items-center">
+               
+                        <img
+                          className="lg:h-24 w-14 h-14 lg:w-24 rounded-xl object-cvoer"
+                          src="https://landingfoliocom.imgix.net/store/collection/clarity-blog/images/hero/6/thumbnail-3.png"
+                          alt=""
+                        />
+                   
+
+                      <div className="flex-1 ml-4 lg:ml-6">
+                        <p className="text-xs font-medium text-gray-900 lg:text-sm">
+                      
+                            Growth
+                       
+                        </p>
+                        <p className="mt-2 text-sm font-bold text-gray-900 lg:text-lg group-hover:text-gray-600">
+                      
+                            How a visual artist redefines success in graphic
+                            design
+                       
                         </p>
                         <p className="mt-2 text-xs font-medium text-gray-500 lg:text-sm">
                           April 09, 2022
@@ -556,14 +586,14 @@ export default function Services() {
       {/*  */}
       <div>
         <br />
-      {isVisible && (
-        <button
-          onClick={scrollToTop}
-          className="fixed bottom-6 right-4 bg-blue-600 text-white p-3 rounded-full shadow-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-300"
-        >
-          ↑
-        </button>
-      )}
+        {isVisible && (
+          <button
+            onClick={scrollToTop}
+            className="fixed bottom-6 right-4 bg-blue-600 text-white p-3 rounded-full shadow-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-300"
+          >
+            ↑
+          </button>
+        )}
       </div>
       <br />
       {/*  */}
