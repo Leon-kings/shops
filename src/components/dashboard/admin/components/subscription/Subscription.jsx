@@ -93,6 +93,7 @@ export default function Subscription() {
               </button>
             </Link>
           </div>
+          <h2 className="text-blue-400 font-bold">SUBSCRIPTION</h2>
           {subsc && subsc.length > 0 ? (
             <div className="overflow-x-auto">
               <table className="w-full bg-white border border-gray-200">

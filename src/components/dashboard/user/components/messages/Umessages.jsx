@@ -94,6 +94,7 @@ export default function Umessages() {
               </button>
             </Link>
           </div>
+          <h2 className="text-blue-400 font-bold">MESSAGES</h2>
           {message && message.length > 0 ? (
             <div className="overflow-x-auto">
               <table className="min-w-full bg-white border border-gray-200">

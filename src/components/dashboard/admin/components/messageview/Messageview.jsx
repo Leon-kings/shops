@@ -96,7 +96,7 @@ export default function Messageview() {
               </button>
             </Link>
           </div>
-          <h4>Messages</h4>
+          <h2 className="text-blue-400 font-bold">MESSAGES</h2>
           {message.length > 0 ? (
             <div className="overflow-x-auto">
               <table className="min-w-full bg-white border border-gray-200">

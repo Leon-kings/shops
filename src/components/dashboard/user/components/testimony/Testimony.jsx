@@ -98,6 +98,7 @@ export default function UTestimony() {
               </button>
             </Link>
           </div>
+          <h2 className="text-blue-400 font-bold">TESTIMONY</h2>
           {test && test.length > 0 ? (
             <div className="overflow-x-auto">
               <table className="min-w-full bg-white border border-gray-200">

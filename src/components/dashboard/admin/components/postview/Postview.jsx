@@ -100,7 +100,7 @@ export default function Postview() {
               </button>
             </Link>
           </div>
-        <h4>Posts</h4>
+          <h2 className="text-blue-400 font-bold">POSTS</h2>
         <div className="overflow-x-auto">
           <table className="min-w-full bg-white border border-gray-200">
             <thead className="rounded-lg text-base text-blue-400 font-semibold w-full">

@@ -7,16 +7,22 @@ import "../userview/components/css.css";
 import { HomeIcon } from "@heroicons/react/16/solid";
 export default function Testimonyview() {
   const [testimonies, setTestimonies] = useState([]);
-  const [formData, setFormData] = useState({ email: "", name: "", testimony: "" });
+  const [formData, setFormData] = useState({
+    email: "",
+    name: "",
+    testimony: "",
+  });
   const [editingTestimonyId, setEditingTestimonyId] = useState(null);
 
   // Fetch testimonies from API
   useEffect(() => {
     const fetchTestimonies = async () => {
       try {
-        const response = await axios.get("https://shopsnodejs.onrender.com/testimony");
+        const response = await axios.get(
+          "https://shopsnodejs.onrender.com/testimony"
+        );
         setTestimonies(response.data.data);
-        console.log(response.data)
+        console.log(response.data);
       } catch (error) {
         console.error("Error fetching testimonies:", error);
       }
@@ -50,7 +56,9 @@ export default function Testimonyview() {
         );
         setTestimonies(
           testimonies.map((test) =>
-            test._id === editingTestimonyId ? { ...test, ...response.data } : test
+            test._id === editingTestimonyId
+              ? { ...test, ...response.data }
+              : test
           )
         );
         setEditingTestimonyId(null);
@@ -58,7 +66,7 @@ export default function Testimonyview() {
       }
     } catch (error) {
       console.error("Error updating testimony:", error);
-      alert('Error updating Testimony',error);
+      alert("Error updating Testimony", error);
     }
   };
 
@@ -66,7 +74,9 @@ export default function Testimonyview() {
   const handleDelete = async (testimonyId) => {
     try {
       if (window.confirm("Are you sure you want to delete this testimony?")) {
-        await axios.delete(`https://shopsnodejs.onrender.com/testimony/${testimonyId}`);
+        await axios.delete(
+          `https://shopsnodejs.onrender.com/testimony/${testimonyId}`
+        );
         setTestimonies(testimonies.filter((test) => test._id !== testimonyId));
       }
     } catch (error) {
@@ -81,15 +91,15 @@ export default function Testimonyview() {
         <br />
       </div>
       <div className="container bg-white rounded-md">
-      <div className="relative overflow-hidden bg-gray-100 ">
-      <div className="fixed right-4">
+        <div className="relative overflow-hidden bg-gray-100 ">
+          <div className="fixed right-4">
             <Link to={"/Dashboard"}>
               <button>
                 <HomeIcon className="size-4" />
               </button>
             </Link>
           </div>
-          <h4>Testimony</h4>
+          <h2 className="text-blue-400 font-bold">TESTIMONY</h2>
           {testimonies.length > 0 ? (
             <div className="overflow-x-auto">
               <table className="min-w-full bg-white border border-gray-200">
@@ -205,9 +215,11 @@ export default function Testimonyview() {
             <p className="text-red-500"> No Testimony found.</p>
           )}
         </div>
-        <Link to={'/dashboard'}>
-      <button><BsHouse/></button>
-      </Link>
+        <Link to={"/dashboard"}>
+          <button>
+            <BsHouse />
+          </button>
+        </Link>
       </div>
     </>
   );
