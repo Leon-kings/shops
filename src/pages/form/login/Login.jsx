@@ -78,7 +78,7 @@ const Login = () => {
       <div className="container flex items-center justify-center min-h-screen bg-gray-100">
         <div className="w-full max-w-md p-8 bg-white rounded shadow-md">
           <form onSubmit={handleSubmit} className="mt-4">
-            <h2 className="title text-green-400 text-2xl py-4">Log in</h2>
+            <h2 className="title text-blue-400 font-bold py-4">LOG IN</h2>
             <div className="container">
               {inputs.map((input) => (
                 <FormInput

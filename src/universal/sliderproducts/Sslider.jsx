@@ -18,7 +18,7 @@ const Show = () => {
   return (
     <>
       <section className="pb-20 pt-20 dark:bg-dark lg:pb-[120px] bg-white lg:pt-[120px]">
-      <h2 className="text-blue-400 font-bold p-4">WHAT WE HAVE</h2>
+        <h2 className="text-blue-400 font-bold p-4">WHAT WE HAVE</h2>
         <div className="container mx-auto">
           <Swiper slidesPerView={1} ref={sliderRef}>
             <SwiperSlide>
@@ -84,10 +84,10 @@ const SingleShow = ({ image, details, name, position }) => {
       <div className="relative w-full pb-16 md:w-11/12 lg:w-10/12 xl:w-8/12">
         <div className="w-full items-center md:flex">
           <div className="relative mb-12 w-full max-w-[310px] md:mb-0 md:mr-12 md:max-w-[250px] lg:mr-14 lg:max-w-[280px] 2xl:mr-16">
-            <img src={image} alt="image" className="w-full" />
-            <span className="absolute -left-6 -top-6 z-[-1] hidden sm:block">
+            <img src={image} alt="" className="w-full" />
+            <p className="absolute -left-6 -top-6 z-[-1] hidden sm:block">
               <DotShape />
-            </span>
+            </p>
             <span className="absolute -bottom-6 -right-6 z-[-1]">
               <svg
                 width="64"
@@ -106,16 +106,9 @@ const SingleShow = ({ image, details, name, position }) => {
           </div>
           <div className="w-full">
             <div>
-              <p className="mb-11 text-base font-normal italic leading-[1.81] text-body-color dark:text-dark-6 sm:text-[22px]">
+              <h2 className="mb-11 text-base font-normal italic leading-[1.81] text-body-color dark:text-dark-6 sm:text-[22px]">
                 {details}
-              </p>
-
-              <h4 className="mb-2 text-[22px] font-semibold leading-[27px] text-dark dark:text-white">
-                {name}
-              </h4>
-              <p className="text-base text-body-color dark:text-dark-6">
-                {position}
-              </p>
+              </h2>
             </div>
           </div>
         </div>

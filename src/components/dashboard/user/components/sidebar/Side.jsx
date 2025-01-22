@@ -110,7 +110,7 @@ function Sidebar() {
           <div className="new">
             <main className="bg-indigo-300 rounded-lg shadow-lg mt-10 py-20">
               <section className=" justify-between items-center p-10 ">
-                <div className="space-y-4 grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-2 sm:grid-cols-1 gap-6">
+                <div className="space-y-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 sm:grid-cols-1 gap-6">
                   <div className="flex -space-x-2 overflow-hidden">
                     {marketerLogos.map((logo, index) => (
                       <img
@@ -135,7 +135,6 @@ function Sidebar() {
               </section>
             </main>
           </div>
-
           {/* ... */}
         </div>
 
@@ -147,7 +146,6 @@ function Sidebar() {
           {isSidebarOpen ? "Close" : "Menu"}
         </button>
       </div>
-
     </>
   );
 }

@@ -5,8 +5,8 @@ const ComponentName = () => {
     <section className="py-12 bg-white sm:py-16 lg:py-20">
       <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
         <div className="text-center">
-          <h2 className="text-3xl font-bold text-gray-900 sm:text-4xl xl:text-5xl font-pj">
-            Our Investors & Board of Directors
+          <h2 className="text-xl font-bold text-gray-900 sm:text-4xl xl:text-2xl font-pj">
+            Board
           </h2>
         </div>
 
@@ -18,10 +18,10 @@ const ComponentName = () => {
               alt=""
             />
             <p className="mt-5 text-lg font-bold text-gray-900 sm:text-xl sm:mt-8 font-pj">
-              Jerome Bell
+              A Leon
             </p>
             <p className="mt-2 text-base font-normal text-gray-600 font-pj">
-              Co founder, Chairman, Executive Director
+              Co founder
             </p>
           </div>
 
@@ -32,10 +32,10 @@ const ComponentName = () => {
               alt=""
             />
             <p className="mt-5 text-lg font-bold text-gray-900 sm:text-xl sm:mt-8 font-pj">
-              Jerome Bell
+             Leon
             </p>
             <p className="mt-2 text-base font-normal text-gray-600 font-pj">
-              Co founder, Chairman, Executive Director
+             Executive Director
             </p>
           </div>
 
@@ -46,10 +46,10 @@ const ComponentName = () => {
               alt=""
             />
             <p className="mt-5 text-lg font-bold text-gray-900 sm:text-xl sm:mt-8 font-pj">
-              Jerome Bell
+              Marvin
             </p>
             <p className="mt-2 text-base font-normal text-gray-600 font-pj">
-              Co founder, Chairman, Executive Director
+              Guidance and Debugger
             </p>
           </div>
 
@@ -60,10 +60,10 @@ const ComponentName = () => {
               alt=""
             />
             <p className="mt-5 text-lg font-bold text-gray-900 sm:text-xl sm:mt-8 font-pj">
-              Jerome Bell
+              Pinsoe
             </p>
             <p className="mt-2 text-base font-normal text-gray-600 font-pj">
-              Co founder, Chairman, Executive Director
+              Debugger
             </p>
           </div>
         </div>

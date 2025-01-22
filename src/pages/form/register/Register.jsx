@@ -84,7 +84,7 @@ const Register = () => {
           <div className="Register">
             <form onSubmit={handleSubmit}>
               <div className="head">
-                <h2 className="text-green-400 text-2xl py-4"> Register</h2>
+                <h2 className="text-blue-400 font-bold py-4"> REGISTER</h2>
               </div>
               <div className="contain">
                 {inputs.map((input) => (

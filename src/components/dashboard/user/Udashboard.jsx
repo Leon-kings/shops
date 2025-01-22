@@ -4,7 +4,7 @@ import Header from "./components/heading/Head";
 import ComponentName from "./components/linechart/Linechart";
 import UTestimony from "./components/testimony/Testimony";
 import UPost from "./components/post/Post";
-
+import side from '../../../assets/images/postdp-hero03.jpg.large.2x.jpg'
 React;
 export default function Udashboard() {
   return (
@@ -34,9 +34,10 @@ export default function Udashboard() {
                 {/* Left content */}
                 <div>
                   <h2 className="mt-4 text-lg font-normal text-gray-400 sm:mt-8">
-                    Amet minim mollit non deserunt ullamco est sit aliqua dolor
-                    do amet sint. Velit officia consequat duis enim velit
-                    mollit. Exercitation veniam consequat.
+                  Computer Accessories · Computer Batteries · Acer · Asus · Dell · HP · Toshiba · Computer Cables · Computer Connectors · Display Connectors · Ethernet Connectors .
+                  </h2>
+                  <h2 className="mt-4 text-lg font-normal text-gray-400 sm:mt-8">
+                  Shop Newegg today for all of your gaming, PC & technology needs. Don&apos; t miss today&apos; s best electronics deals with fast shipping & great customer service!
                   </h2>
                 </div>
 
@@ -88,7 +89,7 @@ export default function Udashboard() {
 
                   <img
                     className="relative w-full max-w-md mx-auto"
-                    src="https://landingfoliocom.imgix.net/store/collection/dusk/images/hero/2/illustration.png"
+                    src={side}
                     alt=""
                   />
                 </div>

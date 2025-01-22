@@ -37,6 +37,7 @@ import UPost from "./components/dashboard/user/components/post/Post";
 import CreateMessageUser from "./components/dashboard/user/components/messages/CreateMessageUser";
 import CreateTestimonyUser from "./components/dashboard/user/components/testimony/CreateTestimonyUser";
 import CreatePostUser from "./components/dashboard/user/components/post/CreatePostUser";
+import UProfile from "./components/dashboard/user/components/profile/Profile";
 
 export default function App() {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
@@ -78,6 +79,7 @@ export default function App() {
             <Route path="/302020/Testimony" element={<UTestimony/> } />
             <Route path="/5044/Create/Testimony/245678" element={<CreateTestimonyUser/> } />
             <Route path="/302025/Post" element={<UPost/> } />
+            <Route path="/302005/Profile" element={<UProfile/> } />
             <Route path="/5044/Create/Post/245678" element={<CreatePostUser/> } />
             {/* payment */}
             <Route path="/CheckOut" element={<CheckOut />} />

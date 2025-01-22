@@ -16,7 +16,7 @@ export default function Testimony() {
         </>
       ),
       author: "Leon",
-      title: "CEO Of LD",
+      // title: "CEO Of LD",
       avatar:
         "https://images.unsplash.com/photo-1511485977113-f34c92461ad9?crop=faces&cs=tinysrgb&fit=crop&fm=jpg&ixid=MnwxfDB8MXxhbGx8fHx8fHx8fHwxNjIwMTQ5ODEx&ixlib=rb-1.2.1&q=80&w=100&h=100",
     },
@@ -28,7 +28,7 @@ export default function Testimony() {
         </>
       ),
       author: "Dylan Ambrose",
-      title: "Lead marketer at Netflix ",
+      // title: "Lead marketer at Netflix ",
       avatar:
         "https://images.unsplash.com/photo-1463453091185-61582044d556?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&crop=faces&fit=crop&w=100&h=100&q=80",
     },
@@ -40,7 +40,7 @@ export default function Testimony() {
         </>
       ),
       author: "Gabrielle Winn",
-      title: "Co-founder of Acme Inc",
+      // title: "Co-founder of Acme Inc",
       avatar:
         "https://images.unsplash.com/photo-1624224971170-2f84fed5eb5e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=100&h=100&crop=faces&q=80",
     },
@@ -52,7 +52,7 @@ export default function Testimony() {
         </>
       ),
       author: " WinnGabrielle",
-      title: " Co-founder ",
+      // title: " User",
       avatar:
         "https://images.unsplash.com/photo-1624224971170-2f84fed5eb5e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=100&h=100&crop=faces&q=80",
     },
@@ -82,15 +82,16 @@ export default function Testimony() {
                       }
                       key={index}>
                       <div className="flex flex-col justify-between w-full h-full px-6 py-6 bg-gray-100 dark:bg-gray-800 md:px-14 rounded-2xl md:py-14 dark:bg-trueGray-800">
-                        <p className="text-2xl leading-normal">
+                        <p className="text-2xl max-w-full leading-normal">
                           {item.content}
                         </p>
                         <div className="flex items-center mt-8 space-x-3">
                           <div className="flex-shrink-0 overflow-hidden w-28 h-24">
                             <img
-                              alt="LD"
+                              alt=""
                               src={item.avatar}
                               loading="lazy"
+                              className="w-full object-cover mx-auto rounded-2xl"
                              
                             />
                           </div>
@@ -99,7 +100,7 @@ export default function Testimony() {
                               {item.author}
                             </div>
                             <div className="text-gray-600 dark:text-gray-400">
-                              {item.title}
+                              {/* {item.title} */}
                             </div>
                           </div>
                         </div>

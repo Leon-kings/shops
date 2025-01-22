@@ -14,7 +14,7 @@ const Header = () => {
                     on your daily expenses
                   </h1>
                   <p className="mt-6 text-base text-black sm:text-xl">
-                    Our A.I helps you to predict your expenses based on your
+                    Our App helps you to predict your expenses based on your
                     previous activity and shares how you should manage you
                     money.
                   </p>
@@ -22,7 +22,7 @@ const Header = () => {
                     className="inline-flex items-center px-6 py-5 text-base font-semibold text-black transition-all duration-200 bg-green-300 mt-9 hover:bg-green-400 focus:bg-green-400"
                     role="button"
                   >
-                    Get started for free
+                    Get started
                   </b>
                 </div>
 

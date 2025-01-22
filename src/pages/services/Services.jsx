@@ -8,6 +8,11 @@ import {
 } from "@heroicons/react/24/outline";
 import logo from "../../assets/images/young-man-showing-his-friend-information-from-his-notes.jpg";
 import { Link } from "react-router-dom";
+import macbook from '../../assets/images/macbook-pro.Avif'
+import side1 from '../../assets/images/postdp-hero03.jpg.large.2x.jpg'
+import side2 from '../../assets/images/student-with-laptop.jpg'
+import side3 from '../../assets/images/best-laptop-brands-20230420-3-medium.jpg'
+import side4 from '../../assets/images/laptopwok.jpg'
 const features = [
   {
     name: "Bought Products",
@@ -391,14 +396,6 @@ export default function Services() {
           </div>
 
           <div className="relative flex items-end px-4 py-16 bg-gray-900 sm:px-6 lg:pb-24 lg:px-8 xl:pl-12">
-            <div className="absolute inset-0">
-              <img
-                className="object-cover w-full h-full"
-                src="https://landingfoliocom.imgix.net/store/collection/clarity-blog/images/hero/6/grid-pattern.svg"
-                alt=""
-              />
-            </div>
-
             <div className="relative w-full max-w-lg mx-auto lg:max-w-none">
               <p className="text-lg font-bold text-white">Featured Post</p>
 
@@ -407,8 +404,8 @@ export default function Services() {
                   <div className="px-4 py-5 sm:p-5">
                     <div className="flex items-start lg:items-center">
                       <img
-                        className="lg:h-24 w-14 h-14 lg:w-24 rounded-xl object-cover"
-                        src={logo}
+                        className="lg:h-24 w-14 h-14 lg:w-30 rounded-xl object-cover"
+                        src={side4}
                         alt=""
                       />
                       <div className="flex-1 ml-4 lg:ml-6">
@@ -432,8 +429,8 @@ export default function Services() {
                     <div className="flex items-start lg:items-center">
                   
                         <img
-                          className="lg:h-24 w-14 h-14 lg:w-24 rounded-xl object-cvoer"
-                          src="https://landingfoliocom.imgix.net/store/collection/clarity-blog/images/hero/6/thumbnail-2.png"
+                          className="lg:h-24 w-14 h-14 lg:w-30 rounded-xl object-cvoer"
+                          src={side1}
                           alt=""
                         />
                
@@ -462,8 +459,8 @@ export default function Services() {
                     <div className="flex items-start lg:items-center">
             
                         <img
-                          className="lg:h-24 w-14 h-14 lg:w-24 rounded-xl object-cvoer"
-                          src="https://landingfoliocom.imgix.net/store/collection/clarity-blog/images/hero/6/thumbnail-2.png"
+                          className="lg:h-24 w-14 h-14 lg:w-30 rounded-xl object-cvoer"
+                          src={side2}
                           alt=""
                         />
                   
@@ -492,8 +489,8 @@ export default function Services() {
                     <div className="flex items-start lg:items-center">
                
                         <img
-                          className="lg:h-24 w-14 h-14 lg:w-24 rounded-xl object-cvoer"
-                          src="https://landingfoliocom.imgix.net/store/collection/clarity-blog/images/hero/6/thumbnail-3.png"
+                          className="lg:h-24 w-14 h-14 lg:w-30 rounded-xl object-cvoer"
+                          src={side3}
                           alt=""
                         />
                    
@@ -528,8 +525,8 @@ export default function Services() {
           <div className="grid items-center grid-cols-1 gap-y-12 lg:grid-cols-2 lg:gap-x-24">
             <div>
               <img
-                className="w-full max-w-md mx-auto"
-                src="https://cdn.rareblocks.xyz/collection/celebration/images/integration/2/services-icons.png"
+                className="w-full max-w-md mx-auto object-cover"
+                src={macbook}
                 alt=""
               />
             </div>

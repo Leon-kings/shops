@@ -100,6 +100,7 @@ const Userview = () => {
               </button>
             </Link>
           </div>
+          <h2 className="text-blue-400 font-bold">USERS</h2>
           {users && users.length > 0 ? (
             <div className="overflow-x-auto">
               <table className="min-w-full bg-white border border-gray-200">

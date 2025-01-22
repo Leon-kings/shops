@@ -79,8 +79,8 @@ export default function CreateTestimony() {
             <div className="Register">
               <form onSubmit={handleSubmit}>
                 <div className="head">
-                  <h2 className="text-black text-2xl py-4">
-                    TESTIMONY
+                  <h2 className="text-blue-400 font-bold py-4">
+                  CREATE TESTIMONY
                   </h2>
                 </div>
                 <div className="contain">

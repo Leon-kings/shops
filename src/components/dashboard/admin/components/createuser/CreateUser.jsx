@@ -48,7 +48,7 @@ export default function CreateUser() {
       errorMessage:
         "password should be 8-12 characters include at least 1 letter and 1 symbol",
       label: "password",
-      pattern:"/^[a-zA-Z0-9!@#\$%\^\&*_=+-]{8,12}$/g",
+      pattern: "/^[a-zA-Z0-9!@#$%^&*_=+-]{8,12}$/g",
       required: true,
     },
   ];
@@ -57,10 +57,7 @@ export default function CreateUser() {
     e.preventDefault();
     console.log(values);
     try {
-      await axios.post(
-        "https://shopsnodejs.onrender.com/users",
-        values
-      );
+      await axios.post("https://shopsnodejs.onrender.com/users", values);
       if (window.confirm("Shall We Move")) {
         Navigate("/Dashboard");
       } else {
@@ -76,16 +73,14 @@ export default function CreateUser() {
   };
   return (
     <>
+      <div className="title"></div>
       <div>
-        <div className="title">
-          <br />
-        </div>
         <div className="container w-full xl:w-full lg:w-full md:w-full sm:w-full flex justify-center min-h-screen bg-gray-100 text-black">
           <div className="w-full max-w-md p-8 bg-white rounded shadow-md">
             <div className="Register">
               <form onSubmit={handleSubmit}>
                 <div className="head">
-                  <h2 className="text-green-400 text-2xl py-4"> Register</h2>
+                  <h2 className="text-blue-400 font-bold py-4"> REGISTER</h2>
                 </div>
                 <div className="contain">
                   {inputs.map((input) => (

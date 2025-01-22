@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 React;
 const products = [
   {
@@ -89,14 +88,14 @@ export default function Product() {
           {products.map((product) => (
             <div key={product.id} className="group relative">
               <img
-                alt={product.imageAlt}
+                alt=''
                 src={product.imageSrc}
                 className="aspect-square w-full rounded-md bg-gray-200 object-cover group-hover:opacity-75 lg:aspect-auto lg:h-50"
               />
               <div className="mt-4 flex justify-between">
                 <div>
-                  <h3 className="text-sm text-black">
-                    <Link to={product.href}>{product.name}</Link>
+                  <h3 className="text-sm text-black font-extralight">
+                   {product.name}
                   </h3>
                   <p className="mt-1 text-md font-medium text-blue-500">{product.color}</p>
                 </div>

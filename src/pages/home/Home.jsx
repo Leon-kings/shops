@@ -48,13 +48,8 @@ const Home = () => {
     <>
       {/* Body space */}
       <div className="container md:w-full px-0 xl:w-full w-full py-0 mx-0">
-        {/* general container */}
-        {/* Head Body starts*/}
+
         <div className="head w-full">
-          
-          {/* space btn nav and body */}
-          {/* <div className="title"></div> */}
-          {/* space btn nav and body ends*/}
           {/* Header Video components*/}
           <div className="header">
             <div className="header" id="top">
@@ -62,14 +57,13 @@ const Home = () => {
             </div>
           </div>
         </div>
-        {/* <hr className="p-3 text-2xl text-blue-600" /> */}
-        {/* end of nav part */}
+
+        {/* end of Header part */}
         {/*  */}
         {/*  */}
 
         {/* head components start*/}
         <div className="head w-full lg:w-full xl:w-full">
-          {/* space btn nav and body ends*/}
           {/* Header Video components*/}
           <div className="main">
             <div className="main">
@@ -78,23 +72,16 @@ const Home = () => {
           </div>
         </div>
         {/*  */}
-
+        {/* Card components start*/}
         <div className="head w-full lg:w-full xl:w-full">
-          {/* space btn nav and body ends*/}
-          {/* Header Video components*/}
           <div className="main">
             <div className="main">
               <Card />
             </div>
           </div>
         </div>
-        {/*  */}
-
-        {/* <hr className="p-3 text-2xl text-blue-600" /> */}
+        {/* Card components ends */}
         <div className="head w-full lg:w-full xl:w-full">
-          {/* space btn nav and body */}
-
-          {/* space btn nav and body ends*/}
           {/* Header Video components*/}
           <div className="her">
             <div className="he">
@@ -102,12 +89,10 @@ const Home = () => {
             </div>
           </div>
         </div>
-        {/* <hr className="p-3 text-2xl text-blue-600" /> */}
         {/* end of head */}
         {/*  */}
         {/*  */}
         <div className="head lg:w-full xl:w-full">
-          {/* space btn nav and body ends*/}
           {/* Header Video components*/}
           <div className="main">
             <div className="main ">
@@ -115,9 +100,7 @@ const Home = () => {
             </div>
           </div>
         </div>
-        {/* <hr className="p-3 text-2xl text-blue-600" /> */}
         <div className="head lg:w-full xl:w-full" id="fQ">
-          {/* space btn nav and body ends*/}
           {/* Header Video components*/}
           <div className="main">
             <div className="main ">
@@ -126,9 +109,7 @@ const Home = () => {
           </div>
         </div>
         {/*  */}
-        {/* <hr className="p-3 text-2xl text-blue-600" /> */}
         <div className="head lg:w-full xl:w-full">
-          {/* space btn nav and body ends*/}
           {/* Header Video components*/}
           <div className="main">
             <div className="main ">
@@ -137,9 +118,7 @@ const Home = () => {
           </div>
         </div>
         {/*  */}
-        <hr className="text-blue-600" />
         <div className="head lg:w-full xl:w-full" id="about">
-          {/* space btn nav and body ends*/}
           {/* Header Video components*/}
           <div className="main">
             <div className="main ">
@@ -147,9 +126,7 @@ const Home = () => {
             </div>
           </div>
         </div>
-        {/* <hr className="p-3 text-2xl text-blue-600" /> */}
         <div className="head lg:w-full xl:w-full">
-          {/* space btn nav and body ends*/}
           {/* Header Video components*/}
           <div className="main">
             <div className="main ">
@@ -157,10 +134,8 @@ const Home = () => {
             </div>
           </div>
         </div>
-        <hr className="text-blue-600" />
         {/*  */}
         <div className="head lg:w-full xl:w-full">
-          {/* space btn nav and body ends*/}
           {/* Header Video components*/}
           <div className="main">
             <div className="main ">
@@ -170,10 +145,8 @@ const Home = () => {
         </div>
  
         {/*  */}
-        {/* <hr className="p-3 text-2xl text-blue-600" /> */}
         <div className="head lg:w-full xl:w-full" id="service">
           {/* space btn nav and body */}
-          {/* space btn nav and body ends*/}
           {/* Header Video components*/}
           <div className="header">
             <div className="header">
@@ -184,7 +157,6 @@ const Home = () => {
         <br />
         <div className="head lg:w-full xl:w-full" id="service">
           {/* space btn nav and body */}
-          {/* space btn nav and body ends*/}
           {/* Header Video components*/}
           <div className="header">
             <div className="header">
@@ -195,7 +167,6 @@ const Home = () => {
         <br />
         <div className="head lg:w-full xl:w-full" id="service">
           {/* space btn nav and body */}
-          {/* space btn nav and body ends*/}
           {/* Header Video components*/}
           <div className="header">
             <div className="header">
@@ -206,7 +177,6 @@ const Home = () => {
         <br />
         <div className="head lg:w-full xl:w-full" id="service">
           {/* space btn nav and body */}
-          {/* space btn nav and body ends*/}
           {/* Header Video components*/}
           <div className="header">
             <div className="header">
