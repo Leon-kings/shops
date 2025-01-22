@@ -166,6 +166,7 @@ export default function CheckOut() {
           </form>
         </div>
       </div>
+      <br />
       {/* new section */}
       <div className="bg-gradient-to-b from-[#101212] relative to-[#08201D]">
         <section className="relative lg:min-h-[1000px] pt-24 pb-10 sm:pt-32 sm:pb-16 lg:pb-24">
