@@ -49,10 +49,7 @@ const Login = () => {
     }
 
     try {
-      await axios.post(
-        "https://shopsnodejs.onrender.com/users/auth",
-        values
-      );
+      await axios.post("https://shopsnodejs.onrender.com/users/auth", values);
       if (window.confirm("Do you really want to move?")) {
         Navigate("/Udashboard");
       } else {
@@ -74,7 +71,6 @@ const Login = () => {
   return (
     <>
       <div className="title"></div>
-      <br />
       <div className="container flex items-center justify-center min-h-screen bg-gray-100">
         <div className="w-full max-w-md p-8 bg-white rounded shadow-md">
           <form onSubmit={handleSubmit} className="mt-4">
@@ -96,7 +92,6 @@ const Login = () => {
                   <Link to="/Register">
                     <b>
                       <button className="p-3 bg-blue-500 hover:text-green-300 ">
-                       
                         Register
                       </button>
                     </b>
@@ -107,6 +102,7 @@ const Login = () => {
           </form>
         </div>
       </div>
+      <br />
     </>
   );
 };

@@ -51,33 +51,14 @@ export default function CheckOut() {
       required: true,
     },
   ];
-  const residents = [
-    {
-      id: 1,
-      name: "card",
-      type: "text",
-      placeholder: "455-637-873-56",
-      errorMessage: "Names needed ",
-      label: "Card",
-      required: true,
-    },
-    {
-      id: 2,
-      name: "Expire",
-      type: "date",
-      placeholder: "Expire",
-      errorMessage: "Date should be filled",
-      label: "Expire",
-      required: true,
-    },
-  ];
+
   const Navigate = useNavigate();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     console.log(values);
     try {
-      await axios.post("https://shopsnodejs.onrender.com/users", values);
+      await axios.post("", values);
       if (window.confirm("Do you really want to continue to login?")) {
         Navigate("/login");
       } else {
@@ -124,41 +105,19 @@ export default function CheckOut() {
                         />
                       ))}
                     </div>
-                  </form>
-                </div>
-              </div>
-              <div className="grid md:grid-cols-3 gap-4 mt-12">
-                <div>
-                  <h3 className="text-3xl font-bold text-gray-300">02</h3>
-                  <h3 className="text-xl font-bold text-gray-800 mt-1">
-                    Shopping Address
-                  </h3>
-                </div>
-                {residents.map((input) => (
-                  <FormInput
-                    key={input.id}
-                    className="p-3"
-                    {...input}
-                    value={values[input.name]}
-                    onChange={onChange}
-                  />
-                ))}
-              </div>
-           
-              <div className="flex flex-wrap justify-end gap-4 mt-12">
-                <button
-                  type="button"
-                  className="px-6 py-3 text-sm font-semibold tracking-wide bg-transparent border-2 text-gray-800 rounded-md hover:bg-gray-100"
-                >
-                  Pay later
-                </button>
-                <button
+                    <div className="flex flex-wrap justify-end gap-4 mt-12">
+              <button
                   type="button"
                   className="px-6 py-3 text-sm font-semibold tracking-wide bg-blue-600 text-white rounded-md hover:bg-blue-700"
                 >
                   Pay now
-                </button>
+                </button> 
+
               </div>
+                  </form>
+                </div>
+              </div>
+
               <h2 className="text-xl text-black">
                     Secured & safe online payment
                   </h2>
@@ -186,17 +145,20 @@ export default function CheckOut() {
           <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8 relative z-20">
             <div className="max-w-xl mx-auto text-center">
               <h1 className="text-4xl font-bold sm:text-6xl">
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-300 to-white">
+                <h2 className="text-transparent bg-clip-text bg-gradient-to-r from-green-300 to-white">
                   {" "}
                   Simplified credit cards for students{" "}
-                </span>
+                </h2>
               </h1>
-              <p className="mt-5 text-base text-white sm:text-xl">
+              <h4 className="mt-5 text-base text-white sm:text-xl">
                 No more hassle taking loans and making payments. Try Postcrats
                 credit card, make your life simple.
-              </p>
-
-              <a
+              </h4>
+              
+              <h5 className="text-white py-10">When choosing a computer for coding, you can consider things like the amount of RAM, 
+                the screen size, and the processor. <br /> You can also consider whether you want a laptop 
+                or a more compact device.</h5>
+              <button
                 href="#"
                 title=""
                 className="inline-flex items-center px-6 py-4 mt-8 font-semibold text-white transition-all duration-200 bg-blue-600 rounded-lg sm:mt-16 hover:bg-blue-700 focus:bg-blue-700"
@@ -217,7 +179,7 @@ export default function CheckOut() {
                     d="M13 9l3 3m0 0l-3 3m3-3H8m13 0a9 9 0 11-18 0 9 9 0 0118 0z"
                   />
                 </svg>
-              </a>
+              </button>
 
               <div className="grid grid-cols-1 px-20 mt-12 text-left gap-x-12 gap-y-8 sm:grid-cols-3 sm:px-0">
                 <div className="flex items-center">
@@ -334,7 +296,9 @@ export default function CheckOut() {
                       strokeLinejoin="round"
                     />
                   </svg>
-
+                  <p className="ml-3 text-sm text-white">
+                    Security Issues, maximum limits
+                  </p>
                 </div>
               </div>
             </div>
