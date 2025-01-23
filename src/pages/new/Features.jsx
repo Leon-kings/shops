@@ -56,7 +56,6 @@ const Features = () => {
     <>
       <div className="title"></div>
       <div className=" w-full">
-        <br />
         <section className="py-24 bg-white relative xl:mr-0 lg:mr-0 mr-0 w-full xl:w-full lg:w-full">
           <h2 className="text-2xl py-3 font-bold  text-blue-600">FEATURES</h2>
           <p className="font-bold">Discover a wide selection of the latest laptops from top brands. Whether for work, gaming, or daily use, <br />find the perfect laptop that fits your needs</p>

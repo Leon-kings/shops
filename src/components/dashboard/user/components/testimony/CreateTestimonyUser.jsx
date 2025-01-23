@@ -74,7 +74,7 @@ export default function CreateTestimonyUser() {
             <div className="Register">
               <form onSubmit={handleSubmit}>
                 <div className="head">
-                  <h2 className="text-green-300  py-4 font-bold">CREATE TESTIMONY</h2>
+                  <h2 className="text-blue-400 font-bold">CREATE TESTIMONY</h2>
                 </div>
                 <div className="contain">
                   {inputs.map((input) => (

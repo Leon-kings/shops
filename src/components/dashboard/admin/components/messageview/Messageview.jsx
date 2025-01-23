@@ -194,7 +194,7 @@ export default function Messageview() {
               </table>
             </div>
           ) : (
-            <p className="text-red-500 font-bold"> No Message found.</p>
+            <p className="text-red-500 font-bold py-4"> No Message found.</p>
           )}
         </div>
       </div>

@@ -99,6 +99,7 @@ export default function UPost() {
         <button><HomeIcon className='size-4'/></button>
       </Link>
       </div>
+      <h2 className="text-blue-400 font-bold">CREATE POSTS</h2>
       {post && post.length > 0 ? (
         <div className="overflow-x-auto">
           <table className="min-w-full bg-white border border-gray-200">

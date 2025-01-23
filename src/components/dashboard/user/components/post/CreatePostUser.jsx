@@ -85,7 +85,7 @@ export default function CreatePostUser() {
           <div className="w-full max-w-md p-8 bg-white rounded shadow-md">
             <div className="Register">
               <form onSubmit={handleSubmit}>
-                <h2 className="text-green-300 py-4 font-bold">CREATE POST</h2>
+              <h2 className="text-blue-400 font-bold">CREATE POSTS</h2>
                 <div className="contain">
                   {inputs.map((input) => (
                     <FormInput

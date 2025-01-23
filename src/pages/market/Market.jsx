@@ -30,7 +30,7 @@ const Market = () => {
   return (
     <>
       <div className="title"></div>
-      <div className="container">
+      <div className="w-full">
         <section className="py-10 bg-white sm:py-16 lg:py-24">
           <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
             <div className="max-w-2xl mx-auto text-center">
@@ -73,7 +73,7 @@ const Market = () => {
                     <p className="text-xl font-semibold text-gray-700">2</p>
                   </div>
                   <h3 className="mt-6 text-xl font-semibold leading-tight text-black md:mt-10">
-                    Select product 
+                    Select product
                   </h3>
                   <p className="mt-4 text-base text-gray-600">
                     Amet minim mollit non deserunt ullamco est sit aliqua dolor
@@ -127,7 +127,9 @@ const Market = () => {
                 Find the best office accessories in one tap
               </h1>
               <p className="max-w-lg mx-auto mt-6 text-base font-normal leading-7 text-gray-300">
-              Shop Newegg today for all of your gaming, PC & technology needs. Don&apos; t miss today&apos; s best electronics deals with fast shipping & great customer service!
+                Shop Newegg today for all of your gaming, PC & technology needs.
+                Don&apos; t miss today&apos; s best electronics deals with fast
+                shipping & great customer service!
               </p>
               <div className="grid max-w-md grid-cols-2 mx-auto mt-8 md:mt-16 lg:mt-24 xl:mt-32 gap-x-6 grid-col-2">
                 <div>

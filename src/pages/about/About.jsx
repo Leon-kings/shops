@@ -4,30 +4,31 @@ import { Link } from "react-router-dom";
 import axios from "axios";
 import FormInput from "../form/action/FormInput";
 import image from "../../assets/images/356202168_1515581109215839_7191836832866658358_n.jpg";
+
 React;
 export default function About() {
-   const [isVisible, setIsVisible] = useState(false);
-  
-    // Show or hide the button based on scroll position
-    useEffect(() => {
-      const toggleVisibility = () => {
-        if (window.scrollY > 300) {
-          setIsVisible(true);
-        } else {
-          setIsVisible(false);
-        }
-      };
-      window.addEventListener("scroll", toggleVisibility);
-      return () => window.removeEventListener("scroll", toggleVisibility);
-    }, []);
-  
-    // Scroll to the top smoothly
-    const scrollToTop = () => {
-      window.scrollTo({
-        top: 0,
-        behavior: "smooth",
-      });
+  const [isVisible, setIsVisible] = useState(false);
+
+  // Show or hide the button based on scroll position
+  useEffect(() => {
+    const toggleVisibility = () => {
+      if (window.scrollY > 300) {
+        setIsVisible(true);
+      } else {
+        setIsVisible(false);
+      }
     };
+    window.addEventListener("scroll", toggleVisibility);
+    return () => window.removeEventListener("scroll", toggleVisibility);
+  }, []);
+
+  // Scroll to the top smoothly
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
   // form data
   const [values, setValues] = useState({
     email: "",
@@ -80,29 +81,38 @@ export default function About() {
   return (
     <>
       <div className="title"></div>
-      <div className="container">
+      <div className="w-full">
         <section className="pt-12 bg-gradient-to-b from-gray-50 via-white to-gray-50">
           <h2 className="text-2xl py-3 font-bold tracking-tight text-blue-600">
             ABOUT
           </h2>
-          <p className="p-4 font-medium "> We are <b className="text-blue-500">LD</b> . Together, weve not only constructed buildings but also built enduring connections that define our success story</p>
+          <p className="p-4 font-medium ">
+            {" "}
+            We are <b className="text-blue-500">LD</b> . Together, weve not only
+            constructed buildings but also built enduring connections that
+            define our success story
+          </p>
           <div className="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
             <div className="grid max-w-md grid-cols-1 mx-auto lg:grid-cols-12 gap-x-6 gap-y-8 lg:max-w-none">
               <div className="self-center lg:col-span-4">
                 <h2 className="text-xl font-bold text-gray-900 sm:text-4xl xl:text-3xl">
-                  Hey 👋 I am A Leon, Owner of LD design.
+                 LD
                 </h2>
                 <p className="mt-5 text-base font-normal leading-7 text-gray-500">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  Vehicula massa in enim luctus.
+                LD Computer Store Rwanda Limited is a Full-Service Technology Services Provider also called the Top IT Consulting Company in Kigali, Rwanda.
+                </p>
+                <p className="mt-5 text-base font-normal leading-7 text-gray-500">
+                Leon is happy to Serve you Your Favourite Computers. Choose the Best PC and Also If You want to Buy Your repairment Kits.
                 </p>
                 <div className="relative inline-flex mt-9 group">
-                  <button>BUY NOW</button>
+                  <Link to={"/Market"}>
+                    <button>BUY NOW</button>
+                  </Link>
                 </div>
               </div>
 
               <div className="self-end lg:order-last lg:pb-20 lg:col-span-3">
-                <p className="text-xs font-bold tracking-widest text-gray-500 uppercase">
+                <p className="text-lg font-bold tracking-widest text-gray-500 uppercase">
                   ⚡️ Latest Picks
                 </p>
 
@@ -110,7 +120,7 @@ export default function About() {
                   <div className="relative overflow-hidden">
                     <div className="flex items-start lg:items-center">
                       <img
-                        className="object-cover w-12 h-12 rounded-lg shrink-0"
+                        className="object-cover w-22 h-18 rounded-lg shrink-0"
                         src="https://www.hp.com/gb-en/shop/Html/Merch/Images/c09014144_390x286.jpg"
                         alt=""
                       />
@@ -124,7 +134,7 @@ export default function About() {
                   <div className="relative overflow-hidden">
                     <div className="flex items-start lg:items-center">
                       <img
-                        className="object-cover w-12 h-12 rounded-lg shrink-0"
+                        className="object-cover w-22 h-18 rounded-lg shrink-0"
                         src="https://9to5mac.com/wp-content/uploads/sites/6/2021/10/MacBook-Pro-2021.jpg?quality=82&strip=all&w=1024"
                         alt=""
                       />
@@ -138,7 +148,7 @@ export default function About() {
                   <div className="relative overflow-hidden">
                     <div className="flex items-start lg:items-center">
                       <img
-                        className="object-cover w-12 h-12 rounded-lg shrink-0"
+                        className="object-cover w-22 h-18 rounded-lg shrink-0"
                         src="https://i.ebayimg.com/images/g/6iIAAOSw13ZlvUkz/s-l1200.jpg"
                         alt=""
                       />
@@ -152,7 +162,7 @@ export default function About() {
               </div>
 
               <div className="self-end lg:col-span-5">
-                <img className="w-full mx-auto" src={image} alt="" />
+                <img className="w-full object-cover p-5" src={image} alt="" />
               </div>
             </div>
           </div>
@@ -189,7 +199,7 @@ export default function About() {
               <img
                 className="lg:mx-0 mx-auto h-full rounded-3xl object-cover"
                 src="https://pagedone.io/asset/uploads/1717751272.png"
-                alt="LD"
+                alt=""
               />
             </div>
           </div>
@@ -258,16 +268,15 @@ export default function About() {
           </div>
         </section>
         <div>
-        
-      {isVisible && (
-        <button
-          onClick={scrollToTop}
-          className="fixed bottom-6 right-4 bg-blue-600 text-white p-3 rounded-full shadow-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-300"
-        >
-          ↑
-        </button>
-      )}
-      </div>
+          {isVisible && (
+            <button
+              onClick={scrollToTop}
+              className="fixed bottom-6 right-4 bg-blue-600 text-white p-3 rounded-full shadow-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-300"
+            >
+              ↑
+            </button>
+          )}
+        </div>
       </div>
       <br />
     </>

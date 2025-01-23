@@ -1,5 +1,6 @@
 import React from "react";
 React;
+// import image from '../../assets/images/SEI_156640666.webp';
 export default function Card() {
   return (
     <>

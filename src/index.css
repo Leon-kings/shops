@@ -48,4 +48,16 @@ button {
   }
 }
 
+@media (max-width: 1095px) and (min-width: 992px) {
+  .container{
+    width: 100%;
+  }
+  .header{
+    width: 100%;
+  }
+  video{
+    width: 100%;
+  }
+  }
+  
 @import "tailwindcss";

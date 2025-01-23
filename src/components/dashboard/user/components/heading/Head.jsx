@@ -1,23 +1,34 @@
 import React from "react";
 React;
+import image from "../../../../../assets/images/best-laptop-brands-20230420-3-medium.jpg";
 const Header = () => {
   return (
-    <div className="relative bg-gradient-to-b from-green-50 to-green-100">
+    <div className="relative bg-gradient-to-b ">
       <section className="overflow-hidden">
-        <div className="flex flex-col lg:flex-row lg:items-stretch lg:max-h-[900px] lg:min-h-[900px]">
+        <h2 className="text-blue-400 font-bold py-4">
+          CONTROL WORK PERFOMANCE
+        </h2>
+        <p className="font-bold py-5">
+          With our products you can provide better perfomance
+        </p>
+        <div className="flex flex-col lg:flex-row lg:items-stretch">
           <div className="flex items-center justify-center w-full lg:order-2 lg:w-7/12">
-            <div className="h-full px-4 pt-24 pb-16 sm:px-6 lg:px-24 2xl:px-32 lg:pt-40 lg:pb-14">
+            <div className="h-full px-4 sm:px-6 lg:px-24 lg:pt-20 lg:pb-14">
               <div className="flex flex-col justify-between flex-1 h-full">
                 <div>
-                  <h1 className="text-4xl font-bold text-black sm:text-6xl xl:text-7xl">
-                    Take control <br />
-                    on your daily expenses
-                  </h1>
-                  <p className="mt-6 text-base text-black sm:text-xl">
-                    Our App helps you to predict your expenses based on your
-                    previous activity and shares how you should manage you
-                    money.
-                  </p>
+                  <h2 className="text-xl text-blue-300">WHY ?</h2>
+
+                  <h2 className="text font-sm">
+                    Through collaboration perse perspectives and strengths are
+                    leveraged to create inclusive web with more leverage to help
+                    environments to hangle challenges.
+                  </h2>
+                  <h2 className="font-light">
+                    LD , We are happy to serve best Qualited Computer and Its
+                    Cables and <br />
+                    Headphone with great Beats and Preserve your Thought and
+                    Encourage you in Work{" "}
+                  </h2>
                   <b
                     className="inline-flex items-center px-6 py-5 text-base font-semibold text-black transition-all duration-200 bg-green-300 mt-9 hover:bg-green-400 focus:bg-green-400"
                     role="button"
@@ -25,21 +36,13 @@ const Header = () => {
                     Get started
                   </b>
                 </div>
-
-                <div className="mt-8 border-t-2 border-black lg:mt-auto sm:mt-14">
-                  <div className="pt-8 sm:flex sm:items-center sm:justify-between sm:pt-14"></div>
-                </div>
               </div>
             </div>
           </div>
 
           <div className="relative w-full overflow-hidden lg:w-5/12 lg:order-1">
             <div className="lg:absolute lg:bottom-0 lg:left-0">
-              <img
-                className="w-full"
-                src="https://cdn.rareblocks.xyz/collection/celebration/images/hero/4/phone-mockup.png"
-                alt=""
-              />
+              <img className="w-full p-8 object-cover" src={image} alt="" />
             </div>
           </div>
         </div>

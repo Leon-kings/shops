@@ -47,7 +47,7 @@ const Register = () => {
       errorMessage:
         "password should be 8-12 characters include at least 1 letter and 1 symbol",
       label: "password",
-      // pattern:"/^[a-zA-Z0-9!@#\$%\^\&*_=+-]{8,12}$/g",
+      pattern:"/^[a-zA-Z0-9!@#\$%\^\&*_=+-]{8,12}$/g",
       required: true,
     },
   ];
@@ -57,10 +57,7 @@ const Register = () => {
     e.preventDefault();
     console.log(values);
     try {
-      await axios.post(
-        "https://shopsnodejs.onrender.com/users",
-        values
-      );
+      await axios.post("https://shopsnodejs.onrender.com/users", values);
       if (window.confirm("Do you really want to continue to login?")) {
         Navigate("/login");
       } else {
@@ -70,16 +67,14 @@ const Register = () => {
       console.log(err);
     }
   };
- 
+
   const onChange = (e) => {
     setValues({ ...values, [e.target.name]: e.target.value });
   };
   return (
     <>
-      <div className="title">
-       <br /> 
-      </div>
-      <div className="container w-full xl:w-full lg:w-full md:w-full sm:w-full flex justify-center min-h-screen bg-gray-100">
+      <div className="title"></div>
+      <div className="w-full xl:w-full lg:w-full md:w-full sm:w-full flex justify-center min-h-screen bg-gray-100">
         <div className="w-full max-w-md p-8 bg-white rounded shadow-md">
           <div className="Register">
             <form onSubmit={handleSubmit}>
@@ -116,6 +111,7 @@ const Register = () => {
         </div>
         <div className="title"></div>
       </div>
+      <br />
     </>
   );
 };

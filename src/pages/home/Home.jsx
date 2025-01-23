@@ -43,13 +43,11 @@ const Home = () => {
     });
   };
 
-
   return (
     <>
       {/* Body space */}
-      <div className="container md:w-full px-0 xl:w-full w-full py-0 mx-0">
-
-        <div className="head w-full">
+      <div className="w-full">
+        <div className="head lg:w-full xl:w-full">
           {/* Header Video components*/}
           <div className="header">
             <div className="header" id="top">
@@ -57,13 +55,10 @@ const Home = () => {
             </div>
           </div>
         </div>
-
         {/* end of Header part */}
         {/*  */}
-        {/*  */}
-
         {/* head components start*/}
-        <div className="head w-full lg:w-full xl:w-full">
+        <div className="head lg:w-full xl:w-full">
           {/* Header Video components*/}
           <div className="main">
             <div className="main">
@@ -73,7 +68,7 @@ const Home = () => {
         </div>
         {/*  */}
         {/* Card components start*/}
-        <div className="head w-full lg:w-full xl:w-full">
+        <div className="head lg:w-full xl:w-full">
           <div className="main">
             <div className="main">
               <Card />
@@ -81,10 +76,10 @@ const Home = () => {
           </div>
         </div>
         {/* Card components ends */}
-        <div className="head w-full lg:w-full xl:w-full">
+        <div className="head lg:w-full xl:w-full">
           {/* Header Video components*/}
-          <div className="her">
-            <div className="he">
+          <div className="heading">
+            <div className="header">
               <Product />
             </div>
           </div>
@@ -143,10 +138,8 @@ const Home = () => {
             </div>
           </div>
         </div>
- 
         {/*  */}
         <div className="head lg:w-full xl:w-full" id="service">
-          {/* space btn nav and body */}
           {/* Header Video components*/}
           <div className="header">
             <div className="header">
@@ -155,8 +148,7 @@ const Home = () => {
           </div>
         </div>
         <br />
-        <div className="head lg:w-full xl:w-full" id="service">
-          {/* space btn nav and body */}
+        <div className="head lg:w-full xl:w-full" >
           {/* Header Video components*/}
           <div className="header">
             <div className="header">
@@ -165,8 +157,7 @@ const Home = () => {
           </div>
         </div>
         <br />
-        <div className="head lg:w-full xl:w-full" id="service">
-          {/* space btn nav and body */}
+        <div className="head lg:w-full xl:w-full" >
           {/* Header Video components*/}
           <div className="header">
             <div className="header">
@@ -175,8 +166,7 @@ const Home = () => {
           </div>
         </div>
         <br />
-        <div className="head lg:w-full xl:w-full" id="service">
-          {/* space btn nav and body */}
+        <div className="head lg:w-full xl:w-full">
           {/* Header Video components*/}
           <div className="header">
             <div className="header">
@@ -186,27 +176,52 @@ const Home = () => {
         </div>
         {/* button back to top */}
 
-        <div className="head lg:w-full xl:w-full" id="service">
-      <div>
-        <br />
-      {isVisible && (
-        <button
-          onClick={scrollToTop}
-          className="fixed bottom-6 right-4 bg-blue-600 text-white p-3 rounded-full shadow-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-300"
-        >
-          ↑
-        </button>
-      )}
-      </div>
+        <div className="head lg:w-full xl:w-full">
+          <div>
+            <br />
+            {isVisible && (
+              <button
+                onClick={scrollToTop}
+                className="fixed bottom-6 right-4 bg-blue-600 text-white p-3 rounded-full shadow-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-300"
+              >
+                ↑
+              </button>
+            )}
+          </div>
 
-    {/* back to tops */}
-      <div className="grid bg-white py-4 grid-cols-[repeat(auto-fit,minmax(150px,1fr))] gap-4">
-      <div className="bg-blue-200 text-white p-4 text-center"> <Link to={'/Register'}><button><BiLogIn/> </button> </Link></div>
-      <div className="bg-green-200 text-white p-4 text-center"><a href="#service" title="Services"><button><TbSettingsExclamation/> </button> </a></div>
-      <div className="bg-red-200 text-white p-4 text-center"><a href="#fQ" title="Question"><button><BsQuestion/> </button> </a></div>
-      <div className="bg-yellow-200 text-white p-4 text-center"><a href="#about" title="About"><button><BsInfo/> </button> </a></div>
-    </div>
-    </div>
+          {/* back to tops */}
+          <div className="grid bg-white py-4 grid-cols-[repeat(auto-fit,minmax(150px,1fr))] gap-4">
+            <div className="bg-blue-200 text-white p-4 text-center">
+              {" "}
+              <Link to={"/Register"}>
+                <button>
+                  <BiLogIn />{" "}
+                </button>{" "}
+              </Link>
+            </div>
+            <div className="bg-green-200 text-white p-4 text-center">
+              <a href="#service" title="Services">
+                <button>
+                  <TbSettingsExclamation />{" "}
+                </button>{" "}
+              </a>
+            </div>
+            <div className="bg-red-200 text-white p-4 text-center">
+              <a href="#fQ" title="Question">
+                <button>
+                  <BsQuestion />{" "}
+                </button>{" "}
+              </a>
+            </div>
+            <div className="bg-yellow-200 text-white p-4 text-center">
+              <a href="#about" title="About">
+                <button>
+                  <BsInfo />{" "}
+                </button>{" "}
+              </a>
+            </div>
+          </div>
+        </div>
       </div>
     </>
   );

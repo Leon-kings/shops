@@ -18,7 +18,7 @@ export default function Udashboard() {
         <div className="main">
           <UPost />
         </div>
-        <div className="new">
+        <div className="container w-full">
           <Header />
         </div>
         <div className="main">
