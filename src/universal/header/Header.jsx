@@ -26,7 +26,9 @@ const Header = () => {
               <div className="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
                 <div className="hidden sm:mb-8 sm:flex sm:justify-center">
                   <div className="relative rounded-full px-3 py-4 text-sm/6 text-white ring-1 ring-yellow-100 hover:ring-blue-500">
-                    <b>GET YOUR DESIRED COMPUTER AT A REASONABLE PRICE</b>
+                    <div className="font-bold">
+                      GET YOUR DESIRED COMPUTER AT A REASONABLE PRICE .
+                    </div>
                   </div>
                 </div>
                 <div className="text-center my-10">
@@ -47,12 +49,12 @@ const Header = () => {
                         to={"/Who/we/are"}
                         className="text-sm/6 font-semibold text-black"
                       >
-                        Learn more{" "}
+                        Learn More
                         <b
                           aria-hidden="true"
-                          className="text-white font-extrabold"
+                          className="text-amber-300 font-extrabold"
                         >
-                          →
+                          &#8594;
                         </b>
                       </Link>
                     </button>

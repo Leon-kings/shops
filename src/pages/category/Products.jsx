@@ -21,7 +21,7 @@ export default function Card() {
               <h2 className="text-3xl font-bold text-white sm:text-4xl xl:text-5xl xl:leading-tight">
                 BEST COMPUTER TO COMPUTE CODES
               </h2>
-              <h3 className="mt-8 text-base font-normal leading-7 text-gray-400 lg:max-w-md xl:pr-0 lg:pr-16">
+              <h3 className="mt-8 text-base font-normal leading-7 text-white lg:max-w-md xl:pr-0 lg:pr-16">
                 CODES is a set of Instruction to compute set of action done by
                 Computer.
               </h3>

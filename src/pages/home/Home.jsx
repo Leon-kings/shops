@@ -184,7 +184,7 @@ const Home = () => {
                 onClick={scrollToTop}
                 className="fixed bottom-6 right-4 bg-blue-600 text-white p-3 rounded-full shadow-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-300"
               >
-                ↑
+               &#8593;
               </button>
             )}
           </div>
