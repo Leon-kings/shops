@@ -47,7 +47,7 @@ const Register = () => {
       errorMessage:
         "password should be 8-12 characters include at least 1 letter and 1 symbol",
       label: "password",
-      pattern:"/^[a-zA-Z0-9!@#\$%\^\&*_=+-]{8,12}$/g",
+      // pattern:"/^[a-zA-Z0-9!@#\$%\^\&*_=+-]{8,12}$/g",
       required: true,
     },
   ];
