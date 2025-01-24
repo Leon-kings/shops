@@ -2,7 +2,14 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import Shop from "../../universal/marketPart/Shop";
 import BlogP from "../products/BloggerProduct";
+import image from "../../assets/images/1717742431.png";
+import side from "../../assets/images/best-laptop-brands-20230420-3-medium.jpg";
+import side1 from "../../assets/images/edifier-g5btcat-pink-1_bbf9a39e-dbac-4fb5-8a63-d9afa1210342.webp";
+import side2 from "../../assets/images/GW54.0026-1-518x518.jpg";
+import side3 from "../../assets/images/Watches-PCD_CO15_Sleep-Coaching_MO.webp";
+import side4 from "../../assets/images/SEI_156640666.webp";
 React;
+
 const Features = () => {
   const [isVisible, setIsVisible] = useState(false);
 
@@ -58,7 +65,11 @@ const Features = () => {
       <div className=" w-full">
         <section className="py-24 bg-white relative xl:mr-0 lg:mr-0 mr-0 w-full xl:w-full lg:w-full">
           <h2 className="text-2xl py-3 font-bold  text-blue-600">FEATURES</h2>
-          <p className="font-bold">Discover a wide selection of the latest laptops from top brands. Whether for work, gaming, or daily use, <br />find the perfect laptop that fits your needs</p>
+          <p className="font-bold">
+            Discover a wide selection of the latest laptops from top brands.
+            Whether for work, gaming, or daily use, <br />
+            find the perfect laptop that fits your needs
+          </p>
           <h2 className="text-blue-400 font-bold py-4">EMPOWERING OTHERS</h2>
           <div className="w-full max-w-7xl px-4 md:px-5 lg:px-5 mx-auto">
             <div className="w-full justify-start items-center xl:gap-12 gap-10 grid lg:grid-cols-2 grid-cols-1">
@@ -145,7 +156,7 @@ const Features = () => {
                 <div className="sm:w-[564px] w-full sm:h-[646px] h-full sm:bg-gray-100 rounded-3xl sm:border border-gray-200 relative">
                   <img
                     className="sm:mt-5 sm:ml-5 w-full h-full rounded-3xl object-cover"
-                    src="https://pagedone.io/asset/uploads/1717742431.png"
+                    src={image}
                     alt="LD"
                   />
                 </div>
@@ -192,8 +203,8 @@ const Features = () => {
                       d="M5 13l4 4L19 7"
                     />
                   </svg>
-                  <p className="text-xs font-medium text-gray-900 sm:text-sm">
-                    Weekly new articles
+                  <p className="text-xs font-bold text-gray-900 sm:text-sm">
+                    Products
                   </p>
                 </li>
 
@@ -212,8 +223,8 @@ const Features = () => {
                       d="M5 13l4 4L19 7"
                     />
                   </svg>
-                  <p className="text-xs font-medium text-gray-900 sm:text-sm">
-                    Join other 1600+ Devs
+                  <p className="text-xs font-bold text-gray-900 sm:text-sm">
+                    Join other 160+
                   </p>
                 </li>
               </ul>
@@ -225,28 +236,21 @@ const Features = () => {
               <div className="overflow-hidden w-[300px] lg:w-[420px] transition-all duration-200 transform bg-white border border-gray-200 rounded-2xl hover:shadow-lg hover:-translate-y-1">
                 <div className="px-4 py-5 sm:p-5">
                   <div className="flex items-start lg:items-center">
-                    <a href="#" title="" className="shrink-0">
-                      <img
-                        className="lg:h-24 w-14 h-14 lg:w-24 rounded-xl object-cvoer"
-                        src="https://landingfoliocom.imgix.net/store/collection/clarity-blog/images/hero/5/thumbnail-1.png"
-                        alt=""
-                      />
-                    </a>
+                    <img
+                      className="lg:h-24 w-14 h-14 lg:w-30 rounded-xl object-cover"
+                      src={side}
+                      alt=""
+                    />
 
                     <div className="flex-1 ml-4 lg:ml-6">
                       <p className="text-xs font-medium text-gray-900 lg:text-sm">
-                        <a href="#" title="" className="">
-                          Growth
-                        </a>
+                        New Features
                       </p>
                       <p className="mt-2 text-sm font-bold text-gray-900 lg:text-lg group-hover:text-gray-600">
-                        <a href="#" title="" className="">
-                          How a visual artist redefines success in graphic
-                          design
-                        </a>
+                      Rwanda&lsquo; s Shop for mobiles, Electronics, perfumes, Laptops.
                       </p>
                       <p className="mt-2 text-xs font-medium text-gray-500 lg:text-sm">
-                        April 09, 2022
+                        April 09, 2025
                       </p>
                     </div>
                   </div>
@@ -258,28 +262,20 @@ const Features = () => {
               <div className="overflow-hidden w-[300px] lg:w-[420px] transition-all duration-200 transform bg-white border border-gray-200 rounded-2xl hover:shadow-lg hover:-translate-y-1">
                 <div className="px-4 py-5 sm:p-5">
                   <div className="flex items-start lg:items-center">
-                    <a href="#" title="" className="shrink-0">
-                      <img
-                        className="lg:h-24 w-14 h-14 lg:w-24 rounded-xl object-cvoer"
-                        src="https://landingfoliocom.imgix.net/store/collection/clarity-blog/images/hero/5/thumbnail-2.png"
-                        alt=""
-                      />
-                    </a>
-
+                    <img
+                      className="lg:h-24 w-14 h-14 lg:w-24 rounded-xl object-cvoer"
+                      src={side1}
+                      alt=""
+                    />
                     <div className="flex-1 ml-4 lg:ml-6">
                       <p className="text-xs font-medium text-gray-900 lg:text-sm">
-                        <a href="#" title="" className="">
-                          Growth
-                        </a>
+                        New Features
                       </p>
                       <p className="mt-2 text-sm font-bold text-gray-900 lg:text-lg group-hover:text-gray-600">
-                        <a href="#" title="" className="">
-                          How a visual artist redefines success in graphic
-                          design
-                        </a>
+                      Buy genuine products at the best prices. Apple, Samsung, HP.
                       </p>
                       <p className="mt-2 text-xs font-medium text-gray-500 lg:text-sm">
-                        April 09, 2022
+                        April 09, 2025
                       </p>
                     </div>
                   </div>
@@ -291,28 +287,21 @@ const Features = () => {
               <div className="overflow-hidden w-[300px] lg:w-[420px] transition-all duration-200 transform bg-white border border-gray-200 rounded-2xl hover:shadow-lg hover:-translate-y-1">
                 <div className="px-4 py-5 sm:p-5">
                   <div className="flex items-start lg:items-center">
-                    <a href="#" title="" className="shrink-0">
-                      <img
-                        className="lg:h-24 w-14 h-14 lg:w-24 rounded-xl object-cvoer"
-                        src="https://landingfoliocom.imgix.net/store/collection/clarity-blog/images/hero/5/thumbnail-3.png"
-                        alt=""
-                      />
-                    </a>
+                    <img
+                      className="lg:h-24 w-14 h-14 lg:w-24 rounded-xl object-cvoer"
+                      src={side2}
+                      alt=""
+                    />
 
                     <div className="flex-1 ml-4 lg:ml-6">
                       <p className="text-xs font-medium text-gray-900 lg:text-sm">
-                        <a href="#" title="" className="">
-                          Growth
-                        </a>
+                        New Features
                       </p>
                       <p className="mt-2 text-sm font-bold text-gray-900 lg:text-lg group-hover:text-gray-600">
-                        <a href="#" title="" className="">
-                          How a visual artist redefines success in graphic
-                          design
-                        </a>
+                      Razer BlackShark V2 X Gaming Headset: 7.1 Surround Sound - 50mm. 
                       </p>
                       <p className="mt-2 text-xs font-medium text-gray-500 lg:text-sm">
-                        April 09, 2022
+                        April 09, 2025
                       </p>
                     </div>
                   </div>
@@ -324,28 +313,21 @@ const Features = () => {
               <div className="overflow-hidden w-[300px] lg:w-[420px] transition-all duration-200 transform bg-white border border-gray-200 rounded-2xl hover:shadow-lg hover:-translate-y-1">
                 <div className="px-4 py-5 sm:p-5">
                   <div className="flex items-start lg:items-center">
-                    <a href="#" title="" className="shrink-0">
-                      <img
-                        className="lg:h-24 w-14 h-14 lg:w-24 rounded-xl object-cvoer"
-                        src="https://landingfoliocom.imgix.net/store/collection/clarity-blog/images/hero/5/thumbnail-4.png"
-                        alt=""
-                      />
-                    </a>
+                    <img
+                      className="lg:h-24 w-14 h-14 lg:w-24 rounded-xl object-cvoer"
+                      src={side3}
+                      alt=""
+                    />
 
                     <div className="flex-1 ml-4 lg:ml-6">
                       <p className="text-xs font-medium text-gray-900 lg:text-sm">
-                        <a href="#" title="" className="">
-                          Growth
-                        </a>
+                        New Feature
                       </p>
                       <p className="mt-2 text-sm font-bold text-gray-900 lg:text-lg group-hover:text-gray-600">
-                        <a href="#" title="" className="">
-                          How a visual artist redefines success in graphic
-                          design
-                        </a>
+                      Shop through a wide selection of Smart Watches with Free shipping .
                       </p>
                       <p className="mt-2 text-xs font-medium text-gray-500 lg:text-sm">
-                        April 09, 2022
+                        April 09, 2025
                       </p>
                     </div>
                   </div>
@@ -357,28 +339,21 @@ const Features = () => {
               <div className="overflow-hidden w-[300px] lg:w-[420px] transition-all duration-200 transform bg-white border border-gray-200 rounded-2xl hover:shadow-lg hover:-translate-y-1">
                 <div className="px-4 py-5 sm:p-5">
                   <div className="flex items-start lg:items-center">
-                    <a href="#" title="" className="shrink-0">
-                      <img
-                        className="lg:h-24 w-14 h-14 lg:w-24 rounded-xl object-cvoer"
-                        src="https://landingfoliocom.imgix.net/store/collection/clarity-blog/images/hero/5/thumbnail-5.png"
-                        alt=""
-                      />
-                    </a>
+                    <img
+                      className="lg:h-24 w-14 h-14 lg:w-24 rounded-xl object-cvoer"
+                      src={side4}
+                      alt=""
+                    />
 
                     <div className="flex-1 ml-4 lg:ml-6">
                       <p className="text-xs font-medium text-gray-900 lg:text-sm">
-                        <a href="#" title="" className="">
-                          Growth
-                        </a>
+                        New Feature
                       </p>
                       <p className="mt-2 text-sm font-bold text-gray-900 lg:text-lg group-hover:text-gray-600">
-                        <a href="#" title="" className="">
-                          How a visual artist redefines success in graphic
-                          design
-                        </a>
+                      Navigation, 3.53 cm HD Display & BT Calling Smartwatch. 82%. 
                       </p>
                       <p className="mt-2 text-xs font-medium text-gray-500 lg:text-sm">
-                        April 09, 2022
+                        April 09, 2025
                       </p>
                     </div>
                   </div>
@@ -404,8 +379,8 @@ const Features = () => {
                     Through collaboration perse perspectives and strengths are
                     leveraged to create inclusive environments where everyone
                     has the opportunity to thrive. This approach not only
-                    fosters personal growth and achievement but also strengthens
-                    the fabric of society.
+                    fosters personal New Feature and achievement but also
+                    strengthens the fabric of society.
                   </p>
                 </div>
                 <button className="sm:w-fit w-full px-3.5 py-2 bg-indigo-600 hover:bg-indigo-800 transition-all duration-700 ease-in-out rounded-lg shadow-[0px_1px_2px_0px_rgba(16,_24,_40,_0.05)] justify-center items-center flex">

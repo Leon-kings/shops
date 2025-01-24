@@ -1,6 +1,7 @@
 import React from "react";
 React;
-// import image from '../../assets/images/SEI_156640666.webp';
+import image from '../../assets/images/laptopwok.jpg';
+import image1 from '../../assets/images/programmer-people-working-laptops-smartphones-600nw-2473384115.webp'
 export default function Card() {
   return (
     <>
@@ -29,13 +30,13 @@ export default function Card() {
                 <div className="grid gap-2 grid-cols-1 xl:grid-cols-2 sm:grid-cols-1 lg:grid-cols-2">
                   <div className="main">
                     <img
-                      src="https://www.shutterstock.com/image-photo/igniting-innovation-harnessing-power-coding-600nw-2425426569.jpg"
+                      src={image}
                       alt=""
                     />
                   </div>
                   <div className="main">
                     <img
-                      src="https://www.shutterstock.com/image-photo/programmer-people-working-laptops-smartphones-600nw-2473384115.jpg"
+                      src={image1}
                       alt=""
                     />
                   </div>

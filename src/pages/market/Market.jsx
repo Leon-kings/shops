@@ -3,6 +3,7 @@ import Shop from "../../universal/marketPart/Shop";
 import App from "../../components/cart/appliances/App";
 import AppComputer from "../../components/cart/computer/App";
 import image from "../../assets/images/young-man-showing-his-friend-information-from-his-notes.jpg";
+
 React;
 const Market = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -62,9 +63,8 @@ const Market = () => {
                     Create a free account
                   </h3>
                   <p className="mt-4 text-base text-gray-600">
-                    Amet minim mollit non deserunt ullamco est sit aliqua dolor
-                    do amet sint. Velit officia consequat duis enim velit
-                    mollit.
+                    Create free account then you&lsquo; ll be able to choose and
+                    buy your products.
                   </p>
                 </div>
 
@@ -76,9 +76,8 @@ const Market = () => {
                     Select product
                   </h3>
                   <p className="mt-4 text-base text-gray-600">
-                    Amet minim mollit non deserunt ullamco est sit aliqua dolor
-                    do amet sint. Velit officia consequat duis enim velit
-                    mollit.
+                    Visit our Products Page and select the product as match to
+                    your wishes.
                   </p>
                 </div>
 
@@ -90,9 +89,7 @@ const Market = () => {
                     Pay
                   </h3>
                   <p className="mt-4 text-base text-gray-600">
-                    Amet minim mollit non deserunt ullamco est sit aliqua dolor
-                    do amet sint. Velit officia consequat duis enim velit
-                    mollit.
+                    You can pay by Cards and also by Mobile Money.
                   </p>
                 </div>
               </div>
