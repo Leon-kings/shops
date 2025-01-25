@@ -11,14 +11,14 @@ export default function Udashboard() {
     <>
       {" "}
       <div className="title"></div>
-      <div className="container bg-white xl:w-full lg:w-full md:w-full sm:w-full">
+      <div className="w-full bg-white xl:w-full lg:w-full md:w-full sm:w-full">
         <div className="w-full ">
           <Sidebar />
         </div>
         <div className="main">
           <UPost />
         </div>
-        <div className="container w-full">
+        <div className="w-full">
           <Header />
         </div>
         <div className="main">

@@ -36,8 +36,9 @@ function Sidebar() {
   };
   return (
     <>
-      <div className="flex scroll-auto">
-        <div className="title"></div>
+      {" "}
+      <div className="title"></div>
+      <div className="flex scroll-auto w-full">
         {/* Sidebar */}
         <div
           className={`

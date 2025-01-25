@@ -5,7 +5,7 @@ import image1 from '../../assets/images/programmer-people-working-laptops-smartp
 export default function Card() {
   return (
     <>
-      <div className="container">
+      <div className="w-full">
       <br />
         <div className="relative w-full py-12 bg-gray-700 sm:py-16 lg:py-20 xl:pt-32 xl:pb-44">
           <div className="absolute inset-0 hidden lg:block">

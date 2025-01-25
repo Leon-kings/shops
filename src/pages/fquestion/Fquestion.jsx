@@ -110,8 +110,8 @@ export default function Fquestion(handler) {
   return (
     <>
       <div className="title"></div>
-      <div className="py-5 bg-white md:w-full sm:w-full lg:w-full w-full xl:w-full">
-        <div className="container flex flex-col items-center justify-center w-full p-8 mx-auto mt-4 text-center xl:px-0">
+      <div className="w-full py-5 bg-white md:w-full sm:w-full lg:w-full xl:w-full">
+        <div className="flex flex-col items-center justify-center w-full p-8 mx-auto mt-4 text-center xl:px-0">
         <h2 className="text-blue-400 font-bold size-10 py-4">FAQ</h2>
           <p className="max-w-2xl py-4 text-lg leading-normal text-black lg:text-xl xl:text-xl dark:text-gray-300">
             Answer your customers possible questions here, it will increase the
@@ -161,10 +161,10 @@ export default function Fquestion(handler) {
       </div>
       {/*  */}
       <br />
-      <section className="bg-white py-20 dark:bg-dark lg:py-[20px] md:w-full sm:w-full lg:w-full w-full xl:w-full">
+      <section className="w-full bg-white py-20 dark:bg-dark lg:py-[20px] md:w-full sm:w-full lg:w-full xl:w-full">
       <h2 className="text-blue-400 font-bold py-4">EXPLORE MORE</h2>
       <p className='font-medium p-4'>Don&apos; t miss today&apos; s best electronics deals !</p>
-        <div ref={domNode} className="container">
+        <div ref={domNode} className="w-full">
           <div className="-mx-4 flex flex-wrap justify-center">
             <div className="w-full px-4 lg:w-10/12">
               <div className="relative z-20 h-[300px] overflow-hidden rounded-lg md:h-[450px]">
@@ -559,7 +559,7 @@ export default function Fquestion(handler) {
 
         {videoOpen && (
           <div className="fixed left-0 top-0 z-50 flex h-screen w-full items-center justify-center bg-black bg-opacity-70">
-            <div className="mx-auto w-full max-w-[550px] bg-white">
+            <div className="mx-auto w-full bg-white">
               <>
                 <iframe
                   className="h-[320px] w-full"

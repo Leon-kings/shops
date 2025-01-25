@@ -410,9 +410,9 @@ const Features = () => {
         </div>
         <br />
         {/*  */}
-        <div className="bg-white py-24 sm:py-32">
-          <div className="mx-auto grid max-w-7xl gap-20 px-6 lg:px-8 xl:grid-cols-3">
-            <div className="max-w-xl">
+        <div className="bg-white py-24 sm:py-32 w-full">
+          <div className="mx-auto grid max-w-7xl gap-20 px-6 lg:px-8 lg:w-full xl:grid-cols-3">
+            <div className="w-full">
               <h2 className="text-pretty text-3xl font-semibold tracking-tight text-gray-900 sm:text-4xl">
                 Meet Our Products
               </h2>
@@ -422,13 +422,14 @@ const Features = () => {
                 clients.
               </p>
             </div>
+            <div className="w-full">
             <ul
               role="list"
-              className="grid gap-x-8 gap-y-12 sm:grid-cols-2 sm:gap-y-16 xl:col-span-2"
+              className="grid gap-x-8 gap-y-12 lg:grid-cols-3 sm:grid-cols-2 sm:gap-y-16 xl:col-span-2"
             >
               {people.map((person) => (
-                <li key={person.name}>
-                  <div className="flex items-center gap-x-6">
+                <li key={person.index}>
+                  <div className="flex grid-cols-3 items-center gap-x-6">
                     <img
                       alt=""
                       src={person.imageUrl}
@@ -438,6 +439,7 @@ const Features = () => {
                 </li>
               ))}
             </ul>
+            </div>
           </div>
         </div>
         <div>

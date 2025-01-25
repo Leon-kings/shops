@@ -68,7 +68,7 @@ const Home = () => {
         </div>
         {/*  */}
         {/* Card components start*/}
-        <div className="head lg:w-full xl:w-full">
+        <div className="head w-full lg:w-full xl:w-full">
           <div className="main">
             <div className="main">
               <Card />
@@ -95,7 +95,7 @@ const Home = () => {
             </div>
           </div>
         </div>
-        <div className="head lg:w-full xl:w-full" id="fQ">
+        <div className="head w-full lg:w-full xl:w-full" id="fQ">
           {/* Header Video components*/}
           <div className="main">
             <div className="main ">

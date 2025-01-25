@@ -103,7 +103,7 @@ export default function Umessages() {
   return (
     <>
       <div className="title"></div>
-      <div className="container">
+      <div className="w-full">
         <div className="relative overflow-hidden bg-gray-100 ">
           <div className="fixed right-4">
             <Link to={"/Udashboard"}>

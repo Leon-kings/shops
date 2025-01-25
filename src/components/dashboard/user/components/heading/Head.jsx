@@ -3,7 +3,7 @@ React;
 import image from "../../../../../assets/images/best-laptop-brands-20230420-3-medium.jpg";
 const Header = () => {
   return (
-    <div className="relative bg-gradient-to-b ">
+    <div className="w-full relative bg-gradient-to-b ">
       <section className="overflow-hidden">
         <h2 className="text-blue-400 font-bold py-4">
           CONTROL WORK PERFOMANCE

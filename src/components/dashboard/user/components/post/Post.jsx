@@ -92,7 +92,7 @@ export default function UPost() {
   return (
     <>
     <div className="title"></div>
-    <div className='container'>
+    <div className='w-full'>
     <div className="relative overflow-hidden bg-gray-100">
     <div className=" fixed top right-4">
       <Link to={'/Udashboard'}>
