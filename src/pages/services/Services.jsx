@@ -8,7 +8,7 @@ import {
 } from "@heroicons/react/24/outline";
 import logo from "../../assets/images/young-man-showing-his-friend-information-from-his-notes.jpg";
 import { Link } from "react-router-dom";
-import macbook from '../../assets/images/macbook-pro.Avif'
+import macbook from '../../assets/images/macbook-pro.avif'
 import side1 from '../../assets/images/postdp-hero03.jpg.large.2x.jpg'
 import side2 from '../../assets/images/student-with-laptop.jpg'
 import side3 from '../../assets/images/best-laptop-brands-20230420-3-medium.jpg'
