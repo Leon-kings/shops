@@ -1,4 +1,7 @@
 import React from "react";
+import image from '../../../../../assets/images/356202168_1515581109215839_7191836832866658358_n.jpg'
+import image1 from '../../../../../assets/images/301389587_1302677223839563_7777363161221694487_n.jpg'
+import image2 from '../../../../../assets/images/460570675_480390934997131_2922507436482495344_n.jpg'
 React;
 const ComponentName = () => {
   return (
@@ -14,7 +17,7 @@ const ComponentName = () => {
           <div>
             <img
               className="object-cover w-32 h-32 mx-auto rounded-full lg:w-44 lg:h-44 grayscale filter"
-              src="https://cdn.rareblocks.xyz/collection/clarity/images/team/1/team-member-1.png"
+              src={image}
               alt=""
             />
             <p className="mt-5 text-lg font-bold text-gray-900 sm:text-xl sm:mt-8 font-pj">
@@ -28,7 +31,7 @@ const ComponentName = () => {
           <div>
             <img
               className="object-cover w-32 h-32 mx-auto rounded-full lg:w-44 lg:h-44 grayscale filter"
-              src="https://cdn.rareblocks.xyz/collection/clarity/images/team/1/team-member-2.png"
+              src={image1}
               alt=""
             />
             <p className="mt-5 text-lg font-bold text-gray-900 sm:text-xl sm:mt-8 font-pj">
@@ -42,7 +45,7 @@ const ComponentName = () => {
           <div>
             <img
               className="object-cover w-32 h-32 mx-auto rounded-full lg:w-44 lg:h-44 grayscale filter"
-              src="https://cdn.rareblocks.xyz/collection/clarity/images/team/1/team-member-3.png"
+              src={image2}
               alt=""
             />
             <p className="mt-5 text-lg font-bold text-gray-900 sm:text-xl sm:mt-8 font-pj">

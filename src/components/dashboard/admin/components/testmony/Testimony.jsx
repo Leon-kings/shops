@@ -74,7 +74,7 @@ export default function CreateTestimony() {
         <div className="title">
           <br />
         </div>
-        <div className="container flex items-center justify-center min-h-screen bg-gray-100 text-black">
+        <div className=" flex items-center justify-center bg-gray-100 text-black">
           <div className="w-full max-w-md p-8 bg-white rounded shadow-md">
             <div className="Register">
               <form onSubmit={handleSubmit}>
@@ -102,6 +102,7 @@ export default function CreateTestimony() {
           </div>
         </div>
       </div>
+      <br />
     </>
   );
 }

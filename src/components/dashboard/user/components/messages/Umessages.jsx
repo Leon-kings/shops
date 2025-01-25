@@ -4,13 +4,31 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 React;
 export default function Umessages() {
+  // const [loggedInUserEmail, setLoggedInUserEmail] = useState('');
   const [message, setMessage] = useState([]);
   const [editingMessage, setEditingMessage] = useState(null);
   const [formData, setFormData] = useState({
     email: "",
     message: "",
   });
+  // Replace with actual logic to get logged-in user's email
 
+  // useEffect(() => {
+  //   const fetchPosts = async () => {
+  //     try {
+  //       const response = await axios.get('https://shopsnodejs.onrender.com/messages'); // Replace with your actual API endpoint
+  //       const userMessage = response.data.filter(post => post.email === loggedInUserEmail);
+  //       setMessage(userMessage);
+  //     } catch (error) {
+  //       console.error('Error fetching posts:', error);
+  //     }
+  //   };
+
+  //   fetchPosts();
+  // }, [loggedInUserEmail]); // Only re-fetch posts when loggedInUserEmail changes
+  // setLoggedInUserEmail();
+
+  
   // Fetch users from API
   useEffect(() => {
     const fetchMessage = async () => {

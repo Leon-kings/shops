@@ -1,4 +1,6 @@
 import React from "react";
+import image from '../../assets/images/Watches-PCD_CO15_Sleep-Coaching_MO.webp'
+import image1 from '../../assets/images/unnamed.png'
 React;
 const BlogP = () => {
   return (
@@ -23,12 +25,12 @@ const BlogP = () => {
             <BlogCard
               CardTitle="SMART WATCHES"
               CardDescription="Shop through a wide selection of Smart Watches at Amazon.com. Free shipping and free returns on eligible items."
-              image="https://images.samsung.com/is/image/samsung/assets/us/2407/watches/Watches-PCD_CO15_Sleep-Coaching_MO.jpg?$624_624_JPG$"
+              image={image}
             />
             <BlogCard
               CardTitle="SMART BLACERETES"
               CardDescription="Wearable Activity & Fitness Tracker for Multi-Sport Mode, All-Day Automatic Continuous Monitoring of Health Data, Improve Sleep, Stress & Wellness"
-              image="https://play-lh.googleusercontent.com/r7jpJUzShrtPb6tJZy4ptr1CMQt_Vbaldn-7cWvLzga6zMhorcn8UybjeO4azY7Xv6g"
+              image={image1}
             />
             <BlogCard
               CardTitle="SMART PHONE"

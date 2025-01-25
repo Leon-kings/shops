@@ -58,7 +58,7 @@ export default function CreateUser() {
     console.log(values);
     try {
       await axios.post("https://shopsnodejs.onrender.com/users", values);
-      if (window.confirm("Shall We Move")) {
+      if (window.confirm("Move Next ?")) {
         Navigate("/Dashboard");
       } else {
         Navigate("/Settings");
@@ -75,7 +75,7 @@ export default function CreateUser() {
     <>
       <div className="title"></div>
       <div>
-        <div className="container w-full xl:w-full lg:w-full md:w-full sm:w-full flex justify-center min-h-screen bg-gray-100 text-black">
+        <div className="w-full xl:w-full lg:w-full md:w-full sm:w-full flex justify-center bg-gray-100 text-black">
           <div className="w-full max-w-md p-8 bg-white rounded shadow-md">
             <div className="Register">
               <form onSubmit={handleSubmit}>
@@ -101,7 +101,7 @@ export default function CreateUser() {
           </div>
         </div>
       </div>
-      <div className="title"></div>
+      <br />
     </>
   );
 }

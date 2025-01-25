@@ -33,10 +33,7 @@ export default function CreateMessage() {
     e.preventDefault();
     console.log(values);
     try {
-      await axios.post(
-        "https://shopsnodejs.onrender.com/messages",
-        values
-      );
+      await axios.post("https://shopsnodejs.onrender.com/messages", values);
       if (window.confirm("message received, Continue ?")) {
         Navigate("/Dashboard");
       } else {
@@ -52,14 +49,15 @@ export default function CreateMessage() {
   };
   return (
     <>
-    <div className="title">
-     </div>
-      <div className="container w-full xl:w-full lg:w-full md:w-full sm:w-full text-black">
-        <div className=" flex items-center justify-center min-h-screen bg-gray-100">
+      <div className="title"></div>
+      <div className="w-full xl:w-full lg:w-full md:w-full sm:w-full text-black">
+        <div className=" flex items-center justify-center bg-gray-100">
           <div className="w-full max-w-md p-8 bg-white rounded shadow-md">
             <div className="Register">
               <form onSubmit={handleSubmit}>
-                <h2 className="text-blue-400 font-bold py-4">CREATE MESSAGES</h2>
+                <h2 className="text-blue-400 font-bold py-4">
+                  CREATE MESSAGES
+                </h2>
                 <div className="contain">
                   {inputs.map((input) => (
                     <FormInput
@@ -72,13 +70,14 @@ export default function CreateMessage() {
                   ))}
                   <div className="head">
                     <button className="btn w-44 text-white">Send</button>
-                  </div>
+                  </div>  
                 </div>
               </form>
             </div>
           </div>
         </div>
       </div>
+      <br />
     </>
   );
 }
