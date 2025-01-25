@@ -7,7 +7,7 @@ export default function Card() {
     <>
       <div className="container">
       <br />
-        <div className="relative py-12 bg-gray-700 sm:py-16 lg:py-20 xl:pt-32 xl:pb-44">
+        <div className="relative w-full py-12 bg-gray-700 sm:py-16 lg:py-20 xl:pt-32 xl:pb-44">
           <div className="absolute inset-0 hidden lg:block">
             <img
               className="object-cover object-right-bottom w-full h-full"
