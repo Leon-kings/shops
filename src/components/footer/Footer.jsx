@@ -30,7 +30,7 @@ export default function Footer() {
 
     try {
       await axios.post("https://shopsnodejs.onrender.com/subscription", values);
-      if (window.confirm("Thank you ! Your Subscription received")) {
+      if (window.confirm("Thank you ! Your Subscription received !!")) {
         Navigate("/");
       } else {
         Navigate("/Register");
