@@ -13,6 +13,7 @@
 
 body {
   margin: 0;
+  font-family:'Times New Roman', Times, serif;
   display: flex;
   place-items: center;
   width: 100%;
@@ -44,20 +45,9 @@ button {
   }
 
   button {
-    background-color: #636ddf;
+    background-color: #7782f4;
+    font-weight: 600
   }
 }
 
-@media (max-width: 1095px) and (min-width: 992px) {
-  .container{
-    width: 100%;
-  }
-  .header{
-    width: 100%;
-  }
-  video{
-    width: 100%;
-  }
-  }
-  
 @import "tailwindcss";

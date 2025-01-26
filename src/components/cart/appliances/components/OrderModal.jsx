@@ -2,6 +2,8 @@
 import { useCart } from "../CartContext";
 import OrderConfirmed from "../../../../assets/images/360_F_288921356_krHC3KV1lJ2jAGnaep6NXZX6Fkv4FF9q.jpg";
 import React from "react";
+import { Link } from "react-router-dom";
+
 React;
 const OrderModal = ({ isOpen, onClose, onStartNewOrder }) => {
   const { cartItems } = useCart();
@@ -17,7 +19,7 @@ const OrderModal = ({ isOpen, onClose, onStartNewOrder }) => {
 
   return (
     <div
-      className="fixed inset-0 bg-[#000] bg-opacity-50 flex justify-center items-center z-50"
+      className="w-full fixed inset-0 bg-[#000] bg-opacity-50 flex justify-center items-center z-50"
       onClick={onClose}
     >
       <div
@@ -25,6 +27,7 @@ const OrderModal = ({ isOpen, onClose, onStartNewOrder }) => {
         onClick={(e) => e.stopPropagation()}
       >
         <img src={OrderConfirmed} alt="Order Confirmed" className="w-14 h-14" />
+       
         <h2 className="text-2xl font-bold font-primary text-rose-500">
           Order Confirmed
         </h2>
@@ -66,15 +69,14 @@ const OrderModal = ({ isOpen, onClose, onStartNewOrder }) => {
             </p>
           </div>
         </div>
-
-        {/* <p className="font-bold">Total Quantity: {totalItems}</p> */}
-
+        <Link to={'/CheckOut'}>
         <button
           onClick={onStartNewOrder}
           className=" text-sm self-stretch bg-red px-4 py-2 text-white bg-red-400 rounded-3xl"
         >
           Start New Order
         </button>
+        </Link>
       </div>
     </div>
   );

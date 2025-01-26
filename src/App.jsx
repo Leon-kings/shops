@@ -16,7 +16,9 @@ import Services from "./pages/services/Services";
 import Market from "./pages/market/Market";
 import Features from "./pages/new/Features";
 import Register from "./pages/form/register/Register";
+// checkout
 import CheckOut from "./components/payment/CheckOut";
+//  dashboards
 import Profile from "./components/dashboard/admin/components/profile/Profile";
 import Userview from "./components/dashboard/admin/components/userview/Userview";
 import Settings from "./components/dashboard/admin/components/settings/Settings";
@@ -38,6 +40,7 @@ import CreateMessageUser from "./components/dashboard/user/components/messages/C
 import CreateTestimonyUser from "./components/dashboard/user/components/testimony/CreateTestimonyUser";
 import CreatePostUser from "./components/dashboard/user/components/post/CreatePostUser";
 import UProfile from "./components/dashboard/user/components/profile/Profile";
+import Details from "./components/cart/appliances/components/Details";
 
 export default function App() {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
@@ -53,6 +56,7 @@ export default function App() {
               element={<Login onLogin={() => setIsAuthenticated(false)} />}
             />
             <Route path="/" element={<Home />} />
+            <Route path="/Details/:id" element={<Details />} />
             <Route path="/Fquestion" element={<Fquestion />} />
             <Route path="/Who/we/are" element={<Address />} />
             <Route path="/Contacts" element={<About />} />
@@ -63,24 +67,39 @@ export default function App() {
             {/* dashboard link */}
             <Route path="/Dashboard" element={<Dashboard />} />
             <Route path="/Udashboard" element={<Udashboard />} />
-            <Route path="/5010/Userview" element={<Userview/> } />
-            <Route path="/5010/Postview" element={<Postview/> } />
-            <Route path="/5010/Testimony" element={<Testimonyview/> } />
-            <Route path="5010/Message" element={<Messageview/> } />
-            <Route path="/Settings" element={<Settings/> } />
-            <Route path="/5040/Create/Testimony/245678" element={<CreateTestimony/> } />
-            <Route path="/5040/Create/Message/245678" element={<CreateMessage/> } />
-            <Route path="/5040/Create/Post/245678" element={<CreatePost/> } />
-            <Route path="/5040/Create/User/245678" element={<CreateUser/> } />
+            <Route path="/5010/Userview" element={<Userview />} />
+            <Route path="/5010/Postview" element={<Postview />} />
+            <Route path="/5010/Testimony" element={<Testimonyview />} />
+            <Route path="5010/Message" element={<Messageview />} />
+            <Route path="/Settings" element={<Settings />} />
+            <Route
+              path="/5040/Create/Testimony/245678"
+              element={<CreateTestimony />}
+            />
+            <Route
+              path="/5040/Create/Message/245678"
+              element={<CreateMessage />}
+            />
+            <Route path="/5040/Create/Post/245678" element={<CreatePost />} />
+            <Route path="/5040/Create/User/245678" element={<CreateUser />} />
             {/* user dshboard */}
-            <Route path="/302010/Settings" element={<USettings/> } />
-            <Route path="/302015/Message" element={<Umessages/> } />
-            <Route path="/5044/Create/Message/245678" element={<CreateMessageUser/> } />
-            <Route path="/302020/Testimony" element={<UTestimony/> } />
-            <Route path="/5044/Create/Testimony/245678" element={<CreateTestimonyUser/> } />
-            <Route path="/302025/Post" element={<UPost/> } />
-            <Route path="/302005/Profile" element={<UProfile/> } />
-            <Route path="/5044/Create/Post/245678" element={<CreatePostUser/> } />
+            <Route path="/302010/Settings" element={<USettings />} />
+            <Route path="/302015/Message" element={<Umessages />} />
+            <Route
+              path="/5044/Create/Message/245678"
+              element={<CreateMessageUser />}
+            />
+            <Route path="/302020/Testimony" element={<UTestimony />} />
+            <Route
+              path="/5044/Create/Testimony/245678"
+              element={<CreateTestimonyUser />}
+            />
+            <Route path="/302025/Post" element={<UPost />} />
+            <Route path="/302005/Profile" element={<UProfile />} />
+            <Route
+              path="/5044/Create/Post/245678"
+              element={<CreatePostUser />}
+            />
             {/* payment */}
             <Route path="/CheckOut" element={<CheckOut />} />
             {/* Private Route */}
@@ -92,7 +111,7 @@ export default function App() {
                 </PrivateRoute>
               }
             />
-                        <Route
+            <Route
               path="/Profile/Dashboard"
               element={
                 <PrivateRoute isAuthenticated={isAuthenticated}>
