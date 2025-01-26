@@ -1,13 +1,13 @@
 import React, { useState } from "react";
 React;
-import { BiLogOut, BiUser } from "react-icons/bi";
-import { CgProfile } from "react-icons/cg";
+import { BiLogOut, BiMenu, BiUser } from "react-icons/bi";
+import { CgClose, CgProfile } from "react-icons/cg";
 import { IoSettings } from "react-icons/io5";
 import { BsHouse } from "react-icons/bs";
 import { Link, useNavigate } from "react-router-dom";
 import MyBarChart from "../charts/Barchart";
 import MyChart from "../charts/Chart";
-
+import image from '../../../../../assets/images/buying-laptops-in-ireland-in-2023-min-1678291071660_a842ec16-4d68-4ab9-ade7-3a46f6e4efcf_1600x.webp'
 function Sidebar() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const navigate = useNavigate();
@@ -49,9 +49,9 @@ function Sidebar() {
           {/* Sidebar content here */}
 
           <ul className="scroll-auto">
-            <li className="w-40">
+            <li className="w-full">
               <img
-                src="https://t4.ftcdn.net/jpg/02/88/92/13/360_F_288921356_krHC3KV1lJ2jAGnaep6NXZX6Fkv4FF9q.jpg"
+                src={image}
                 alt=""
               />
             </li>
@@ -144,7 +144,7 @@ function Sidebar() {
           className="fixed top-34 left-4 z-50 bg-blue-500 hover:bg-blue-600 text-white font-bold py-18 px-4 rounded"
           onClick={toggleSidebar}
         >
-          {isSidebarOpen ? "Close" : "Menu"}
+          {isSidebarOpen ? <CgClose className="text-red-500 font-bold"/> : <BiMenu/> }
         </button>
       </div>
     </>
