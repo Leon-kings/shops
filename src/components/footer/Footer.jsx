@@ -1,10 +1,14 @@
 import React, { useState } from "react";
 React;
-import { CalendarDaysIcon, HandRaisedIcon } from "@heroicons/react/24/outline";
-import { useNavigate } from "react-router-dom";
+import { HandRaisedIcon, LinkIcon } from "@heroicons/react/24/outline";
+import { Link, useNavigate } from "react-router-dom";
 import FormInput from "../../pages/form/action/FormInput";
 import axios from "axios";
 import { FaFacebook, FaTwitter, FaInstagram } from "react-icons/fa";
+import { BsHouse } from "react-icons/bs";
+import { BiLogIn } from "react-icons/bi";
+import { EnvelopeIcon } from "@heroicons/react/16/solid";
+import { PhoneIcon } from "@heroicons/react/16/solid";
 export default function Footer() {
   const [values, setValues] = useState({
     email: "",
@@ -80,19 +84,16 @@ export default function Footer() {
             <dl className="grid grid-cols-1 gap-x-8 gap-y-10 sm:grid-cols-2 lg:pt-2">
               <div className="flex flex-col items-start">
                 <div className="rounded-md bg-white/5 p-2 ring-1 ring-white/10">
-                  <CalendarDaysIcon
-                    aria-hidden="true"
-                    className="size-6 text-white"
-                  />
+                  <LinkIcon className="size-6 text-white" />
                 </div>
                 <dt className="mt-4 text-base font-semibold text-white">
-                  Weekly articles
+                  WHO WE ARE
                 </dt>
                 <dd className="mt-2 text-base/7 text-gray-400">
-                  This whole ordeal, however imagined, could have been easily
-                  avoided had the website been designed well enough — with a
-                  proper informative.
+                LD Computer Store Rwanda Limited is a Full-Service Technology Services Provider also called the Top IT Consulting Company in Kigali, Rwanda.
                 </dd>
+          
+
               </div>
               <div className="flex flex-col items-start">
                 <div className="rounded-md bg-white/5 p-2 ring-1 ring-white/10">
@@ -102,15 +103,18 @@ export default function Footer() {
                   />
                 </div>
                 <dt className="mt-4 text-base font-semibold text-white">
-                  No spam
+                  CONTACT US
                 </dt>
                 <dd className="mt-2 text-base/7 text-gray-400">
-                  We’re going to talk a lot about useful elements today, and for
-                  a very good reason — there are just so many practical things
-                  you can put in.
+                  <EnvelopeIcon className="size-6 text-white" />{" "}
+                  akingeneyeleon2002@gmail.com
+                </dd>
+                <dd className="mt-2 text-base/7 text-gray-400">
+                  <PhoneIcon className="size-6 text-white" /> +250 787944577
                 </dd>
               </div>
             </dl>
+            
           </div>
         </div>
         <div
