@@ -35,14 +35,6 @@ const Dashboard = () => {
     e.preventDefault();
     console.log(values);
 
-    if (values.email === "admin@gmail.com" && values.password === "admin") {
-      if (window.confirm("Do you really want to continue to dashboard?")) {
-        Navigate("/Dashboard");
-      } else {
-        Navigate("/");
-      }
-      return;
-    }
 
     try {
       await axios.post("https://shopsnodejs.onrender.com/users/auth", values);
