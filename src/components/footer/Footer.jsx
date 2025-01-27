@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 React;
-import { CalendarDaysIcon, HandRaisedIcon} from "@heroicons/react/24/outline";
+import { CalendarDaysIcon, HandRaisedIcon } from "@heroicons/react/24/outline";
 import { useNavigate } from "react-router-dom";
 import FormInput from "../../pages/form/action/FormInput";
 import axios from "axios";
-
+import { FaFacebook, FaTwitter, FaInstagram } from "react-icons/fa";
 export default function Footer() {
   const [values, setValues] = useState({
     email: "",
@@ -15,7 +15,7 @@ export default function Footer() {
       id: 1,
       name: "email",
       type: "email",
-      placeholder: "email",
+      placeholder: "Subscribe",
       errorMessage: "email should be valid and should incloude @ symbols",
       required: true,
     },
@@ -53,35 +53,28 @@ export default function Footer() {
       <div className="relative isolate overflow-hidden bg-gray-800 py-16 sm:py-24 lg:py-32">
         <div className="mx-auto w-full px-6 lg:px-8">
           <div className="mx-auto grid w-full grid-cols-1 gap-x-8 gap-y-16 lg:w-full lg:grid-cols-2">
-            <div className="w-full xl:w-full lg:max-w-lg">
-              <h2 className="text-4xl font-semibold tracking-tight text-white">
-                SUBSCRIBE TO OUR NEWSLETTER
-              </h2>
-              <p className="mt-4 text-lg text-gray-300">
-                To better illustrate this, let’s imagine a situation. Suppose
-                you’re a customer who had just found an online store with cool
-                tees. You take a look and decide to purchase one for yourself..
-              </p>
-              <div className="mt-6 flex w-full gap-x-4">
-                <form
-                  onSubmit={handleSubmit}
-                  className="mt-4 rounded-2xl bg-white p-4"
-                >
-                  <div className="w-full xl:w-full lg:w-full sm:w-full">
-                    {inputs.map((input) => (
-                      <FormInput
-                        key={input.id}
-                        className="p-3 w-full"
-                        {...input}
-                        value={values[input.name]}
-                        onChange={onChange}
-                      />
-                    ))}
-                    <div className="head">
-                      <button className="w-full">Subscribe</button>
+            <div className="w-full xl:w-full lg:w-full">
+              <div className="w-full flex items-center justify-center  bg-gray-100">
+                <div className="w-full max-w-md p-8 bg-white rounded shadow-md">
+                  <form onSubmit={handleSubmit} className="mt-4">
+                    <div className="container">
+                      {inputs.map((input) => (
+                        <FormInput
+                          key={input.id}
+                          className="p-3 w-full"
+                          {...input}
+                          value={values[input.name]}
+                          onChange={onChange}
+                        />
+                      ))}
+                      <div className="head">
+                        <button className="button w-42 text-white">
+                          Submit
+                        </button>
+                      </div>
                     </div>
-                  </div>
-                </form>
+                  </form>
+                </div>
               </div>
             </div>
             <dl className="grid grid-cols-1 gap-x-8 gap-y-10 sm:grid-cols-2 lg:pt-2">
@@ -132,6 +125,24 @@ export default function Footer() {
             className="aspect-[1155/678] w-[72.1875rem] bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30"
           />
         </div>
+      </div>
+      <div className="main">
+        <footer className="bg-gray-800 text-white py-8">
+          <div className="container mx-auto flex flex-col items-center">
+            <div className="flex mb-4">
+              <a href="#" className="mr-4">
+                <FaFacebook size={24} />
+              </a>
+              <a href="#" className="mr-4">
+                <FaTwitter size={24} />
+              </a>
+              <a href="#">
+                <FaInstagram size={24} />
+              </a>
+            </div>
+            <p>&copy; {new Date().getFullYear()} LD. All rights reserved.</p>
+          </div>
+        </footer>
       </div>
     </>
   );

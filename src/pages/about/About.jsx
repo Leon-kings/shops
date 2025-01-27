@@ -235,7 +235,7 @@ export default function About() {
               <div className="container flex items-center justify-center min-h-screen bg-gray-100 text-black">
                 <div className="w-full max-w-md p-3 lg:p-8 xl:p-8 bg-white rounded shadow-md">
                   <form onSubmit={handleSubmit} className="mt-4">
-                    <h2 className="title text-green-300 font-bold">MESSAGE</h2>
+                    <h2 className="title text-blue-400 font-bold">MESSAGE</h2>
                     <div className="p-0">
                       {inputs.map((input) => (
                         <FormInput
