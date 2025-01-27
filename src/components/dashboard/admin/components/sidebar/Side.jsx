@@ -69,7 +69,7 @@ function Sidebar() {
           </li>
           <br />
           <li className="my-2">
-            <Link to={'/LogOut'}>
+            <Link to={'/'}>
               <button>
                 <BiLogOut />
               </button>
