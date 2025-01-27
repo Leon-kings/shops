@@ -53,11 +53,7 @@ export default function Fquestion(handler) {
   });
 
   const data = [
-    {
-      id: 1,
-      question: "Is this component completely free to use?",
-      answer: "The software development life cycle (SDLC) typically includes planning, requirements analysis, design, coding, testing, deployment, and maintenance.",
-    },
+
     {
       id: 2,
       question: "What methodologies are used?",

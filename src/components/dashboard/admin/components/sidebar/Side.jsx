@@ -4,7 +4,7 @@ import { BiLogOut, BiMenu, BiUser } from "react-icons/bi";
 import { CgClose, CgProfile } from "react-icons/cg";
 import { IoSettings } from "react-icons/io5";
 import { BsHouse } from "react-icons/bs";
-import { Link, useNavigate } from "react-router-dom";
+import { Link} from "react-router-dom";
 import MyBarChart from "../../../user/components/charts/Barchart";
 import MyChart from "../../../user/components/charts/Chart";
 import Subscription from "../subscription/Subscription";
@@ -12,16 +12,11 @@ import image from '../../../../../assets/images/buying-laptops-in-ireland-in-202
 
 function Sidebar() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
-  const navigate = useNavigate();
+
   const toggleSidebar = () => {
     setIsSidebarOpen(!isSidebarOpen);
   };
-  const handleLogout = () => {
-    // Clear user authentication data
-    localStorage.removeItem("token"); // Or sessionStorage.removeItem("token");
-    localStorage.removeItem("user"); // Optional: Remove any stored user info
-    navigate("/login"); // Redirect to the login page
-  };
+
   return (
     <div className="flex scroll-auto">
       <div className="title"></div>
@@ -74,7 +69,7 @@ function Sidebar() {
           </li>
           <br />
           <li className="my-2">
-            <Link to={handleLogout}>
+            <Link to={'/LogOut'}>
               <button>
                 <BiLogOut />
               </button>

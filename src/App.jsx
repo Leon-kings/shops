@@ -41,6 +41,7 @@ import CreateTestimonyUser from "./components/dashboard/user/components/testimon
 import CreatePostUser from "./components/dashboard/user/components/post/CreatePostUser";
 import UProfile from "./components/dashboard/user/components/profile/Profile";
 import Details from "./components/cart/appliances/components/Details";
+import LogOut from "./components/logs/LogOut";
 
 export default function App() {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
@@ -80,6 +81,7 @@ export default function App() {
               path="/5040/Create/Message/245678"
               element={<CreateMessage />}
             />
+            <Route path="/Profile/Dashboard" element={<Profile />} />
             <Route path="/5040/Create/Post/245678" element={<CreatePost />} />
             <Route path="/5040/Create/User/245678" element={<CreateUser />} />
             {/* user dshboard */}
@@ -111,11 +113,12 @@ export default function App() {
                 </PrivateRoute>
               }
             />
+
             <Route
-              path="/Profile/Dashboard"
+              path="/LogOut"
               element={
                 <PrivateRoute isAuthenticated={isAuthenticated}>
-                  <Profile />
+                  <LogOut />
                 </PrivateRoute>
               }
             />

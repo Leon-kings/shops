@@ -4,36 +4,21 @@ import { BiLogOut, BiMenu, BiUser } from "react-icons/bi";
 import { CgClose, CgProfile } from "react-icons/cg";
 import { IoSettings } from "react-icons/io5";
 import { BsHouse } from "react-icons/bs";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import MyBarChart from "../charts/Barchart";
 import MyChart from "../charts/Chart";
-import image from '../../../../../assets/images/buying-laptops-in-ireland-in-2023-min-1678291071660_a842ec16-4d68-4ab9-ade7-3a46f6e4efcf_1600x.webp'
+import image from "../../../../../assets/images/buying-laptops-in-ireland-in-2023-min-1678291071660_a842ec16-4d68-4ab9-ade7-3a46f6e4efcf_1600x.webp";
+import side from "../../../../../assets/images/Watches-PCD_CO15_Sleep-Coaching_MO.webp";
+import side1 from "../../../../../assets/images/student-with-laptop.jpg";
+import side2 from "../../../../../assets/images/romantic-african-woman-with-trendy-hairstyle-sitting-her-workplace-analysing-data-indoor-portrait-black-female-student-working-with-laptop-before-exam_197531-3782.avif";
+import side3 from "../../../../../assets/images/programmer-people-working-laptops-smartphones-600nw-2473384115.webp";
+import side4 from "../../../../../assets/images/macbook-pro.avif";
 function Sidebar() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
-  const navigate = useNavigate();
   const toggleSidebar = () => {
     setIsSidebarOpen(!isSidebarOpen);
   };
 
-  const marketerLogos = [
-    "https://i.pravatar.cc/130",
-    "https://i.pravatar.cc/131",
-    "https://i.pravatar.cc/132",
-    "https://i.pravatar.cc/133",
-    "https://i.pravatar.cc/134",
-    "https://i.pravatar.cc/135",
-    "https://i.pravatar.cc/136",
-    "https://i.pravatar.cc/137",
-    "https://i.pravatar.cc/138",
-    "https://i.pravatar.cc/139",
-    "https://i.pravatar.cc/140",
-  ];
-  const handleLogout = () => {
-    // Clear user authentication data
-    localStorage.removeItem("token"); // Or sessionStorage.removeItem("token");
-    localStorage.removeItem("user"); // Optional: Remove any stored user info
-    navigate("/login"); // Redirect to the login page
-  };
   return (
     <>
       {" "}
@@ -50,10 +35,7 @@ function Sidebar() {
 
           <ul className="scroll-auto">
             <li className="w-full">
-              <img
-                src={image}
-                alt=""
-              />
+              <img src={image} alt="" />
             </li>
             <li className="my-2">
               <Link to={"/Udashboard"}>
@@ -88,7 +70,7 @@ function Sidebar() {
             </li>
             <br />
             <li className="my-2">
-              <Link to={handleLogout}>
+              <Link to={"/LogOut"}>
                 <button>
                   <BiLogOut />
                 </button>
@@ -108,33 +90,142 @@ function Sidebar() {
               <MyChart />
             </div>
           </div>
-          <div className="new">
-            <main className="bg-indigo-300 rounded-lg shadow-lg mt-10 py-20">
-              <section className=" justify-between items-center p-10 ">
-                <div className="space-y-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 sm:grid-cols-1 gap-6">
-                  <div className="flex -space-x-2 overflow-hidden">
-                    {marketerLogos.map((logo, index) => (
+          <div className="w-full">
+            <div className="flex w-full gap-6 pb-8 mt-12 overflow-x-auto sm:mt-16 lg:mt-20 snap-x">
+              <div className="relative snap-center scroll-ml-6 shrink-0 first:pl-6 last:pr-6">
+                <div className="overflow-hidden w-[300px] lg:w-[420px] transition-all duration-200 transform bg-white border border-gray-200 rounded-2xl hover:shadow-lg hover:-translate-y-1">
+                  <div className="px-4 py-5 sm:p-5">
+                    <div className="flex items-start lg:items-center">
                       <img
-                        key={index}
-                        src={logo}
+                        className="lg:h-24 w-14 h-14 lg:w-30 rounded-xl object-cover"
+                        src={side}
                         alt=""
-                        className="inline-block h-8 w-8 rounded-full ring-2 ring-amber-100"
                       />
-                    ))}
-                  </div>
-                  <div className="flex -space-x-2 overflow-hidden">
-                    {marketerLogos.map((logo, index) => (
-                      <img
-                        key={index}
-                        src={logo}
-                        alt=""
-                        className="inline-block h-8 w-8 rounded-full ring-2 ring-white"
-                      />
-                    ))}
+
+                      <div className="flex-1 ml-4 lg:ml-6">
+                        <p className="text-xs font-medium text-gray-900 lg:text-sm">
+                          New Features
+                        </p>
+                        <p className="mt-2 text-sm font-bold text-gray-900 lg:text-lg group-hover:text-gray-600">
+                          Rwanda&lsquo; s Shop for mobiles, Electronics,
+                          perfumes, Laptops.
+                        </p>
+                        <p className="mt-2 text-xs font-medium text-gray-500 lg:text-sm">
+                          April 09, 2025
+                        </p>
+                      </div>
+                    </div>
                   </div>
                 </div>
-              </section>
-            </main>
+              </div>
+
+              <div className="relative snap-center scroll-ml-6 shrink-0 first:pl-6 last:pr-6">
+                <div className="overflow-hidden w-[300px] lg:w-[420px] transition-all duration-200 transform bg-white border border-gray-200 rounded-2xl hover:shadow-lg hover:-translate-y-1">
+                  <div className="px-4 py-5 sm:p-5">
+                    <div className="flex items-start lg:items-center">
+                      <img
+                        className="lg:h-24 w-14 h-14 lg:w-30 rounded-xl object-cvoer"
+                        src={side1}
+                        alt=""
+                      />
+                      <div className="flex-1 ml-4 lg:ml-6">
+                        <p className="text-xs font-medium text-gray-900 lg:text-sm">
+                          New Features
+                        </p>
+                        <p className="mt-2 text-sm font-bold text-gray-900 lg:text-lg group-hover:text-gray-600">
+                          Buy genuine products at the best prices. Apple,
+                          Samsung, HP.
+                        </p>
+                        <p className="mt-2 text-xs font-medium text-gray-500 lg:text-sm">
+                          April 09, 2025
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div className="relative snap-center scroll-ml-6 shrink-0 first:pl-6 last:pr-6">
+                <div className="overflow-hidden w-[300px] lg:w-[420px] transition-all duration-200 transform bg-white border border-gray-200 rounded-2xl hover:shadow-lg hover:-translate-y-1">
+                  <div className="px-4 py-5 sm:p-5">
+                    <div className="flex items-start lg:items-center">
+                      <img
+                        className="lg:h-24 w-14 h-14 lg:w-30 rounded-xl object-cvoer"
+                        src={side2}
+                        alt=""
+                      />
+
+                      <div className="flex-1 ml-4 lg:ml-6">
+                        <p className="text-xs font-medium text-gray-900 lg:text-sm">
+                          New Features
+                        </p>
+                        <p className="mt-2 text-sm font-bold text-gray-900 lg:text-lg group-hover:text-gray-600">
+                          Razer BlackShark V2 X Gaming Headset: 7.1 Surround
+                          Sound - 50mm.
+                        </p>
+                        <p className="mt-2 text-xs font-medium text-gray-500 lg:text-sm">
+                          April 09, 2025
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div className="relative snap-center scroll-ml-6 shrink-0 first:pl-6 last:pr-6">
+                <div className="overflow-hidden w-[300px] lg:w-[420px] transition-all duration-200 transform bg-white border border-gray-200 rounded-2xl hover:shadow-lg hover:-translate-y-1">
+                  <div className="px-4 py-5 sm:p-5">
+                    <div className="flex items-start lg:items-center">
+                      <img
+                        className="lg:h-24 w-14 h-14 lg:w-30 rounded-xl object-cvoer"
+                        src={side3}
+                        alt=""
+                      />
+
+                      <div className="flex-1 ml-4 lg:ml-6">
+                        <p className="text-xs font-medium text-gray-900 lg:text-sm">
+                          New Feature
+                        </p>
+                        <p className="mt-2 text-sm font-bold text-gray-900 lg:text-lg group-hover:text-gray-600">
+                          Shop through a wide selection of Smart Watches with
+                          Free shipping .
+                        </p>
+                        <p className="mt-2 text-xs font-medium text-gray-500 lg:text-sm">
+                          April 09, 2025
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div className="relative snap-center scroll-ml-6 shrink-0 first:pl-6 last:pr-6">
+                <div className="overflow-hidden w-[300px] lg:w-[420px] transition-all duration-200 transform bg-white border border-gray-200 rounded-2xl hover:shadow-lg hover:-translate-y-1">
+                  <div className="px-4 py-5 sm:p-5">
+                    <div className="flex items-start lg:items-center">
+                      <img
+                        className="lg:h-24 w-14 h-14 lg:w-30 rounded-xl object-cvoer"
+                        src={side4}
+                        alt=""
+                      />
+
+                      <div className="flex-1 ml-4 lg:ml-6">
+                        <p className="text-xs font-medium text-gray-900 lg:text-sm">
+                          New Feature
+                        </p>
+                        <p className="mt-2 text-sm font-bold text-gray-900 lg:text-lg group-hover:text-gray-600">
+                          Navigation, 3.53 cm HD Display & BT Calling
+                          Smartwatch. 82%.
+                        </p>
+                        <p className="mt-2 text-xs font-medium text-gray-500 lg:text-sm">
+                          April 09, 2025
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
           {/* ... */}
         </div>
@@ -144,7 +235,11 @@ function Sidebar() {
           className="fixed top-34 left-4 z-50 bg-blue-500 hover:bg-blue-600 text-white font-bold py-18 px-4 rounded"
           onClick={toggleSidebar}
         >
-          {isSidebarOpen ? <CgClose className="text-red-500 font-bold"/> : <BiMenu/> }
+          {isSidebarOpen ? (
+            <CgClose className="text-red-500 font-bold" />
+          ) : (
+            <BiMenu />
+          )}
         </button>
       </div>
     </>

@@ -39,7 +39,7 @@ export default function Head() {
                   <div className="mt-10">
                     {/* Decorative image grid */}
                     <div className="pointer-events-none lg:absolute lg:inset-y-0 lg:mx-auto lg:w-full lg:max-w-7xl">
-                      <div className="absolute transform sm:top-0 sm:left-1/2 sm:translate-x-8 lg:top-1/2 lg:left-1/2 lg:-translate-y-1/2 lg:translate-x-8">
+                      <div className="absolute transform sm:top-0 md:left-1/2 sm:left-1/2 sm:translate-x-8 lg:top-1/2 lg:left-1/2 lg:-translate-y-1/2 lg:translate-x-8">
                         <div className="flex items-center space-x-6 lg:space-x-8">
                           <div className="grid shrink-0 grid-cols-1 ">
                             <div className="h-44 w-40 overflow-hidden rounded-lg sm:opacity-0 lg:opacity-100">
