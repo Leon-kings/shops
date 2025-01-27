@@ -41,7 +41,6 @@ import CreateTestimonyUser from "./components/dashboard/user/components/testimon
 import CreatePostUser from "./components/dashboard/user/components/post/CreatePostUser";
 import UProfile from "./components/dashboard/user/components/profile/Profile";
 import Details from "./components/cart/appliances/components/Details";
-// import Log from "./components/logs/Logout";
 
 export default function App() {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
@@ -113,15 +112,6 @@ export default function App() {
                 </PrivateRoute>
               }
             />
-
-            {/* <Route
-              path="/LogOut"
-              element={
-                <PrivateRoute isAuthenticated={isAuthenticated}>
-                  <Log />
-                </PrivateRoute>
-              }
-            /> */}
           </Routes>
           <Footer />
         </BrowserRouter>

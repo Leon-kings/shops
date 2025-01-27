@@ -22,8 +22,8 @@ const Userview = () => {
         const response = await axios.get(
           "https://shopsnodejs.onrender.com/users"
         );
-        setUsers(response.data.data);
-        console.log(response.data);
+        setUsers(response.data.users);
+        console.log(response.data.users);
       } catch (error) {
         console.log("Error fetching users:", error);
       }

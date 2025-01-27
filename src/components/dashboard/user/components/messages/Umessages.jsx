@@ -4,31 +4,12 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 React;
 export default function Umessages() {
-  // const [loggedInUserEmail, setLoggedInUserEmail] = useState('');
   const [message, setMessage] = useState([]);
   const [editingMessage, setEditingMessage] = useState(null);
   const [formData, setFormData] = useState({
     email: "",
     message: "",
   });
-  // Replace with actual logic to get logged-in user's email
-
-  // useEffect(() => {
-  //   const fetchPosts = async () => {
-  //     try {
-  //       const response = await axios.get('https://shopsnodejs.onrender.com/messages'); // Replace with your actual API endpoint
-  //       const userMessage = response.data.filter(post => post.email === loggedInUserEmail);
-  //       setMessage(userMessage);
-  //     } catch (error) {
-  //       console.error('Error fetching posts:', error);
-  //     }
-  //   };
-
-  //   fetchPosts();
-  // }, [loggedInUserEmail]); // Only re-fetch posts when loggedInUserEmail changes
-  // setLoggedInUserEmail();
-
-  
   // Fetch users from API
   useEffect(() => {
     const fetchMessage = async () => {
@@ -99,7 +80,7 @@ export default function Umessages() {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
   };
-  // console.log(message[0]);
+
   return (
     <>
       <div className="title"></div>
@@ -214,3 +195,42 @@ export default function Umessages() {
     </>
   );
 }
+
+// import React, { useState, useEffect } from 'react';
+// import axios from 'axios'; // Assuming you're using axios for API calls
+// React;
+// function UMessages() {
+//     const [posts, setPosts] = useState([]);
+//     const [loggedInUserEmail, setLoggedInUserEmail] = useState(''); // Replace with actual logic to get logged-in user's email
+
+//     useEffect(() => {
+//       const fetchPosts = async () => {
+//         try {
+//           const response = await axios.get('https://shopsnodejs.onrender.com/messages'); // Replace with your actual API endpoint
+//           const UMessages = response.data.filter(post => post.email === loggedInUserEmail);
+//           setPosts(UMessages);
+//         } catch (error) {
+//           console.error('Error fetching posts:', error);
+//         }
+//       };
+
+//       fetchPosts();
+//     }, [loggedInUserEmail]); // Only re-fetch posts when loggedInUserEmail changes
+
+//   return (
+//     <div>
+//       <div className="title"></div>
+//       <h2>Your Posts</h2>
+//       <ul>
+//         {posts.map(post => (
+//           <li key={post.id}>
+//             {/* Display post content here */}
+//             {post.title} 
+//           </li>
+//         ))}
+//       </ul>
+//     </div>
+//   );
+// }
+
+// export default UMessages;

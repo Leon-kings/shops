@@ -49,8 +49,8 @@ const Home = () => {
       <div className="w-full">
         <div className="head lg:w-full xl:w-full">
           {/* Header Video components*/}
-          <div className="header">
-            <div className="header" id="top">
+          <div className="w-full">
+            <div className="w-full" id="top">
               <Header />
             </div>
           </div>
