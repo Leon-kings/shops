@@ -50,7 +50,7 @@ function Cart({ onConfirmOrder }) {
                       {item.quantity}
                       <XMarkIcon className="size-6" />{" "}
                     </p>
-                    <p className="text-sm">@ {item.price}/item =</p>
+                    <p className="text-sm">@ {item.price}/item</p>
                     <p className="font-bold text-rose-500">
                       $
                       {(
