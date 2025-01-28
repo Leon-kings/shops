@@ -1,7 +1,9 @@
 import React, { useState } from "react";
-import Cart from '../../../../assets/images/360_F_288921356_krHC3KV1lJ2jAGnaep6NXZX6Fkv4FF9q.jpg'
 import { useCart } from "../CartContext";
 import { useEffect } from "react";
+import { BiCart } from "react-icons/bi";
+import { Link } from "react-router-dom";
+Link;
 React;
 const Product = ({ product }) => {
   const [count, setCount] = useState(0);
@@ -11,9 +13,6 @@ const Product = ({ product }) => {
     const cartItem = cartItems.find((item) => item.id === product.id);
     setCount(cartItem ? cartItem.quantity : 0);
   }, [cartItems, product.id]);
-
-
-
 
   const increment = () => {
     setCount((prevCount) => prevCount + 1);
@@ -28,17 +27,19 @@ const Product = ({ product }) => {
   };
 
   return (
-    <div className="flex flex-col gap-2">
+    <div className="w-full flex flex-col gap-2">
       <div className="flex flex-col items-center">
-        <img
-          className={
-            count > 0
-              ? "border-red border-2 md:w-[200px] rounded-[5px]"
-              : "md:w-[200px] rounded-[5px]"
-          }
-          src={product.image}
-          alt={product.name}
-        />
+        <Link to={`/Details/:${product.id}`}>
+          <img
+            className={
+              count > 0
+                ? "border-red border-2 w-full lg:w-full h-[250px] object-cover rounded-[5px]"
+                : " lg:w-full w-full h-[250px] object-cover rounded-[5px]"
+            }
+            src={product.image}
+            alt={product.id}
+          />
+        </Link>
         <div className="relative group">
           <button
             className={
@@ -47,9 +48,7 @@ const Product = ({ product }) => {
                 : "flex bg-white -mt-5 border-black border-2 px-5 py-2 rounded-[1.5rem] transition-all duration-300 group-hover:hidden"
             }
           >
-            <label>
-              <img src={Cart} alt="Add to cart" className="w-4" />
-            </label>
+            <BiCart className="size-6 text-white" />
             Add to cart
           </button>
           <div
@@ -80,7 +79,7 @@ const Product = ({ product }) => {
         <h3 className="text-lg text-black font-primary font-medium">
           {product.name}
         </h3>
-        <p className="text-black font-primary">{product.price}</p>
+        <p className="text-green-400 bg-amber-50  font-bold">{product.price}</p>
       </div>
     </div>
   );
