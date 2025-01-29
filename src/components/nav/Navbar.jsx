@@ -68,7 +68,7 @@ export default function Navbar() {
           <div className="fixed inset-0 z-50" />
           <DialogPanel className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-blue-400 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
             <div className="flex items-center w-full justify-between">
-              <img alt="" src={logo} className="h-10 w-auto rounded-2xl rounded-b-sm" />
+              <img alt="" src={logo} className="h-20 p-4 w-auto rounded-2xl rounded-b-sm" />
 
               <button
                 type="button"
@@ -83,7 +83,7 @@ export default function Navbar() {
                 </b>
               </button>
             </div>
-            <div className="mt-6 flow-root">
+            <div className="mt-6 flow-root p-4">
               <div className="-my-6 divide-y divide-gray-500/10">
                 <div className="space-y-2 py-6">
                   {navigation.map((item) => (

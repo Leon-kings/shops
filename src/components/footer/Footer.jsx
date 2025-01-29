@@ -141,7 +141,7 @@ export default function Footer() {
                 <FaInstagram size={24} />
               </a>
             </div>
-            <p>&copy; {new Date().getFullYear()} LD. All rights reserved.</p>
+            <p>&copy; {new Date().getFullYear()} <b className="text-blue-600">LD.</b> All rights reserved.</p>
           </div>
         </footer>
       </div>
