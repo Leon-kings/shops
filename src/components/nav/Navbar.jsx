@@ -24,7 +24,11 @@ export default function Navbar() {
           className="flex items-center justify-between p-6 lg:px-8"
         >
           <div className="flex lg:flex-1">
-            <img alt="" src={logo} className="h-20 w-auto rounded-2xl rounded-b-sm" />
+            <img
+              alt=""
+              src={logo}
+              className="h-20 w-auto rounded-2xl rounded-b-sm"
+            />
           </div>
           <div className="flex lg:hidden">
             <button
@@ -32,7 +36,7 @@ export default function Navbar() {
               onClick={() => setMobileMenuOpen(true)}
               className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700"
             >
-              <span className="sr-only">Open main menu</span>
+              <b className="sr-only">Open main menu</b>
               <Bars3Icon aria-hidden="true" className="size-6" />
             </button>
           </div>
@@ -68,7 +72,11 @@ export default function Navbar() {
           <div className="fixed inset-0 z-50" />
           <DialogPanel className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-blue-400 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
             <div className="flex items-center w-full justify-between">
-              <img alt="" src={logo} className="h-20 p-4 w-auto rounded-2xl rounded-b-sm" />
+              <img
+                alt=""
+                src={logo}
+                className="h-20 p-4 w-auto rounded-2xl rounded-b-sm"
+              />
 
               <button
                 type="button"
@@ -98,7 +106,7 @@ export default function Navbar() {
                 </div>
                 <div className="py-6">
                   <Link
-                    className="text-sm/6 font-semibold text-gray-900 hover:bg-gray-50"
+                    className="text-sm/6 block rounded-lg  py-2 font-semibold text-gray-900 hover:bg-gray-50"
                     to={"/login"}
                   >
                     LOG IN{" "}

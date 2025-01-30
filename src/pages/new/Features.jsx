@@ -247,7 +247,8 @@ const Features = () => {
                         New Features
                       </p>
                       <p className="mt-2 text-sm font-bold text-gray-900 lg:text-lg group-hover:text-gray-600">
-                      Rwanda&lsquo; s Shop for mobiles, Electronics, perfumes, Laptops.
+                        Rwanda&lsquo; s Shop for mobiles, Electronics, perfumes,
+                        Laptops.
                       </p>
                       <p className="mt-2 text-xs font-medium text-gray-500 lg:text-sm">
                         April 09, 2025
@@ -272,7 +273,8 @@ const Features = () => {
                         New Features
                       </p>
                       <p className="mt-2 text-sm font-bold text-gray-900 lg:text-lg group-hover:text-gray-600">
-                      Buy genuine products at the best prices. Apple, Samsung, HP.
+                        Buy genuine products at the best prices. Apple, Samsung,
+                        HP.
                       </p>
                       <p className="mt-2 text-xs font-medium text-gray-500 lg:text-sm">
                         April 09, 2025
@@ -298,7 +300,8 @@ const Features = () => {
                         New Features
                       </p>
                       <p className="mt-2 text-sm font-bold text-gray-900 lg:text-lg group-hover:text-gray-600">
-                      Razer BlackShark V2 X Gaming Headset: 7.1 Surround Sound - 50mm. 
+                        Razer BlackShark V2 X Gaming Headset: 7.1 Surround Sound
+                        - 50mm.
                       </p>
                       <p className="mt-2 text-xs font-medium text-gray-500 lg:text-sm">
                         April 09, 2025
@@ -324,7 +327,8 @@ const Features = () => {
                         New Feature
                       </p>
                       <p className="mt-2 text-sm font-bold text-gray-900 lg:text-lg group-hover:text-gray-600">
-                      Shop through a wide selection of Smart Watches with Free shipping .
+                        Shop through a wide selection of Smart Watches with Free
+                        shipping .
                       </p>
                       <p className="mt-2 text-xs font-medium text-gray-500 lg:text-sm">
                         April 09, 2025
@@ -350,7 +354,8 @@ const Features = () => {
                         New Feature
                       </p>
                       <p className="mt-2 text-sm font-bold text-gray-900 lg:text-lg group-hover:text-gray-600">
-                      Navigation, 3.53 cm HD Display & BT Calling Smartwatch. 82%. 
+                        Navigation, 3.53 cm HD Display & BT Calling Smartwatch.
+                        82%.
                       </p>
                       <p className="mt-2 text-xs font-medium text-gray-500 lg:text-sm">
                         April 09, 2025
@@ -394,7 +399,7 @@ const Features = () => {
               <img
                 className="lg:mx-0 mx-auto h-full rounded-3xl object-cover"
                 src="https://pagedone.io/asset/uploads/1717751272.png"
-                alt="LD"
+                alt=""
               />
             </div>
           </div>
@@ -411,7 +416,7 @@ const Features = () => {
         <br />
         {/*  */}
         <div className="bg-white py-24 sm:py-32 w-full">
-          <div className="mx-auto grid max-w-7xl gap-20 px-6 lg:px-8 lg:w-full xl:grid-cols-3">
+          <div className="mx-auto grid w-full gap-20 px-6 lg:px-8 lg:w-full xl:grid-cols-2">
             <div className="w-full">
               <h2 className="text-pretty text-3xl font-semibold tracking-tight text-gray-900 sm:text-4xl">
                 Meet Our Products
@@ -423,22 +428,22 @@ const Features = () => {
               </p>
             </div>
             <div className="w-full">
-            <ul
-              role="list"
-              className="grid gap-x-8 gap-y-12 lg:grid-cols-3 sm:grid-cols-2 sm:gap-y-16 xl:col-span-2"
-            >
-              {people.map((person) => (
-                <li key={person.index}>
-                  <div className="flex grid-cols-3 items-center gap-x-6">
-                    <img
-                      alt=""
-                      src={person.imageUrl}
-                      className="w-full rounded-sm"
-                    />
-                  </div>
-                </li>
-              ))}
-            </ul>
+              <ul
+                role="list"
+                className="grid gap-x-8 gap-y-12 lg:grid-cols-3 sm:grid-cols-2 sm:gap-y-16 xl:col-span-2"
+              >
+                {people.map((person) => (
+                  <li key={person.index}>
+                    <div className="flex grid-cols-3 items-center gap-x-6">
+                      <img
+                        alt=""
+                        src={person.imageUrl}
+                        className="w-full rounded-sm"
+                      />
+                    </div>
+                  </li>
+                ))}
+              </ul>
             </div>
           </div>
         </div>

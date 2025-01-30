@@ -3,6 +3,7 @@ import { useCart } from "../CartContext";
 import OrderConfirmed from "../../../../assets/images/360_F_288921356_krHC3KV1lJ2jAGnaep6NXZX6Fkv4FF9q.jpg";
 import React from "react";
 import { Link } from "react-router-dom";
+import { BsCashCoin } from "react-icons/bs";
 
 React;
 const OrderModal = ({ isOpen, onClose, onStartNewOrder }) => {
@@ -26,8 +27,12 @@ const OrderModal = ({ isOpen, onClose, onStartNewOrder }) => {
         className="bg-white p-8 rounded-lg max-w-2xl w-full flex flex-col gap-4 max-h-[90vh] overflow-y-auto"
         onClick={(e) => e.stopPropagation()}
       >
-        <img src={OrderConfirmed} alt="Order Confirmed" className="w-14 h-14" />
-       
+        <img
+          src={OrderConfirmed}
+          alt="Order Confirmed"
+          className="w-14 h-14 rounded-2xl"
+        />
+
         <h2 className="text-2xl font-bold font-primary text-rose-500">
           Order Confirmed
         </h2>
@@ -39,18 +44,18 @@ const OrderModal = ({ isOpen, onClose, onStartNewOrder }) => {
             >
               <img
                 src={item.image}
-                alt={item.name}
-                className="w-16 h-16 object-cover rounded"
+                alt=""
+                className="w-20 h-16 object-cover rounded"
               />
               <div className="font-primary flex items-center justify-between w-full">
                 <div>
-                  <p className="font-semibold text-sm text-rose-500">
+                  <p className="font-semibold text-sm text-black">
                     {item.name}
                   </p>
-                  <span className="flex gap-4 items-center">
+                  <div className="flex gap-4 items-center">
                     <p className="text-sm text-red">{item.quantity}x</p>
-                    <p className="text-sm text-rose-400">@ {item.price}</p>
-                  </span>
+                    <p className="text-sm text-blue-400">@ {item.price}</p>
+                  </div>
                 </div>
                 <p className="font-bold text-rose-500">
                   $
@@ -69,14 +74,19 @@ const OrderModal = ({ isOpen, onClose, onStartNewOrder }) => {
             </p>
           </div>
         </div>
-        <Link to={'/CheckOut'}>
-        <button
-          onClick={onStartNewOrder}
-          className=" text-sm self-stretch bg-red px-4 py-2 text-white bg-red-400 rounded-3xl"
-        >
-          Start New Order
-        </button>
-        </Link>
+        <div className="flex gap-4">
+          <Link to={"/CheckOut"}>
+            <button className="flex">
+              Pay
+              <BsCashCoin />
+            </button>
+          </Link>
+          <Link to={"/Market"}>
+            <button className="flex" onClick={onStartNewOrder}>
+              Cancel
+            </button>
+          </Link>
+        </div>
       </div>
     </div>
   );

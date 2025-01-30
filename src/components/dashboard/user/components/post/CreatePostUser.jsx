@@ -10,6 +10,7 @@ export default function CreatePostUser() {
     description: "",
     name: "",
     price: "",
+    image:""
   });
   const inputs = [
     {
@@ -57,6 +58,7 @@ export default function CreatePostUser() {
       label: "Description",
       required: true,
     },
+
   ];
 
   const handleSubmit = async (e) => {

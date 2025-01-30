@@ -11,7 +11,7 @@ function ProductList() {
         Visit Headset Store, The Fastest Growing Marketplace for Business Headsets, Office Headsets, Call Centre Headsets and Contact Centre Headsets
         </h2>
       </div>
-      <h2 className="title p-6 font-medium">Best Quality We Serve</h2>
+      <h2 className="title p-6 font-medium">BEST HEADPHONES</h2>
       <div className="w-full sm:grid-cols-1 gap-8 lg:grid-cols-4  grid grid-cols-1 md:grid-cols-3  gap-y-7">
         {Products.map((product) => (
           <Product product={product} key={product.id} />

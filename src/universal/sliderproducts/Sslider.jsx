@@ -1,5 +1,6 @@
 import React, { useCallback, useRef } from "react";
 import "swiper/css";
+import image from "../../assets/images/laptopwok.jpg";
 import { Swiper, SwiperSlide } from "swiper/react";
 React;
 const Show = () => {
@@ -31,6 +32,12 @@ const Show = () => {
               <SingleShow
                 image="https://img.freepik.com/free-photo/people-working-together-new-project_23-2148778013.jpg"
                 details="Rwanda's Shop for mobiles, Electronics, perfumes, Laptops. Buy genuine products at the best prices. Apple, Samsung, HP, Canon, Sony, JBL, Epson."
+              />
+            </SwiperSlide>
+            <SwiperSlide>
+              <SingleShow
+                image={image}
+                details="The new tech gadgets and product releases across several different categories, including AI, gaming etc. curated by the Gadget Flow team ."
               />
             </SwiperSlide>
             <div className="absolute left-0 right-0 z-10 flex items-center justify-center gap-5 sm:bottom-0">
@@ -78,7 +85,7 @@ const Show = () => {
 
 export default Show;
 
-const SingleShow = ({ image, details, name, position }) => {
+const SingleShow = ({ image, details }) => {
   return (
     <div className="relative flex justify-center">
       <div className="relative w-full pb-16 md:w-11/12 lg:w-10/12 xl:w-8/12">

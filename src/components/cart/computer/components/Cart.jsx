@@ -2,7 +2,7 @@
 import { useCart } from "../CartContext";
 import React from "react";
 import { BiCart } from "react-icons/bi";
-import { Link } from "react-router-dom";
+
 import { CgClose } from "react-icons/cg";
 import { XMarkIcon } from "@heroicons/react/16/solid";
 React;
@@ -77,14 +77,14 @@ function Cart({ onConfirmOrder }) {
           <div className="container flex-col items-center justify-center">
             <p className="items-center">LD</p>
           </div>
-          <Link to={"/CheckOut"}>
+      
             <button
               onClick={onConfirmOrder}
               className="text-sm self-stretch mt-4 bg-red px-4 py-2 bg-black text-white rounded-3xl"
             >
               Confirm Order
             </button>
-          </Link>
+       
         </div>
       )}
     </div>

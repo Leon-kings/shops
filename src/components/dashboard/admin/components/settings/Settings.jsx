@@ -89,10 +89,10 @@ export default function Settings() {
           Make your Components Compatible
         </h2>
         <div className="grid bg-white grid-cols-[repeat(auto-fit,minmax(350px,1fr))] gap-4">
-          <div className="text-white p-4 text-center">
+          <div className="text-white p-6 text-center">
             <CreateUser />
           </div>
-          <div className="text-white p-4 text-center">
+          <div className="text-white p-6 text-center">
             <CreatePost />
           </div>
         </div>
@@ -105,15 +105,15 @@ export default function Settings() {
           or post products
         </p>
         <div className="grid bg-white py-4 grid-cols-[repeat(auto-fit,minmax(350px,1fr))] gap-4">
-          <div className="text-white p-4 text-center">
+          <div className="text-white p-6 text-center">
             <CreateMessage />
           </div>
-          <div className="text-white p-4 text-center">
+          <div className="text-white p-6 text-center">
             <CreateTestimony />
           </div>
         </div>
-        <div className="title"></div>
       </div>
+      <br />
     </>
   );
 }
