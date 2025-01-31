@@ -16,8 +16,8 @@ export default function Testimony() {
         const response = await axios.get(
           "https://shopsnodejs.onrender.com/testimony"
         );
-        setTestimonies(response.data.testimonies);
-        console.log(response.testimonies);
+        setTestimonies(response.data.data);
+        // console.log(response.data);
       } catch (error) {
         console.error("Error fetching testimonies:", error);
       }
@@ -25,54 +25,6 @@ export default function Testimony() {
     fetchTestimonies();
   }, []);
 
-  // const data = [
-  //   {
-  //     content: (
-  //       <>
-  //         Share a testimonial
-  //         that hits some of your benefits from one of your popular
-  //         customer.
-  //       </>
-  //     ),
-  //     author: "Leon",
-  //     // title: "CEO Of LD",
-  //     avatar:
-  //       "https://images.unsplash.com/photo-1511485977113-f34c92461ad9?crop=faces&cs=tinysrgb&fit=crop&fm=jpg&ixid=MnwxfDB8MXxhbGx8fHx8fHx8fHwxNjIwMTQ5ODEx&ixlib=rb-1.2.1&q=80&w=100&h=100",
-  //   },
-  //   {
-  //     content: (
-  //       <>
-  //         Make sure you only pick the right sentence to
-  //         keep it short and simple.
-  //       </>
-  //     ),
-  //     author: "Dylan Ambrose",
-  //     avatar:
-  //       "https://images.unsplash.com/photo-1463453091185-61582044d556?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&crop=faces&fit=crop&w=100&h=100&q=80",
-  //   },
-  //   {
-  //     content: (
-  //       <>
-  //         This is an awesome landing page template Ive
-  //         seen. I would use this for anything.
-  //       </>
-  //     ),
-  //     author: "Gabrielle Winn",
-  //     avatar:
-  //       "https://images.unsplash.com/photo-1624224971170-2f84fed5eb5e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=100&h=100&crop=faces&q=80",
-  //   },
-  //   {
-  //     content: (
-  //       <>
-  //         This is an awesome landing page template Ive
-  //         seen. I would use this for anything.
-  //       </>
-  //     ),
-  //     author: " WinnGabrielle",
-  //     avatar:
-  //       "https://images.unsplash.com/photo-1624224971170-2f84fed5eb5e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=100&h=100&crop=faces&q=80",
-  //   },
-  // ];
   return (
     <div className="bg-white">
       <div className="mx-auto w-full px-4 xl:w-full sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8">
@@ -90,7 +42,7 @@ export default function Testimony() {
           >
             <div className="container p-6 mx-auto mb-10 xl:px-0">
               <div className="grid gap-10 ">
-                {testimonies.map((item, index) => (
+                {testimonies&&testimonies.map((item, index) => (
                   <SwiperSlide key={item._id}>
                     <div
                       className={
