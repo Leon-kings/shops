@@ -1,62 +1,78 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Autoplay, A11y } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/autoplay';
 import 'swiper/css/controller';
+import axios from "axios";
+import { BiMessage } from "react-icons/bi";
 React;
 export default function Testimony() {
-  const data = [
-    {
-      content: (
-        <>
-          Share a testimonial
-          that hits some of your benefits from one of your popular
-          customer.
-        </>
-      ),
-      author: "Leon",
-      // title: "CEO Of LD",
-      avatar:
-        "https://images.unsplash.com/photo-1511485977113-f34c92461ad9?crop=faces&cs=tinysrgb&fit=crop&fm=jpg&ixid=MnwxfDB8MXxhbGx8fHx8fHx8fHwxNjIwMTQ5ODEx&ixlib=rb-1.2.1&q=80&w=100&h=100",
-    },
-    {
-      content: (
-        <>
-          Make sure you only pick the right sentence to
-          keep it short and simple.
-        </>
-      ),
-      author: "Dylan Ambrose",
-      // title: "Lead marketer at Netflix ",
-      avatar:
-        "https://images.unsplash.com/photo-1463453091185-61582044d556?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&crop=faces&fit=crop&w=100&h=100&q=80",
-    },
-    {
-      content: (
-        <>
-          This is an awesome landing page template Ive
-          seen. I would use this for anything.
-        </>
-      ),
-      author: "Gabrielle Winn",
-      // title: "Co-founder of Acme Inc",
-      avatar:
-        "https://images.unsplash.com/photo-1624224971170-2f84fed5eb5e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=100&h=100&crop=faces&q=80",
-    },
-    {
-      content: (
-        <>
-          This is an awesome landing page template Ive
-          seen. I would use this for anything.
-        </>
-      ),
-      author: " WinnGabrielle",
-      // title: " User",
-      avatar:
-        "https://images.unsplash.com/photo-1624224971170-2f84fed5eb5e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=100&h=100&crop=faces&q=80",
-    },
-  ];
+    const [testimonies, setTestimonies] = useState([]);
+  // Fetch testimonies from API
+  useEffect(() => {
+    const fetchTestimonies = async () => {
+      try {
+        const response = await axios.get(
+          "https://shopsnodejs.onrender.com/testimony"
+        );
+        setTestimonies(response.data.testimonies);
+        console.log(response.testimonies);
+      } catch (error) {
+        console.error("Error fetching testimonies:", error);
+      }
+    };
+    fetchTestimonies();
+  }, []);
+
+  // const data = [
+  //   {
+  //     content: (
+  //       <>
+  //         Share a testimonial
+  //         that hits some of your benefits from one of your popular
+  //         customer.
+  //       </>
+  //     ),
+  //     author: "Leon",
+  //     // title: "CEO Of LD",
+  //     avatar:
+  //       "https://images.unsplash.com/photo-1511485977113-f34c92461ad9?crop=faces&cs=tinysrgb&fit=crop&fm=jpg&ixid=MnwxfDB8MXxhbGx8fHx8fHx8fHwxNjIwMTQ5ODEx&ixlib=rb-1.2.1&q=80&w=100&h=100",
+  //   },
+  //   {
+  //     content: (
+  //       <>
+  //         Make sure you only pick the right sentence to
+  //         keep it short and simple.
+  //       </>
+  //     ),
+  //     author: "Dylan Ambrose",
+  //     avatar:
+  //       "https://images.unsplash.com/photo-1463453091185-61582044d556?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&crop=faces&fit=crop&w=100&h=100&q=80",
+  //   },
+  //   {
+  //     content: (
+  //       <>
+  //         This is an awesome landing page template Ive
+  //         seen. I would use this for anything.
+  //       </>
+  //     ),
+  //     author: "Gabrielle Winn",
+  //     avatar:
+  //       "https://images.unsplash.com/photo-1624224971170-2f84fed5eb5e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=100&h=100&crop=faces&q=80",
+  //   },
+  //   {
+  //     content: (
+  //       <>
+  //         This is an awesome landing page template Ive
+  //         seen. I would use this for anything.
+  //       </>
+  //     ),
+  //     author: " WinnGabrielle",
+  //     avatar:
+  //       "https://images.unsplash.com/photo-1624224971170-2f84fed5eb5e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=100&h=100&crop=faces&q=80",
+  //   },
+  // ];
   return (
     <div className="bg-white">
       <div className="mx-auto w-full px-4 xl:w-full sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8">
@@ -74,8 +90,8 @@ export default function Testimony() {
           >
             <div className="container p-6 mx-auto mb-10 xl:px-0">
               <div className="grid gap-10 ">
-                {data.map((item, index) => (
-                  <SwiperSlide key={index}>
+                {testimonies.map((item, index) => (
+                  <SwiperSlide key={item._id}>
                     <div
                       className={
                         index === 0 ? "lg:col-span-2 xl:col-auto" : ""
@@ -83,24 +99,25 @@ export default function Testimony() {
                       key={index}>
                       <div className="flex flex-col justify-between w-full h-full px-6 py-6 bg-gray-100 dark:bg-gray-800 md:px-14 rounded-2xl md:py-14 dark:bg-trueGray-800">
                         <p className="text-2xl max-w-full leading-normal">
-                          {item.content}
+                          {item.testimony}
                         </p>
                         <div className="flex items-center mt-8 space-x-3">
                           <div className="flex-shrink-0 overflow-hidden w-28 h-24">
-                            <img
+                            {/* <img
                               alt=""
                               src={item.avatar}
                               loading="lazy"
                               className="w-full object-cover mx-auto rounded-2xl"
                              
-                            />
+                            /> */}
+                            <BiMessage className="w-28 h-24 text-white"/>
                           </div>
                           <div>
                             <div className="text-lg font-medium">
-                              {item.author}
+                              {item.name}
                             </div>
                             <div className="text-gray-600 dark:text-gray-400">
-                              {/* {item.title} */}
+                              {item.email}
                             </div>
                           </div>
                         </div>
