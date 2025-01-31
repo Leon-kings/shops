@@ -1,6 +1,6 @@
 import React from "react";
 import "./App.css";
-React.App;
+React;
 import { useState } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import PrivateRoute from "./components/privateRoute/PrivateRoutes";

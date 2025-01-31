@@ -64,13 +64,14 @@ export default function CreatePost() {
     console.log(values);
     try {
       await axios.post("https://shopsnodejs.onrender.com/posts", values);
-      if (window.confirm("Do you really want to continue to login?")) {
+      if (window.confirm("Thank you!!")) {
         Navigate("/Dashboard");
       } else {
         Navigate("/Settings");
       }
     } catch (err) {
       console.log(err);
+      alert('error in posting products!',err)
     }
   };
   const Navigate = useNavigate();
