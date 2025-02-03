@@ -554,7 +554,7 @@ export default function Services() {
       <br />
       <section className="bg-white xl:w-full lg:w-full md:w-full xl:mr-0 lg:mr-0 sm:mr-0 md:mr-0 mr-0 p-8">
         <div className="mx-auto py-12 w-full xl:w-full ">
-          <h2 className="text-blue-400 font-bold py-4">EMPOWERING OTHERS</h2>
+          <h2 className="text-blue-400 font-bold py-6">EMPOWERING OTHERS</h2>
           <p className="font-bold p-4">
             We Glad To support and guide with best Quality Services.
           </p>
@@ -579,10 +579,9 @@ export default function Services() {
           </dl>
         </div>
       </section>
-      <br />
       {/*  */}
       <div>
-        <br />
+       
         {isVisible && (
           <button
             onClick={scrollToTop}

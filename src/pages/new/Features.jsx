@@ -448,7 +448,6 @@ const Features = () => {
           </div>
         </div>
         <div>
-          <br />
           {isVisible && (
             <button
               onClick={scrollToTop}
@@ -458,7 +457,6 @@ const Features = () => {
             </button>
           )}
         </div>
-        {/*  */}
       </div>
       <br />
     </>
