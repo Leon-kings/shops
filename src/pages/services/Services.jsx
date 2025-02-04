@@ -65,7 +65,7 @@ export default function Services() {
   return (
     <>
       <div className="title"></div>
-      <section className="py-12 w-full bg-white sm:py-16 lg:py-10 w-full sm:w-full md:w-full lg:w-full xl:w-full">
+      <section className="py-12 w-full bg-white sm:py-16 lg:py-10 sm:w-full md:w-full lg:w-full xl:w-full">
         <div className="px-4 mx-auto w-full sm:px-6 lg:px-8">
           <div className="text-center">
             <h2 className="text-xl font-bold leading-tight text-blue-400 sm:text-xl xl:text-xl font-pj">
