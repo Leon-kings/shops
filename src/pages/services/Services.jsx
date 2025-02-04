@@ -65,7 +65,7 @@ export default function Services() {
   return (
     <>
       <div className="title"></div>
-      <section className="py-12 bg-white sm:py-16 lg:py-10 w-full sm:w-full md:w-full lg:w-full xl:w-full">
+      <section className="py-12 w-full bg-white sm:py-16 lg:py-10 w-full sm:w-full md:w-full lg:w-full xl:w-full">
         <div className="px-4 mx-auto w-full sm:px-6 lg:px-8">
           <div className="text-center">
             <h2 className="text-xl font-bold leading-tight text-blue-400 sm:text-xl xl:text-xl font-pj">
@@ -372,7 +372,7 @@ export default function Services() {
 
         <div className="relative mx-auto w-full lg:grid sm:grid-cols-1 lg:grid-cols-2">
           <div className="flex items-end px-4 pb-16 bg-white pt-28 sm:px-6 lg:px-8 lg:pb-24 xl:pr-12">
-            <div className="max-w-lg mx-auto lg:mx-0">
+            <div className="w-full mx-auto lg:mx-0">
               <p className="text-5xl sm:text-6xl lg:text-7xl">
                 <img src={logo} alt="" className="w-full" />
               </p>

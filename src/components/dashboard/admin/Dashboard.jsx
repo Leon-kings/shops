@@ -16,7 +16,7 @@ const Dashboard = () => {
   const [values, setValues] = useState({
     email: "",
   });
-
+ 
   const inputs = [
     {
       id: 1,
