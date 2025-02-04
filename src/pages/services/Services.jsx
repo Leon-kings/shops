@@ -376,7 +376,7 @@ export default function Services() {
               <p className="text-5xl sm:text-6xl lg:text-7xl">
                 <img src={logo} alt="" className="w-full" />
               </p>
-              <h1 className="mt-10 flex-col text-3xl font-bold text-gray-900 sm:text-4xl lg:text-5xl">
+              <h1 className="mt-10 flex text-3xl font-bold text-gray-900 ">
                 Electronics Store: Tech, PC Parts
               </h1>
               <p className="mt-6 text-base font-normal leading-7 text-gray-500">
