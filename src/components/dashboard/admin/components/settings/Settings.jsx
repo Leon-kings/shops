@@ -88,7 +88,7 @@ export default function Settings() {
         <h2 className="text-blue-300 bg-amber-100 rounded-md">
           Make your Components Compatible
         </h2>
-        <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4">
+        <div className="grid grid-cols- sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4">
           <div className="text-white p-4">
             <CreateUser />
           </div>
@@ -104,7 +104,7 @@ export default function Settings() {
           We can make our Comments and Testimony and also create user and post
           or post products
         </p>
-        <div className="grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4">
+        <div className="grid bg-white py-4 grid-cols-[repeat(auto-fit,minmax(350px,1fr))] gap-4">
           <div className="text-white p-6">
             <CreateMessage />
           </div>
