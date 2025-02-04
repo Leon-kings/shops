@@ -371,10 +371,10 @@ export default function Services() {
         </div>
 
         <div className="relative mx-auto w-full lg:grid sm:grid-cols-1 lg:grid-cols-2">
-          <div className="flex items-end px-4 pb-16 bg-white pt-28 sm:px-6 lg:px-8 lg:pb-24 xl:pr-12">
+          <div className="flex items-end pb-16 bg-white pt-28 sm:px-4 lg:px-8 lg:pb-24 xl:pr-12">
             <div className="w-full mx-auto lg:mx-0">
               <p className="text-5xl sm:text-6xl lg:text-7xl">
-                <img src={logo} alt="" className="w-full" />
+                <img src={logo} alt="" className="w-full"/>
               </p>
               <h1 className="mt-10 flex text-xl font-bold text-gray-900 ">
                 Electronics Store: Tech, PC Parts
