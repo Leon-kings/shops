@@ -15,8 +15,8 @@ export default function Settings() {
   return (
     <>
       <div className="title"></div>
-      <div className="bg-white">
-        <div className="grid bg-white py-4 sm:grid-cols-2 grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4">
+      <div className="bg-white w-full">
+        <div className="grid bg-white py-4 grid-cols-[repeat(auto-fit,minmax(150px,1fr))] gap-4">
           <div className="bg-blue-200 text-white p-4 text-center">
             <Link to={"/5040/Create/User/245678"}>
               <button>
@@ -49,7 +49,7 @@ export default function Settings() {
         <h4 className="py-4">View All</h4>
         {/*  */}
         {/*  */}
-        <div className="grid bg-white py-4 sm:grid-cols-2 grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4">
+        <div className="grid bg-white py-4 grid-cols-[repeat(auto-fit,minmax(150px,1fr))] gap-4">
           <div className="bg-blue-200 text-white p-4 text-center">
             <Link to={"/5010/Userview"}>
               <button>
@@ -88,7 +88,7 @@ export default function Settings() {
         <h2 className="text-blue-300 bg-amber-100 rounded-md">
           Make your Components Compatible
         </h2>
-        <div className="grid bg-white sm:grid-cols-2 grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4">
+        <div className="grid bg-white sm:grid-cols-2 grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
           <div className="text-white p-6 text-center">
             <CreateUser />
           </div>

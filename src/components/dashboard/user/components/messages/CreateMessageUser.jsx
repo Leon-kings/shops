@@ -51,7 +51,7 @@ export default function CreateMessageUser() {
     <>
       <div className="title"></div>
       <div className="w-full xl:w-full lg:w-full md:w-full sm:w-full text-black">
-        <div className=" flex items-center justify-center min-h-screen bg-gray-100">
+        <div className=" flex items-center justify-center bg-gray-100">
           <div className="w-full max-w-md p-8 bg-white rounded shadow-md">
             <div className="Register">
               <form onSubmit={handleSubmit}>
