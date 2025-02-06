@@ -81,7 +81,7 @@ export default function CreatePost() {
   return (
     <>
       <div className="title"></div>
-      <div className="items-center w-full xl:w-full lg:w-full md:w-full text-black">
+      <div className="w-full xl:w-full lg:w-full md:w-full sm:w-full text-black">
         <div className=" flex items-center justify-center bg-gray-100">
           <div className="w-full max-w-md p-8 bg-white rounded shadow-md">
             <div className="Register">

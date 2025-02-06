@@ -87,7 +87,7 @@ export default function Settings() {
         <h2 className="text-blue-300 bg-amber-100 rounded-md">
           Make your Components Compatible
         </h2>
-        <div className="grid bg-white sm:grid-cols-2 grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+        <div className="grid bg-white sm:grid-cols-2 grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4">
           <div className="text-white p-6 text-center">
             <CreateUser />
           </div>

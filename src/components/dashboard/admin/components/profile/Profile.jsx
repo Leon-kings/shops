@@ -49,7 +49,7 @@ export default function Profile() {
 
     try {
       await axios.post(
-        "https://backendproject-8m9r.onrender.com/users/auth",
+        "https://backendproject-8m9r.onrender.com/users/profile",
         values
       );
       if (window.confirm("Do you really want to move?")) {
@@ -75,7 +75,7 @@ export default function Profile() {
       <section className="py-24 bg-white relative rounded shadow-md">
         <div className="w-full max-w-7xl md:px-5 lg:px-5 mx-auto">
         <div className="head">
-            <h2 className="text-center items-center">
+            <h2 className="hidden text-center items-center">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. 
                 Sapiente vel, id labore placeat architecto temporibus deleniti 
                 non ullam odio iusto rerum consequatur, incidunt vitae molestiae 
