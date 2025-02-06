@@ -9,7 +9,6 @@ import CreateTestimony from "../testmony/Testimony";
 import CreatePost from "../post/CreatePost";
 import CreateMessage from "../message/CreateMessage";
 import CreateUser from "../createuser/CreateUser";
-
 React;
 export default function Settings() {
   return (

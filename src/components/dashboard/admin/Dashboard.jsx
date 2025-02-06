@@ -11,12 +11,13 @@ import side1 from "../../../assets/images/student-with-laptop.jpg";
 import side2 from "../../../assets/images/romantic-african-woman-with-trendy-hairstyle-sitting-her-workplace-analysing-data-indoor-portrait-black-female-student-working-with-laptop-before-exam_197531-3782.avif";
 import side3 from "../../../assets/images/programmer-people-working-laptops-smartphones-600nw-2473384115.webp";
 import side4 from "../../../assets/images/postdp-hero03.jpg.large.2x.jpg";
+
 React;
 const Dashboard = () => {
   const [values, setValues] = useState({
     email: "",
   });
- 
+
   const inputs = [
     {
       id: 1,
@@ -28,13 +29,12 @@ const Dashboard = () => {
     },
   ];
   const Navigate = useNavigate();
-  // fetching data from database
+
   // handleSubmit
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     console.log(values);
-
 
     try {
       await axios.post("https://shopsnodejs.onrender.com/users/auth", values);
@@ -111,6 +111,7 @@ const Dashboard = () => {
                     </form>
                   </div>
                 </div>
+                {/* <HoveredContainer/> */}
                 <div className="grid max-w-md grid-cols-2 mx-auto mt-8 md:mt-16 lg:mt-24 xl:mt-32 gap-x-6 grid-col-2">
                   <div>
                     <p className="text-4xl font-bold text-white">3,942</p>
