@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./App.css";
 React;
 import { useState } from "react";
@@ -41,81 +41,101 @@ import CreateTestimonyUser from "./components/dashboard/user/components/testimon
 import CreatePostUser from "./components/dashboard/user/components/post/CreatePostUser";
 import UProfile from "./components/dashboard/user/components/profile/Profile";
 import Details from "./components/cart/appliances/components/Details";
-
+import Opening from './assets/video/opening.mp4'
 export default function App() {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
+  const [videoEnded, setVideoEnded] = useState(false);
+
+  useEffect(() => {
+    const timer = setTimeout(() => setVideoEnded(true), 5000); // Adjust duration as needed
+    return () => clearTimeout(timer);
+  }, []);
   return (
     <>
-      <div className="mx-auto w-full">
-        <BrowserRouter>
-          <Example />
-          <Routes>
-            {/* Public Routes */}
-            <Route
-              path="/login"
-              element={<Login onLogin={() => setIsAuthenticated(false)} />}
-            />
-            <Route path="/" element={<Home />} />
-            <Route path="/Details/:id" element={<Details />} />
-            <Route path="/Fquestion" element={<Fquestion />} />
-            <Route path="/Who/we/are" element={<Address />} />
-            <Route path="/Contacts" element={<About />} />
-            <Route path="/Services" element={<Services />} />
-            <Route path="/Market" element={<Market />} />
-            <Route path="/Register" element={<Register />} />
-            <Route path="/Features" element={<Features />} />
-            {/* dashboard link */}
-            <Route path="/Dashboard" element={<Dashboard />} />
-            <Route path="/Udashboard" element={<Udashboard />} />
-            <Route path="/5010/Userview" element={<Userview />} />
-            <Route path="/5010/Postview" element={<Postview />} />
-            <Route path="/5010/Testimony" element={<Testimonyview />} />
-            <Route path="5010/Message" element={<Messageview />} />
-            <Route path="/Settings" element={<Settings />} />
-            <Route
-              path="/5040/Create/Testimony/245678"
-              element={<CreateTestimony />}
-            />
-            <Route
-              path="/5040/Create/Message/245678"
-              element={<CreateMessage />}
-            />
-            <Route path="/Profile/Dashboard" element={<Profile />} />
-            <Route path="/5040/Create/Post/245678" element={<CreatePost />} />
-            <Route path="/5040/Create/User/245678" element={<CreateUser />} />
-            {/* user dshboard */}
-            <Route path="/302010/Settings" element={<USettings />} />
-            <Route path="/302015/Message" element={<Umessages />} />
-            <Route
-              path="/5044/Create/Message/245678"
-              element={<CreateMessageUser />}
-            />
-            <Route path="/302020/Testimony" element={<UTestimony />} />
-            <Route
-              path="/5044/Create/Testimony/245678"
-              element={<CreateTestimonyUser />}
-            />
-            <Route path="/302025/Post" element={<UPost />} />
-            <Route path="/302005/Profile" element={<UProfile />} />
-            <Route
-              path="/5044/Create/Post/245678"
-              element={<CreatePostUser />}
-            />
-            {/* payment */}
-            <Route path="/CheckOut" element={<CheckOut />} />
-            {/* Private Route */}
-            <Route
-              path="/Udashboard"
-              element={
-                <PrivateRoute isAuthenticated={isAuthenticated}>
-                  <Dashboard />
-                </PrivateRoute>
-              }
-            />
-          </Routes>
-          <Footer />
-        </BrowserRouter>
+     <div className="w-full min-h-screen">
+        {!videoEnded ? (
+          <video
+            autoPlay
+            muted
+            className="absolute inset-0 w-full h-full object-cover"
+            onEnded={() => setVideoEnded(true)}
+          >
+            <source src={Opening} type="video/mp4" />
+          </video>
+        ) : (
+          <div className="mx-auto w-full">
+          <BrowserRouter>
+            <Example />
+            <Routes>
+              {/* Public Routes */}
+              <Route
+                path="/login"
+                element={<Login onLogin={() => setIsAuthenticated(false)} />}
+              />
+              <Route path="/" element={<Home />} />
+              <Route path="/Details/:id" element={<Details />} />
+              <Route path="/Fquestion" element={<Fquestion />} />
+              <Route path="/Who/we/are" element={<Address />} />
+              <Route path="/Contacts" element={<About />} />
+              <Route path="/Services" element={<Services />} />
+              <Route path="/Market" element={<Market />} />
+              <Route path="/Register" element={<Register />} />
+              <Route path="/Features" element={<Features />} />
+              {/* dashboard link */}
+              <Route path="/Dashboard" element={<Dashboard />} />
+              <Route path="/Udashboard" element={<Udashboard />} />
+              <Route path="/5010/Userview" element={<Userview />} />
+              <Route path="/5010/Postview" element={<Postview />} />
+              <Route path="/5010/Testimony" element={<Testimonyview />} />
+              <Route path="5010/Message" element={<Messageview />} />
+              <Route path="/Settings" element={<Settings />} />
+              <Route
+                path="/5040/Create/Testimony/245678"
+                element={<CreateTestimony />}
+              />
+              <Route
+                path="/5040/Create/Message/245678"
+                element={<CreateMessage />}
+              />
+              <Route path="/Profile/Dashboard" element={<Profile />} />
+              <Route path="/5040/Create/Post/245678" element={<CreatePost />} />
+              <Route path="/5040/Create/User/245678" element={<CreateUser />} />
+              {/* user dshboard */}
+              <Route path="/302010/Settings" element={<USettings />} />
+              <Route path="/302015/Message" element={<Umessages />} />
+              <Route
+                path="/5044/Create/Message/245678"
+                element={<CreateMessageUser />}
+              />
+              <Route path="/302020/Testimony" element={<UTestimony />} />
+              <Route
+                path="/5044/Create/Testimony/245678"
+                element={<CreateTestimonyUser />}
+              />
+              <Route path="/302025/Post" element={<UPost />} />
+              <Route path="/302005/Profile" element={<UProfile />} />
+              <Route
+                path="/5044/Create/Post/245678"
+                element={<CreatePostUser />}
+              />
+              {/* payment */}
+              <Route path="/CheckOut" element={<CheckOut />} />
+              {/* Private Route */}
+              <Route
+                path="/Udashboard"
+                element={
+                  <PrivateRoute isAuthenticated={isAuthenticated}>
+                    <Dashboard />
+                  </PrivateRoute>
+                }
+              />
+            </Routes>
+            <Footer />
+          </BrowserRouter>
+        </div>
+        )}
       </div>
+
     </>
   );
 }

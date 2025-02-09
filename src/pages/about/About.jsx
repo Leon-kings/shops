@@ -96,13 +96,16 @@ export default function About() {
             <div className="grid max-w-md grid-cols-1 mx-auto lg:grid-cols-12 gap-x-6 gap-y-8 lg:max-w-none">
               <div className="self-center lg:col-span-4">
                 <h2 className="text-xl font-bold text-gray-900 sm:text-4xl xl:text-3xl">
-                 LD
+                  LD
                 </h2>
                 <p className="mt-5 text-base font-normal leading-7 text-gray-500">
-                LD Computer Store Rwanda Limited is a Full-Service Technology Services Provider also called the Top IT Consulting Company in Kigali, Rwanda.
+                  LD Computer Store Rwanda Limited is a Full-Service Technology
+                  Services Provider also called the Top IT Consulting Company in
+                  Kigali, Rwanda.
                 </p>
                 <p className="mt-5 text-base font-normal leading-7 text-gray-500">
-                Leon is happy to Serve you Your Favourite Computers. Choose the Best PC and Also If You want to Buy Your repairment Kits.
+                  Leon is happy to Serve you Your Favourite Computers. Choose
+                  the Best PC and Also If You want to Buy Your repairment Kits.
                 </p>
                 <div className="relative inline-flex mt-9 group">
                   <Link to={"/Market"}>

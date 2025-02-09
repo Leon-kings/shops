@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Sidebar from "./components/sidebar/Side";
 import Postview from "./components/postview/Postview";
 import Userview from "./components/userview/Userview";
@@ -11,9 +11,15 @@ import side1 from "../../../assets/images/student-with-laptop.jpg";
 import side2 from "../../../assets/images/romantic-african-woman-with-trendy-hairstyle-sitting-her-workplace-analysing-data-indoor-portrait-black-female-student-working-with-laptop-before-exam_197531-3782.avif";
 import side3 from "../../../assets/images/programmer-people-working-laptops-smartphones-600nw-2473384115.webp";
 import side4 from "../../../assets/images/postdp-hero03.jpg.large.2x.jpg";
-
+import Opening from '../../../assets/video/opening.mp4'
 React;
 const Dashboard = () => {
+    const [videoEnded, setVideoEnded] = useState(false);
+  
+    useEffect(() => {
+      const timer = setTimeout(() => setVideoEnded(true), 5000); // Adjust duration as needed
+      return () => clearTimeout(timer);
+    }, []);
   const [values, setValues] = useState({
     email: "",
   });
@@ -59,7 +65,19 @@ const Dashboard = () => {
   return (
     <>
       <div className="title"></div>
-      <div className=" w-full bg-white md:w-full lg:w-full xl:w-full">
+      <div className="w-full min-h-screen">
+        {!videoEnded ? (
+          <video
+            autoPlay
+            muted
+            className="absolute inset-0 w-full h-full object-cover"
+            onEnded={() => setVideoEnded(true)}
+          >
+            <source src={Opening} type="video/mp4" />
+          </video>
+        ) : (
+          <div className="mx-auto w-full">
+         <div className=" w-full bg-white md:w-full lg:w-full xl:w-full">
         <h3 className="text-center py-5 text-blue-400 font-bold">DASHBOARD</h3>
         <Sidebar />
         <br />
@@ -326,6 +344,11 @@ const Dashboard = () => {
           {/* end of contents */}
         </div>
       </div>
+        </div>
+        )}
+      </div>
+
+    
       <br />
     </>
   );

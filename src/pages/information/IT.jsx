@@ -5,7 +5,7 @@ import image1 from '../../assets/images/301389587_1302677223839563_7777363161221
 export default function IT() {
     return (
     <>
-    <br />
+    <br /> 
       <div className="bg-gray-50 py-24 sm:py-32">
         <div className="mx-auto w-full px-6 lg:w-full xl:w-full xl:px-8 lg:px-8">
         <h2 className="text-blue-400 font-bold py-4">DEBUG FASTER</h2>
