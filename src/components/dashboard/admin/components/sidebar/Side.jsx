@@ -5,10 +5,8 @@ import { CgClose, CgProfile } from "react-icons/cg";
 import { IoSettings } from "react-icons/io5";
 import { BsHouse } from "react-icons/bs";
 import { Link} from "react-router-dom";
-import MyBarChart from "../../../user/components/charts/Barchart";
-import MyChart from "../../../user/components/charts/Chart";
-import Subscription from "../subscription/Subscription";
 import image from '../../../../../assets/images/buying-laptops-in-ireland-in-2023-min-1678291071660_a842ec16-4d68-4ab9-ade7-3a46f6e4efcf_1600x.webp'
+import Graphs from "../map/Graphs";
 
 function Sidebar() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
@@ -80,19 +78,7 @@ function Sidebar() {
 
       {/* Main content */}
       <div className="flex-1 bg-white p-4 w-full xl:w-full lg:w-full sm:w-full">
-        {/* Main content here */}
-        <div className="grid gap-4 grid-cols-1 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 xl:grid-cols-3">
-          <div className="main">
-            <MyBarChart />
-          </div>
-          <div className="main">
-            <MyChart />
-          </div>
-          <div className="main">
-            <Subscription />
-          </div>
-        </div>
-      
+        <Graphs/>  
         {/* ... */}
       </div>
 

@@ -1,157 +1,23 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import Sidebar from "./components/sidebar/Side";
 import Postview from "./components/postview/Postview";
-import Userview from "./components/userview/Userview";
+
 import image from "../../../assets/images/best-laptop-brands-20230420-3-medium.jpg";
-import axios from "axios";
-import { useNavigate } from "react-router-dom";
-import FormInput from "../../../pages/form/action/FormInput";
 import side from "../../../assets/images/Watches-PCD_CO15_Sleep-Coaching_MO.webp";
 import side1 from "../../../assets/images/student-with-laptop.jpg";
 import side2 from "../../../assets/images/romantic-african-woman-with-trendy-hairstyle-sitting-her-workplace-analysing-data-indoor-portrait-black-female-student-working-with-laptop-before-exam_197531-3782.avif";
 import side3 from "../../../assets/images/programmer-people-working-laptops-smartphones-600nw-2473384115.webp";
 import side4 from "../../../assets/images/postdp-hero03.jpg.large.2x.jpg";
-import Opening from '../../../assets/video/opening.mp4'
+
 React;
 const Dashboard = () => {
-    const [videoEnded, setVideoEnded] = useState(false);
-  
-    useEffect(() => {
-      const timer = setTimeout(() => setVideoEnded(true), 5000); // Adjust duration as needed
-      return () => clearTimeout(timer);
-    }, []);
-  const [values, setValues] = useState({
-    email: "",
-  });
-
-  const inputs = [
-    {
-      id: 1,
-      name: "email",
-      type: "email",
-      placeholder: "email",
-      errorMessage: "email should be valid and should incloude @ symbols",
-      required: true,
-    },
-  ];
-  const Navigate = useNavigate();
-
-  // handleSubmit
-
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    console.log(values);
-
-    try {
-      await axios.post("https://shopsnodejs.onrender.com/users/auth", values);
-      if (window.confirm("Do you really want to move?")) {
-        Navigate("/Udashboard");
-      } else {
-        Navigate("/");
-      }
-    } catch (err) {
-      console.log(err);
-
-      if (err.response && err.response.status === 401) {
-        alert("Invalid credentials. Please try again.");
-      } else {
-        alert("An error occurred. Please try again later.");
-      }
-    }
-  };
-  const onChange = (e) => {
-    setValues({ ...values, [e.target.name]: e.target.value });
-  };
   return (
     <>
       <div className="title"></div>
-      <div className="w-full min-h-screen">
-        {!videoEnded ? (
-          <video
-            autoPlay
-            muted
-            className="absolute inset-0 w-full h-full object-cover"
-            onEnded={() => setVideoEnded(true)}
-          >
-            <source src={Opening} type="video/mp4" />
-          </video>
-        ) : (
-          <div className="mx-auto w-full">
-         <div className=" w-full bg-white md:w-full lg:w-full xl:w-full">
+      <div className=" w-full bg-white md:w-full lg:w-full xl:w-full">
         <h3 className="text-center py-5 text-blue-400 font-bold">DASHBOARD</h3>
         <Sidebar />
         <br />
-        <div className="w-full">
-          <div className="relative py-12 bg-white sm:py-16 lg:py-20">
-            <div className="absolute inset-0">
-              <img
-                className="object-cover object-right w-full h-full lg:object-center"
-                src="https://cdn.rareblocks.xyz/collection/clarity-ecommerce/images/hero/5/background.png"
-                alt=""
-              />
-            </div>
-
-            <div className="absolute inset-0 bg-gray-900 bg-opacity-40"></div>
-
-            <div className="relative px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
-              <div className="max-w-lg mx-auto text-center xl:max-w-2xl">
-                <h1 className="text-3xl font-bold text-white sm:text-4xl xl:text-5xl">
-                  Find the best office accessories in one tap
-                </h1>
-                <p className="max-w-lg mx-auto mt-6 text-base font-normal leading-7 text-gray-300">
-                  LD , We are happy to serve best Qualited Computer and Its
-                  Cables and Headphone with great Beats and Preserve your
-                  Thought and Encourage you in Work.
-                </p>
-
-                <div className="w-full flex items-center justify-center min-h-screen bg-gray-100">
-                  <div className="w-full max-w-md p-8 bg-white rounded shadow-md">
-                    <form onSubmit={handleSubmit} className="mt-4">
-                      <h2 className="title text-blue-400 font-bold py-4">
-                        SEARCH BY EMAIL
-                      </h2>
-                      <div className="container">
-                        {inputs.map((input) => (
-                          <FormInput
-                            key={input.id}
-                            className="p-3 w-full"
-                            {...input}
-                            value={values[input.name]}
-                            onChange={onChange}
-                          />
-                        ))}
-                        <div className="head">
-                          <button className="button w-42 text-white">
-                            Submit
-                          </button>
-                        </div>
-                      </div>
-                    </form>
-                  </div>
-                </div>
-                {/* <HoveredContainer/> */}
-                <div className="grid max-w-md grid-cols-2 mx-auto mt-8 md:mt-16 lg:mt-24 xl:mt-32 gap-x-6 grid-col-2">
-                  <div>
-                    <p className="text-4xl font-bold text-white">3,942</p>
-                    <p className="mt-2 text-sm font-medium text-gray-300">
-                      Order Delivered
-                    </p>
-                  </div>
-
-                  <div>
-                    <p className="text-4xl font-bold text-white">1,444</p>
-                    <p className="mt-2 text-sm font-medium text-gray-300">
-                      Registered Customers
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="grid">
-          <Userview />
-        </div>
         <div className="w-full">
           <div className="flex w-full gap-6 pb-8 mt-12 overflow-x-auto sm:mt-16 lg:mt-20 snap-x">
             <div className="relative snap-center scroll-ml-6 shrink-0 first:pl-6 last:pr-6">
@@ -344,11 +210,6 @@ const Dashboard = () => {
           {/* end of contents */}
         </div>
       </div>
-        </div>
-        )}
-      </div>
-
-    
       <br />
     </>
   );
