@@ -15,7 +15,7 @@ const Dashboard = () => {
     <>
       <div className="title"></div>
       <div className=" w-full bg-white md:w-full lg:w-full xl:w-full">
-        <h3 className="text-center py-5 text-blue-400 font-bold">DASHBOARD</h3>
+        {/* <h3 className="text-center py-5 text-blue-400 font-bold">DASHBOARD</h3> */}
         <Sidebar />
         <br />
         <div className="w-full">

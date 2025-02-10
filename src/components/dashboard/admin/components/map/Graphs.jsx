@@ -32,9 +32,9 @@ const Graphs = () => {
   ];
 
   const pieData = [
-    { name: "Category A", value: 400 },
-    { name: "Category B", value: 300 },
-    { name: "Category C", value: 200 },
+    { name: "A", value: 400 },
+    { name: "B", value: 400 },
+    { name: "C", value: 100 },
   ];
   const COLORS = ["#0088FE", "#00C49F", "#FFBB28"];
 
@@ -66,10 +66,10 @@ const Graphs = () => {
       </header>
 
       {/* Main Content */}
-      <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-6 p-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 p-6">
         {/* Line Chart */}
         <div className="bg-white shadow-md rounded-lg p-4">
-          <h2 className="text-lg font-semibold mb-2">Monthly Data Trends</h2>
+          <h2 className="text-lg font-semibold mb-2">USERS</h2>
           <ResponsiveContainer width="100%" height={250}>
             <LineChart data={data}>
               <XAxis dataKey="name" />
@@ -94,7 +94,7 @@ const Graphs = () => {
             </BarChart>
           </ResponsiveContainer>
         </div>
-       
+
         {/* Pie Chart */}
         <div className="bg-white shadow-md rounded-lg p-4">
           <h2 className="text-lg font-semibold mb-2">
@@ -113,6 +113,7 @@ const Graphs = () => {
                   <Cell
                     key={`cell-${index}`}
                     fill={COLORS[index % COLORS.length]}
+                    data={entry.name}
                   />
                 ))}
               </Pie>
@@ -123,8 +124,8 @@ const Graphs = () => {
         </div>
       </div>
       <div className="w-full main-container">
-          <Userview />
-        </div>
+        <Userview />
+      </div>
       {/* Map Section */}
       <div className="p-6">
         <h2 className="text-lg font-semibold mb-2">Kigali City Map</h2>

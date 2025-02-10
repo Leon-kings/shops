@@ -55,9 +55,9 @@ export default function Footer() {
       <div className="relative isolate overflow-hidden bg-gray-800 py-16 sm:py-24 lg:py-32">
         <div className="mx-auto w-full px-6 lg:px-8">
           <div className="mx-auto grid w-full grid-cols-1 gap-x-8 gap-y-16 lg:w-full lg:grid-cols-2">
-            <div className="w-full xl:w-full lg:w-full">
-              <div className="w-full flex items-center justify-center  bg-gray-100">
-                <div className="w-full max-w-md p-8 bg-white rounded shadow-md">
+            <div className="w-full xl:w-full lg:w-full rounded-2xl">
+              <div className="w-full flex items-center p-4 justify-center rounded-2xl bg-gray-100">
+                <div className="w-full max-w-md p-8 bg-white rounded-2xl shadow-md">
                   <form onSubmit={handleSubmit} className="mt-4">
                     <div className="container">
                       {inputs.map((input) => (
