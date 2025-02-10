@@ -23,7 +23,7 @@ const Userview = () => {
           "https://shopsnodejs.onrender.com/users"
         );
         setUsers(response.data.users);
-        console.log(response.data.users);
+        // console.log(response.data.users);
       } catch (error) {
         console.log("Error fetching users:", error);
       }
