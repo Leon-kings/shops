@@ -190,7 +190,7 @@ const Home = () => {
           </div>
 
           {/* back to tops */}
-          <div className="grid bg-white py-4 grid-cols-[repeat(auto-fit,minmax(150px,1fr))] gap-4">
+          <div className="grid bg-white py-4 md:grid-cols-2 sm:grid-cols-2 grid-cols-[repeat(auto-fit,minmax(150px,1fr))] gap-4">
             <div className="bg-blue-200 text-white p-4 text-center">
               {" "}
               <Link to={"/Register"}>

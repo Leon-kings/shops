@@ -10,7 +10,7 @@ const Header = () => {
           <div className="header relative lg:max-w-none md:w-full w-full lg:w-full xl:w-full">
             {/* Video Background */}
             <div className="absolute transform-gpu overflow-hidden blur-1xl ">
-              <div className="title"></div>
+              <div className="title sm:pt-0 pb-0"></div>
               <video
                 className="w-full md:w-full  lg:w-fulllg:w-full xl:w-full object-cover"
                 autoPlay
@@ -22,7 +22,7 @@ const Header = () => {
               </video>
             </div>
             {/* Content */}
-            <div className="w-full relative isolate px-6 pt-14 lg:px-8">
+            <div className="w-full relative isolate px-6 pb-0 pt-14 lg:px-8">
               <div className="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
                 <div className="hidden sm:mb-8 sm:flex sm:justify-center">
                   <div className="relative rounded-full px-3 py-4 text-sm/6 text-white ring-1 ring-yellow-100 hover:ring-blue-500">

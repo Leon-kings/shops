@@ -6,9 +6,10 @@ React;
 export default function CheckOut() {
   const [values, setValues] = useState({
     email: "",
-    password: "",
+    card: "",
     fullname: "",
     phone: "",
+    frw:""
   });
   const inputs = [
     {
@@ -26,7 +27,7 @@ export default function CheckOut() {
       type: "email",
       placeholder: "email",
       errorMessage: "email should be valid and should incloude @ symbols",
-      label: "email",
+      label: "Email",
       required: true,
     },
     {
@@ -41,13 +42,22 @@ export default function CheckOut() {
 
     {
       id: 4,
-      name: "password",
-      type: "password",
-      placeholder: "password",
+      name: "card",
+      type: "card",
+      placeholder: "1234 - 2345 - 2345 - 23",
       errorMessage:
-        "password should be 8-12 characters include at least 1 letter and 1 symbol",
-      label: "password",
-      // pattern:"/^[a-zA-Z0-9!@#\$%\^\&*_=+-]{8,12}$/g",
+        "card should be 8-16 characters",
+      label: "Card-Numbers",
+      required: true,
+    },
+    {
+      id: 5,
+      name: "frw",
+      type: "text",
+      placeholder: " 1234 $",
+      errorMessage:
+        "Currency should be in $",
+      label: "Money - Paid",
       required: true,
     },
   ];
